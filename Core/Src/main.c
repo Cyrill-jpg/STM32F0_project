@@ -15,28 +15,20 @@
   *
   ******************************************************************************
   */
-/* USER CODE END Header */
+
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include <math.h>
 #include "usb_device.h"
 #include "usbd_cdc_if.h"
 
 
 void SystemClock_Config(void);
-static void MX_I2C2_Init(void);
-/* USER CODE BEGIN PFP */
+void I2C_Read(uint8_t address, uint8_t reg, uint8_t nb, uint8_t *data);
 
-/* USER CODE END PFP */
+uint8_t PIN_SCL = 10, PIN_SDA = 11;
 
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
 
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
 int main(void)
 {
   HAL_Init();
@@ -47,13 +39,10 @@ int main(void)
   // low level access to GPIO
   // we init the pin by direct manipulation of registers
   RCC->AHBENR |= RCC_AHBENR_GPIOCEN; 	// enable the clock to GPIOC
-  // (RM0091 lists this as IOPCEN, not GPIOCEN)
   GPIOC->MODER = (5 << 16); // 0x28000;
 
   // middle level access to GPIO (via the peripheral library)
   LL_GPIO_InitTypeDef  GPIO_InitStructure;
-
-  //RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOC, ENABLE);  // Enable the GPIO LEDs clock
 
   // by [DocID025474 Rev 1] the red LED is hardwired to PC7
   // by default PC7 is the 7th signal of GPIO bank C
@@ -64,111 +53,127 @@ int main(void)
   GPIO_InitStructure.Speed = LL_GPIO_SPEED_MEDIUM;
   LL_GPIO_Init(GPIOC, &GPIO_InitStructure);
 
-
-
   MX_USB_DEVICE_Init();
 
   uint8_t address = 0x0A;
+  uint8_t data[3];
+  int8_t x,y,z;
   uint32_t number;
   uint8_t* pointer;
+  double Rx, Ry, Rz;
+  int8_t Arx, Ary, Arz;
+
+  char string[100];
 
   RCC->AHBENR |= RCC_AHBENR_GPIOBEN; // enable the clock to GPIOB
-
   RCC->APB1ENR |= RCC_APB1ENR_I2C2EN; // enable the clock to I2C2
 
+  //Setting I2C pins
+  GPIOB->MODER |= (LL_GPIO_MODE_ALTERNATE << PIN_SCL*2) | (LL_GPIO_MODE_ALTERNATE << PIN_SDA*2);
+  GPIOB->AFR[1] |= (LL_GPIO_AF_1 << (PIN_SCL-8)*4) | (LL_GPIO_AF_1 << (PIN_SDA-8)*4);
+  GPIOB->OTYPER |= (LL_GPIO_OUTPUT_OPENDRAIN << PIN_SCL) | (LL_GPIO_OUTPUT_OPENDRAIN << PIN_SDA);
+  GPIOB->OSPEEDR |= (LL_GPIO_SPEED_FREQ_HIGH << PIN_SCL*2) | (LL_GPIO_SPEED_FREQ_HIGH << PIN_SDA*2);
+  GPIOB->PUPDR |= (LL_GPIO_PULL_UP << PIN_SCL*2) | (LL_GPIO_PULL_UP << PIN_SDA*2);
 
-  //MX_I2C2_Init();
-
-  GPIOB->MODER |= (0b10 << 10*2) | (0b10 << 11*2);
-  GPIOB->AFR[1] |= (0b0001 << 2*4) | (0b0001 << 3*4);
-  GPIOB->OTYPER |= (0b1 << 10) | (0b1 << 11);
-  GPIOB->OSPEEDR |= (0b11 << 10*2) | (0b11 << 11*2);
-  GPIOB->PUPDR |= (0b01 << 10*2) | (0b01 << 11*2);
-
+  //Setting I2C timmings
   I2C2->CR1 &= ~I2C_CR1_PE;
   I2C2->TIMINGR = (0x13) | (0xF << 8) | (0x2 << 16) | (0x4 << 20) | (1 << 28);
   I2C2->CR1 |= I2C_CR1_PE;
 
+  //data = malloc(3*sizeof(uint8_t));
+
+  /*I2C_Read(address, (uint8_t)0x4, 3, data);
 
 
-  I2C2->CR2 =  (address << 1) | (0b1 << 16) | I2C_CR2_START;
+  x = (int8_t)data[0] >> 2;
+  y = (int8_t)data[1] >> 2;
+  z = (int8_t)data[2] >> 2;
+
+  sprintf(string, "x = %d\n\n y = %d\n\n z = %d\n\n", x, y, z);*/
+
+
+  while (1){
+    I2C_Read(address, (uint8_t)0x4, 3, data);
+    x = (int8_t)data[0] / 4;
+    y = (int8_t)data[1] / 4;
+    z = (int8_t)data[2] / 4;
+
+    Rx = x / 16.0;
+    Ry = y / 16.0;
+    Rz = z / 16.0;
+    Arx = (int8_t)(atan(Rx/sqrt(pow(Ry,2) + pow(Rz, 2)))*180/M_PI);
+    Ary = (int8_t)(atan(Ry/sqrt(pow(Rx,2) + pow(Rz, 2)))*180/M_PI);
+    Arz = (int8_t)(atan(sqrt(pow(Rx,2) + pow(Ry, 2))/Rz)*180/M_PI);
+
+    sprintf(string, "x = %d\n\r y = %d\n\r z = %d\n\r", Arx, Ary, Arz);
+    CDC_Transmit_FS((uint8_t*)string, strlen(string));
+    HAL_Delay(1000);
+  }
+
+
+
+  /*I2C2->CR2 =  (address << 1) | (0b1 << 16) | I2C_CR2_START;
+   *
+   *  while((I2C2->ISR & I2C_ISR_TXIS) == 0);
+   *
+   *  I2C2->TXDR = (uint8_t)0x0;
+   *
+   *  while(!(I2C2->ISR & I2C_ISR_TC));
+   *
+   *
+   *  I2C2->CR2 = (address << 1) | I2C_CR2_RD_WRN | I2C_CR2_AUTOEND | (0b1 << 16) | I2C_CR2_START;
+   *
+   *  while((I2C2->ISR & I2C_ISR_RXNE) == 0);*/
+
+  //sprintf(pointer, "%d ", (uint8_t)data);
+
+  /*sprintf(pointer, "%d ", I2C2->RXDR);
+   *  while (1){
+   *    CDC_Transmit_FS(pointer, strlen(pointer));
+   *    HAL_Delay(1000);
+}*/
+
+
+  //if(data == 0xDD) GPIOC->ODR ^= (1 << 8);
+
+  //while(!((I2C2->ISR & I2C_ISR_STOPF) == I2C_ISR_STOPF));
+
+  //I2C2->ICR |= I2C_ICR_STOPCF;
+  //I2C2->CR2 = 0x0;
+
+
+
+  //sprintf(pointer, "%d ", (uint16_t)data);
+
+}
+
+void I2C_Write(){
+
+}
+
+void I2C_Read(uint8_t address, uint8_t reg, uint8_t nb, uint8_t *data){
+
+  I2C2->CR2 = (address << 1) | (1 << 16) | I2C_CR2_START;
 
   while((I2C2->ISR & I2C_ISR_TXIS) == 0);
 
-  I2C2->TXDR = (uint8_t)0x0;
+  I2C2->TXDR = reg;
 
-  while(!(I2C2->ISR & I2C_ISR_TC)) GPIOC->ODR ^= (1 << 7);
+  while(!(I2C2->ISR & I2C_ISR_TC));
 
+  I2C2->CR2 = (address << 1) | I2C_CR2_RD_WRN | I2C_CR2_AUTOEND | (nb << 16) | I2C_CR2_START;
 
-  I2C2->CR2 = (address << 1) | I2C_CR2_RD_WRN | I2C_CR2_AUTOEND | (0b1 << 16) | I2C_CR2_START;
-
-  while((I2C2->ISR & I2C_ISR_RXNE) == 0);
-
-
-  /*sprintf(pointer, "%d ", I2C2->RXDR);
-  while (1){
-    CDC_Transmit_FS(pointer, strlen(pointer));
-    HAL_Delay(1000);
-  }*/
-
-  if(I2C2->RXDR == 0xDD) GPIOC->ODR ^= (1 << 8);
+  for(uint8_t i = 0; i < nb; i++){
+    while((I2C2->ISR & I2C_ISR_RXNE) == 0);
+    data[i] = I2C2->RXDR;
+  }
 
   while(!((I2C2->ISR & I2C_ISR_STOPF) == I2C_ISR_STOPF));
 
   I2C2->ICR |= I2C_ICR_STOPCF;
   I2C2->CR2 = 0x0;
-
-
-
-
-
-
-  while (1){
-    CDC_Transmit_FS((uint8_t *)"Hello World\n", 12);
-    HAL_Delay(1000);
-  }
-  /*
-
-
-  number = I2C2->ISR;
-  sprintf(pointer, "%d ", I2C_ISR_TC);
-  while (1){
-    CDC_Transmit_FS(pointer, sizeof(I2C_ISR_TC));
-    HAL_Delay(1000);
 }
 
-
-
-
-
-
-
-
-
-  while(I2C_ISR_TXIS);
-
-  I2C2->TXDR = 0x0;
-
-  while(~I2C_ISR_TC);
-
-  I2C2->ICR |= I2C_ICR_STOPCF;
-  I2C2->CR2 = 0x0;
-
-  I2C2->CR2 |=  (address << 1) | is_read | I2C_CR2_AUTOEND | (1 << 16) | I2C_CR2_START;
-
-  while(I2C_ISR_RXNE);
-
-  if(I2C2->RXDR == 0xDD);
-
-  while(~I2C_ISR_TC);
-
-  I2C2->ICR |= I2C_ICR_STOPCF;
-  I2C2->CR2 = 0x0;
-*/
-
-
-
-}
 
 /**
   * @brief System Clock Configuration
@@ -222,76 +227,7 @@ void SystemClock_Config(void)
   LL_RCC_SetUSBClockSource(LL_RCC_USB_CLKSOURCE_HSI48);
 }
 
-/**
-  * @brief I2C2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_I2C2_Init(void)
-{
 
-  /* USER CODE BEGIN I2C2_Init 0 */
-
-  /* USER CODE END I2C2_Init 0 */
-
-  LL_I2C_InitTypeDef I2C_InitStruct = {0};
-
-  LL_GPIO_InitTypeDef GPIO_InitStruct = {0};
-
-  LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOB);
-  /**I2C2 GPIO Configuration
-  PB10   ------> I2C2_SCL
-  PB11   ------> I2C2_SDA
-  */
-  GPIO_InitStruct.Pin = I2C2_SCL_Pin;
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
-  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
-  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_OPENDRAIN;
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
-  GPIO_InitStruct.Alternate = LL_GPIO_AF_1;
-  LL_GPIO_Init(I2C2_SCL_GPIO_Port, &GPIO_InitStruct);
-
-  GPIO_InitStruct.Pin = I2C2_SDA_Pin;
-  GPIO_InitStruct.Mode = LL_GPIO_MODE_ALTERNATE;
-  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
-  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_OPENDRAIN;
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
-  GPIO_InitStruct.Alternate = LL_GPIO_AF_1;
-  LL_GPIO_Init(I2C2_SDA_GPIO_Port, &GPIO_InitStruct);
-
-  /* Peripheral clock enable */
-  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_I2C2);
-
-  /* USER CODE BEGIN I2C2_Init 1 */
-
-  /* USER CODE END I2C2_Init 1 */
-
-  /** I2C Initialization
-  */
-  LL_I2C_DisableOwnAddress2(I2C2);
-  LL_I2C_DisableGeneralCall(I2C2);
-  LL_I2C_EnableClockStretching(I2C2);
-  I2C_InitStruct.PeripheralMode = LL_I2C_MODE_I2C;
-  I2C_InitStruct.Timing = 0x20303E5D;
-  I2C_InitStruct.AnalogFilter = LL_I2C_ANALOGFILTER_ENABLE;
-  I2C_InitStruct.DigitalFilter = 0;
-  I2C_InitStruct.OwnAddress1 = 0;
-  I2C_InitStruct.TypeAcknowledge = LL_I2C_ACK;
-  I2C_InitStruct.OwnAddrSize = LL_I2C_OWNADDRESS1_7BIT;
-  LL_I2C_Init(I2C2, &I2C_InitStruct);
-  LL_I2C_EnableAutoEndMode(I2C2);
-  LL_I2C_SetOwnAddress2(I2C2, 0, LL_I2C_OWNADDRESS2_NOMASK);
-  /* USER CODE BEGIN I2C2_Init 2 */
-
-  /* USER CODE END I2C2_Init 2 */
-
-}
-
-
-/**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -302,19 +238,21 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
+
 #ifdef USE_FULL_ASSERT
 /**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
   /* User can add his own implementation to report the file name and line number,
-     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+   *     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+

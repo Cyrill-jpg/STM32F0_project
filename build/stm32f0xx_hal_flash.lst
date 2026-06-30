@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccVcJCCG.s 			page 1
+ARM GAS  /tmp/ccC2JgJd.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
   54 002e 0223     		movs	r3, #2
   55 0030 72E0     		b	.L3
   56              	.L2:
-ARM GAS  /tmp/ccVcJCCG.s 			page 2
+ARM GAS  /tmp/ccC2JgJd.s 			page 2
 
 
   57 0032 3B4B     		ldr	r3, .L14
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  111 0098 203A     		subs	r2, r2, #32
  112 009a 002A     		cmp	r2, #0
  113 009c 03DB     		blt	.L9
-ARM GAS  /tmp/ccVcJCCG.s 			page 3
+ARM GAS  /tmp/ccC2JgJd.s 			page 3
 
 
  114 009e 7968     		ldr	r1, [r7, #4]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  168 0108 00E0     		b	.L4
  169              	.L13:
  170 010a C046     		nop
-ARM GAS  /tmp/ccVcJCCG.s 			page 4
+ARM GAS  /tmp/ccC2JgJd.s 			page 4
 
 
  171              	.L4:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  227 0032 0A43     		orrs	r2, r1
  228 0034 1A61     		str	r2, [r3, #16]
  229 0036 194B     		ldr	r3, .L22
-ARM GAS  /tmp/ccVcJCCG.s 			page 5
+ARM GAS  /tmp/ccC2JgJd.s 			page 5
 
 
  230 0038 BA68     		ldr	r2, [r7, #8]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  284 009a C046     		.align	2
  285              	.L22:
  286 009c 00000000 		.word	pFlash
-ARM GAS  /tmp/ccVcJCCG.s 			page 6
+ARM GAS  /tmp/ccC2JgJd.s 			page 6
 
 
  287 00a0 00200240 		.word	1073881088
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  343 0056 5C4B     		ldr	r3, .L37+4
  344 0058 1B78     		ldrb	r3, [r3]
  345 005a DBB2     		uxtb	r3, r3
-ARM GAS  /tmp/ccVcJCCG.s 			page 7
+ARM GAS  /tmp/ccC2JgJd.s 			page 7
 
 
  346 005c 002B     		cmp	r3, #0
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  400 00c8 7B68     		ldr	r3, [r7, #4]
  401 00ca 1800     		movs	r0, r3
  402 00cc FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
-ARM GAS  /tmp/ccVcJCCG.s 			page 8
+ARM GAS  /tmp/ccC2JgJd.s 			page 8
 
 
  403 00d0 60E0     		b	.L27
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  457 013a 1A69     		ldr	r2, [r3, #16]
  458 013c 5B69     		ldr	r3, [r3, #20]
  459 013e 92B2     		uxth	r2, r2
-ARM GAS  /tmp/ccVcJCCG.s 			page 9
+ARM GAS  /tmp/ccC2JgJd.s 			page 9
 
 
  460 0140 7B68     		ldr	r3, [r7, #4]
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  514 01aa 064B     		ldr	r3, .L37
  515 01ac 1A69     		ldr	r2, [r3, #16]
  516 01ae 054B     		ldr	r3, .L37
-ARM GAS  /tmp/ccVcJCCG.s 			page 10
+ARM GAS  /tmp/ccC2JgJd.s 			page 10
 
 
  517 01b0 0649     		ldr	r1, .L37+8
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  576              		.section	.text.HAL_FLASH_Unlock,"ax",%progbits
  577              		.align	1
  578              		.global	HAL_FLASH_Unlock
-ARM GAS  /tmp/ccVcJCCG.s 			page 11
+ARM GAS  /tmp/ccC2JgJd.s 			page 11
 
 
  579              		.syntax unified
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  636 0000 80B5     		push	{r7, lr}
  637 0002 00AF     		add	r7, sp, #0
  638 0004 044B     		ldr	r3, .L48
-ARM GAS  /tmp/ccVcJCCG.s 			page 12
+ARM GAS  /tmp/ccC2JgJd.s 			page 12
 
 
  639 0006 1A69     		ldr	r2, [r3, #16]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  696              		.global	HAL_FLASH_OB_Lock
  697              		.syntax unified
  698              		.code	16
-ARM GAS  /tmp/ccVcJCCG.s 			page 13
+ARM GAS  /tmp/ccC2JgJd.s 			page 13
 
 
  699              		.thumb_func
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  757              		.align	1
  758              		.global	HAL_FLASH_GetError
  759              		.syntax unified
-ARM GAS  /tmp/ccVcJCCG.s 			page 14
+ARM GAS  /tmp/ccC2JgJd.s 			page 14
 
 
  760              		.code	16
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  817 0034 00200240 		.word	1073881088
  819              		.section	.text.FLASH_WaitForLastOperation,"ax",%progbits
  820              		.align	1
-ARM GAS  /tmp/ccVcJCCG.s 			page 15
+ARM GAS  /tmp/ccC2JgJd.s 			page 15
 
 
  821              		.global	FLASH_WaitForLastOperation
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  876 005a 05D0     		beq	.L78
  877 005c 074B     		ldr	r3, .L81
  878 005e DB68     		ldr	r3, [r3, #12]
-ARM GAS  /tmp/ccVcJCCG.s 			page 16
+ARM GAS  /tmp/ccC2JgJd.s 			page 16
 
 
  879 0060 0422     		movs	r2, #4
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  935 0032 042B     		cmp	r3, #4
  936 0034 09D1     		bne	.L85
  937 0036 094B     		ldr	r3, .L86+4
-ARM GAS  /tmp/ccVcJCCG.s 			page 17
+ARM GAS  /tmp/ccC2JgJd.s 			page 17
 
 
  938 0038 DB69     		ldr	r3, [r3, #28]
@@ -985,53 +985,53 @@ ARM GAS  /tmp/ccVcJCCG.s 			page 1
  959 0058 00200240 		.word	1073881088
  960 005c 00000000 		.word	pFlash
  962              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccVcJCCG.s 			page 18
+ARM GAS  /tmp/ccC2JgJd.s 			page 18
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_flash.c
-     /tmp/ccVcJCCG.s:19     .bss.pFlash:00000000 pFlash
-     /tmp/ccVcJCCG.s:16     .bss.pFlash:00000000 $d
-     /tmp/ccVcJCCG.s:22     .text.HAL_FLASH_Program:00000000 $t
-     /tmp/ccVcJCCG.s:28     .text.HAL_FLASH_Program:00000000 HAL_FLASH_Program
-     /tmp/ccVcJCCG.s:826    .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
-     /tmp/ccVcJCCG.s:785    .text.FLASH_Program_HalfWord:00000000 FLASH_Program_HalfWord
-     /tmp/ccVcJCCG.s:187    .text.HAL_FLASH_Program:00000120 $d
-     /tmp/ccVcJCCG.s:192    .text.HAL_FLASH_Program_IT:00000000 $t
-     /tmp/ccVcJCCG.s:198    .text.HAL_FLASH_Program_IT:00000000 HAL_FLASH_Program_IT
-     /tmp/ccVcJCCG.s:286    .text.HAL_FLASH_Program_IT:0000009c $d
-     /tmp/ccVcJCCG.s:290    .text.HAL_FLASH_IRQHandler:00000000 $t
-     /tmp/ccVcJCCG.s:296    .text.HAL_FLASH_IRQHandler:00000000 HAL_FLASH_IRQHandler
-     /tmp/ccVcJCCG.s:906    .text.FLASH_SetErrorCode:00000000 FLASH_SetErrorCode
-     /tmp/ccVcJCCG.s:563    .text.HAL_FLASH_OperationErrorCallback:00000000 HAL_FLASH_OperationErrorCallback
-     /tmp/ccVcJCCG.s:543    .text.HAL_FLASH_EndOfOperationCallback:00000000 HAL_FLASH_EndOfOperationCallback
-     /tmp/ccVcJCCG.s:532    .text.HAL_FLASH_IRQHandler:000001c4 $d
-     /tmp/ccVcJCCG.s:537    .text.HAL_FLASH_EndOfOperationCallback:00000000 $t
-     /tmp/ccVcJCCG.s:557    .text.HAL_FLASH_OperationErrorCallback:00000000 $t
-     /tmp/ccVcJCCG.s:577    .text.HAL_FLASH_Unlock:00000000 $t
-     /tmp/ccVcJCCG.s:583    .text.HAL_FLASH_Unlock:00000000 HAL_FLASH_Unlock
-     /tmp/ccVcJCCG.s:622    .text.HAL_FLASH_Unlock:00000040 $d
-     /tmp/ccVcJCCG.s:627    .text.HAL_FLASH_Lock:00000000 $t
-     /tmp/ccVcJCCG.s:633    .text.HAL_FLASH_Lock:00000000 HAL_FLASH_Lock
-     /tmp/ccVcJCCG.s:652    .text.HAL_FLASH_Lock:00000018 $d
-     /tmp/ccVcJCCG.s:655    .text.HAL_FLASH_OB_Unlock:00000000 $t
-     /tmp/ccVcJCCG.s:661    .text.HAL_FLASH_OB_Unlock:00000000 HAL_FLASH_OB_Unlock
-     /tmp/ccVcJCCG.s:690    .text.HAL_FLASH_OB_Unlock:00000028 $d
-     /tmp/ccVcJCCG.s:695    .text.HAL_FLASH_OB_Lock:00000000 $t
-     /tmp/ccVcJCCG.s:701    .text.HAL_FLASH_OB_Lock:00000000 HAL_FLASH_OB_Lock
-     /tmp/ccVcJCCG.s:720    .text.HAL_FLASH_OB_Lock:00000018 $d
-     /tmp/ccVcJCCG.s:724    .text.HAL_FLASH_OB_Launch:00000000 $t
-     /tmp/ccVcJCCG.s:730    .text.HAL_FLASH_OB_Launch:00000000 HAL_FLASH_OB_Launch
-     /tmp/ccVcJCCG.s:753    .text.HAL_FLASH_OB_Launch:00000024 $d
-     /tmp/ccVcJCCG.s:757    .text.HAL_FLASH_GetError:00000000 $t
-     /tmp/ccVcJCCG.s:763    .text.HAL_FLASH_GetError:00000000 HAL_FLASH_GetError
-     /tmp/ccVcJCCG.s:777    .text.HAL_FLASH_GetError:00000010 $d
-     /tmp/ccVcJCCG.s:780    .text.FLASH_Program_HalfWord:00000000 $t
-     /tmp/ccVcJCCG.s:816    .text.FLASH_Program_HalfWord:00000030 $d
-     /tmp/ccVcJCCG.s:820    .text.FLASH_WaitForLastOperation:00000000 $t
-     /tmp/ccVcJCCG.s:898    .text.FLASH_WaitForLastOperation:0000007c $d
-     /tmp/ccVcJCCG.s:901    .text.FLASH_SetErrorCode:00000000 $t
-     /tmp/ccVcJCCG.s:959    .text.FLASH_SetErrorCode:00000058 $d
+     /tmp/ccC2JgJd.s:19     .bss.pFlash:00000000 pFlash
+     /tmp/ccC2JgJd.s:16     .bss.pFlash:00000000 $d
+     /tmp/ccC2JgJd.s:22     .text.HAL_FLASH_Program:00000000 $t
+     /tmp/ccC2JgJd.s:28     .text.HAL_FLASH_Program:00000000 HAL_FLASH_Program
+     /tmp/ccC2JgJd.s:826    .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
+     /tmp/ccC2JgJd.s:785    .text.FLASH_Program_HalfWord:00000000 FLASH_Program_HalfWord
+     /tmp/ccC2JgJd.s:187    .text.HAL_FLASH_Program:00000120 $d
+     /tmp/ccC2JgJd.s:192    .text.HAL_FLASH_Program_IT:00000000 $t
+     /tmp/ccC2JgJd.s:198    .text.HAL_FLASH_Program_IT:00000000 HAL_FLASH_Program_IT
+     /tmp/ccC2JgJd.s:286    .text.HAL_FLASH_Program_IT:0000009c $d
+     /tmp/ccC2JgJd.s:290    .text.HAL_FLASH_IRQHandler:00000000 $t
+     /tmp/ccC2JgJd.s:296    .text.HAL_FLASH_IRQHandler:00000000 HAL_FLASH_IRQHandler
+     /tmp/ccC2JgJd.s:906    .text.FLASH_SetErrorCode:00000000 FLASH_SetErrorCode
+     /tmp/ccC2JgJd.s:563    .text.HAL_FLASH_OperationErrorCallback:00000000 HAL_FLASH_OperationErrorCallback
+     /tmp/ccC2JgJd.s:543    .text.HAL_FLASH_EndOfOperationCallback:00000000 HAL_FLASH_EndOfOperationCallback
+     /tmp/ccC2JgJd.s:532    .text.HAL_FLASH_IRQHandler:000001c4 $d
+     /tmp/ccC2JgJd.s:537    .text.HAL_FLASH_EndOfOperationCallback:00000000 $t
+     /tmp/ccC2JgJd.s:557    .text.HAL_FLASH_OperationErrorCallback:00000000 $t
+     /tmp/ccC2JgJd.s:577    .text.HAL_FLASH_Unlock:00000000 $t
+     /tmp/ccC2JgJd.s:583    .text.HAL_FLASH_Unlock:00000000 HAL_FLASH_Unlock
+     /tmp/ccC2JgJd.s:622    .text.HAL_FLASH_Unlock:00000040 $d
+     /tmp/ccC2JgJd.s:627    .text.HAL_FLASH_Lock:00000000 $t
+     /tmp/ccC2JgJd.s:633    .text.HAL_FLASH_Lock:00000000 HAL_FLASH_Lock
+     /tmp/ccC2JgJd.s:652    .text.HAL_FLASH_Lock:00000018 $d
+     /tmp/ccC2JgJd.s:655    .text.HAL_FLASH_OB_Unlock:00000000 $t
+     /tmp/ccC2JgJd.s:661    .text.HAL_FLASH_OB_Unlock:00000000 HAL_FLASH_OB_Unlock
+     /tmp/ccC2JgJd.s:690    .text.HAL_FLASH_OB_Unlock:00000028 $d
+     /tmp/ccC2JgJd.s:695    .text.HAL_FLASH_OB_Lock:00000000 $t
+     /tmp/ccC2JgJd.s:701    .text.HAL_FLASH_OB_Lock:00000000 HAL_FLASH_OB_Lock
+     /tmp/ccC2JgJd.s:720    .text.HAL_FLASH_OB_Lock:00000018 $d
+     /tmp/ccC2JgJd.s:724    .text.HAL_FLASH_OB_Launch:00000000 $t
+     /tmp/ccC2JgJd.s:730    .text.HAL_FLASH_OB_Launch:00000000 HAL_FLASH_OB_Launch
+     /tmp/ccC2JgJd.s:753    .text.HAL_FLASH_OB_Launch:00000024 $d
+     /tmp/ccC2JgJd.s:757    .text.HAL_FLASH_GetError:00000000 $t
+     /tmp/ccC2JgJd.s:763    .text.HAL_FLASH_GetError:00000000 HAL_FLASH_GetError
+     /tmp/ccC2JgJd.s:777    .text.HAL_FLASH_GetError:00000010 $d
+     /tmp/ccC2JgJd.s:780    .text.FLASH_Program_HalfWord:00000000 $t
+     /tmp/ccC2JgJd.s:816    .text.FLASH_Program_HalfWord:00000030 $d
+     /tmp/ccC2JgJd.s:820    .text.FLASH_WaitForLastOperation:00000000 $t
+     /tmp/ccC2JgJd.s:898    .text.FLASH_WaitForLastOperation:0000007c $d
+     /tmp/ccC2JgJd.s:901    .text.FLASH_SetErrorCode:00000000 $t
+     /tmp/ccC2JgJd.s:959    .text.FLASH_SetErrorCode:00000058 $d
 
 UNDEFINED SYMBOLS
 FLASH_PageErase

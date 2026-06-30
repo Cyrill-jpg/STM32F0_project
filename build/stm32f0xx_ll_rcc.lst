@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccrGitZn.s 			page 1
+ARM GAS  /tmp/cco2JoLR.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
   58 0010 C046     		nop
   59 0012 BD46     		mov	sp, r7
   60              		@ sp needed
-ARM GAS  /tmp/ccrGitZn.s 			page 2
+ARM GAS  /tmp/cco2JoLR.s 			page 2
 
 
   61 0014 80BD     		pop	{r7, pc}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  119 0020 02B0     		add	sp, sp, #8
  120              		@ sp needed
  121 0022 80BD     		pop	{r7, pc}
-ARM GAS  /tmp/ccrGitZn.s 			page 3
+ARM GAS  /tmp/cco2JoLR.s 			page 3
 
 
  122              	.L13:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  180 001c 00100240 		.word	1073876992
  182              		.section	.text.LL_RCC_HSI14_Disable,"ax",%progbits
  183              		.align	1
-ARM GAS  /tmp/ccrGitZn.s 			page 4
+ARM GAS  /tmp/cco2JoLR.s 			page 4
 
 
  184              		.syntax unified
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  243 0000 80B5     		push	{r7, lr}
  244 0002 82B0     		sub	sp, sp, #8
  245 0004 00AF     		add	r7, sp, #0
-ARM GAS  /tmp/ccrGitZn.s 			page 5
+ARM GAS  /tmp/cco2JoLR.s 			page 5
 
 
  246 0006 7860     		str	r0, [r7, #4]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  304 0002 00AF     		add	r7, sp, #0
  305 0004 034B     		ldr	r3, .L36
  306 0006 5B68     		ldr	r3, [r3, #4]
-ARM GAS  /tmp/ccrGitZn.s 			page 6
+ARM GAS  /tmp/cco2JoLR.s 			page 6
 
 
  307 0008 0C22     		movs	r2, #12
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  365 0014 00100240 		.word	1073876992
  367              		.section	.text.LL_RCC_GetUSARTClockSource,"ax",%progbits
  368              		.align	1
-ARM GAS  /tmp/ccrGitZn.s 			page 7
+ARM GAS  /tmp/cco2JoLR.s 			page 7
 
 
  369              		.syntax unified
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  427              		.section	.text.LL_RCC_GetCECClockSource,"ax",%progbits
  428              		.align	1
  429              		.syntax unified
-ARM GAS  /tmp/ccrGitZn.s 			page 8
+ARM GAS  /tmp/cco2JoLR.s 			page 8
 
 
  430              		.code	16
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  489              		@ frame_needed = 1, uses_anonymous_args = 0
  490 0000 80B5     		push	{r7, lr}
  491 0002 00AF     		add	r7, sp, #0
-ARM GAS  /tmp/ccrGitZn.s 			page 9
+ARM GAS  /tmp/cco2JoLR.s 			page 9
 
 
  492 0004 054B     		ldr	r3, .L64
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  550 000e 1800     		movs	r0, r3
  551 0010 BD46     		mov	sp, r7
  552              		@ sp needed
-ARM GAS  /tmp/ccrGitZn.s 			page 10
+ARM GAS  /tmp/cco2JoLR.s 			page 10
 
 
  553 0012 80BD     		pop	{r7, pc}
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  612              		.global	LL_RCC_DeInit
  613              		.syntax unified
  614              		.code	16
-ARM GAS  /tmp/ccrGitZn.s 			page 11
+ARM GAS  /tmp/cco2JoLR.s 			page 11
 
 
  615              		.thumb_func
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  670 006c 1020     		movs	r0, #16
  671 006e FFF7FEFF 		bl	LL_RCC_HSI14_SetCalibTrimming
  672 0072 FFF7FEFF 		bl	LL_RCC_HSI14_Disable
-ARM GAS  /tmp/ccrGitZn.s 			page 12
+ARM GAS  /tmp/cco2JoLR.s 			page 12
 
 
  673 0076 FFF7FEFF 		bl	LL_RCC_HSI14_EnableADCControl
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  729 0024 5B68     		ldr	r3, [r3, #4]
  730 0026 1800     		movs	r0, r3
  731 0028 FFF7FEFF 		bl	RCC_GetPCLK1ClockFreq
-ARM GAS  /tmp/ccrGitZn.s 			page 13
+ARM GAS  /tmp/cco2JoLR.s 			page 13
 
 
  732 002c 0200     		movs	r2, r0
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  788 004c 8023     		movs	r3, #128
  789 004e 1B02     		lsls	r3, r3, #8
  790 0050 FB60     		str	r3, [r7, #12]
-ARM GAS  /tmp/ccrGitZn.s 			page 14
+ARM GAS  /tmp/cco2JoLR.s 			page 14
 
 
  791 0052 0EE0     		b	.L106
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  845 00be 8023     		movs	r3, #128
  846 00c0 1B02     		lsls	r3, r3, #8
  847 00c2 FB60     		str	r3, [r7, #12]
-ARM GAS  /tmp/ccrGitZn.s 			page 15
+ARM GAS  /tmp/cco2JoLR.s 			page 15
 
 
  848 00c4 0EE0     		b	.L108
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  904 001e 04D1     		bne	.L113
  905 0020 FFF7FEFF 		bl	RCC_GetSystemClockFreq
  906 0024 0300     		movs	r3, r0
-ARM GAS  /tmp/ccrGitZn.s 			page 16
+ARM GAS  /tmp/cco2JoLR.s 			page 16
 
 
  907 0026 FB60     		str	r3, [r7, #12]
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  963 0036 FB60     		str	r3, [r7, #12]
  964 0038 01E0     		b	.L126
  965              	.L125:
-ARM GAS  /tmp/ccrGitZn.s 			page 17
+ARM GAS  /tmp/cco2JoLR.s 			page 17
 
 
  966 003a C046     		nop
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  1022              	.L132:
  1023 003c FB68     		ldr	r3, [r7, #12]
  1024 003e 1800     		movs	r0, r3
-ARM GAS  /tmp/ccrGitZn.s 			page 18
+ARM GAS  /tmp/cco2JoLR.s 			page 18
 
 
  1025 0040 BD46     		mov	sp, r7
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  1081 0044 7B60     		str	r3, [r7, #4]
  1082 0046 C046     		nop
  1083              	.L145:
-ARM GAS  /tmp/ccrGitZn.s 			page 19
+ARM GAS  /tmp/cco2JoLR.s 			page 19
 
 
  1084 0048 7B68     		ldr	r3, [r7, #4]
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  1142 0004 00AF     		add	r7, sp, #0
  1143 0006 7860     		str	r0, [r7, #4]
  1144 0008 FFF7FEFF 		bl	LL_RCC_GetAPB1Prescaler
-ARM GAS  /tmp/ccrGitZn.s 			page 20
+ARM GAS  /tmp/cco2JoLR.s 			page 20
 
 
  1145 000c 0300     		movs	r3, r0
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  1201 003c 06D0     		beq	.L161
  1202 003e 08E0     		b	.L159
  1203              	.L160:
-ARM GAS  /tmp/ccrGitZn.s 			page 21
+ARM GAS  /tmp/cco2JoLR.s 			page 21
 
 
  1204 0040 114B     		ldr	r3, .L164
@@ -1246,109 +1246,109 @@ ARM GAS  /tmp/ccrGitZn.s 			page 1
  1246 008c 006CDC02 		.word	48000000
  1248              		.global	__aeabi_uidiv
  1249              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccrGitZn.s 			page 22
+ARM GAS  /tmp/cco2JoLR.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_ll_rcc.c
-     /tmp/ccrGitZn.s:15     .text.LL_RCC_HSE_DisableBypass:00000000 $t
-     /tmp/ccrGitZn.s:20     .text.LL_RCC_HSE_DisableBypass:00000000 LL_RCC_HSE_DisableBypass
-     /tmp/ccrGitZn.s:38     .text.LL_RCC_HSE_DisableBypass:00000018 $d
-     /tmp/ccrGitZn.s:42     .text.LL_RCC_HSI_Enable:00000000 $t
-     /tmp/ccrGitZn.s:47     .text.LL_RCC_HSI_Enable:00000000 LL_RCC_HSI_Enable
-     /tmp/ccrGitZn.s:65     .text.LL_RCC_HSI_Enable:00000018 $d
-     /tmp/ccrGitZn.s:68     .text.LL_RCC_HSI_IsReady:00000000 $t
-     /tmp/ccrGitZn.s:73     .text.LL_RCC_HSI_IsReady:00000000 LL_RCC_HSI_IsReady
-     /tmp/ccrGitZn.s:92     .text.LL_RCC_HSI_IsReady:00000018 $d
-     /tmp/ccrGitZn.s:95     .text.LL_RCC_HSI_SetCalibTrimming:00000000 $t
-     /tmp/ccrGitZn.s:100    .text.LL_RCC_HSI_SetCalibTrimming:00000000 LL_RCC_HSI_SetCalibTrimming
-     /tmp/ccrGitZn.s:125    .text.LL_RCC_HSI_SetCalibTrimming:00000024 $d
-     /tmp/ccrGitZn.s:128    .text.LL_RCC_HSI48_Disable:00000000 $t
-     /tmp/ccrGitZn.s:133    .text.LL_RCC_HSI48_Disable:00000000 LL_RCC_HSI48_Disable
-     /tmp/ccrGitZn.s:151    .text.LL_RCC_HSI48_Disable:00000018 $d
-     /tmp/ccrGitZn.s:155    .text.LL_RCC_HSI48_IsReady:00000000 $t
-     /tmp/ccrGitZn.s:160    .text.LL_RCC_HSI48_IsReady:00000000 LL_RCC_HSI48_IsReady
-     /tmp/ccrGitZn.s:180    .text.LL_RCC_HSI48_IsReady:0000001c $d
-     /tmp/ccrGitZn.s:183    .text.LL_RCC_HSI14_Disable:00000000 $t
-     /tmp/ccrGitZn.s:188    .text.LL_RCC_HSI14_Disable:00000000 LL_RCC_HSI14_Disable
-     /tmp/ccrGitZn.s:206    .text.LL_RCC_HSI14_Disable:00000018 $d
-     /tmp/ccrGitZn.s:209    .text.LL_RCC_HSI14_EnableADCControl:00000000 $t
-     /tmp/ccrGitZn.s:214    .text.LL_RCC_HSI14_EnableADCControl:00000000 LL_RCC_HSI14_EnableADCControl
-     /tmp/ccrGitZn.s:232    .text.LL_RCC_HSI14_EnableADCControl:00000018 $d
-     /tmp/ccrGitZn.s:235    .text.LL_RCC_HSI14_SetCalibTrimming:00000000 $t
-     /tmp/ccrGitZn.s:240    .text.LL_RCC_HSI14_SetCalibTrimming:00000000 LL_RCC_HSI14_SetCalibTrimming
-     /tmp/ccrGitZn.s:265    .text.LL_RCC_HSI14_SetCalibTrimming:00000024 $d
-     /tmp/ccrGitZn.s:268    .text.LL_RCC_LSE_IsReady:00000000 $t
-     /tmp/ccrGitZn.s:273    .text.LL_RCC_LSE_IsReady:00000000 LL_RCC_LSE_IsReady
-     /tmp/ccrGitZn.s:292    .text.LL_RCC_LSE_IsReady:00000018 $d
-     /tmp/ccrGitZn.s:295    .text.LL_RCC_GetSysClkSource:00000000 $t
-     /tmp/ccrGitZn.s:300    .text.LL_RCC_GetSysClkSource:00000000 LL_RCC_GetSysClkSource
-     /tmp/ccrGitZn.s:316    .text.LL_RCC_GetSysClkSource:00000014 $d
-     /tmp/ccrGitZn.s:319    .text.LL_RCC_GetAHBPrescaler:00000000 $t
-     /tmp/ccrGitZn.s:324    .text.LL_RCC_GetAHBPrescaler:00000000 LL_RCC_GetAHBPrescaler
-     /tmp/ccrGitZn.s:340    .text.LL_RCC_GetAHBPrescaler:00000014 $d
-     /tmp/ccrGitZn.s:343    .text.LL_RCC_GetAPB1Prescaler:00000000 $t
-     /tmp/ccrGitZn.s:348    .text.LL_RCC_GetAPB1Prescaler:00000000 LL_RCC_GetAPB1Prescaler
-     /tmp/ccrGitZn.s:365    .text.LL_RCC_GetAPB1Prescaler:00000014 $d
-     /tmp/ccrGitZn.s:368    .text.LL_RCC_GetUSARTClockSource:00000000 $t
-     /tmp/ccrGitZn.s:373    .text.LL_RCC_GetUSARTClockSource:00000000 LL_RCC_GetUSARTClockSource
-     /tmp/ccrGitZn.s:398    .text.LL_RCC_GetUSARTClockSource:00000024 $d
-     /tmp/ccrGitZn.s:401    .text.LL_RCC_GetI2CClockSource:00000000 $t
-     /tmp/ccrGitZn.s:406    .text.LL_RCC_GetI2CClockSource:00000000 LL_RCC_GetI2CClockSource
-     /tmp/ccrGitZn.s:425    .text.LL_RCC_GetI2CClockSource:00000018 $d
-     /tmp/ccrGitZn.s:428    .text.LL_RCC_GetCECClockSource:00000000 $t
-     /tmp/ccrGitZn.s:433    .text.LL_RCC_GetCECClockSource:00000000 LL_RCC_GetCECClockSource
-     /tmp/ccrGitZn.s:452    .text.LL_RCC_GetCECClockSource:00000018 $d
-     /tmp/ccrGitZn.s:455    .text.LL_RCC_GetUSBClockSource:00000000 $t
-     /tmp/ccrGitZn.s:460    .text.LL_RCC_GetUSBClockSource:00000000 LL_RCC_GetUSBClockSource
-     /tmp/ccrGitZn.s:479    .text.LL_RCC_GetUSBClockSource:00000018 $d
-     /tmp/ccrGitZn.s:482    .text.LL_RCC_PLL_IsReady:00000000 $t
-     /tmp/ccrGitZn.s:487    .text.LL_RCC_PLL_IsReady:00000000 LL_RCC_PLL_IsReady
-     /tmp/ccrGitZn.s:507    .text.LL_RCC_PLL_IsReady:0000001c $d
-     /tmp/ccrGitZn.s:510    .text.LL_RCC_PLL_GetMainSource:00000000 $t
-ARM GAS  /tmp/ccrGitZn.s 			page 23
+     /tmp/cco2JoLR.s:15     .text.LL_RCC_HSE_DisableBypass:00000000 $t
+     /tmp/cco2JoLR.s:20     .text.LL_RCC_HSE_DisableBypass:00000000 LL_RCC_HSE_DisableBypass
+     /tmp/cco2JoLR.s:38     .text.LL_RCC_HSE_DisableBypass:00000018 $d
+     /tmp/cco2JoLR.s:42     .text.LL_RCC_HSI_Enable:00000000 $t
+     /tmp/cco2JoLR.s:47     .text.LL_RCC_HSI_Enable:00000000 LL_RCC_HSI_Enable
+     /tmp/cco2JoLR.s:65     .text.LL_RCC_HSI_Enable:00000018 $d
+     /tmp/cco2JoLR.s:68     .text.LL_RCC_HSI_IsReady:00000000 $t
+     /tmp/cco2JoLR.s:73     .text.LL_RCC_HSI_IsReady:00000000 LL_RCC_HSI_IsReady
+     /tmp/cco2JoLR.s:92     .text.LL_RCC_HSI_IsReady:00000018 $d
+     /tmp/cco2JoLR.s:95     .text.LL_RCC_HSI_SetCalibTrimming:00000000 $t
+     /tmp/cco2JoLR.s:100    .text.LL_RCC_HSI_SetCalibTrimming:00000000 LL_RCC_HSI_SetCalibTrimming
+     /tmp/cco2JoLR.s:125    .text.LL_RCC_HSI_SetCalibTrimming:00000024 $d
+     /tmp/cco2JoLR.s:128    .text.LL_RCC_HSI48_Disable:00000000 $t
+     /tmp/cco2JoLR.s:133    .text.LL_RCC_HSI48_Disable:00000000 LL_RCC_HSI48_Disable
+     /tmp/cco2JoLR.s:151    .text.LL_RCC_HSI48_Disable:00000018 $d
+     /tmp/cco2JoLR.s:155    .text.LL_RCC_HSI48_IsReady:00000000 $t
+     /tmp/cco2JoLR.s:160    .text.LL_RCC_HSI48_IsReady:00000000 LL_RCC_HSI48_IsReady
+     /tmp/cco2JoLR.s:180    .text.LL_RCC_HSI48_IsReady:0000001c $d
+     /tmp/cco2JoLR.s:183    .text.LL_RCC_HSI14_Disable:00000000 $t
+     /tmp/cco2JoLR.s:188    .text.LL_RCC_HSI14_Disable:00000000 LL_RCC_HSI14_Disable
+     /tmp/cco2JoLR.s:206    .text.LL_RCC_HSI14_Disable:00000018 $d
+     /tmp/cco2JoLR.s:209    .text.LL_RCC_HSI14_EnableADCControl:00000000 $t
+     /tmp/cco2JoLR.s:214    .text.LL_RCC_HSI14_EnableADCControl:00000000 LL_RCC_HSI14_EnableADCControl
+     /tmp/cco2JoLR.s:232    .text.LL_RCC_HSI14_EnableADCControl:00000018 $d
+     /tmp/cco2JoLR.s:235    .text.LL_RCC_HSI14_SetCalibTrimming:00000000 $t
+     /tmp/cco2JoLR.s:240    .text.LL_RCC_HSI14_SetCalibTrimming:00000000 LL_RCC_HSI14_SetCalibTrimming
+     /tmp/cco2JoLR.s:265    .text.LL_RCC_HSI14_SetCalibTrimming:00000024 $d
+     /tmp/cco2JoLR.s:268    .text.LL_RCC_LSE_IsReady:00000000 $t
+     /tmp/cco2JoLR.s:273    .text.LL_RCC_LSE_IsReady:00000000 LL_RCC_LSE_IsReady
+     /tmp/cco2JoLR.s:292    .text.LL_RCC_LSE_IsReady:00000018 $d
+     /tmp/cco2JoLR.s:295    .text.LL_RCC_GetSysClkSource:00000000 $t
+     /tmp/cco2JoLR.s:300    .text.LL_RCC_GetSysClkSource:00000000 LL_RCC_GetSysClkSource
+     /tmp/cco2JoLR.s:316    .text.LL_RCC_GetSysClkSource:00000014 $d
+     /tmp/cco2JoLR.s:319    .text.LL_RCC_GetAHBPrescaler:00000000 $t
+     /tmp/cco2JoLR.s:324    .text.LL_RCC_GetAHBPrescaler:00000000 LL_RCC_GetAHBPrescaler
+     /tmp/cco2JoLR.s:340    .text.LL_RCC_GetAHBPrescaler:00000014 $d
+     /tmp/cco2JoLR.s:343    .text.LL_RCC_GetAPB1Prescaler:00000000 $t
+     /tmp/cco2JoLR.s:348    .text.LL_RCC_GetAPB1Prescaler:00000000 LL_RCC_GetAPB1Prescaler
+     /tmp/cco2JoLR.s:365    .text.LL_RCC_GetAPB1Prescaler:00000014 $d
+     /tmp/cco2JoLR.s:368    .text.LL_RCC_GetUSARTClockSource:00000000 $t
+     /tmp/cco2JoLR.s:373    .text.LL_RCC_GetUSARTClockSource:00000000 LL_RCC_GetUSARTClockSource
+     /tmp/cco2JoLR.s:398    .text.LL_RCC_GetUSARTClockSource:00000024 $d
+     /tmp/cco2JoLR.s:401    .text.LL_RCC_GetI2CClockSource:00000000 $t
+     /tmp/cco2JoLR.s:406    .text.LL_RCC_GetI2CClockSource:00000000 LL_RCC_GetI2CClockSource
+     /tmp/cco2JoLR.s:425    .text.LL_RCC_GetI2CClockSource:00000018 $d
+     /tmp/cco2JoLR.s:428    .text.LL_RCC_GetCECClockSource:00000000 $t
+     /tmp/cco2JoLR.s:433    .text.LL_RCC_GetCECClockSource:00000000 LL_RCC_GetCECClockSource
+     /tmp/cco2JoLR.s:452    .text.LL_RCC_GetCECClockSource:00000018 $d
+     /tmp/cco2JoLR.s:455    .text.LL_RCC_GetUSBClockSource:00000000 $t
+     /tmp/cco2JoLR.s:460    .text.LL_RCC_GetUSBClockSource:00000000 LL_RCC_GetUSBClockSource
+     /tmp/cco2JoLR.s:479    .text.LL_RCC_GetUSBClockSource:00000018 $d
+     /tmp/cco2JoLR.s:482    .text.LL_RCC_PLL_IsReady:00000000 $t
+     /tmp/cco2JoLR.s:487    .text.LL_RCC_PLL_IsReady:00000000 LL_RCC_PLL_IsReady
+     /tmp/cco2JoLR.s:507    .text.LL_RCC_PLL_IsReady:0000001c $d
+     /tmp/cco2JoLR.s:510    .text.LL_RCC_PLL_GetMainSource:00000000 $t
+ARM GAS  /tmp/cco2JoLR.s 			page 23
 
 
-     /tmp/ccrGitZn.s:515    .text.LL_RCC_PLL_GetMainSource:00000000 LL_RCC_PLL_GetMainSource
-     /tmp/ccrGitZn.s:532    .text.LL_RCC_PLL_GetMainSource:00000014 $d
-     /tmp/ccrGitZn.s:535    .text.LL_RCC_PLL_GetMultiplicator:00000000 $t
-     /tmp/ccrGitZn.s:540    .text.LL_RCC_PLL_GetMultiplicator:00000000 LL_RCC_PLL_GetMultiplicator
-     /tmp/ccrGitZn.s:557    .text.LL_RCC_PLL_GetMultiplicator:00000014 $d
-     /tmp/ccrGitZn.s:560    .text.LL_RCC_PLL_GetPrediv:00000000 $t
-     /tmp/ccrGitZn.s:565    .text.LL_RCC_PLL_GetPrediv:00000000 LL_RCC_PLL_GetPrediv
-     /tmp/ccrGitZn.s:581    .text.LL_RCC_PLL_GetPrediv:00000014 $d
-     /tmp/ccrGitZn.s:584    .text.LL_RCC_ClearResetFlags:00000000 $t
-     /tmp/ccrGitZn.s:589    .text.LL_RCC_ClearResetFlags:00000000 LL_RCC_ClearResetFlags
-     /tmp/ccrGitZn.s:608    .text.LL_RCC_ClearResetFlags:00000018 $d
-     /tmp/ccrGitZn.s:611    .text.LL_RCC_DeInit:00000000 $t
-     /tmp/ccrGitZn.s:617    .text.LL_RCC_DeInit:00000000 LL_RCC_DeInit
-     /tmp/ccrGitZn.s:699    .text.LL_RCC_DeInit:000000a8 $d
-     /tmp/ccrGitZn.s:704    .text.LL_RCC_GetSystemClocksFreq:00000000 $t
-     /tmp/ccrGitZn.s:710    .text.LL_RCC_GetSystemClocksFreq:00000000 LL_RCC_GetSystemClocksFreq
-     /tmp/ccrGitZn.s:1041   .text.RCC_GetSystemClockFreq:00000000 RCC_GetSystemClockFreq
-     /tmp/ccrGitZn.s:1103   .text.RCC_GetHCLKClockFreq:00000000 RCC_GetHCLKClockFreq
-     /tmp/ccrGitZn.s:1137   .text.RCC_GetPCLK1ClockFreq:00000000 RCC_GetPCLK1ClockFreq
-     /tmp/ccrGitZn.s:742    .text.LL_RCC_GetUSARTClockFreq:00000000 $t
-     /tmp/ccrGitZn.s:748    .text.LL_RCC_GetUSARTClockFreq:00000000 LL_RCC_GetUSARTClockFreq
-     /tmp/ccrGitZn.s:875    .text.LL_RCC_GetUSARTClockFreq:000000f0 $d
-     /tmp/ccrGitZn.s:881    .text.LL_RCC_GetI2CClockFreq:00000000 $t
-     /tmp/ccrGitZn.s:887    .text.LL_RCC_GetI2CClockFreq:00000000 LL_RCC_GetI2CClockFreq
-     /tmp/ccrGitZn.s:927    .text.LL_RCC_GetI2CClockFreq:00000044 $d
-     /tmp/ccrGitZn.s:930    .text.LL_RCC_GetUSBClockFreq:00000000 $t
-     /tmp/ccrGitZn.s:936    .text.LL_RCC_GetUSBClockFreq:00000000 LL_RCC_GetUSBClockFreq
-     /tmp/ccrGitZn.s:1169   .text.RCC_PLL_GetFreqDomain_SYS:00000000 RCC_PLL_GetFreqDomain_SYS
-     /tmp/ccrGitZn.s:980    .text.LL_RCC_GetUSBClockFreq:0000004c $d
-     /tmp/ccrGitZn.s:983    .text.LL_RCC_GetCECClockFreq:00000000 $t
-     /tmp/ccrGitZn.s:989    .text.LL_RCC_GetCECClockFreq:00000000 LL_RCC_GetCECClockFreq
-     /tmp/ccrGitZn.s:1032   .text.LL_RCC_GetCECClockFreq:00000048 $d
-     /tmp/ccrGitZn.s:1035   .text.RCC_GetSystemClockFreq:00000000 $t
-     /tmp/ccrGitZn.s:1093   .text.RCC_GetSystemClockFreq:00000054 $d
-     /tmp/ccrGitZn.s:1097   .text.RCC_GetHCLKClockFreq:00000000 $t
-     /tmp/ccrGitZn.s:1128   .text.RCC_GetHCLKClockFreq:00000028 $d
-     /tmp/ccrGitZn.s:1131   .text.RCC_GetPCLK1ClockFreq:00000000 $t
-     /tmp/ccrGitZn.s:1160   .text.RCC_GetPCLK1ClockFreq:00000024 $d
-     /tmp/ccrGitZn.s:1163   .text.RCC_PLL_GetFreqDomain_SYS:00000000 $t
-     /tmp/ccrGitZn.s:1245   .text.RCC_PLL_GetFreqDomain_SYS:00000088 $d
+     /tmp/cco2JoLR.s:515    .text.LL_RCC_PLL_GetMainSource:00000000 LL_RCC_PLL_GetMainSource
+     /tmp/cco2JoLR.s:532    .text.LL_RCC_PLL_GetMainSource:00000014 $d
+     /tmp/cco2JoLR.s:535    .text.LL_RCC_PLL_GetMultiplicator:00000000 $t
+     /tmp/cco2JoLR.s:540    .text.LL_RCC_PLL_GetMultiplicator:00000000 LL_RCC_PLL_GetMultiplicator
+     /tmp/cco2JoLR.s:557    .text.LL_RCC_PLL_GetMultiplicator:00000014 $d
+     /tmp/cco2JoLR.s:560    .text.LL_RCC_PLL_GetPrediv:00000000 $t
+     /tmp/cco2JoLR.s:565    .text.LL_RCC_PLL_GetPrediv:00000000 LL_RCC_PLL_GetPrediv
+     /tmp/cco2JoLR.s:581    .text.LL_RCC_PLL_GetPrediv:00000014 $d
+     /tmp/cco2JoLR.s:584    .text.LL_RCC_ClearResetFlags:00000000 $t
+     /tmp/cco2JoLR.s:589    .text.LL_RCC_ClearResetFlags:00000000 LL_RCC_ClearResetFlags
+     /tmp/cco2JoLR.s:608    .text.LL_RCC_ClearResetFlags:00000018 $d
+     /tmp/cco2JoLR.s:611    .text.LL_RCC_DeInit:00000000 $t
+     /tmp/cco2JoLR.s:617    .text.LL_RCC_DeInit:00000000 LL_RCC_DeInit
+     /tmp/cco2JoLR.s:699    .text.LL_RCC_DeInit:000000a8 $d
+     /tmp/cco2JoLR.s:704    .text.LL_RCC_GetSystemClocksFreq:00000000 $t
+     /tmp/cco2JoLR.s:710    .text.LL_RCC_GetSystemClocksFreq:00000000 LL_RCC_GetSystemClocksFreq
+     /tmp/cco2JoLR.s:1041   .text.RCC_GetSystemClockFreq:00000000 RCC_GetSystemClockFreq
+     /tmp/cco2JoLR.s:1103   .text.RCC_GetHCLKClockFreq:00000000 RCC_GetHCLKClockFreq
+     /tmp/cco2JoLR.s:1137   .text.RCC_GetPCLK1ClockFreq:00000000 RCC_GetPCLK1ClockFreq
+     /tmp/cco2JoLR.s:742    .text.LL_RCC_GetUSARTClockFreq:00000000 $t
+     /tmp/cco2JoLR.s:748    .text.LL_RCC_GetUSARTClockFreq:00000000 LL_RCC_GetUSARTClockFreq
+     /tmp/cco2JoLR.s:875    .text.LL_RCC_GetUSARTClockFreq:000000f0 $d
+     /tmp/cco2JoLR.s:881    .text.LL_RCC_GetI2CClockFreq:00000000 $t
+     /tmp/cco2JoLR.s:887    .text.LL_RCC_GetI2CClockFreq:00000000 LL_RCC_GetI2CClockFreq
+     /tmp/cco2JoLR.s:927    .text.LL_RCC_GetI2CClockFreq:00000044 $d
+     /tmp/cco2JoLR.s:930    .text.LL_RCC_GetUSBClockFreq:00000000 $t
+     /tmp/cco2JoLR.s:936    .text.LL_RCC_GetUSBClockFreq:00000000 LL_RCC_GetUSBClockFreq
+     /tmp/cco2JoLR.s:1169   .text.RCC_PLL_GetFreqDomain_SYS:00000000 RCC_PLL_GetFreqDomain_SYS
+     /tmp/cco2JoLR.s:980    .text.LL_RCC_GetUSBClockFreq:0000004c $d
+     /tmp/cco2JoLR.s:983    .text.LL_RCC_GetCECClockFreq:00000000 $t
+     /tmp/cco2JoLR.s:989    .text.LL_RCC_GetCECClockFreq:00000000 LL_RCC_GetCECClockFreq
+     /tmp/cco2JoLR.s:1032   .text.LL_RCC_GetCECClockFreq:00000048 $d
+     /tmp/cco2JoLR.s:1035   .text.RCC_GetSystemClockFreq:00000000 $t
+     /tmp/cco2JoLR.s:1093   .text.RCC_GetSystemClockFreq:00000054 $d
+     /tmp/cco2JoLR.s:1097   .text.RCC_GetHCLKClockFreq:00000000 $t
+     /tmp/cco2JoLR.s:1128   .text.RCC_GetHCLKClockFreq:00000028 $d
+     /tmp/cco2JoLR.s:1131   .text.RCC_GetPCLK1ClockFreq:00000000 $t
+     /tmp/cco2JoLR.s:1160   .text.RCC_GetPCLK1ClockFreq:00000024 $d
+     /tmp/cco2JoLR.s:1163   .text.RCC_PLL_GetFreqDomain_SYS:00000000 $t
+     /tmp/cco2JoLR.s:1245   .text.RCC_PLL_GetFreqDomain_SYS:00000088 $d
 
 UNDEFINED SYMBOLS
 AHBPrescTable

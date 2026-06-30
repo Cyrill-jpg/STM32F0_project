@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccMqNddy.s 			page 1
+ARM GAS  /tmp/ccC2N0Kw.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
   56 003c 022B     		cmp	r3, #2
   57 003e 30D1     		bne	.L5
   58              	.L4:
-ARM GAS  /tmp/ccMqNddy.s 			page 2
+ARM GAS  /tmp/ccC2N0Kw.s 			page 2
 
 
   59 0040 7B68     		ldr	r3, [r7, #4]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  113 00aa 032B     		cmp	r3, #3
  114 00ac 17D0     		beq	.L6
  115 00ae 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/ccMqNddy.s 			page 3
+ARM GAS  /tmp/ccC2N0Kw.s 			page 3
 
 
  116 00b0 DB68     		ldr	r3, [r3, #12]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  170 011a 9A40     		lsls	r2, r2, r3
  171 011c 1300     		movs	r3, r2
  172 011e 3A69     		ldr	r2, [r7, #16]
-ARM GAS  /tmp/ccMqNddy.s 			page 4
+ARM GAS  /tmp/ccC2N0Kw.s 			page 4
 
 
  173 0120 1343     		orrs	r3, r2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  227 0188 BB60     		str	r3, [r7, #8]
  228 018a BB68     		ldr	r3, [r7, #8]
  229 018c 524A     		ldr	r2, .L19+4
-ARM GAS  /tmp/ccMqNddy.s 			page 5
+ARM GAS  /tmp/ccC2N0Kw.s 			page 5
 
 
  230 018e 7B69     		ldr	r3, [r7, #20]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  284              	.L13:
  285 01f0 7A69     		ldr	r2, [r7, #20]
  286 01f2 0321     		movs	r1, #3
-ARM GAS  /tmp/ccMqNddy.s 			page 6
+ARM GAS  /tmp/ccC2N0Kw.s 			page 6
 
 
  287 01f4 0A40     		ands	r2, r1
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  341 025c 234B     		ldr	r3, .L19+24
  342 025e 3A69     		ldr	r2, [r7, #16]
  343 0260 DA60     		str	r2, [r3, #12]
-ARM GAS  /tmp/ccMqNddy.s 			page 7
+ARM GAS  /tmp/ccC2N0Kw.s 			page 7
 
 
  344 0262 224B     		ldr	r3, .L19+24
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  398 02c6 00D0     		beq	.LCB402
  399 02c8 A2E6     		b	.L18	@long jump
  400              	.LCB402:
-ARM GAS  /tmp/ccMqNddy.s 			page 8
+ARM GAS  /tmp/ccC2N0Kw.s 			page 8
 
 
  401 02ca C046     		nop
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  457 0036 1340     		ands	r3, r2
  458 0038 9B00     		lsls	r3, r3, #2
  459 003a 0F22     		movs	r2, #15
-ARM GAS  /tmp/ccMqNddy.s 			page 9
+ARM GAS  /tmp/ccC2N0Kw.s 			page 9
 
 
  460 003c 9A40     		lsls	r2, r2, r3
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  514 009c 434B     		ldr	r3, .L32+20
  515 009e 0A40     		ands	r2, r1
  516 00a0 1A60     		str	r2, [r3]
-ARM GAS  /tmp/ccMqNddy.s 			page 10
+ARM GAS  /tmp/ccC2N0Kw.s 			page 10
 
 
  517 00a2 424B     		ldr	r3, .L32+20
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  571 010c 7B68     		ldr	r3, [r7, #4]
  572 010e 1A60     		str	r2, [r3]
  573 0110 7B69     		ldr	r3, [r7, #20]
-ARM GAS  /tmp/ccMqNddy.s 			page 11
+ARM GAS  /tmp/ccC2N0Kw.s 			page 11
 
 
  574 0112 DA08     		lsrs	r2, r3, #3
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  628 017c 0133     		adds	r3, r3, #1
  629 017e 7B61     		str	r3, [r7, #20]
  630              	.L22:
-ARM GAS  /tmp/ccMqNddy.s 			page 12
+ARM GAS  /tmp/ccC2N0Kw.s 			page 12
 
 
  631 0180 3A68     		ldr	r2, [r7]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  687              	.L36:
  688 002c 0F23     		movs	r3, #15
  689 002e FB18     		adds	r3, r7, r3
-ARM GAS  /tmp/ccMqNddy.s 			page 13
+ARM GAS  /tmp/ccC2N0Kw.s 			page 13
 
 
  690 0030 1B78     		ldrb	r3, [r3]
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  748              		@ args = 0, pretend = 0, frame = 16
  749              		@ frame_needed = 1, uses_anonymous_args = 0
  750 0000 80B5     		push	{r7, lr}
-ARM GAS  /tmp/ccMqNddy.s 			page 14
+ARM GAS  /tmp/ccC2N0Kw.s 			page 14
 
 
  751 0002 84B0     		sub	sp, sp, #16
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  807 0024 BB1C     		adds	r3, r7, #2
  808 0026 1A88     		ldrh	r2, [r3]
  809 0028 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/ccMqNddy.s 			page 15
+ARM GAS  /tmp/ccC2N0Kw.s 			page 15
 
 
  810 002a DA61     		str	r2, [r3, #28]
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  866 002c BD46     		mov	sp, r7
  867 002e 02B0     		add	sp, sp, #8
  868              		@ sp needed
-ARM GAS  /tmp/ccMqNddy.s 			page 16
+ARM GAS  /tmp/ccC2N0Kw.s 			page 16
 
 
  869 0030 80BD     		pop	{r7, pc}
@@ -927,29 +927,29 @@ ARM GAS  /tmp/ccMqNddy.s 			page 1
  894              		@ sp needed
  895 0012 80BD     		pop	{r7, pc}
  897              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccMqNddy.s 			page 17
+ARM GAS  /tmp/ccC2N0Kw.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_gpio.c
-     /tmp/ccMqNddy.s:15     .text.HAL_GPIO_Init:00000000 $t
-     /tmp/ccMqNddy.s:21     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
-     /tmp/ccMqNddy.s:410    .text.HAL_GPIO_Init:000002d4 $d
-     /tmp/ccMqNddy.s:419    .text.HAL_GPIO_DeInit:00000000 $t
-     /tmp/ccMqNddy.s:425    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
-     /tmp/ccMqNddy.s:647    .text.HAL_GPIO_DeInit:00000198 $d
-     /tmp/ccMqNddy.s:655    .text.HAL_GPIO_ReadPin:00000000 $t
-     /tmp/ccMqNddy.s:661    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
-     /tmp/ccMqNddy.s:698    .text.HAL_GPIO_WritePin:00000000 $t
-     /tmp/ccMqNddy.s:704    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
-     /tmp/ccMqNddy.s:741    .text.HAL_GPIO_TogglePin:00000000 $t
-     /tmp/ccMqNddy.s:747    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
-     /tmp/ccMqNddy.s:780    .text.HAL_GPIO_LockPin:00000000 $t
-     /tmp/ccMqNddy.s:786    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
-     /tmp/ccMqNddy.s:835    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
-     /tmp/ccMqNddy.s:841    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
-     /tmp/ccMqNddy.s:882    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
-     /tmp/ccMqNddy.s:873    .text.HAL_GPIO_EXTI_IRQHandler:00000034 $d
-     /tmp/ccMqNddy.s:876    .text.HAL_GPIO_EXTI_Callback:00000000 $t
+     /tmp/ccC2N0Kw.s:15     .text.HAL_GPIO_Init:00000000 $t
+     /tmp/ccC2N0Kw.s:21     .text.HAL_GPIO_Init:00000000 HAL_GPIO_Init
+     /tmp/ccC2N0Kw.s:410    .text.HAL_GPIO_Init:000002d4 $d
+     /tmp/ccC2N0Kw.s:419    .text.HAL_GPIO_DeInit:00000000 $t
+     /tmp/ccC2N0Kw.s:425    .text.HAL_GPIO_DeInit:00000000 HAL_GPIO_DeInit
+     /tmp/ccC2N0Kw.s:647    .text.HAL_GPIO_DeInit:00000198 $d
+     /tmp/ccC2N0Kw.s:655    .text.HAL_GPIO_ReadPin:00000000 $t
+     /tmp/ccC2N0Kw.s:661    .text.HAL_GPIO_ReadPin:00000000 HAL_GPIO_ReadPin
+     /tmp/ccC2N0Kw.s:698    .text.HAL_GPIO_WritePin:00000000 $t
+     /tmp/ccC2N0Kw.s:704    .text.HAL_GPIO_WritePin:00000000 HAL_GPIO_WritePin
+     /tmp/ccC2N0Kw.s:741    .text.HAL_GPIO_TogglePin:00000000 $t
+     /tmp/ccC2N0Kw.s:747    .text.HAL_GPIO_TogglePin:00000000 HAL_GPIO_TogglePin
+     /tmp/ccC2N0Kw.s:780    .text.HAL_GPIO_LockPin:00000000 $t
+     /tmp/ccC2N0Kw.s:786    .text.HAL_GPIO_LockPin:00000000 HAL_GPIO_LockPin
+     /tmp/ccC2N0Kw.s:835    .text.HAL_GPIO_EXTI_IRQHandler:00000000 $t
+     /tmp/ccC2N0Kw.s:841    .text.HAL_GPIO_EXTI_IRQHandler:00000000 HAL_GPIO_EXTI_IRQHandler
+     /tmp/ccC2N0Kw.s:882    .text.HAL_GPIO_EXTI_Callback:00000000 HAL_GPIO_EXTI_Callback
+     /tmp/ccC2N0Kw.s:873    .text.HAL_GPIO_EXTI_IRQHandler:00000034 $d
+     /tmp/ccC2N0Kw.s:876    .text.HAL_GPIO_EXTI_Callback:00000000 $t
 
 NO UNDEFINED SYMBOLS

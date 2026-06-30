@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccFUEOJy.s 			page 1
+ARM GAS  /tmp/ccR9zhjH.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
   56 003e 7B68     		ldr	r3, [r7, #4]
   57 0040 1B69     		ldr	r3, [r3, #16]
   58 0042 1A43     		orrs	r2, r3
-ARM GAS  /tmp/ccFUEOJy.s 			page 2
+ARM GAS  /tmp/ccR9zhjH.s 			page 2
 
 
   59 0044 7B68     		ldr	r3, [r7, #4]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  115 0008 7B68     		ldr	r3, [r7, #4]
  116 000a 002B     		cmp	r3, #0
  117 000c 01D1     		bne	.L7
-ARM GAS  /tmp/ccFUEOJy.s 			page 3
+ARM GAS  /tmp/ccR9zhjH.s 			page 3
 
 
  118 000e 0123     		movs	r3, #1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  172 007a 2122     		movs	r2, #33
  173 007c 0021     		movs	r1, #0
  174 007e 9954     		strb	r1, [r3, r2]
-ARM GAS  /tmp/ccFUEOJy.s 			page 4
+ARM GAS  /tmp/ccR9zhjH.s 			page 4
 
 
  175 0080 7B68     		ldr	r3, [r7, #4]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  231 0042 0022     		movs	r2, #0
  232 0044 9A63     		str	r2, [r3, #56]
  233 0046 FB68     		ldr	r3, [r7, #12]
-ARM GAS  /tmp/ccFUEOJy.s 			page 5
+ARM GAS  /tmp/ccR9zhjH.s 			page 5
 
 
  234 0048 1B68     		ldr	r3, [r3]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  290 000a 7A60     		str	r2, [r7, #4]
  291 000c 3B60     		str	r3, [r7]
  292 000e 1723     		movs	r3, #23
-ARM GAS  /tmp/ccFUEOJy.s 			page 6
+ARM GAS  /tmp/ccR9zhjH.s 			page 6
 
 
  293 0010 FB18     		adds	r3, r7, r3
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  347              	.L18:
  348 007c FB68     		ldr	r3, [r7, #12]
  349 007e 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccFUEOJy.s 			page 7
+ARM GAS  /tmp/ccR9zhjH.s 			page 7
 
 
  350 0080 1A68     		ldr	r2, [r3]
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  406 0004 00AF     		add	r7, sp, #0
  407 0006 7860     		str	r0, [r7, #4]
  408 0008 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/ccFUEOJy.s 			page 8
+ARM GAS  /tmp/ccR9zhjH.s 			page 8
 
 
  409 000a 2122     		movs	r2, #33
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  464              		.section	.text.HAL_DMA_Abort_IT,"ax",%progbits
  465              		.align	1
  466              		.global	HAL_DMA_Abort_IT
-ARM GAS  /tmp/ccFUEOJy.s 			page 9
+ARM GAS  /tmp/ccR9zhjH.s 			page 9
 
 
  467              		.syntax unified
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  522 005e 0121     		movs	r1, #1
  523 0060 9954     		strb	r1, [r3, r2]
  524 0062 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/ccFUEOJy.s 			page 10
+ARM GAS  /tmp/ccR9zhjH.s 			page 10
 
 
  525 0064 2022     		movs	r2, #32
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  581 002e FB68     		ldr	r3, [r7, #12]
  582 0030 1B68     		ldr	r3, [r3]
  583 0032 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccFUEOJy.s 			page 11
+ARM GAS  /tmp/ccR9zhjH.s 			page 11
 
 
  584 0034 2022     		movs	r2, #32
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  638 009a FB68     		ldr	r3, [r7, #12]
  639 009c 2122     		movs	r2, #33
  640 009e 0121     		movs	r1, #1
-ARM GAS  /tmp/ccFUEOJy.s 			page 12
+ARM GAS  /tmp/ccR9zhjH.s 			page 12
 
 
  641 00a0 9954     		strb	r1, [r3, r2]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  695 0108 2122     		movs	r2, #33
  696 010a 0121     		movs	r1, #1
  697 010c 9954     		strb	r1, [r3, r2]
-ARM GAS  /tmp/ccFUEOJy.s 			page 13
+ARM GAS  /tmp/ccR9zhjH.s 			page 13
 
 
  698 010e 07E0     		b	.L40
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  754 002e 20D0     		beq	.L43
  755 0030 7B68     		ldr	r3, [r7, #4]
  756 0032 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccFUEOJy.s 			page 14
+ARM GAS  /tmp/ccR9zhjH.s 			page 14
 
 
  757 0034 1B68     		ldr	r3, [r3]
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  811 009a 1A68     		ldr	r2, [r3]
  812 009c 7B68     		ldr	r3, [r7, #4]
  813 009e 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccFUEOJy.s 			page 15
+ARM GAS  /tmp/ccR9zhjH.s 			page 15
 
 
  814 00a0 0A21     		movs	r1, #10
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  868 0108 DB6B     		ldr	r3, [r3, #60]
  869 010a 0121     		movs	r1, #1
  870 010c 9140     		lsls	r1, r1, r2
-ARM GAS  /tmp/ccFUEOJy.s 			page 16
+ARM GAS  /tmp/ccR9zhjH.s 			page 16
 
 
  871 010e 0A00     		movs	r2, r1
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  927 001e 9B5C     		ldrb	r3, [r3, r2]
  928 0020 012B     		cmp	r3, #1
  929 0022 01D1     		bne	.L52
-ARM GAS  /tmp/ccFUEOJy.s 			page 17
+ARM GAS  /tmp/ccR9zhjH.s 			page 17
 
 
  930 0024 0223     		movs	r3, #2
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  984 0082 1723     		movs	r3, #23
  985 0084 FB18     		adds	r3, r7, r3
  986 0086 0122     		movs	r2, #1
-ARM GAS  /tmp/ccFUEOJy.s 			page 18
+ARM GAS  /tmp/ccR9zhjH.s 			page 18
 
 
  987 0088 1A70     		strb	r2, [r3]
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  1043 003a 1B78     		ldrb	r3, [r3]
  1044 003c 042B     		cmp	r3, #4
  1045 003e 1BD0     		beq	.L66
-ARM GAS  /tmp/ccFUEOJy.s 			page 19
+ARM GAS  /tmp/ccR9zhjH.s 			page 19
 
 
  1046 0040 27DC     		bgt	.L67
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  1100 009e FB18     		adds	r3, r7, r3
  1101 00a0 0122     		movs	r2, #1
  1102 00a2 1A70     		strb	r2, [r3]
-ARM GAS  /tmp/ccFUEOJy.s 			page 20
+ARM GAS  /tmp/ccR9zhjH.s 			page 20
 
 
  1103              	.L73:
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  1161              		@ sp needed
  1162 0012 80BD     		pop	{r7, pc}
  1164              		.section	.text.DMA_SetConfig,"ax",%progbits
-ARM GAS  /tmp/ccFUEOJy.s 			page 21
+ARM GAS  /tmp/ccR9zhjH.s 			page 21
 
 
  1165              		.align	1
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  1221              		.section	.text.DMA_CalcBaseAndBitshift,"ax",%progbits
  1222              		.align	1
  1223              		.syntax unified
-ARM GAS  /tmp/ccFUEOJy.s 			page 22
+ARM GAS  /tmp/ccR9zhjH.s 			page 22
 
 
  1224              		.code	16
@@ -1297,41 +1297,41 @@ ARM GAS  /tmp/ccFUEOJy.s 			page 1
  1258 0034 00000240 		.word	1073872896
  1260              		.global	__aeabi_uidiv
  1261              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccFUEOJy.s 			page 23
+ARM GAS  /tmp/ccR9zhjH.s 			page 23
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_dma.c
-     /tmp/ccFUEOJy.s:15     .text.HAL_DMA_Init:00000000 $t
-     /tmp/ccFUEOJy.s:21     .text.HAL_DMA_Init:00000000 HAL_DMA_Init
-     /tmp/ccFUEOJy.s:1227   .text.DMA_CalcBaseAndBitshift:00000000 DMA_CalcBaseAndBitshift
-     /tmp/ccFUEOJy.s:99     .text.HAL_DMA_Init:0000008c $d
-     /tmp/ccFUEOJy.s:102    .text.HAL_DMA_DeInit:00000000 $t
-     /tmp/ccFUEOJy.s:108    .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
-     /tmp/ccFUEOJy.s:188    .text.HAL_DMA_Start:00000000 $t
-     /tmp/ccFUEOJy.s:194    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
-     /tmp/ccFUEOJy.s:1170   .text.DMA_SetConfig:00000000 DMA_SetConfig
-     /tmp/ccFUEOJy.s:276    .text.HAL_DMA_Start_IT:00000000 $t
-     /tmp/ccFUEOJy.s:282    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
-     /tmp/ccFUEOJy.s:395    .text.HAL_DMA_Abort:00000000 $t
-     /tmp/ccFUEOJy.s:401    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
-     /tmp/ccFUEOJy.s:465    .text.HAL_DMA_Abort_IT:00000000 $t
-     /tmp/ccFUEOJy.s:471    .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
-     /tmp/ccFUEOJy.s:548    .text.HAL_DMA_PollForTransfer:00000000 $t
-     /tmp/ccFUEOJy.s:554    .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
-     /tmp/ccFUEOJy.s:722    .text.HAL_DMA_IRQHandler:00000000 $t
-     /tmp/ccFUEOJy.s:728    .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
-     /tmp/ccFUEOJy.s:903    .text.HAL_DMA_RegisterCallback:00000000 $t
-     /tmp/ccFUEOJy.s:909    .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
-     /tmp/ccFUEOJy.s:1004   .text.HAL_DMA_UnRegisterCallback:00000000 $t
-     /tmp/ccFUEOJy.s:1010   .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
-     /tmp/ccFUEOJy.s:1119   .text.HAL_DMA_GetState:00000000 $t
-     /tmp/ccFUEOJy.s:1125   .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
-     /tmp/ccFUEOJy.s:1143   .text.HAL_DMA_GetError:00000000 $t
-     /tmp/ccFUEOJy.s:1149   .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
-     /tmp/ccFUEOJy.s:1165   .text.DMA_SetConfig:00000000 $t
-     /tmp/ccFUEOJy.s:1222   .text.DMA_CalcBaseAndBitshift:00000000 $t
-     /tmp/ccFUEOJy.s:1257   .text.DMA_CalcBaseAndBitshift:00000030 $d
+     /tmp/ccR9zhjH.s:15     .text.HAL_DMA_Init:00000000 $t
+     /tmp/ccR9zhjH.s:21     .text.HAL_DMA_Init:00000000 HAL_DMA_Init
+     /tmp/ccR9zhjH.s:1227   .text.DMA_CalcBaseAndBitshift:00000000 DMA_CalcBaseAndBitshift
+     /tmp/ccR9zhjH.s:99     .text.HAL_DMA_Init:0000008c $d
+     /tmp/ccR9zhjH.s:102    .text.HAL_DMA_DeInit:00000000 $t
+     /tmp/ccR9zhjH.s:108    .text.HAL_DMA_DeInit:00000000 HAL_DMA_DeInit
+     /tmp/ccR9zhjH.s:188    .text.HAL_DMA_Start:00000000 $t
+     /tmp/ccR9zhjH.s:194    .text.HAL_DMA_Start:00000000 HAL_DMA_Start
+     /tmp/ccR9zhjH.s:1170   .text.DMA_SetConfig:00000000 DMA_SetConfig
+     /tmp/ccR9zhjH.s:276    .text.HAL_DMA_Start_IT:00000000 $t
+     /tmp/ccR9zhjH.s:282    .text.HAL_DMA_Start_IT:00000000 HAL_DMA_Start_IT
+     /tmp/ccR9zhjH.s:395    .text.HAL_DMA_Abort:00000000 $t
+     /tmp/ccR9zhjH.s:401    .text.HAL_DMA_Abort:00000000 HAL_DMA_Abort
+     /tmp/ccR9zhjH.s:465    .text.HAL_DMA_Abort_IT:00000000 $t
+     /tmp/ccR9zhjH.s:471    .text.HAL_DMA_Abort_IT:00000000 HAL_DMA_Abort_IT
+     /tmp/ccR9zhjH.s:548    .text.HAL_DMA_PollForTransfer:00000000 $t
+     /tmp/ccR9zhjH.s:554    .text.HAL_DMA_PollForTransfer:00000000 HAL_DMA_PollForTransfer
+     /tmp/ccR9zhjH.s:722    .text.HAL_DMA_IRQHandler:00000000 $t
+     /tmp/ccR9zhjH.s:728    .text.HAL_DMA_IRQHandler:00000000 HAL_DMA_IRQHandler
+     /tmp/ccR9zhjH.s:903    .text.HAL_DMA_RegisterCallback:00000000 $t
+     /tmp/ccR9zhjH.s:909    .text.HAL_DMA_RegisterCallback:00000000 HAL_DMA_RegisterCallback
+     /tmp/ccR9zhjH.s:1004   .text.HAL_DMA_UnRegisterCallback:00000000 $t
+     /tmp/ccR9zhjH.s:1010   .text.HAL_DMA_UnRegisterCallback:00000000 HAL_DMA_UnRegisterCallback
+     /tmp/ccR9zhjH.s:1119   .text.HAL_DMA_GetState:00000000 $t
+     /tmp/ccR9zhjH.s:1125   .text.HAL_DMA_GetState:00000000 HAL_DMA_GetState
+     /tmp/ccR9zhjH.s:1143   .text.HAL_DMA_GetError:00000000 $t
+     /tmp/ccR9zhjH.s:1149   .text.HAL_DMA_GetError:00000000 HAL_DMA_GetError
+     /tmp/ccR9zhjH.s:1165   .text.DMA_SetConfig:00000000 $t
+     /tmp/ccR9zhjH.s:1222   .text.DMA_CalcBaseAndBitshift:00000000 $t
+     /tmp/ccR9zhjH.s:1257   .text.DMA_CalcBaseAndBitshift:00000030 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick

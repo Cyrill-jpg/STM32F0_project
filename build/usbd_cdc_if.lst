@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccBptNfx.s 			page 1
+ARM GAS  /tmp/cc2q3wQ7.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccBptNfx.s 			page 1
   55 0004 0749     		ldr	r1, .L3
   56 0006 084B     		ldr	r3, .L3+4
   57 0008 0022     		movs	r2, #0
-ARM GAS  /tmp/ccBptNfx.s 			page 2
+ARM GAS  /tmp/cc2q3wQ7.s 			page 2
 
 
   58 000a 1800     		movs	r0, r3
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccBptNfx.s 			page 1
  116 001a 232B     		cmp	r3, #35
  117 001c 17D0     		beq	.L20
  118 001e 18DC     		bgt	.L21
-ARM GAS  /tmp/ccBptNfx.s 			page 3
+ARM GAS  /tmp/cc2q3wQ7.s 			page 3
 
 
  119 0020 222B     		cmp	r3, #34
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccBptNfx.s 			page 1
  173 0076 1800     		movs	r0, r3
  174 0078 BD46     		mov	sp, r7
  175 007a 02B0     		add	sp, sp, #8
-ARM GAS  /tmp/ccBptNfx.s 			page 4
+ARM GAS  /tmp/cc2q3wQ7.s 			page 4
 
 
  176              		@ sp needed
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccBptNfx.s 			page 1
  234 0018 AE23     		movs	r3, #174
  235 001a 9B00     		lsls	r3, r3, #2
  236 001c D358     		ldr	r3, [r2, r3]
-ARM GAS  /tmp/ccBptNfx.s 			page 5
+ARM GAS  /tmp/cc2q3wQ7.s 			page 5
 
 
  237 001e BB60     		str	r3, [r7, #8]
@@ -277,32 +277,32 @@ ARM GAS  /tmp/ccBptNfx.s 			page 1
  270              	.L37:
  271 005c 00000000 		.word	hUsbDeviceFS
  273              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccBptNfx.s 			page 6
+ARM GAS  /tmp/cc2q3wQ7.s 			page 6
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_cdc_if.c
-     /tmp/ccBptNfx.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
-     /tmp/ccBptNfx.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
-     /tmp/ccBptNfx.s:25     .bss.UserRxBufferFS:00000000 UserRxBufferFS
-     /tmp/ccBptNfx.s:22     .bss.UserRxBufferFS:00000000 $d
-     /tmp/ccBptNfx.s:32     .bss.UserTxBufferFS:00000000 UserTxBufferFS
-     /tmp/ccBptNfx.s:29     .bss.UserTxBufferFS:00000000 $d
-     /tmp/ccBptNfx.s:39     .data.USBD_Interface_fops_FS:00000000 USBD_Interface_fops_FS
-     /tmp/ccBptNfx.s:36     .data.USBD_Interface_fops_FS:00000000 $d
-     /tmp/ccBptNfx.s:50     .text.CDC_Init_FS:00000000 CDC_Init_FS
-     /tmp/ccBptNfx.s:83     .text.CDC_DeInit_FS:00000000 CDC_DeInit_FS
-     /tmp/ccBptNfx.s:100    .text.CDC_Control_FS:00000000 CDC_Control_FS
-     /tmp/ccBptNfx.s:185    .text.CDC_Receive_FS:00000000 CDC_Receive_FS
-     /tmp/ccBptNfx.s:45     .text.CDC_Init_FS:00000000 $t
-     /tmp/ccBptNfx.s:73     .text.CDC_Init_FS:00000024 $d
-     /tmp/ccBptNfx.s:78     .text.CDC_DeInit_FS:00000000 $t
-     /tmp/ccBptNfx.s:95     .text.CDC_Control_FS:00000000 $t
-     /tmp/ccBptNfx.s:180    .text.CDC_Receive_FS:00000000 $t
-     /tmp/ccBptNfx.s:210    .text.CDC_Receive_FS:00000028 $d
-     /tmp/ccBptNfx.s:213    .text.CDC_Transmit_FS:00000000 $t
-     /tmp/ccBptNfx.s:219    .text.CDC_Transmit_FS:00000000 CDC_Transmit_FS
-     /tmp/ccBptNfx.s:271    .text.CDC_Transmit_FS:0000005c $d
+     /tmp/cc2q3wQ7.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+     /tmp/cc2q3wQ7.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+     /tmp/cc2q3wQ7.s:25     .bss.UserRxBufferFS:00000000 UserRxBufferFS
+     /tmp/cc2q3wQ7.s:22     .bss.UserRxBufferFS:00000000 $d
+     /tmp/cc2q3wQ7.s:32     .bss.UserTxBufferFS:00000000 UserTxBufferFS
+     /tmp/cc2q3wQ7.s:29     .bss.UserTxBufferFS:00000000 $d
+     /tmp/cc2q3wQ7.s:39     .data.USBD_Interface_fops_FS:00000000 USBD_Interface_fops_FS
+     /tmp/cc2q3wQ7.s:36     .data.USBD_Interface_fops_FS:00000000 $d
+     /tmp/cc2q3wQ7.s:50     .text.CDC_Init_FS:00000000 CDC_Init_FS
+     /tmp/cc2q3wQ7.s:83     .text.CDC_DeInit_FS:00000000 CDC_DeInit_FS
+     /tmp/cc2q3wQ7.s:100    .text.CDC_Control_FS:00000000 CDC_Control_FS
+     /tmp/cc2q3wQ7.s:185    .text.CDC_Receive_FS:00000000 CDC_Receive_FS
+     /tmp/cc2q3wQ7.s:45     .text.CDC_Init_FS:00000000 $t
+     /tmp/cc2q3wQ7.s:73     .text.CDC_Init_FS:00000024 $d
+     /tmp/cc2q3wQ7.s:78     .text.CDC_DeInit_FS:00000000 $t
+     /tmp/cc2q3wQ7.s:95     .text.CDC_Control_FS:00000000 $t
+     /tmp/cc2q3wQ7.s:180    .text.CDC_Receive_FS:00000000 $t
+     /tmp/cc2q3wQ7.s:210    .text.CDC_Receive_FS:00000028 $d
+     /tmp/cc2q3wQ7.s:213    .text.CDC_Transmit_FS:00000000 $t
+     /tmp/cc2q3wQ7.s:219    .text.CDC_Transmit_FS:00000000 CDC_Transmit_FS
+     /tmp/cc2q3wQ7.s:271    .text.CDC_Transmit_FS:0000005c $d
 
 UNDEFINED SYMBOLS
 USBD_CDC_SetTxBuffer

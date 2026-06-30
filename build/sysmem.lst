@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc9aGcVr.s 			page 1
+ARM GAS  /tmp/ccRoSora.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc9aGcVr.s 			page 1
   58 0038 1A60     		str	r2, [r3]
   59 003a 0123     		movs	r3, #1
   60 003c 5B42     		rsbs	r3, r3, #0
-ARM GAS  /tmp/cc9aGcVr.s 			page 2
+ARM GAS  /tmp/ccRoSora.s 			page 2
 
 
   61 003e 09E0     		b	.L4
@@ -87,16 +87,16 @@ ARM GAS  /tmp/cc9aGcVr.s 			page 1
   84 0064 00000000 		.word	__sbrk_heap_end
   85 0068 00000000 		.word	_end
   87              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/cc9aGcVr.s 			page 3
+ARM GAS  /tmp/ccRoSora.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 sysmem.c
-     /tmp/cc9aGcVr.s:15     .bss.__sbrk_heap_end:00000000 $d
-     /tmp/cc9aGcVr.s:18     .bss.__sbrk_heap_end:00000000 __sbrk_heap_end
-     /tmp/cc9aGcVr.s:21     .text._sbrk:00000000 $t
-     /tmp/cc9aGcVr.s:27     .text._sbrk:00000000 _sbrk
-     /tmp/cc9aGcVr.s:82     .text._sbrk:0000005c $d
+     /tmp/ccRoSora.s:15     .bss.__sbrk_heap_end:00000000 $d
+     /tmp/ccRoSora.s:18     .bss.__sbrk_heap_end:00000000 __sbrk_heap_end
+     /tmp/ccRoSora.s:21     .text._sbrk:00000000 $t
+     /tmp/ccRoSora.s:27     .text._sbrk:00000000 _sbrk
+     /tmp/ccRoSora.s:82     .text._sbrk:0000005c $d
 
 UNDEFINED SYMBOLS
 __errno
