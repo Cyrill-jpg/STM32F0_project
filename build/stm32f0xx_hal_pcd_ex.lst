@@ -1,0 +1,550 @@
+ARM GAS  /tmp/ccok0rFu.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"stm32f0xx_hal_pcd_ex.c"
+  13              		.text
+  14              		.section	.text.HAL_PCDEx_PMAConfig,"ax",%progbits
+  15              		.align	1
+  16              		.global	HAL_PCDEx_PMAConfig
+  17              		.syntax unified
+  18              		.code	16
+  19              		.thumb_func
+  21              	HAL_PCDEx_PMAConfig:
+  22              		@ args = 0, pretend = 0, frame = 24
+  23              		@ frame_needed = 1, uses_anonymous_args = 0
+  24 0000 90B5     		push	{r4, r7, lr}
+  25 0002 87B0     		sub	sp, sp, #28
+  26 0004 00AF     		add	r7, sp, #0
+  27 0006 F860     		str	r0, [r7, #12]
+  28 0008 0800     		movs	r0, r1
+  29 000a 1100     		movs	r1, r2
+  30 000c 7B60     		str	r3, [r7, #4]
+  31 000e 0A24     		movs	r4, #10
+  32 0010 3B19     		adds	r3, r7, r4
+  33 0012 021C     		adds	r2, r0, #0
+  34 0014 1A80     		strh	r2, [r3]
+  35 0016 0823     		movs	r3, #8
+  36 0018 FB18     		adds	r3, r7, r3
+  37 001a 0A1C     		adds	r2, r1, #0
+  38 001c 1A80     		strh	r2, [r3]
+  39 001e 2100     		movs	r1, r4
+  40 0020 7B18     		adds	r3, r7, r1
+  41 0022 1B88     		ldrh	r3, [r3]
+  42 0024 8022     		movs	r2, #128
+  43 0026 1340     		ands	r3, r2
+  44 0028 9BB2     		uxth	r3, r3
+  45 002a 002B     		cmp	r3, #0
+  46 002c 0CD0     		beq	.L2
+  47 002e 7B18     		adds	r3, r7, r1
+  48 0030 1B88     		ldrh	r3, [r3]
+  49 0032 0722     		movs	r2, #7
+  50 0034 1A40     		ands	r2, r3
+  51 0036 1300     		movs	r3, r2
+  52 0038 9B00     		lsls	r3, r3, #2
+  53 003a 9B18     		adds	r3, r3, r2
+  54 003c DB00     		lsls	r3, r3, #3
+  55 003e 1033     		adds	r3, r3, #16
+  56 0040 FA68     		ldr	r2, [r7, #12]
+  57 0042 D318     		adds	r3, r2, r3
+  58 0044 7B61     		str	r3, [r7, #20]
+ARM GAS  /tmp/ccok0rFu.s 			page 2
+
+
+  59 0046 0BE0     		b	.L3
+  60              	.L2:
+  61 0048 0A23     		movs	r3, #10
+  62 004a FB18     		adds	r3, r7, r3
+  63 004c 1A88     		ldrh	r2, [r3]
+  64 004e 1300     		movs	r3, r2
+  65 0050 9B00     		lsls	r3, r3, #2
+  66 0052 9B18     		adds	r3, r3, r2
+  67 0054 DB00     		lsls	r3, r3, #3
+  68 0056 5133     		adds	r3, r3, #81
+  69 0058 FF33     		adds	r3, r3, #255
+  70 005a FA68     		ldr	r2, [r7, #12]
+  71 005c D318     		adds	r3, r2, r3
+  72 005e 7B61     		str	r3, [r7, #20]
+  73              	.L3:
+  74 0060 0823     		movs	r3, #8
+  75 0062 FB18     		adds	r3, r7, r3
+  76 0064 1B88     		ldrh	r3, [r3]
+  77 0066 002B     		cmp	r3, #0
+  78 0068 07D1     		bne	.L4
+  79 006a 7B69     		ldr	r3, [r7, #20]
+  80 006c 0022     		movs	r2, #0
+  81 006e 1A73     		strb	r2, [r3, #12]
+  82 0070 7B68     		ldr	r3, [r7, #4]
+  83 0072 9AB2     		uxth	r2, r3
+  84 0074 7B69     		ldr	r3, [r7, #20]
+  85 0076 DA80     		strh	r2, [r3, #6]
+  86 0078 0BE0     		b	.L5
+  87              	.L4:
+  88 007a 7B69     		ldr	r3, [r7, #20]
+  89 007c 0122     		movs	r2, #1
+  90 007e 1A73     		strb	r2, [r3, #12]
+  91 0080 7B68     		ldr	r3, [r7, #4]
+  92 0082 9AB2     		uxth	r2, r3
+  93 0084 7B69     		ldr	r3, [r7, #20]
+  94 0086 1A81     		strh	r2, [r3, #8]
+  95 0088 7B68     		ldr	r3, [r7, #4]
+  96 008a 1B0C     		lsrs	r3, r3, #16
+  97 008c 9AB2     		uxth	r2, r3
+  98 008e 7B69     		ldr	r3, [r7, #20]
+  99 0090 5A81     		strh	r2, [r3, #10]
+ 100              	.L5:
+ 101 0092 0023     		movs	r3, #0
+ 102 0094 1800     		movs	r0, r3
+ 103 0096 BD46     		mov	sp, r7
+ 104 0098 07B0     		add	sp, sp, #28
+ 105              		@ sp needed
+ 106 009a 90BD     		pop	{r4, r7, pc}
+ 108              		.section	.text.HAL_PCDEx_ActivateBCD,"ax",%progbits
+ 109              		.align	1
+ 110              		.global	HAL_PCDEx_ActivateBCD
+ 111              		.syntax unified
+ 112              		.code	16
+ 113              		.thumb_func
+ 115              	HAL_PCDEx_ActivateBCD:
+ 116              		@ args = 0, pretend = 0, frame = 16
+ 117              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  /tmp/ccok0rFu.s 			page 3
+
+
+ 118 0000 80B5     		push	{r7, lr}
+ 119 0002 84B0     		sub	sp, sp, #16
+ 120 0004 00AF     		add	r7, sp, #0
+ 121 0006 7860     		str	r0, [r7, #4]
+ 122 0008 7B68     		ldr	r3, [r7, #4]
+ 123 000a 1B68     		ldr	r3, [r3]
+ 124 000c FB60     		str	r3, [r7, #12]
+ 125 000e 7A68     		ldr	r2, [r7, #4]
+ 126 0010 B523     		movs	r3, #181
+ 127 0012 9B00     		lsls	r3, r3, #2
+ 128 0014 0121     		movs	r1, #1
+ 129 0016 D150     		str	r1, [r2, r3]
+ 130 0018 FB68     		ldr	r3, [r7, #12]
+ 131 001a 5822     		movs	r2, #88
+ 132 001c 9B5A     		ldrh	r3, [r3, r2]
+ 133 001e 9BB2     		uxth	r3, r3
+ 134 0020 0122     		movs	r2, #1
+ 135 0022 1343     		orrs	r3, r2
+ 136 0024 99B2     		uxth	r1, r3
+ 137 0026 FB68     		ldr	r3, [r7, #12]
+ 138 0028 5822     		movs	r2, #88
+ 139 002a 9952     		strh	r1, [r3, r2]
+ 140 002c FB68     		ldr	r3, [r7, #12]
+ 141 002e 5822     		movs	r2, #88
+ 142 0030 9B5A     		ldrh	r3, [r3, r2]
+ 143 0032 9BB2     		uxth	r3, r3
+ 144 0034 0422     		movs	r2, #4
+ 145 0036 9343     		bics	r3, r2
+ 146 0038 99B2     		uxth	r1, r3
+ 147 003a FB68     		ldr	r3, [r7, #12]
+ 148 003c 5822     		movs	r2, #88
+ 149 003e 9952     		strh	r1, [r3, r2]
+ 150 0040 FB68     		ldr	r3, [r7, #12]
+ 151 0042 5822     		movs	r2, #88
+ 152 0044 9B5A     		ldrh	r3, [r3, r2]
+ 153 0046 9BB2     		uxth	r3, r3
+ 154 0048 0822     		movs	r2, #8
+ 155 004a 9343     		bics	r3, r2
+ 156 004c 99B2     		uxth	r1, r3
+ 157 004e FB68     		ldr	r3, [r7, #12]
+ 158 0050 5822     		movs	r2, #88
+ 159 0052 9952     		strh	r1, [r3, r2]
+ 160 0054 FB68     		ldr	r3, [r7, #12]
+ 161 0056 5822     		movs	r2, #88
+ 162 0058 9B5A     		ldrh	r3, [r3, r2]
+ 163 005a 9BB2     		uxth	r3, r3
+ 164 005c 0222     		movs	r2, #2
+ 165 005e 1343     		orrs	r3, r2
+ 166 0060 99B2     		uxth	r1, r3
+ 167 0062 FB68     		ldr	r3, [r7, #12]
+ 168 0064 5822     		movs	r2, #88
+ 169 0066 9952     		strh	r1, [r3, r2]
+ 170 0068 0023     		movs	r3, #0
+ 171 006a 1800     		movs	r0, r3
+ 172 006c BD46     		mov	sp, r7
+ 173 006e 04B0     		add	sp, sp, #16
+ 174              		@ sp needed
+ARM GAS  /tmp/ccok0rFu.s 			page 4
+
+
+ 175 0070 80BD     		pop	{r7, pc}
+ 177              		.section	.text.HAL_PCDEx_DeActivateBCD,"ax",%progbits
+ 178              		.align	1
+ 179              		.global	HAL_PCDEx_DeActivateBCD
+ 180              		.syntax unified
+ 181              		.code	16
+ 182              		.thumb_func
+ 184              	HAL_PCDEx_DeActivateBCD:
+ 185              		@ args = 0, pretend = 0, frame = 16
+ 186              		@ frame_needed = 1, uses_anonymous_args = 0
+ 187 0000 80B5     		push	{r7, lr}
+ 188 0002 84B0     		sub	sp, sp, #16
+ 189 0004 00AF     		add	r7, sp, #0
+ 190 0006 7860     		str	r0, [r7, #4]
+ 191 0008 7B68     		ldr	r3, [r7, #4]
+ 192 000a 1B68     		ldr	r3, [r3]
+ 193 000c FB60     		str	r3, [r7, #12]
+ 194 000e 7A68     		ldr	r2, [r7, #4]
+ 195 0010 B523     		movs	r3, #181
+ 196 0012 9B00     		lsls	r3, r3, #2
+ 197 0014 0021     		movs	r1, #0
+ 198 0016 D150     		str	r1, [r2, r3]
+ 199 0018 FB68     		ldr	r3, [r7, #12]
+ 200 001a 5822     		movs	r2, #88
+ 201 001c 9B5A     		ldrh	r3, [r3, r2]
+ 202 001e 9BB2     		uxth	r3, r3
+ 203 0020 0122     		movs	r2, #1
+ 204 0022 9343     		bics	r3, r2
+ 205 0024 99B2     		uxth	r1, r3
+ 206 0026 FB68     		ldr	r3, [r7, #12]
+ 207 0028 5822     		movs	r2, #88
+ 208 002a 9952     		strh	r1, [r3, r2]
+ 209 002c 0023     		movs	r3, #0
+ 210 002e 1800     		movs	r0, r3
+ 211 0030 BD46     		mov	sp, r7
+ 212 0032 04B0     		add	sp, sp, #16
+ 213              		@ sp needed
+ 214 0034 80BD     		pop	{r7, pc}
+ 216              		.section	.text.HAL_PCDEx_BCD_VBUSDetect,"ax",%progbits
+ 217              		.align	1
+ 218              		.global	HAL_PCDEx_BCD_VBUSDetect
+ 219              		.syntax unified
+ 220              		.code	16
+ 221              		.thumb_func
+ 223              	HAL_PCDEx_BCD_VBUSDetect:
+ 224              		@ args = 0, pretend = 0, frame = 16
+ 225              		@ frame_needed = 1, uses_anonymous_args = 0
+ 226 0000 80B5     		push	{r7, lr}
+ 227 0002 84B0     		sub	sp, sp, #16
+ 228 0004 00AF     		add	r7, sp, #0
+ 229 0006 7860     		str	r0, [r7, #4]
+ 230 0008 7B68     		ldr	r3, [r7, #4]
+ 231 000a 1B68     		ldr	r3, [r3]
+ 232 000c FB60     		str	r3, [r7, #12]
+ 233 000e FFF7FEFF 		bl	HAL_GetTick
+ 234 0012 0300     		movs	r3, r0
+ 235 0014 BB60     		str	r3, [r7, #8]
+ARM GAS  /tmp/ccok0rFu.s 			page 5
+
+
+ 236 0016 9623     		movs	r3, #150
+ 237 0018 5B00     		lsls	r3, r3, #1
+ 238 001a 1800     		movs	r0, r3
+ 239 001c FFF7FEFF 		bl	HAL_Delay
+ 240 0020 FB68     		ldr	r3, [r7, #12]
+ 241 0022 5822     		movs	r2, #88
+ 242 0024 9B5A     		ldrh	r3, [r3, r2]
+ 243 0026 9BB2     		uxth	r3, r3
+ 244 0028 1A00     		movs	r2, r3
+ 245 002a 1023     		movs	r3, #16
+ 246 002c 1340     		ands	r3, r2
+ 247 002e 102B     		cmp	r3, #16
+ 248 0030 04D1     		bne	.L12
+ 249 0032 7B68     		ldr	r3, [r7, #4]
+ 250 0034 FE21     		movs	r1, #254
+ 251 0036 1800     		movs	r0, r3
+ 252 0038 FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 253              	.L12:
+ 254 003c FB68     		ldr	r3, [r7, #12]
+ 255 003e 5822     		movs	r2, #88
+ 256 0040 9B5A     		ldrh	r3, [r3, r2]
+ 257 0042 9BB2     		uxth	r3, r3
+ 258 0044 0222     		movs	r2, #2
+ 259 0046 9343     		bics	r3, r2
+ 260 0048 99B2     		uxth	r1, r3
+ 261 004a FB68     		ldr	r3, [r7, #12]
+ 262 004c 5822     		movs	r2, #88
+ 263 004e 9952     		strh	r1, [r3, r2]
+ 264 0050 3220     		movs	r0, #50
+ 265 0052 FFF7FEFF 		bl	HAL_Delay
+ 266 0056 FB68     		ldr	r3, [r7, #12]
+ 267 0058 5822     		movs	r2, #88
+ 268 005a 9B5A     		ldrh	r3, [r3, r2]
+ 269 005c 9BB2     		uxth	r3, r3
+ 270 005e 0422     		movs	r2, #4
+ 271 0060 1343     		orrs	r3, r2
+ 272 0062 99B2     		uxth	r1, r3
+ 273 0064 FB68     		ldr	r3, [r7, #12]
+ 274 0066 5822     		movs	r2, #88
+ 275 0068 9952     		strh	r1, [r3, r2]
+ 276 006a 3220     		movs	r0, #50
+ 277 006c FFF7FEFF 		bl	HAL_Delay
+ 278 0070 FB68     		ldr	r3, [r7, #12]
+ 279 0072 5822     		movs	r2, #88
+ 280 0074 9B5A     		ldrh	r3, [r3, r2]
+ 281 0076 9BB2     		uxth	r3, r3
+ 282 0078 1A00     		movs	r2, r3
+ 283 007a 2023     		movs	r3, #32
+ 284 007c 1340     		ands	r3, r2
+ 285 007e 202B     		cmp	r3, #32
+ 286 0080 2ED1     		bne	.L13
+ 287 0082 FB68     		ldr	r3, [r7, #12]
+ 288 0084 5822     		movs	r2, #88
+ 289 0086 9B5A     		ldrh	r3, [r3, r2]
+ 290 0088 9BB2     		uxth	r3, r3
+ 291 008a 0422     		movs	r2, #4
+ 292 008c 9343     		bics	r3, r2
+ARM GAS  /tmp/ccok0rFu.s 			page 6
+
+
+ 293 008e 99B2     		uxth	r1, r3
+ 294 0090 FB68     		ldr	r3, [r7, #12]
+ 295 0092 5822     		movs	r2, #88
+ 296 0094 9952     		strh	r1, [r3, r2]
+ 297 0096 3220     		movs	r0, #50
+ 298 0098 FFF7FEFF 		bl	HAL_Delay
+ 299 009c FB68     		ldr	r3, [r7, #12]
+ 300 009e 5822     		movs	r2, #88
+ 301 00a0 9B5A     		ldrh	r3, [r3, r2]
+ 302 00a2 9BB2     		uxth	r3, r3
+ 303 00a4 0822     		movs	r2, #8
+ 304 00a6 1343     		orrs	r3, r2
+ 305 00a8 99B2     		uxth	r1, r3
+ 306 00aa FB68     		ldr	r3, [r7, #12]
+ 307 00ac 5822     		movs	r2, #88
+ 308 00ae 9952     		strh	r1, [r3, r2]
+ 309 00b0 3220     		movs	r0, #50
+ 310 00b2 FFF7FEFF 		bl	HAL_Delay
+ 311 00b6 FB68     		ldr	r3, [r7, #12]
+ 312 00b8 5822     		movs	r2, #88
+ 313 00ba 9B5A     		ldrh	r3, [r3, r2]
+ 314 00bc 9BB2     		uxth	r3, r3
+ 315 00be 1A00     		movs	r2, r3
+ 316 00c0 4023     		movs	r3, #64
+ 317 00c2 1340     		ands	r3, r2
+ 318 00c4 402B     		cmp	r3, #64
+ 319 00c6 05D1     		bne	.L14
+ 320 00c8 7B68     		ldr	r3, [r7, #4]
+ 321 00ca FB21     		movs	r1, #251
+ 322 00cc 1800     		movs	r0, r3
+ 323 00ce FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 324 00d2 0AE0     		b	.L15
+ 325              	.L14:
+ 326 00d4 7B68     		ldr	r3, [r7, #4]
+ 327 00d6 FC21     		movs	r1, #252
+ 328 00d8 1800     		movs	r0, r3
+ 329 00da FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 330 00de 04E0     		b	.L15
+ 331              	.L13:
+ 332 00e0 7B68     		ldr	r3, [r7, #4]
+ 333 00e2 FD21     		movs	r1, #253
+ 334 00e4 1800     		movs	r0, r3
+ 335 00e6 FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 336              	.L15:
+ 337 00ea 7B68     		ldr	r3, [r7, #4]
+ 338 00ec 1800     		movs	r0, r3
+ 339 00ee FFF7FEFF 		bl	HAL_PCDEx_DeActivateBCD
+ 340 00f2 FFF7FEFF 		bl	HAL_GetTick
+ 341 00f6 0200     		movs	r2, r0
+ 342 00f8 BB68     		ldr	r3, [r7, #8]
+ 343 00fa D21A     		subs	r2, r2, r3
+ 344 00fc FA23     		movs	r3, #250
+ 345 00fe 9B00     		lsls	r3, r3, #2
+ 346 0100 9A42     		cmp	r2, r3
+ 347 0102 05D9     		bls	.L16
+ 348 0104 7B68     		ldr	r3, [r7, #4]
+ 349 0106 FF21     		movs	r1, #255
+ARM GAS  /tmp/ccok0rFu.s 			page 7
+
+
+ 350 0108 1800     		movs	r0, r3
+ 351 010a FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 352 010e 04E0     		b	.L18
+ 353              	.L16:
+ 354 0110 7B68     		ldr	r3, [r7, #4]
+ 355 0112 0021     		movs	r1, #0
+ 356 0114 1800     		movs	r0, r3
+ 357 0116 FFF7FEFF 		bl	HAL_PCDEx_BCD_Callback
+ 358              	.L18:
+ 359 011a C046     		nop
+ 360 011c BD46     		mov	sp, r7
+ 361 011e 04B0     		add	sp, sp, #16
+ 362              		@ sp needed
+ 363 0120 80BD     		pop	{r7, pc}
+ 365              		.section	.text.HAL_PCDEx_ActivateLPM,"ax",%progbits
+ 366              		.align	1
+ 367              		.global	HAL_PCDEx_ActivateLPM
+ 368              		.syntax unified
+ 369              		.code	16
+ 370              		.thumb_func
+ 372              	HAL_PCDEx_ActivateLPM:
+ 373              		@ args = 0, pretend = 0, frame = 16
+ 374              		@ frame_needed = 1, uses_anonymous_args = 0
+ 375 0000 80B5     		push	{r7, lr}
+ 376 0002 84B0     		sub	sp, sp, #16
+ 377 0004 00AF     		add	r7, sp, #0
+ 378 0006 7860     		str	r0, [r7, #4]
+ 379 0008 7B68     		ldr	r3, [r7, #4]
+ 380 000a 1B68     		ldr	r3, [r3]
+ 381 000c FB60     		str	r3, [r7, #12]
+ 382 000e 7A68     		ldr	r2, [r7, #4]
+ 383 0010 B423     		movs	r3, #180
+ 384 0012 9B00     		lsls	r3, r3, #2
+ 385 0014 0121     		movs	r1, #1
+ 386 0016 D150     		str	r1, [r2, r3]
+ 387 0018 7A68     		ldr	r2, [r7, #4]
+ 388 001a B223     		movs	r3, #178
+ 389 001c 9B00     		lsls	r3, r3, #2
+ 390 001e 0021     		movs	r1, #0
+ 391 0020 D154     		strb	r1, [r2, r3]
+ 392 0022 FB68     		ldr	r3, [r7, #12]
+ 393 0024 5422     		movs	r2, #84
+ 394 0026 9B5A     		ldrh	r3, [r3, r2]
+ 395 0028 9BB2     		uxth	r3, r3
+ 396 002a 0122     		movs	r2, #1
+ 397 002c 1343     		orrs	r3, r2
+ 398 002e 99B2     		uxth	r1, r3
+ 399 0030 FB68     		ldr	r3, [r7, #12]
+ 400 0032 5422     		movs	r2, #84
+ 401 0034 9952     		strh	r1, [r3, r2]
+ 402 0036 FB68     		ldr	r3, [r7, #12]
+ 403 0038 5422     		movs	r2, #84
+ 404 003a 9B5A     		ldrh	r3, [r3, r2]
+ 405 003c 9BB2     		uxth	r3, r3
+ 406 003e 0222     		movs	r2, #2
+ 407 0040 1343     		orrs	r3, r2
+ 408 0042 99B2     		uxth	r1, r3
+ARM GAS  /tmp/ccok0rFu.s 			page 8
+
+
+ 409 0044 FB68     		ldr	r3, [r7, #12]
+ 410 0046 5422     		movs	r2, #84
+ 411 0048 9952     		strh	r1, [r3, r2]
+ 412 004a 0023     		movs	r3, #0
+ 413 004c 1800     		movs	r0, r3
+ 414 004e BD46     		mov	sp, r7
+ 415 0050 04B0     		add	sp, sp, #16
+ 416              		@ sp needed
+ 417 0052 80BD     		pop	{r7, pc}
+ 419              		.section	.text.HAL_PCDEx_DeActivateLPM,"ax",%progbits
+ 420              		.align	1
+ 421              		.global	HAL_PCDEx_DeActivateLPM
+ 422              		.syntax unified
+ 423              		.code	16
+ 424              		.thumb_func
+ 426              	HAL_PCDEx_DeActivateLPM:
+ 427              		@ args = 0, pretend = 0, frame = 16
+ 428              		@ frame_needed = 1, uses_anonymous_args = 0
+ 429 0000 80B5     		push	{r7, lr}
+ 430 0002 84B0     		sub	sp, sp, #16
+ 431 0004 00AF     		add	r7, sp, #0
+ 432 0006 7860     		str	r0, [r7, #4]
+ 433 0008 7B68     		ldr	r3, [r7, #4]
+ 434 000a 1B68     		ldr	r3, [r3]
+ 435 000c FB60     		str	r3, [r7, #12]
+ 436 000e 7A68     		ldr	r2, [r7, #4]
+ 437 0010 B423     		movs	r3, #180
+ 438 0012 9B00     		lsls	r3, r3, #2
+ 439 0014 0021     		movs	r1, #0
+ 440 0016 D150     		str	r1, [r2, r3]
+ 441 0018 FB68     		ldr	r3, [r7, #12]
+ 442 001a 5422     		movs	r2, #84
+ 443 001c 9B5A     		ldrh	r3, [r3, r2]
+ 444 001e 9BB2     		uxth	r3, r3
+ 445 0020 0122     		movs	r2, #1
+ 446 0022 9343     		bics	r3, r2
+ 447 0024 99B2     		uxth	r1, r3
+ 448 0026 FB68     		ldr	r3, [r7, #12]
+ 449 0028 5422     		movs	r2, #84
+ 450 002a 9952     		strh	r1, [r3, r2]
+ 451 002c FB68     		ldr	r3, [r7, #12]
+ 452 002e 5422     		movs	r2, #84
+ 453 0030 9B5A     		ldrh	r3, [r3, r2]
+ 454 0032 9BB2     		uxth	r3, r3
+ 455 0034 0222     		movs	r2, #2
+ 456 0036 9343     		bics	r3, r2
+ 457 0038 99B2     		uxth	r1, r3
+ 458 003a FB68     		ldr	r3, [r7, #12]
+ 459 003c 5422     		movs	r2, #84
+ 460 003e 9952     		strh	r1, [r3, r2]
+ 461 0040 0023     		movs	r3, #0
+ 462 0042 1800     		movs	r0, r3
+ 463 0044 BD46     		mov	sp, r7
+ 464 0046 04B0     		add	sp, sp, #16
+ 465              		@ sp needed
+ 466 0048 80BD     		pop	{r7, pc}
+ 468              		.section	.text.HAL_PCDEx_LPM_Callback,"ax",%progbits
+ARM GAS  /tmp/ccok0rFu.s 			page 9
+
+
+ 469              		.align	1
+ 470              		.weak	HAL_PCDEx_LPM_Callback
+ 471              		.syntax unified
+ 472              		.code	16
+ 473              		.thumb_func
+ 475              	HAL_PCDEx_LPM_Callback:
+ 476              		@ args = 0, pretend = 0, frame = 8
+ 477              		@ frame_needed = 1, uses_anonymous_args = 0
+ 478 0000 80B5     		push	{r7, lr}
+ 479 0002 82B0     		sub	sp, sp, #8
+ 480 0004 00AF     		add	r7, sp, #0
+ 481 0006 7860     		str	r0, [r7, #4]
+ 482 0008 0A00     		movs	r2, r1
+ 483 000a FB1C     		adds	r3, r7, #3
+ 484 000c 1A70     		strb	r2, [r3]
+ 485 000e C046     		nop
+ 486 0010 BD46     		mov	sp, r7
+ 487 0012 02B0     		add	sp, sp, #8
+ 488              		@ sp needed
+ 489 0014 80BD     		pop	{r7, pc}
+ 491              		.section	.text.HAL_PCDEx_BCD_Callback,"ax",%progbits
+ 492              		.align	1
+ 493              		.weak	HAL_PCDEx_BCD_Callback
+ 494              		.syntax unified
+ 495              		.code	16
+ 496              		.thumb_func
+ 498              	HAL_PCDEx_BCD_Callback:
+ 499              		@ args = 0, pretend = 0, frame = 8
+ 500              		@ frame_needed = 1, uses_anonymous_args = 0
+ 501 0000 80B5     		push	{r7, lr}
+ 502 0002 82B0     		sub	sp, sp, #8
+ 503 0004 00AF     		add	r7, sp, #0
+ 504 0006 7860     		str	r0, [r7, #4]
+ 505 0008 0A00     		movs	r2, r1
+ 506 000a FB1C     		adds	r3, r7, #3
+ 507 000c 1A70     		strb	r2, [r3]
+ 508 000e C046     		nop
+ 509 0010 BD46     		mov	sp, r7
+ 510 0012 02B0     		add	sp, sp, #8
+ 511              		@ sp needed
+ 512 0014 80BD     		pop	{r7, pc}
+ 514              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccok0rFu.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_hal_pcd_ex.c
+     /tmp/ccok0rFu.s:15     .text.HAL_PCDEx_PMAConfig:00000000 $t
+     /tmp/ccok0rFu.s:21     .text.HAL_PCDEx_PMAConfig:00000000 HAL_PCDEx_PMAConfig
+     /tmp/ccok0rFu.s:109    .text.HAL_PCDEx_ActivateBCD:00000000 $t
+     /tmp/ccok0rFu.s:115    .text.HAL_PCDEx_ActivateBCD:00000000 HAL_PCDEx_ActivateBCD
+     /tmp/ccok0rFu.s:178    .text.HAL_PCDEx_DeActivateBCD:00000000 $t
+     /tmp/ccok0rFu.s:184    .text.HAL_PCDEx_DeActivateBCD:00000000 HAL_PCDEx_DeActivateBCD
+     /tmp/ccok0rFu.s:217    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 $t
+     /tmp/ccok0rFu.s:223    .text.HAL_PCDEx_BCD_VBUSDetect:00000000 HAL_PCDEx_BCD_VBUSDetect
+     /tmp/ccok0rFu.s:498    .text.HAL_PCDEx_BCD_Callback:00000000 HAL_PCDEx_BCD_Callback
+     /tmp/ccok0rFu.s:366    .text.HAL_PCDEx_ActivateLPM:00000000 $t
+     /tmp/ccok0rFu.s:372    .text.HAL_PCDEx_ActivateLPM:00000000 HAL_PCDEx_ActivateLPM
+     /tmp/ccok0rFu.s:420    .text.HAL_PCDEx_DeActivateLPM:00000000 $t
+     /tmp/ccok0rFu.s:426    .text.HAL_PCDEx_DeActivateLPM:00000000 HAL_PCDEx_DeActivateLPM
+     /tmp/ccok0rFu.s:469    .text.HAL_PCDEx_LPM_Callback:00000000 $t
+     /tmp/ccok0rFu.s:475    .text.HAL_PCDEx_LPM_Callback:00000000 HAL_PCDEx_LPM_Callback
+     /tmp/ccok0rFu.s:492    .text.HAL_PCDEx_BCD_Callback:00000000 $t
+
+UNDEFINED SYMBOLS
+HAL_GetTick
+HAL_Delay

@@ -1,0 +1,898 @@
+ARM GAS  /tmp/cc1EumhP.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"stm32f0xx_hal_cortex.c"
+  13              		.text
+  14              		.section	.text.__NVIC_EnableIRQ,"ax",%progbits
+  15              		.align	1
+  16              		.syntax unified
+  17              		.code	16
+  18              		.thumb_func
+  20              	__NVIC_EnableIRQ:
+  21              		@ args = 0, pretend = 0, frame = 8
+  22              		@ frame_needed = 1, uses_anonymous_args = 0
+  23 0000 80B5     		push	{r7, lr}
+  24 0002 82B0     		sub	sp, sp, #8
+  25 0004 00AF     		add	r7, sp, #0
+  26 0006 0200     		movs	r2, r0
+  27 0008 FB1D     		adds	r3, r7, #7
+  28 000a 1A70     		strb	r2, [r3]
+  29 000c FB1D     		adds	r3, r7, #7
+  30 000e 1B78     		ldrb	r3, [r3]
+  31 0010 7F2B     		cmp	r3, #127
+  32 0012 09D8     		bhi	.L3
+  33 0014 FB1D     		adds	r3, r7, #7
+  34 0016 1B78     		ldrb	r3, [r3]
+  35 0018 1A00     		movs	r2, r3
+  36 001a 1F23     		movs	r3, #31
+  37 001c 1A40     		ands	r2, r3
+  38 001e 044B     		ldr	r3, .L4
+  39 0020 0121     		movs	r1, #1
+  40 0022 9140     		lsls	r1, r1, r2
+  41 0024 0A00     		movs	r2, r1
+  42 0026 1A60     		str	r2, [r3]
+  43              	.L3:
+  44 0028 C046     		nop
+  45 002a BD46     		mov	sp, r7
+  46 002c 02B0     		add	sp, sp, #8
+  47              		@ sp needed
+  48 002e 80BD     		pop	{r7, pc}
+  49              	.L5:
+  50              		.align	2
+  51              	.L4:
+  52 0030 00E100E0 		.word	-536813312
+  54              		.section	.text.__NVIC_DisableIRQ,"ax",%progbits
+  55              		.align	1
+  56              		.syntax unified
+  57              		.code	16
+  58              		.thumb_func
+  60              	__NVIC_DisableIRQ:
+ARM GAS  /tmp/cc1EumhP.s 			page 2
+
+
+  61              		@ args = 0, pretend = 0, frame = 8
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63 0000 80B5     		push	{r7, lr}
+  64 0002 82B0     		sub	sp, sp, #8
+  65 0004 00AF     		add	r7, sp, #0
+  66 0006 0200     		movs	r2, r0
+  67 0008 FB1D     		adds	r3, r7, #7
+  68 000a 1A70     		strb	r2, [r3]
+  69 000c FB1D     		adds	r3, r7, #7
+  70 000e 1B78     		ldrb	r3, [r3]
+  71 0010 7F2B     		cmp	r3, #127
+  72 0012 10D8     		bhi	.L8
+  73 0014 FB1D     		adds	r3, r7, #7
+  74 0016 1B78     		ldrb	r3, [r3]
+  75 0018 1A00     		movs	r2, r3
+  76 001a 1F23     		movs	r3, #31
+  77 001c 1340     		ands	r3, r2
+  78 001e 0849     		ldr	r1, .L9
+  79 0020 0122     		movs	r2, #1
+  80 0022 9A40     		lsls	r2, r2, r3
+  81 0024 1300     		movs	r3, r2
+  82 0026 8022     		movs	r2, #128
+  83 0028 8B50     		str	r3, [r1, r2]
+  84              		.syntax divided
+  85              	@ 879 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  86 002a BFF34F8F 		dsb 0xF
+  87              	@ 0 "" 2
+  88              		.thumb
+  89              		.syntax unified
+  90 002e C046     		nop
+  91              		.syntax divided
+  92              	@ 868 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+  93 0030 BFF36F8F 		isb 0xF
+  94              	@ 0 "" 2
+  95              		.thumb
+  96              		.syntax unified
+  97 0034 C046     		nop
+  98              	.L8:
+  99 0036 C046     		nop
+ 100 0038 BD46     		mov	sp, r7
+ 101 003a 02B0     		add	sp, sp, #8
+ 102              		@ sp needed
+ 103 003c 80BD     		pop	{r7, pc}
+ 104              	.L10:
+ 105 003e C046     		.align	2
+ 106              	.L9:
+ 107 0040 00E100E0 		.word	-536813312
+ 109              		.section	.text.__NVIC_GetPendingIRQ,"ax",%progbits
+ 110              		.align	1
+ 111              		.syntax unified
+ 112              		.code	16
+ 113              		.thumb_func
+ 115              	__NVIC_GetPendingIRQ:
+ 116              		@ args = 0, pretend = 0, frame = 8
+ 117              		@ frame_needed = 1, uses_anonymous_args = 0
+ 118 0000 80B5     		push	{r7, lr}
+ 119 0002 82B0     		sub	sp, sp, #8
+ARM GAS  /tmp/cc1EumhP.s 			page 3
+
+
+ 120 0004 00AF     		add	r7, sp, #0
+ 121 0006 0200     		movs	r2, r0
+ 122 0008 FB1D     		adds	r3, r7, #7
+ 123 000a 1A70     		strb	r2, [r3]
+ 124 000c FB1D     		adds	r3, r7, #7
+ 125 000e 1B78     		ldrb	r3, [r3]
+ 126 0010 7F2B     		cmp	r3, #127
+ 127 0012 0DD8     		bhi	.L12
+ 128 0014 094A     		ldr	r2, .L14
+ 129 0016 8023     		movs	r3, #128
+ 130 0018 5B00     		lsls	r3, r3, #1
+ 131 001a D258     		ldr	r2, [r2, r3]
+ 132 001c FB1D     		adds	r3, r7, #7
+ 133 001e 1B78     		ldrb	r3, [r3]
+ 134 0020 1900     		movs	r1, r3
+ 135 0022 1F23     		movs	r3, #31
+ 136 0024 0B40     		ands	r3, r1
+ 137 0026 DA40     		lsrs	r2, r2, r3
+ 138 0028 1300     		movs	r3, r2
+ 139 002a 0122     		movs	r2, #1
+ 140 002c 1340     		ands	r3, r2
+ 141 002e 00E0     		b	.L13
+ 142              	.L12:
+ 143 0030 0023     		movs	r3, #0
+ 144              	.L13:
+ 145 0032 1800     		movs	r0, r3
+ 146 0034 BD46     		mov	sp, r7
+ 147 0036 02B0     		add	sp, sp, #8
+ 148              		@ sp needed
+ 149 0038 80BD     		pop	{r7, pc}
+ 150              	.L15:
+ 151 003a C046     		.align	2
+ 152              	.L14:
+ 153 003c 00E100E0 		.word	-536813312
+ 155              		.section	.text.__NVIC_SetPendingIRQ,"ax",%progbits
+ 156              		.align	1
+ 157              		.syntax unified
+ 158              		.code	16
+ 159              		.thumb_func
+ 161              	__NVIC_SetPendingIRQ:
+ 162              		@ args = 0, pretend = 0, frame = 8
+ 163              		@ frame_needed = 1, uses_anonymous_args = 0
+ 164 0000 80B5     		push	{r7, lr}
+ 165 0002 82B0     		sub	sp, sp, #8
+ 166 0004 00AF     		add	r7, sp, #0
+ 167 0006 0200     		movs	r2, r0
+ 168 0008 FB1D     		adds	r3, r7, #7
+ 169 000a 1A70     		strb	r2, [r3]
+ 170 000c FB1D     		adds	r3, r7, #7
+ 171 000e 1B78     		ldrb	r3, [r3]
+ 172 0010 7F2B     		cmp	r3, #127
+ 173 0012 0AD8     		bhi	.L18
+ 174 0014 FB1D     		adds	r3, r7, #7
+ 175 0016 1B78     		ldrb	r3, [r3]
+ 176 0018 1A00     		movs	r2, r3
+ 177 001a 1F23     		movs	r3, #31
+ 178 001c 1340     		ands	r3, r2
+ARM GAS  /tmp/cc1EumhP.s 			page 4
+
+
+ 179 001e 0549     		ldr	r1, .L19
+ 180 0020 0122     		movs	r2, #1
+ 181 0022 9A40     		lsls	r2, r2, r3
+ 182 0024 8023     		movs	r3, #128
+ 183 0026 5B00     		lsls	r3, r3, #1
+ 184 0028 CA50     		str	r2, [r1, r3]
+ 185              	.L18:
+ 186 002a C046     		nop
+ 187 002c BD46     		mov	sp, r7
+ 188 002e 02B0     		add	sp, sp, #8
+ 189              		@ sp needed
+ 190 0030 80BD     		pop	{r7, pc}
+ 191              	.L20:
+ 192 0032 C046     		.align	2
+ 193              	.L19:
+ 194 0034 00E100E0 		.word	-536813312
+ 196              		.section	.text.__NVIC_ClearPendingIRQ,"ax",%progbits
+ 197              		.align	1
+ 198              		.syntax unified
+ 199              		.code	16
+ 200              		.thumb_func
+ 202              	__NVIC_ClearPendingIRQ:
+ 203              		@ args = 0, pretend = 0, frame = 8
+ 204              		@ frame_needed = 1, uses_anonymous_args = 0
+ 205 0000 80B5     		push	{r7, lr}
+ 206 0002 82B0     		sub	sp, sp, #8
+ 207 0004 00AF     		add	r7, sp, #0
+ 208 0006 0200     		movs	r2, r0
+ 209 0008 FB1D     		adds	r3, r7, #7
+ 210 000a 1A70     		strb	r2, [r3]
+ 211 000c FB1D     		adds	r3, r7, #7
+ 212 000e 1B78     		ldrb	r3, [r3]
+ 213 0010 7F2B     		cmp	r3, #127
+ 214 0012 0AD8     		bhi	.L23
+ 215 0014 FB1D     		adds	r3, r7, #7
+ 216 0016 1B78     		ldrb	r3, [r3]
+ 217 0018 1A00     		movs	r2, r3
+ 218 001a 1F23     		movs	r3, #31
+ 219 001c 1340     		ands	r3, r2
+ 220 001e 0549     		ldr	r1, .L24
+ 221 0020 0122     		movs	r2, #1
+ 222 0022 9A40     		lsls	r2, r2, r3
+ 223 0024 C023     		movs	r3, #192
+ 224 0026 5B00     		lsls	r3, r3, #1
+ 225 0028 CA50     		str	r2, [r1, r3]
+ 226              	.L23:
+ 227 002a C046     		nop
+ 228 002c BD46     		mov	sp, r7
+ 229 002e 02B0     		add	sp, sp, #8
+ 230              		@ sp needed
+ 231 0030 80BD     		pop	{r7, pc}
+ 232              	.L25:
+ 233 0032 C046     		.align	2
+ 234              	.L24:
+ 235 0034 00E100E0 		.word	-536813312
+ 237              		.section	.text.__NVIC_SetPriority,"ax",%progbits
+ 238              		.align	1
+ARM GAS  /tmp/cc1EumhP.s 			page 5
+
+
+ 239              		.syntax unified
+ 240              		.code	16
+ 241              		.thumb_func
+ 243              	__NVIC_SetPriority:
+ 244              		@ args = 0, pretend = 0, frame = 8
+ 245              		@ frame_needed = 1, uses_anonymous_args = 0
+ 246 0000 90B5     		push	{r4, r7, lr}
+ 247 0002 83B0     		sub	sp, sp, #12
+ 248 0004 00AF     		add	r7, sp, #0
+ 249 0006 0200     		movs	r2, r0
+ 250 0008 3960     		str	r1, [r7]
+ 251 000a FB1D     		adds	r3, r7, #7
+ 252 000c 1A70     		strb	r2, [r3]
+ 253 000e FB1D     		adds	r3, r7, #7
+ 254 0010 1B78     		ldrb	r3, [r3]
+ 255 0012 7F2B     		cmp	r3, #127
+ 256 0014 28D8     		bhi	.L27
+ 257 0016 2F4A     		ldr	r2, .L30
+ 258 0018 FB1D     		adds	r3, r7, #7
+ 259 001a 1B78     		ldrb	r3, [r3]
+ 260 001c 5BB2     		sxtb	r3, r3
+ 261 001e 9B08     		lsrs	r3, r3, #2
+ 262 0020 C033     		adds	r3, r3, #192
+ 263 0022 9B00     		lsls	r3, r3, #2
+ 264 0024 9B58     		ldr	r3, [r3, r2]
+ 265 0026 FA1D     		adds	r2, r7, #7
+ 266 0028 1278     		ldrb	r2, [r2]
+ 267 002a 1100     		movs	r1, r2
+ 268 002c 0322     		movs	r2, #3
+ 269 002e 0A40     		ands	r2, r1
+ 270 0030 D200     		lsls	r2, r2, #3
+ 271 0032 FF21     		movs	r1, #255
+ 272 0034 9140     		lsls	r1, r1, r2
+ 273 0036 0A00     		movs	r2, r1
+ 274 0038 D243     		mvns	r2, r2
+ 275 003a 1A40     		ands	r2, r3
+ 276 003c 1100     		movs	r1, r2
+ 277 003e 3B68     		ldr	r3, [r7]
+ 278 0040 9B01     		lsls	r3, r3, #6
+ 279 0042 FF22     		movs	r2, #255
+ 280 0044 1A40     		ands	r2, r3
+ 281 0046 FB1D     		adds	r3, r7, #7
+ 282 0048 1B78     		ldrb	r3, [r3]
+ 283 004a 1800     		movs	r0, r3
+ 284 004c 0323     		movs	r3, #3
+ 285 004e 0340     		ands	r3, r0
+ 286 0050 DB00     		lsls	r3, r3, #3
+ 287 0052 9A40     		lsls	r2, r2, r3
+ 288 0054 1F48     		ldr	r0, .L30
+ 289 0056 FB1D     		adds	r3, r7, #7
+ 290 0058 1B78     		ldrb	r3, [r3]
+ 291 005a 5BB2     		sxtb	r3, r3
+ 292 005c 9B08     		lsrs	r3, r3, #2
+ 293 005e 0A43     		orrs	r2, r1
+ 294 0060 C033     		adds	r3, r3, #192
+ 295 0062 9B00     		lsls	r3, r3, #2
+ 296 0064 1A50     		str	r2, [r3, r0]
+ARM GAS  /tmp/cc1EumhP.s 			page 6
+
+
+ 297 0066 31E0     		b	.L29
+ 298              	.L27:
+ 299 0068 1B4A     		ldr	r2, .L30+4
+ 300 006a FB1D     		adds	r3, r7, #7
+ 301 006c 1B78     		ldrb	r3, [r3]
+ 302 006e 1900     		movs	r1, r3
+ 303 0070 0F23     		movs	r3, #15
+ 304 0072 0B40     		ands	r3, r1
+ 305 0074 083B     		subs	r3, r3, #8
+ 306 0076 9B08     		lsrs	r3, r3, #2
+ 307 0078 0633     		adds	r3, r3, #6
+ 308 007a 9B00     		lsls	r3, r3, #2
+ 309 007c D318     		adds	r3, r2, r3
+ 310 007e 0433     		adds	r3, r3, #4
+ 311 0080 1B68     		ldr	r3, [r3]
+ 312 0082 FA1D     		adds	r2, r7, #7
+ 313 0084 1278     		ldrb	r2, [r2]
+ 314 0086 1100     		movs	r1, r2
+ 315 0088 0322     		movs	r2, #3
+ 316 008a 0A40     		ands	r2, r1
+ 317 008c D200     		lsls	r2, r2, #3
+ 318 008e FF21     		movs	r1, #255
+ 319 0090 9140     		lsls	r1, r1, r2
+ 320 0092 0A00     		movs	r2, r1
+ 321 0094 D243     		mvns	r2, r2
+ 322 0096 1A40     		ands	r2, r3
+ 323 0098 1100     		movs	r1, r2
+ 324 009a 3B68     		ldr	r3, [r7]
+ 325 009c 9B01     		lsls	r3, r3, #6
+ 326 009e FF22     		movs	r2, #255
+ 327 00a0 1A40     		ands	r2, r3
+ 328 00a2 FB1D     		adds	r3, r7, #7
+ 329 00a4 1B78     		ldrb	r3, [r3]
+ 330 00a6 1800     		movs	r0, r3
+ 331 00a8 0323     		movs	r3, #3
+ 332 00aa 0340     		ands	r3, r0
+ 333 00ac DB00     		lsls	r3, r3, #3
+ 334 00ae 9A40     		lsls	r2, r2, r3
+ 335 00b0 0948     		ldr	r0, .L30+4
+ 336 00b2 FB1D     		adds	r3, r7, #7
+ 337 00b4 1B78     		ldrb	r3, [r3]
+ 338 00b6 1C00     		movs	r4, r3
+ 339 00b8 0F23     		movs	r3, #15
+ 340 00ba 2340     		ands	r3, r4
+ 341 00bc 083B     		subs	r3, r3, #8
+ 342 00be 9B08     		lsrs	r3, r3, #2
+ 343 00c0 0A43     		orrs	r2, r1
+ 344 00c2 0633     		adds	r3, r3, #6
+ 345 00c4 9B00     		lsls	r3, r3, #2
+ 346 00c6 C318     		adds	r3, r0, r3
+ 347 00c8 0433     		adds	r3, r3, #4
+ 348 00ca 1A60     		str	r2, [r3]
+ 349              	.L29:
+ 350 00cc C046     		nop
+ 351 00ce BD46     		mov	sp, r7
+ 352 00d0 03B0     		add	sp, sp, #12
+ 353              		@ sp needed
+ARM GAS  /tmp/cc1EumhP.s 			page 7
+
+
+ 354 00d2 90BD     		pop	{r4, r7, pc}
+ 355              	.L31:
+ 356              		.align	2
+ 357              	.L30:
+ 358 00d4 00E100E0 		.word	-536813312
+ 359 00d8 00ED00E0 		.word	-536810240
+ 361              		.section	.text.__NVIC_GetPriority,"ax",%progbits
+ 362              		.align	1
+ 363              		.syntax unified
+ 364              		.code	16
+ 365              		.thumb_func
+ 367              	__NVIC_GetPriority:
+ 368              		@ args = 0, pretend = 0, frame = 8
+ 369              		@ frame_needed = 1, uses_anonymous_args = 0
+ 370 0000 80B5     		push	{r7, lr}
+ 371 0002 82B0     		sub	sp, sp, #8
+ 372 0004 00AF     		add	r7, sp, #0
+ 373 0006 0200     		movs	r2, r0
+ 374 0008 FB1D     		adds	r3, r7, #7
+ 375 000a 1A70     		strb	r2, [r3]
+ 376 000c FB1D     		adds	r3, r7, #7
+ 377 000e 1B78     		ldrb	r3, [r3]
+ 378 0010 7F2B     		cmp	r3, #127
+ 379 0012 13D8     		bhi	.L33
+ 380 0014 174A     		ldr	r2, .L35
+ 381 0016 FB1D     		adds	r3, r7, #7
+ 382 0018 1B78     		ldrb	r3, [r3]
+ 383 001a 5BB2     		sxtb	r3, r3
+ 384 001c 9B08     		lsrs	r3, r3, #2
+ 385 001e C033     		adds	r3, r3, #192
+ 386 0020 9B00     		lsls	r3, r3, #2
+ 387 0022 9A58     		ldr	r2, [r3, r2]
+ 388 0024 FB1D     		adds	r3, r7, #7
+ 389 0026 1B78     		ldrb	r3, [r3]
+ 390 0028 1900     		movs	r1, r3
+ 391 002a 0323     		movs	r3, #3
+ 392 002c 0B40     		ands	r3, r1
+ 393 002e DB00     		lsls	r3, r3, #3
+ 394 0030 DA40     		lsrs	r2, r2, r3
+ 395 0032 1300     		movs	r3, r2
+ 396 0034 9B09     		lsrs	r3, r3, #6
+ 397 0036 0322     		movs	r2, #3
+ 398 0038 1340     		ands	r3, r2
+ 399 003a 17E0     		b	.L34
+ 400              	.L33:
+ 401 003c 0E4A     		ldr	r2, .L35+4
+ 402 003e FB1D     		adds	r3, r7, #7
+ 403 0040 1B78     		ldrb	r3, [r3]
+ 404 0042 1900     		movs	r1, r3
+ 405 0044 0F23     		movs	r3, #15
+ 406 0046 0B40     		ands	r3, r1
+ 407 0048 083B     		subs	r3, r3, #8
+ 408 004a 9B08     		lsrs	r3, r3, #2
+ 409 004c 0633     		adds	r3, r3, #6
+ 410 004e 9B00     		lsls	r3, r3, #2
+ 411 0050 D318     		adds	r3, r2, r3
+ 412 0052 0433     		adds	r3, r3, #4
+ARM GAS  /tmp/cc1EumhP.s 			page 8
+
+
+ 413 0054 1A68     		ldr	r2, [r3]
+ 414 0056 FB1D     		adds	r3, r7, #7
+ 415 0058 1B78     		ldrb	r3, [r3]
+ 416 005a 1900     		movs	r1, r3
+ 417 005c 0323     		movs	r3, #3
+ 418 005e 0B40     		ands	r3, r1
+ 419 0060 DB00     		lsls	r3, r3, #3
+ 420 0062 DA40     		lsrs	r2, r2, r3
+ 421 0064 1300     		movs	r3, r2
+ 422 0066 9B09     		lsrs	r3, r3, #6
+ 423 0068 0322     		movs	r2, #3
+ 424 006a 1340     		ands	r3, r2
+ 425              	.L34:
+ 426 006c 1800     		movs	r0, r3
+ 427 006e BD46     		mov	sp, r7
+ 428 0070 02B0     		add	sp, sp, #8
+ 429              		@ sp needed
+ 430 0072 80BD     		pop	{r7, pc}
+ 431              	.L36:
+ 432              		.align	2
+ 433              	.L35:
+ 434 0074 00E100E0 		.word	-536813312
+ 435 0078 00ED00E0 		.word	-536810240
+ 437              		.section	.text.__NVIC_SystemReset,"ax",%progbits
+ 438              		.align	1
+ 439              		.syntax unified
+ 440              		.code	16
+ 441              		.thumb_func
+ 443              	__NVIC_SystemReset:
+ 444              		@ args = 0, pretend = 0, frame = 0
+ 445              		@ frame_needed = 1, uses_anonymous_args = 0
+ 446 0000 80B5     		push	{r7, lr}
+ 447 0002 00AF     		add	r7, sp, #0
+ 448              		.syntax divided
+ 449              	@ 879 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 450 0004 BFF34F8F 		dsb 0xF
+ 451              	@ 0 "" 2
+ 452              		.thumb
+ 453              		.syntax unified
+ 454 0008 C046     		nop
+ 455 000a 044B     		ldr	r3, .L39
+ 456 000c 044A     		ldr	r2, .L39+4
+ 457 000e DA60     		str	r2, [r3, #12]
+ 458              		.syntax divided
+ 459              	@ 879 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 460 0010 BFF34F8F 		dsb 0xF
+ 461              	@ 0 "" 2
+ 462              		.thumb
+ 463              		.syntax unified
+ 464 0014 C046     		nop
+ 465              	.L38:
+ 466              		.syntax divided
+ 467              	@ 866 "Drivers/CMSIS/Include/core_cm0.h" 1
+ 468 0016 C046     		nop
+ 469              	@ 0 "" 2
+ 470              		.thumb
+ 471              		.syntax unified
+ARM GAS  /tmp/cc1EumhP.s 			page 9
+
+
+ 472 0018 FDE7     		b	.L38
+ 473              	.L40:
+ 474 001a C046     		.align	2
+ 475              	.L39:
+ 476 001c 00ED00E0 		.word	-536810240
+ 477 0020 0400FA05 		.word	100270084
+ 479              		.section	.text.SysTick_Config,"ax",%progbits
+ 480              		.align	1
+ 481              		.syntax unified
+ 482              		.code	16
+ 483              		.thumb_func
+ 485              	SysTick_Config:
+ 486              		@ args = 0, pretend = 0, frame = 8
+ 487              		@ frame_needed = 1, uses_anonymous_args = 0
+ 488 0000 80B5     		push	{r7, lr}
+ 489 0002 82B0     		sub	sp, sp, #8
+ 490 0004 00AF     		add	r7, sp, #0
+ 491 0006 7860     		str	r0, [r7, #4]
+ 492 0008 7B68     		ldr	r3, [r7, #4]
+ 493 000a 5A1E     		subs	r2, r3, #1
+ 494 000c 8023     		movs	r3, #128
+ 495 000e 5B04     		lsls	r3, r3, #17
+ 496 0010 9A42     		cmp	r2, r3
+ 497 0012 01D3     		bcc	.L42
+ 498 0014 0123     		movs	r3, #1
+ 499 0016 10E0     		b	.L43
+ 500              	.L42:
+ 501 0018 0A4B     		ldr	r3, .L44
+ 502 001a 7A68     		ldr	r2, [r7, #4]
+ 503 001c 013A     		subs	r2, r2, #1
+ 504 001e 5A60     		str	r2, [r3, #4]
+ 505 0020 0123     		movs	r3, #1
+ 506 0022 5B42     		rsbs	r3, r3, #0
+ 507 0024 0321     		movs	r1, #3
+ 508 0026 1800     		movs	r0, r3
+ 509 0028 FFF7FEFF 		bl	__NVIC_SetPriority
+ 510 002c 054B     		ldr	r3, .L44
+ 511 002e 0022     		movs	r2, #0
+ 512 0030 9A60     		str	r2, [r3, #8]
+ 513 0032 044B     		ldr	r3, .L44
+ 514 0034 0722     		movs	r2, #7
+ 515 0036 1A60     		str	r2, [r3]
+ 516 0038 0023     		movs	r3, #0
+ 517              	.L43:
+ 518 003a 1800     		movs	r0, r3
+ 519 003c BD46     		mov	sp, r7
+ 520 003e 02B0     		add	sp, sp, #8
+ 521              		@ sp needed
+ 522 0040 80BD     		pop	{r7, pc}
+ 523              	.L45:
+ 524 0042 C046     		.align	2
+ 525              	.L44:
+ 526 0044 10E000E0 		.word	-536813552
+ 528              		.section	.text.HAL_NVIC_SetPriority,"ax",%progbits
+ 529              		.align	1
+ 530              		.global	HAL_NVIC_SetPriority
+ 531              		.syntax unified
+ARM GAS  /tmp/cc1EumhP.s 			page 10
+
+
+ 532              		.code	16
+ 533              		.thumb_func
+ 535              	HAL_NVIC_SetPriority:
+ 536              		@ args = 0, pretend = 0, frame = 16
+ 537              		@ frame_needed = 1, uses_anonymous_args = 0
+ 538 0000 80B5     		push	{r7, lr}
+ 539 0002 84B0     		sub	sp, sp, #16
+ 540 0004 00AF     		add	r7, sp, #0
+ 541 0006 B960     		str	r1, [r7, #8]
+ 542 0008 7A60     		str	r2, [r7, #4]
+ 543 000a 0F21     		movs	r1, #15
+ 544 000c 7B18     		adds	r3, r7, r1
+ 545 000e 021C     		adds	r2, r0, #0
+ 546 0010 1A70     		strb	r2, [r3]
+ 547 0012 BA68     		ldr	r2, [r7, #8]
+ 548 0014 7B18     		adds	r3, r7, r1
+ 549 0016 1B78     		ldrb	r3, [r3]
+ 550 0018 5BB2     		sxtb	r3, r3
+ 551 001a 1100     		movs	r1, r2
+ 552 001c 1800     		movs	r0, r3
+ 553 001e FFF7FEFF 		bl	__NVIC_SetPriority
+ 554 0022 C046     		nop
+ 555 0024 BD46     		mov	sp, r7
+ 556 0026 04B0     		add	sp, sp, #16
+ 557              		@ sp needed
+ 558 0028 80BD     		pop	{r7, pc}
+ 560              		.section	.text.HAL_NVIC_EnableIRQ,"ax",%progbits
+ 561              		.align	1
+ 562              		.global	HAL_NVIC_EnableIRQ
+ 563              		.syntax unified
+ 564              		.code	16
+ 565              		.thumb_func
+ 567              	HAL_NVIC_EnableIRQ:
+ 568              		@ args = 0, pretend = 0, frame = 8
+ 569              		@ frame_needed = 1, uses_anonymous_args = 0
+ 570 0000 80B5     		push	{r7, lr}
+ 571 0002 82B0     		sub	sp, sp, #8
+ 572 0004 00AF     		add	r7, sp, #0
+ 573 0006 0200     		movs	r2, r0
+ 574 0008 FB1D     		adds	r3, r7, #7
+ 575 000a 1A70     		strb	r2, [r3]
+ 576 000c FB1D     		adds	r3, r7, #7
+ 577 000e 1B78     		ldrb	r3, [r3]
+ 578 0010 5BB2     		sxtb	r3, r3
+ 579 0012 1800     		movs	r0, r3
+ 580 0014 FFF7FEFF 		bl	__NVIC_EnableIRQ
+ 581 0018 C046     		nop
+ 582 001a BD46     		mov	sp, r7
+ 583 001c 02B0     		add	sp, sp, #8
+ 584              		@ sp needed
+ 585 001e 80BD     		pop	{r7, pc}
+ 587              		.section	.text.HAL_NVIC_DisableIRQ,"ax",%progbits
+ 588              		.align	1
+ 589              		.global	HAL_NVIC_DisableIRQ
+ 590              		.syntax unified
+ 591              		.code	16
+ 592              		.thumb_func
+ARM GAS  /tmp/cc1EumhP.s 			page 11
+
+
+ 594              	HAL_NVIC_DisableIRQ:
+ 595              		@ args = 0, pretend = 0, frame = 8
+ 596              		@ frame_needed = 1, uses_anonymous_args = 0
+ 597 0000 80B5     		push	{r7, lr}
+ 598 0002 82B0     		sub	sp, sp, #8
+ 599 0004 00AF     		add	r7, sp, #0
+ 600 0006 0200     		movs	r2, r0
+ 601 0008 FB1D     		adds	r3, r7, #7
+ 602 000a 1A70     		strb	r2, [r3]
+ 603 000c FB1D     		adds	r3, r7, #7
+ 604 000e 1B78     		ldrb	r3, [r3]
+ 605 0010 5BB2     		sxtb	r3, r3
+ 606 0012 1800     		movs	r0, r3
+ 607 0014 FFF7FEFF 		bl	__NVIC_DisableIRQ
+ 608 0018 C046     		nop
+ 609 001a BD46     		mov	sp, r7
+ 610 001c 02B0     		add	sp, sp, #8
+ 611              		@ sp needed
+ 612 001e 80BD     		pop	{r7, pc}
+ 614              		.section	.text.HAL_NVIC_SystemReset,"ax",%progbits
+ 615              		.align	1
+ 616              		.global	HAL_NVIC_SystemReset
+ 617              		.syntax unified
+ 618              		.code	16
+ 619              		.thumb_func
+ 621              	HAL_NVIC_SystemReset:
+ 622              		@ args = 0, pretend = 0, frame = 0
+ 623              		@ frame_needed = 1, uses_anonymous_args = 0
+ 624 0000 80B5     		push	{r7, lr}
+ 625 0002 00AF     		add	r7, sp, #0
+ 626 0004 FFF7FEFF 		bl	__NVIC_SystemReset
+ 628              		.section	.text.HAL_SYSTICK_Config,"ax",%progbits
+ 629              		.align	1
+ 630              		.global	HAL_SYSTICK_Config
+ 631              		.syntax unified
+ 632              		.code	16
+ 633              		.thumb_func
+ 635              	HAL_SYSTICK_Config:
+ 636              		@ args = 0, pretend = 0, frame = 8
+ 637              		@ frame_needed = 1, uses_anonymous_args = 0
+ 638 0000 80B5     		push	{r7, lr}
+ 639 0002 82B0     		sub	sp, sp, #8
+ 640 0004 00AF     		add	r7, sp, #0
+ 641 0006 7860     		str	r0, [r7, #4]
+ 642 0008 7B68     		ldr	r3, [r7, #4]
+ 643 000a 1800     		movs	r0, r3
+ 644 000c FFF7FEFF 		bl	SysTick_Config
+ 645 0010 0300     		movs	r3, r0
+ 646 0012 1800     		movs	r0, r3
+ 647 0014 BD46     		mov	sp, r7
+ 648 0016 02B0     		add	sp, sp, #8
+ 649              		@ sp needed
+ 650 0018 80BD     		pop	{r7, pc}
+ 652              		.section	.text.HAL_NVIC_GetPriority,"ax",%progbits
+ 653              		.align	1
+ 654              		.global	HAL_NVIC_GetPriority
+ 655              		.syntax unified
+ARM GAS  /tmp/cc1EumhP.s 			page 12
+
+
+ 656              		.code	16
+ 657              		.thumb_func
+ 659              	HAL_NVIC_GetPriority:
+ 660              		@ args = 0, pretend = 0, frame = 8
+ 661              		@ frame_needed = 1, uses_anonymous_args = 0
+ 662 0000 80B5     		push	{r7, lr}
+ 663 0002 82B0     		sub	sp, sp, #8
+ 664 0004 00AF     		add	r7, sp, #0
+ 665 0006 0200     		movs	r2, r0
+ 666 0008 FB1D     		adds	r3, r7, #7
+ 667 000a 1A70     		strb	r2, [r3]
+ 668 000c FB1D     		adds	r3, r7, #7
+ 669 000e 1B78     		ldrb	r3, [r3]
+ 670 0010 5BB2     		sxtb	r3, r3
+ 671 0012 1800     		movs	r0, r3
+ 672 0014 FFF7FEFF 		bl	__NVIC_GetPriority
+ 673 0018 0300     		movs	r3, r0
+ 674 001a 1800     		movs	r0, r3
+ 675 001c BD46     		mov	sp, r7
+ 676 001e 02B0     		add	sp, sp, #8
+ 677              		@ sp needed
+ 678 0020 80BD     		pop	{r7, pc}
+ 680              		.section	.text.HAL_NVIC_SetPendingIRQ,"ax",%progbits
+ 681              		.align	1
+ 682              		.global	HAL_NVIC_SetPendingIRQ
+ 683              		.syntax unified
+ 684              		.code	16
+ 685              		.thumb_func
+ 687              	HAL_NVIC_SetPendingIRQ:
+ 688              		@ args = 0, pretend = 0, frame = 8
+ 689              		@ frame_needed = 1, uses_anonymous_args = 0
+ 690 0000 80B5     		push	{r7, lr}
+ 691 0002 82B0     		sub	sp, sp, #8
+ 692 0004 00AF     		add	r7, sp, #0
+ 693 0006 0200     		movs	r2, r0
+ 694 0008 FB1D     		adds	r3, r7, #7
+ 695 000a 1A70     		strb	r2, [r3]
+ 696 000c FB1D     		adds	r3, r7, #7
+ 697 000e 1B78     		ldrb	r3, [r3]
+ 698 0010 5BB2     		sxtb	r3, r3
+ 699 0012 1800     		movs	r0, r3
+ 700 0014 FFF7FEFF 		bl	__NVIC_SetPendingIRQ
+ 701 0018 C046     		nop
+ 702 001a BD46     		mov	sp, r7
+ 703 001c 02B0     		add	sp, sp, #8
+ 704              		@ sp needed
+ 705 001e 80BD     		pop	{r7, pc}
+ 707              		.section	.text.HAL_NVIC_GetPendingIRQ,"ax",%progbits
+ 708              		.align	1
+ 709              		.global	HAL_NVIC_GetPendingIRQ
+ 710              		.syntax unified
+ 711              		.code	16
+ 712              		.thumb_func
+ 714              	HAL_NVIC_GetPendingIRQ:
+ 715              		@ args = 0, pretend = 0, frame = 8
+ 716              		@ frame_needed = 1, uses_anonymous_args = 0
+ 717 0000 80B5     		push	{r7, lr}
+ARM GAS  /tmp/cc1EumhP.s 			page 13
+
+
+ 718 0002 82B0     		sub	sp, sp, #8
+ 719 0004 00AF     		add	r7, sp, #0
+ 720 0006 0200     		movs	r2, r0
+ 721 0008 FB1D     		adds	r3, r7, #7
+ 722 000a 1A70     		strb	r2, [r3]
+ 723 000c FB1D     		adds	r3, r7, #7
+ 724 000e 1B78     		ldrb	r3, [r3]
+ 725 0010 5BB2     		sxtb	r3, r3
+ 726 0012 1800     		movs	r0, r3
+ 727 0014 FFF7FEFF 		bl	__NVIC_GetPendingIRQ
+ 728 0018 0300     		movs	r3, r0
+ 729 001a 1800     		movs	r0, r3
+ 730 001c BD46     		mov	sp, r7
+ 731 001e 02B0     		add	sp, sp, #8
+ 732              		@ sp needed
+ 733 0020 80BD     		pop	{r7, pc}
+ 735              		.section	.text.HAL_NVIC_ClearPendingIRQ,"ax",%progbits
+ 736              		.align	1
+ 737              		.global	HAL_NVIC_ClearPendingIRQ
+ 738              		.syntax unified
+ 739              		.code	16
+ 740              		.thumb_func
+ 742              	HAL_NVIC_ClearPendingIRQ:
+ 743              		@ args = 0, pretend = 0, frame = 8
+ 744              		@ frame_needed = 1, uses_anonymous_args = 0
+ 745 0000 80B5     		push	{r7, lr}
+ 746 0002 82B0     		sub	sp, sp, #8
+ 747 0004 00AF     		add	r7, sp, #0
+ 748 0006 0200     		movs	r2, r0
+ 749 0008 FB1D     		adds	r3, r7, #7
+ 750 000a 1A70     		strb	r2, [r3]
+ 751 000c FB1D     		adds	r3, r7, #7
+ 752 000e 1B78     		ldrb	r3, [r3]
+ 753 0010 5BB2     		sxtb	r3, r3
+ 754 0012 1800     		movs	r0, r3
+ 755 0014 FFF7FEFF 		bl	__NVIC_ClearPendingIRQ
+ 756 0018 C046     		nop
+ 757 001a BD46     		mov	sp, r7
+ 758 001c 02B0     		add	sp, sp, #8
+ 759              		@ sp needed
+ 760 001e 80BD     		pop	{r7, pc}
+ 762              		.section	.text.HAL_SYSTICK_CLKSourceConfig,"ax",%progbits
+ 763              		.align	1
+ 764              		.global	HAL_SYSTICK_CLKSourceConfig
+ 765              		.syntax unified
+ 766              		.code	16
+ 767              		.thumb_func
+ 769              	HAL_SYSTICK_CLKSourceConfig:
+ 770              		@ args = 0, pretend = 0, frame = 8
+ 771              		@ frame_needed = 1, uses_anonymous_args = 0
+ 772 0000 80B5     		push	{r7, lr}
+ 773 0002 82B0     		sub	sp, sp, #8
+ 774 0004 00AF     		add	r7, sp, #0
+ 775 0006 7860     		str	r0, [r7, #4]
+ 776 0008 7B68     		ldr	r3, [r7, #4]
+ 777 000a 042B     		cmp	r3, #4
+ 778 000c 06D1     		bne	.L59
+ARM GAS  /tmp/cc1EumhP.s 			page 14
+
+
+ 779 000e 084B     		ldr	r3, .L62
+ 780 0010 1A68     		ldr	r2, [r3]
+ 781 0012 074B     		ldr	r3, .L62
+ 782 0014 0421     		movs	r1, #4
+ 783 0016 0A43     		orrs	r2, r1
+ 784 0018 1A60     		str	r2, [r3]
+ 785 001a 05E0     		b	.L61
+ 786              	.L59:
+ 787 001c 044B     		ldr	r3, .L62
+ 788 001e 1A68     		ldr	r2, [r3]
+ 789 0020 034B     		ldr	r3, .L62
+ 790 0022 0421     		movs	r1, #4
+ 791 0024 8A43     		bics	r2, r1
+ 792 0026 1A60     		str	r2, [r3]
+ 793              	.L61:
+ 794 0028 C046     		nop
+ 795 002a BD46     		mov	sp, r7
+ 796 002c 02B0     		add	sp, sp, #8
+ 797              		@ sp needed
+ 798 002e 80BD     		pop	{r7, pc}
+ 799              	.L63:
+ 800              		.align	2
+ 801              	.L62:
+ 802 0030 10E000E0 		.word	-536813552
+ 804              		.section	.text.HAL_SYSTICK_IRQHandler,"ax",%progbits
+ 805              		.align	1
+ 806              		.global	HAL_SYSTICK_IRQHandler
+ 807              		.syntax unified
+ 808              		.code	16
+ 809              		.thumb_func
+ 811              	HAL_SYSTICK_IRQHandler:
+ 812              		@ args = 0, pretend = 0, frame = 0
+ 813              		@ frame_needed = 1, uses_anonymous_args = 0
+ 814 0000 80B5     		push	{r7, lr}
+ 815 0002 00AF     		add	r7, sp, #0
+ 816 0004 FFF7FEFF 		bl	HAL_SYSTICK_Callback
+ 817 0008 C046     		nop
+ 818 000a BD46     		mov	sp, r7
+ 819              		@ sp needed
+ 820 000c 80BD     		pop	{r7, pc}
+ 822              		.section	.text.HAL_SYSTICK_Callback,"ax",%progbits
+ 823              		.align	1
+ 824              		.weak	HAL_SYSTICK_Callback
+ 825              		.syntax unified
+ 826              		.code	16
+ 827              		.thumb_func
+ 829              	HAL_SYSTICK_Callback:
+ 830              		@ args = 0, pretend = 0, frame = 0
+ 831              		@ frame_needed = 1, uses_anonymous_args = 0
+ 832 0000 80B5     		push	{r7, lr}
+ 833 0002 00AF     		add	r7, sp, #0
+ 834 0004 C046     		nop
+ 835 0006 BD46     		mov	sp, r7
+ 836              		@ sp needed
+ 837 0008 80BD     		pop	{r7, pc}
+ 839              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/cc1EumhP.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_hal_cortex.c
+     /tmp/cc1EumhP.s:15     .text.__NVIC_EnableIRQ:00000000 $t
+     /tmp/cc1EumhP.s:20     .text.__NVIC_EnableIRQ:00000000 __NVIC_EnableIRQ
+     /tmp/cc1EumhP.s:52     .text.__NVIC_EnableIRQ:00000030 $d
+     /tmp/cc1EumhP.s:55     .text.__NVIC_DisableIRQ:00000000 $t
+     /tmp/cc1EumhP.s:60     .text.__NVIC_DisableIRQ:00000000 __NVIC_DisableIRQ
+     /tmp/cc1EumhP.s:107    .text.__NVIC_DisableIRQ:00000040 $d
+     /tmp/cc1EumhP.s:110    .text.__NVIC_GetPendingIRQ:00000000 $t
+     /tmp/cc1EumhP.s:115    .text.__NVIC_GetPendingIRQ:00000000 __NVIC_GetPendingIRQ
+     /tmp/cc1EumhP.s:153    .text.__NVIC_GetPendingIRQ:0000003c $d
+     /tmp/cc1EumhP.s:156    .text.__NVIC_SetPendingIRQ:00000000 $t
+     /tmp/cc1EumhP.s:161    .text.__NVIC_SetPendingIRQ:00000000 __NVIC_SetPendingIRQ
+     /tmp/cc1EumhP.s:194    .text.__NVIC_SetPendingIRQ:00000034 $d
+     /tmp/cc1EumhP.s:197    .text.__NVIC_ClearPendingIRQ:00000000 $t
+     /tmp/cc1EumhP.s:202    .text.__NVIC_ClearPendingIRQ:00000000 __NVIC_ClearPendingIRQ
+     /tmp/cc1EumhP.s:235    .text.__NVIC_ClearPendingIRQ:00000034 $d
+     /tmp/cc1EumhP.s:238    .text.__NVIC_SetPriority:00000000 $t
+     /tmp/cc1EumhP.s:243    .text.__NVIC_SetPriority:00000000 __NVIC_SetPriority
+     /tmp/cc1EumhP.s:358    .text.__NVIC_SetPriority:000000d4 $d
+     /tmp/cc1EumhP.s:362    .text.__NVIC_GetPriority:00000000 $t
+     /tmp/cc1EumhP.s:367    .text.__NVIC_GetPriority:00000000 __NVIC_GetPriority
+     /tmp/cc1EumhP.s:434    .text.__NVIC_GetPriority:00000074 $d
+     /tmp/cc1EumhP.s:438    .text.__NVIC_SystemReset:00000000 $t
+     /tmp/cc1EumhP.s:443    .text.__NVIC_SystemReset:00000000 __NVIC_SystemReset
+     /tmp/cc1EumhP.s:476    .text.__NVIC_SystemReset:0000001c $d
+     /tmp/cc1EumhP.s:480    .text.SysTick_Config:00000000 $t
+     /tmp/cc1EumhP.s:485    .text.SysTick_Config:00000000 SysTick_Config
+     /tmp/cc1EumhP.s:526    .text.SysTick_Config:00000044 $d
+     /tmp/cc1EumhP.s:529    .text.HAL_NVIC_SetPriority:00000000 $t
+     /tmp/cc1EumhP.s:535    .text.HAL_NVIC_SetPriority:00000000 HAL_NVIC_SetPriority
+     /tmp/cc1EumhP.s:561    .text.HAL_NVIC_EnableIRQ:00000000 $t
+     /tmp/cc1EumhP.s:567    .text.HAL_NVIC_EnableIRQ:00000000 HAL_NVIC_EnableIRQ
+     /tmp/cc1EumhP.s:588    .text.HAL_NVIC_DisableIRQ:00000000 $t
+     /tmp/cc1EumhP.s:594    .text.HAL_NVIC_DisableIRQ:00000000 HAL_NVIC_DisableIRQ
+     /tmp/cc1EumhP.s:615    .text.HAL_NVIC_SystemReset:00000000 $t
+     /tmp/cc1EumhP.s:621    .text.HAL_NVIC_SystemReset:00000000 HAL_NVIC_SystemReset
+     /tmp/cc1EumhP.s:629    .text.HAL_SYSTICK_Config:00000000 $t
+     /tmp/cc1EumhP.s:635    .text.HAL_SYSTICK_Config:00000000 HAL_SYSTICK_Config
+     /tmp/cc1EumhP.s:653    .text.HAL_NVIC_GetPriority:00000000 $t
+     /tmp/cc1EumhP.s:659    .text.HAL_NVIC_GetPriority:00000000 HAL_NVIC_GetPriority
+     /tmp/cc1EumhP.s:681    .text.HAL_NVIC_SetPendingIRQ:00000000 $t
+     /tmp/cc1EumhP.s:687    .text.HAL_NVIC_SetPendingIRQ:00000000 HAL_NVIC_SetPendingIRQ
+     /tmp/cc1EumhP.s:708    .text.HAL_NVIC_GetPendingIRQ:00000000 $t
+     /tmp/cc1EumhP.s:714    .text.HAL_NVIC_GetPendingIRQ:00000000 HAL_NVIC_GetPendingIRQ
+     /tmp/cc1EumhP.s:736    .text.HAL_NVIC_ClearPendingIRQ:00000000 $t
+     /tmp/cc1EumhP.s:742    .text.HAL_NVIC_ClearPendingIRQ:00000000 HAL_NVIC_ClearPendingIRQ
+     /tmp/cc1EumhP.s:763    .text.HAL_SYSTICK_CLKSourceConfig:00000000 $t
+     /tmp/cc1EumhP.s:769    .text.HAL_SYSTICK_CLKSourceConfig:00000000 HAL_SYSTICK_CLKSourceConfig
+     /tmp/cc1EumhP.s:802    .text.HAL_SYSTICK_CLKSourceConfig:00000030 $d
+     /tmp/cc1EumhP.s:805    .text.HAL_SYSTICK_IRQHandler:00000000 $t
+     /tmp/cc1EumhP.s:811    .text.HAL_SYSTICK_IRQHandler:00000000 HAL_SYSTICK_IRQHandler
+     /tmp/cc1EumhP.s:829    .text.HAL_SYSTICK_Callback:00000000 HAL_SYSTICK_Callback
+     /tmp/cc1EumhP.s:823    .text.HAL_SYSTICK_Callback:00000000 $t
+
+NO UNDEFINED SYMBOLS

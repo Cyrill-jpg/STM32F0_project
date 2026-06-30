@@ -1,0 +1,288 @@
+ARM GAS  /tmp/ccpuCh4y.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"usbd_ioreq.c"
+  13              		.text
+  14              		.section	.rodata.CHANNEL_OFFSET_TAB,"a"
+  15              		.align	2
+  18              	CHANNEL_OFFSET_TAB:
+  19 0000 081C3044 		.ascii	"\010\0340DXl\200"
+  19      586C80
+  20              		.section	.text.USBD_CtlSendData,"ax",%progbits
+  21              		.align	1
+  22              		.global	USBD_CtlSendData
+  23              		.syntax unified
+  24              		.code	16
+  25              		.thumb_func
+  27              	USBD_CtlSendData:
+  28              		@ args = 0, pretend = 0, frame = 16
+  29              		@ frame_needed = 1, uses_anonymous_args = 0
+  30 0000 80B5     		push	{r7, lr}
+  31 0002 84B0     		sub	sp, sp, #16
+  32 0004 00AF     		add	r7, sp, #0
+  33 0006 F860     		str	r0, [r7, #12]
+  34 0008 B960     		str	r1, [r7, #8]
+  35 000a BB1D     		adds	r3, r7, #6
+  36 000c 1A80     		strh	r2, [r3]
+  37 000e FA68     		ldr	r2, [r7, #12]
+  38 0010 A523     		movs	r3, #165
+  39 0012 9B00     		lsls	r3, r3, #2
+  40 0014 0221     		movs	r1, #2
+  41 0016 D150     		str	r1, [r2, r3]
+  42 0018 BB1D     		adds	r3, r7, #6
+  43 001a 1A88     		ldrh	r2, [r3]
+  44 001c FB68     		ldr	r3, [r7, #12]
+  45 001e DA61     		str	r2, [r3, #28]
+  46 0020 BB1D     		adds	r3, r7, #6
+  47 0022 1A88     		ldrh	r2, [r3]
+  48 0024 FB68     		ldr	r3, [r7, #12]
+  49 0026 1A62     		str	r2, [r3, #32]
+  50 0028 BB1D     		adds	r3, r7, #6
+  51 002a 1B88     		ldrh	r3, [r3]
+  52 002c BA68     		ldr	r2, [r7, #8]
+  53 002e F868     		ldr	r0, [r7, #12]
+  54 0030 0021     		movs	r1, #0
+  55 0032 FFF7FEFF 		bl	USBD_LL_Transmit
+  56 0036 0023     		movs	r3, #0
+  57 0038 1800     		movs	r0, r3
+  58 003a BD46     		mov	sp, r7
+  59 003c 04B0     		add	sp, sp, #16
+ARM GAS  /tmp/ccpuCh4y.s 			page 2
+
+
+  60              		@ sp needed
+  61 003e 80BD     		pop	{r7, pc}
+  63              		.section	.text.USBD_CtlContinueSendData,"ax",%progbits
+  64              		.align	1
+  65              		.global	USBD_CtlContinueSendData
+  66              		.syntax unified
+  67              		.code	16
+  68              		.thumb_func
+  70              	USBD_CtlContinueSendData:
+  71              		@ args = 0, pretend = 0, frame = 16
+  72              		@ frame_needed = 1, uses_anonymous_args = 0
+  73 0000 80B5     		push	{r7, lr}
+  74 0002 84B0     		sub	sp, sp, #16
+  75 0004 00AF     		add	r7, sp, #0
+  76 0006 F860     		str	r0, [r7, #12]
+  77 0008 B960     		str	r1, [r7, #8]
+  78 000a BB1D     		adds	r3, r7, #6
+  79 000c 1A80     		strh	r2, [r3]
+  80 000e BB1D     		adds	r3, r7, #6
+  81 0010 1B88     		ldrh	r3, [r3]
+  82 0012 BA68     		ldr	r2, [r7, #8]
+  83 0014 F868     		ldr	r0, [r7, #12]
+  84 0016 0021     		movs	r1, #0
+  85 0018 FFF7FEFF 		bl	USBD_LL_Transmit
+  86 001c 0023     		movs	r3, #0
+  87 001e 1800     		movs	r0, r3
+  88 0020 BD46     		mov	sp, r7
+  89 0022 04B0     		add	sp, sp, #16
+  90              		@ sp needed
+  91 0024 80BD     		pop	{r7, pc}
+  93              		.section	.text.USBD_CtlPrepareRx,"ax",%progbits
+  94              		.align	1
+  95              		.global	USBD_CtlPrepareRx
+  96              		.syntax unified
+  97              		.code	16
+  98              		.thumb_func
+ 100              	USBD_CtlPrepareRx:
+ 101              		@ args = 0, pretend = 0, frame = 16
+ 102              		@ frame_needed = 1, uses_anonymous_args = 0
+ 103 0000 80B5     		push	{r7, lr}
+ 104 0002 84B0     		sub	sp, sp, #16
+ 105 0004 00AF     		add	r7, sp, #0
+ 106 0006 F860     		str	r0, [r7, #12]
+ 107 0008 B960     		str	r1, [r7, #8]
+ 108 000a BB1D     		adds	r3, r7, #6
+ 109 000c 1A80     		strh	r2, [r3]
+ 110 000e FA68     		ldr	r2, [r7, #12]
+ 111 0010 A523     		movs	r3, #165
+ 112 0012 9B00     		lsls	r3, r3, #2
+ 113 0014 0321     		movs	r1, #3
+ 114 0016 D150     		str	r1, [r2, r3]
+ 115 0018 BB1D     		adds	r3, r7, #6
+ 116 001a 1988     		ldrh	r1, [r3]
+ 117 001c FA68     		ldr	r2, [r7, #12]
+ 118 001e AE23     		movs	r3, #174
+ 119 0020 5B00     		lsls	r3, r3, #1
+ 120 0022 D150     		str	r1, [r2, r3]
+ARM GAS  /tmp/ccpuCh4y.s 			page 3
+
+
+ 121 0024 BB1D     		adds	r3, r7, #6
+ 122 0026 1988     		ldrh	r1, [r3]
+ 123 0028 FA68     		ldr	r2, [r7, #12]
+ 124 002a B023     		movs	r3, #176
+ 125 002c 5B00     		lsls	r3, r3, #1
+ 126 002e D150     		str	r1, [r2, r3]
+ 127 0030 BB1D     		adds	r3, r7, #6
+ 128 0032 1B88     		ldrh	r3, [r3]
+ 129 0034 BA68     		ldr	r2, [r7, #8]
+ 130 0036 F868     		ldr	r0, [r7, #12]
+ 131 0038 0021     		movs	r1, #0
+ 132 003a FFF7FEFF 		bl	USBD_LL_PrepareReceive
+ 133 003e 0023     		movs	r3, #0
+ 134 0040 1800     		movs	r0, r3
+ 135 0042 BD46     		mov	sp, r7
+ 136 0044 04B0     		add	sp, sp, #16
+ 137              		@ sp needed
+ 138 0046 80BD     		pop	{r7, pc}
+ 140              		.section	.text.USBD_CtlContinueRx,"ax",%progbits
+ 141              		.align	1
+ 142              		.global	USBD_CtlContinueRx
+ 143              		.syntax unified
+ 144              		.code	16
+ 145              		.thumb_func
+ 147              	USBD_CtlContinueRx:
+ 148              		@ args = 0, pretend = 0, frame = 16
+ 149              		@ frame_needed = 1, uses_anonymous_args = 0
+ 150 0000 80B5     		push	{r7, lr}
+ 151 0002 84B0     		sub	sp, sp, #16
+ 152 0004 00AF     		add	r7, sp, #0
+ 153 0006 F860     		str	r0, [r7, #12]
+ 154 0008 B960     		str	r1, [r7, #8]
+ 155 000a BB1D     		adds	r3, r7, #6
+ 156 000c 1A80     		strh	r2, [r3]
+ 157 000e BB1D     		adds	r3, r7, #6
+ 158 0010 1B88     		ldrh	r3, [r3]
+ 159 0012 BA68     		ldr	r2, [r7, #8]
+ 160 0014 F868     		ldr	r0, [r7, #12]
+ 161 0016 0021     		movs	r1, #0
+ 162 0018 FFF7FEFF 		bl	USBD_LL_PrepareReceive
+ 163 001c 0023     		movs	r3, #0
+ 164 001e 1800     		movs	r0, r3
+ 165 0020 BD46     		mov	sp, r7
+ 166 0022 04B0     		add	sp, sp, #16
+ 167              		@ sp needed
+ 168 0024 80BD     		pop	{r7, pc}
+ 170              		.section	.text.USBD_CtlSendStatus,"ax",%progbits
+ 171              		.align	1
+ 172              		.global	USBD_CtlSendStatus
+ 173              		.syntax unified
+ 174              		.code	16
+ 175              		.thumb_func
+ 177              	USBD_CtlSendStatus:
+ 178              		@ args = 0, pretend = 0, frame = 8
+ 179              		@ frame_needed = 1, uses_anonymous_args = 0
+ 180 0000 80B5     		push	{r7, lr}
+ 181 0002 82B0     		sub	sp, sp, #8
+ARM GAS  /tmp/ccpuCh4y.s 			page 4
+
+
+ 182 0004 00AF     		add	r7, sp, #0
+ 183 0006 7860     		str	r0, [r7, #4]
+ 184 0008 7A68     		ldr	r2, [r7, #4]
+ 185 000a A523     		movs	r3, #165
+ 186 000c 9B00     		lsls	r3, r3, #2
+ 187 000e 0421     		movs	r1, #4
+ 188 0010 D150     		str	r1, [r2, r3]
+ 189 0012 7868     		ldr	r0, [r7, #4]
+ 190 0014 0023     		movs	r3, #0
+ 191 0016 0022     		movs	r2, #0
+ 192 0018 0021     		movs	r1, #0
+ 193 001a FFF7FEFF 		bl	USBD_LL_Transmit
+ 194 001e 0023     		movs	r3, #0
+ 195 0020 1800     		movs	r0, r3
+ 196 0022 BD46     		mov	sp, r7
+ 197 0024 02B0     		add	sp, sp, #8
+ 198              		@ sp needed
+ 199 0026 80BD     		pop	{r7, pc}
+ 201              		.section	.text.USBD_CtlReceiveStatus,"ax",%progbits
+ 202              		.align	1
+ 203              		.global	USBD_CtlReceiveStatus
+ 204              		.syntax unified
+ 205              		.code	16
+ 206              		.thumb_func
+ 208              	USBD_CtlReceiveStatus:
+ 209              		@ args = 0, pretend = 0, frame = 8
+ 210              		@ frame_needed = 1, uses_anonymous_args = 0
+ 211 0000 80B5     		push	{r7, lr}
+ 212 0002 82B0     		sub	sp, sp, #8
+ 213 0004 00AF     		add	r7, sp, #0
+ 214 0006 7860     		str	r0, [r7, #4]
+ 215 0008 7A68     		ldr	r2, [r7, #4]
+ 216 000a A523     		movs	r3, #165
+ 217 000c 9B00     		lsls	r3, r3, #2
+ 218 000e 0521     		movs	r1, #5
+ 219 0010 D150     		str	r1, [r2, r3]
+ 220 0012 7868     		ldr	r0, [r7, #4]
+ 221 0014 0023     		movs	r3, #0
+ 222 0016 0022     		movs	r2, #0
+ 223 0018 0021     		movs	r1, #0
+ 224 001a FFF7FEFF 		bl	USBD_LL_PrepareReceive
+ 225 001e 0023     		movs	r3, #0
+ 226 0020 1800     		movs	r0, r3
+ 227 0022 BD46     		mov	sp, r7
+ 228 0024 02B0     		add	sp, sp, #8
+ 229              		@ sp needed
+ 230 0026 80BD     		pop	{r7, pc}
+ 232              		.section	.text.USBD_GetRxCount,"ax",%progbits
+ 233              		.align	1
+ 234              		.global	USBD_GetRxCount
+ 235              		.syntax unified
+ 236              		.code	16
+ 237              		.thumb_func
+ 239              	USBD_GetRxCount:
+ 240              		@ args = 0, pretend = 0, frame = 8
+ 241              		@ frame_needed = 1, uses_anonymous_args = 0
+ 242 0000 80B5     		push	{r7, lr}
+ARM GAS  /tmp/ccpuCh4y.s 			page 5
+
+
+ 243 0002 82B0     		sub	sp, sp, #8
+ 244 0004 00AF     		add	r7, sp, #0
+ 245 0006 7860     		str	r0, [r7, #4]
+ 246 0008 0A00     		movs	r2, r1
+ 247 000a FB1C     		adds	r3, r7, #3
+ 248 000c 1A70     		strb	r2, [r3]
+ 249 000e FB1C     		adds	r3, r7, #3
+ 250 0010 1A78     		ldrb	r2, [r3]
+ 251 0012 7B68     		ldr	r3, [r7, #4]
+ 252 0014 1100     		movs	r1, r2
+ 253 0016 1800     		movs	r0, r3
+ 254 0018 FFF7FEFF 		bl	USBD_LL_GetRxDataSize
+ 255 001c 0300     		movs	r3, r0
+ 256 001e 1800     		movs	r0, r3
+ 257 0020 BD46     		mov	sp, r7
+ 258 0022 02B0     		add	sp, sp, #8
+ 259              		@ sp needed
+ 260 0024 80BD     		pop	{r7, pc}
+ 262              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccpuCh4y.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 usbd_ioreq.c
+     /tmp/ccpuCh4y.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+     /tmp/ccpuCh4y.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+     /tmp/ccpuCh4y.s:21     .text.USBD_CtlSendData:00000000 $t
+     /tmp/ccpuCh4y.s:27     .text.USBD_CtlSendData:00000000 USBD_CtlSendData
+     /tmp/ccpuCh4y.s:64     .text.USBD_CtlContinueSendData:00000000 $t
+     /tmp/ccpuCh4y.s:70     .text.USBD_CtlContinueSendData:00000000 USBD_CtlContinueSendData
+     /tmp/ccpuCh4y.s:94     .text.USBD_CtlPrepareRx:00000000 $t
+     /tmp/ccpuCh4y.s:100    .text.USBD_CtlPrepareRx:00000000 USBD_CtlPrepareRx
+     /tmp/ccpuCh4y.s:141    .text.USBD_CtlContinueRx:00000000 $t
+     /tmp/ccpuCh4y.s:147    .text.USBD_CtlContinueRx:00000000 USBD_CtlContinueRx
+     /tmp/ccpuCh4y.s:171    .text.USBD_CtlSendStatus:00000000 $t
+     /tmp/ccpuCh4y.s:177    .text.USBD_CtlSendStatus:00000000 USBD_CtlSendStatus
+     /tmp/ccpuCh4y.s:202    .text.USBD_CtlReceiveStatus:00000000 $t
+     /tmp/ccpuCh4y.s:208    .text.USBD_CtlReceiveStatus:00000000 USBD_CtlReceiveStatus
+     /tmp/ccpuCh4y.s:233    .text.USBD_GetRxCount:00000000 $t
+     /tmp/ccpuCh4y.s:239    .text.USBD_GetRxCount:00000000 USBD_GetRxCount
+
+UNDEFINED SYMBOLS
+USBD_LL_Transmit
+USBD_LL_PrepareReceive
+USBD_LL_GetRxDataSize

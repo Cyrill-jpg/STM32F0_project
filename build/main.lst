@@ -1,0 +1,1260 @@
+ARM GAS  /tmp/ccYlNqb7.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"main.c"
+  13              		.text
+  14              		.section	.text.LL_I2C_EnableClockStretching,"ax",%progbits
+  15              		.align	1
+  16              		.syntax unified
+  17              		.code	16
+  18              		.thumb_func
+  20              	LL_I2C_EnableClockStretching:
+  21              		@ args = 0, pretend = 0, frame = 8
+  22              		@ frame_needed = 1, uses_anonymous_args = 0
+  23 0000 80B5     		push	{r7, lr}
+  24 0002 82B0     		sub	sp, sp, #8
+  25 0004 00AF     		add	r7, sp, #0
+  26 0006 7860     		str	r0, [r7, #4]
+  27 0008 7B68     		ldr	r3, [r7, #4]
+  28 000a 1B68     		ldr	r3, [r3]
+  29 000c 034A     		ldr	r2, .L2
+  30 000e 1A40     		ands	r2, r3
+  31 0010 7B68     		ldr	r3, [r7, #4]
+  32 0012 1A60     		str	r2, [r3]
+  33 0014 C046     		nop
+  34 0016 BD46     		mov	sp, r7
+  35 0018 02B0     		add	sp, sp, #8
+  36              		@ sp needed
+  37 001a 80BD     		pop	{r7, pc}
+  38              	.L3:
+  39              		.align	2
+  40              	.L2:
+  41 001c FFFFFDFF 		.word	-131073
+  43              		.section	.text.LL_I2C_DisableGeneralCall,"ax",%progbits
+  44              		.align	1
+  45              		.syntax unified
+  46              		.code	16
+  47              		.thumb_func
+  49              	LL_I2C_DisableGeneralCall:
+  50              		@ args = 0, pretend = 0, frame = 8
+  51              		@ frame_needed = 1, uses_anonymous_args = 0
+  52 0000 80B5     		push	{r7, lr}
+  53 0002 82B0     		sub	sp, sp, #8
+  54 0004 00AF     		add	r7, sp, #0
+  55 0006 7860     		str	r0, [r7, #4]
+  56 0008 7B68     		ldr	r3, [r7, #4]
+  57 000a 1B68     		ldr	r3, [r3]
+  58 000c 034A     		ldr	r2, .L5
+  59 000e 1A40     		ands	r2, r3
+  60 0010 7B68     		ldr	r3, [r7, #4]
+ARM GAS  /tmp/ccYlNqb7.s 			page 2
+
+
+  61 0012 1A60     		str	r2, [r3]
+  62 0014 C046     		nop
+  63 0016 BD46     		mov	sp, r7
+  64 0018 02B0     		add	sp, sp, #8
+  65              		@ sp needed
+  66 001a 80BD     		pop	{r7, pc}
+  67              	.L6:
+  68              		.align	2
+  69              	.L5:
+  70 001c FFFFF7FF 		.word	-524289
+  72              		.section	.text.LL_I2C_SetOwnAddress2,"ax",%progbits
+  73              		.align	1
+  74              		.syntax unified
+  75              		.code	16
+  76              		.thumb_func
+  78              	LL_I2C_SetOwnAddress2:
+  79              		@ args = 0, pretend = 0, frame = 16
+  80              		@ frame_needed = 1, uses_anonymous_args = 0
+  81 0000 80B5     		push	{r7, lr}
+  82 0002 84B0     		sub	sp, sp, #16
+  83 0004 00AF     		add	r7, sp, #0
+  84 0006 F860     		str	r0, [r7, #12]
+  85 0008 B960     		str	r1, [r7, #8]
+  86 000a 7A60     		str	r2, [r7, #4]
+  87 000c FB68     		ldr	r3, [r7, #12]
+  88 000e DB68     		ldr	r3, [r3, #12]
+  89 0010 054A     		ldr	r2, .L8
+  90 0012 1A40     		ands	r2, r3
+  91 0014 B968     		ldr	r1, [r7, #8]
+  92 0016 7B68     		ldr	r3, [r7, #4]
+  93 0018 0B43     		orrs	r3, r1
+  94 001a 1A43     		orrs	r2, r3
+  95 001c FB68     		ldr	r3, [r7, #12]
+  96 001e DA60     		str	r2, [r3, #12]
+  97 0020 C046     		nop
+  98 0022 BD46     		mov	sp, r7
+  99 0024 04B0     		add	sp, sp, #16
+ 100              		@ sp needed
+ 101 0026 80BD     		pop	{r7, pc}
+ 102              	.L9:
+ 103              		.align	2
+ 104              	.L8:
+ 105 0028 01F8FFFF 		.word	-2047
+ 107              		.section	.text.LL_I2C_DisableOwnAddress2,"ax",%progbits
+ 108              		.align	1
+ 109              		.syntax unified
+ 110              		.code	16
+ 111              		.thumb_func
+ 113              	LL_I2C_DisableOwnAddress2:
+ 114              		@ args = 0, pretend = 0, frame = 8
+ 115              		@ frame_needed = 1, uses_anonymous_args = 0
+ 116 0000 80B5     		push	{r7, lr}
+ 117 0002 82B0     		sub	sp, sp, #8
+ 118 0004 00AF     		add	r7, sp, #0
+ 119 0006 7860     		str	r0, [r7, #4]
+ 120 0008 7B68     		ldr	r3, [r7, #4]
+ 121 000a DB68     		ldr	r3, [r3, #12]
+ARM GAS  /tmp/ccYlNqb7.s 			page 3
+
+
+ 122 000c 034A     		ldr	r2, .L11
+ 123 000e 1A40     		ands	r2, r3
+ 124 0010 7B68     		ldr	r3, [r7, #4]
+ 125 0012 DA60     		str	r2, [r3, #12]
+ 126 0014 C046     		nop
+ 127 0016 BD46     		mov	sp, r7
+ 128 0018 02B0     		add	sp, sp, #8
+ 129              		@ sp needed
+ 130 001a 80BD     		pop	{r7, pc}
+ 131              	.L12:
+ 132              		.align	2
+ 133              	.L11:
+ 134 001c FF7FFFFF 		.word	-32769
+ 136              		.section	.text.LL_I2C_EnableAutoEndMode,"ax",%progbits
+ 137              		.align	1
+ 138              		.syntax unified
+ 139              		.code	16
+ 140              		.thumb_func
+ 142              	LL_I2C_EnableAutoEndMode:
+ 143              		@ args = 0, pretend = 0, frame = 8
+ 144              		@ frame_needed = 1, uses_anonymous_args = 0
+ 145 0000 80B5     		push	{r7, lr}
+ 146 0002 82B0     		sub	sp, sp, #8
+ 147 0004 00AF     		add	r7, sp, #0
+ 148 0006 7860     		str	r0, [r7, #4]
+ 149 0008 7B68     		ldr	r3, [r7, #4]
+ 150 000a 5B68     		ldr	r3, [r3, #4]
+ 151 000c 8022     		movs	r2, #128
+ 152 000e 9204     		lsls	r2, r2, #18
+ 153 0010 1A43     		orrs	r2, r3
+ 154 0012 7B68     		ldr	r3, [r7, #4]
+ 155 0014 5A60     		str	r2, [r3, #4]
+ 156 0016 C046     		nop
+ 157 0018 BD46     		mov	sp, r7
+ 158 001a 02B0     		add	sp, sp, #8
+ 159              		@ sp needed
+ 160 001c 80BD     		pop	{r7, pc}
+ 162              		.section	.text.LL_RCC_HSI_Enable,"ax",%progbits
+ 163              		.align	1
+ 164              		.syntax unified
+ 165              		.code	16
+ 166              		.thumb_func
+ 168              	LL_RCC_HSI_Enable:
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 1, uses_anonymous_args = 0
+ 171 0000 80B5     		push	{r7, lr}
+ 172 0002 00AF     		add	r7, sp, #0
+ 173 0004 044B     		ldr	r3, .L15
+ 174 0006 1A68     		ldr	r2, [r3]
+ 175 0008 034B     		ldr	r3, .L15
+ 176 000a 0121     		movs	r1, #1
+ 177 000c 0A43     		orrs	r2, r1
+ 178 000e 1A60     		str	r2, [r3]
+ 179 0010 C046     		nop
+ 180 0012 BD46     		mov	sp, r7
+ 181              		@ sp needed
+ 182 0014 80BD     		pop	{r7, pc}
+ARM GAS  /tmp/ccYlNqb7.s 			page 4
+
+
+ 183              	.L16:
+ 184 0016 C046     		.align	2
+ 185              	.L15:
+ 186 0018 00100240 		.word	1073876992
+ 188              		.section	.text.LL_RCC_HSI_IsReady,"ax",%progbits
+ 189              		.align	1
+ 190              		.syntax unified
+ 191              		.code	16
+ 192              		.thumb_func
+ 194              	LL_RCC_HSI_IsReady:
+ 195              		@ args = 0, pretend = 0, frame = 0
+ 196              		@ frame_needed = 1, uses_anonymous_args = 0
+ 197 0000 80B5     		push	{r7, lr}
+ 198 0002 00AF     		add	r7, sp, #0
+ 199 0004 044B     		ldr	r3, .L19
+ 200 0006 1B68     		ldr	r3, [r3]
+ 201 0008 0222     		movs	r2, #2
+ 202 000a 1340     		ands	r3, r2
+ 203 000c 9B07     		lsls	r3, r3, #30
+ 204 000e DB0F     		lsrs	r3, r3, #31
+ 205 0010 DBB2     		uxtb	r3, r3
+ 206 0012 1800     		movs	r0, r3
+ 207 0014 BD46     		mov	sp, r7
+ 208              		@ sp needed
+ 209 0016 80BD     		pop	{r7, pc}
+ 210              	.L20:
+ 211              		.align	2
+ 212              	.L19:
+ 213 0018 00100240 		.word	1073876992
+ 215              		.section	.text.LL_RCC_HSI_SetCalibTrimming,"ax",%progbits
+ 216              		.align	1
+ 217              		.syntax unified
+ 218              		.code	16
+ 219              		.thumb_func
+ 221              	LL_RCC_HSI_SetCalibTrimming:
+ 222              		@ args = 0, pretend = 0, frame = 8
+ 223              		@ frame_needed = 1, uses_anonymous_args = 0
+ 224 0000 80B5     		push	{r7, lr}
+ 225 0002 82B0     		sub	sp, sp, #8
+ 226 0004 00AF     		add	r7, sp, #0
+ 227 0006 7860     		str	r0, [r7, #4]
+ 228 0008 064B     		ldr	r3, .L22
+ 229 000a 1B68     		ldr	r3, [r3]
+ 230 000c F822     		movs	r2, #248
+ 231 000e 9343     		bics	r3, r2
+ 232 0010 1900     		movs	r1, r3
+ 233 0012 7B68     		ldr	r3, [r7, #4]
+ 234 0014 DA00     		lsls	r2, r3, #3
+ 235 0016 034B     		ldr	r3, .L22
+ 236 0018 0A43     		orrs	r2, r1
+ 237 001a 1A60     		str	r2, [r3]
+ 238 001c C046     		nop
+ 239 001e BD46     		mov	sp, r7
+ 240 0020 02B0     		add	sp, sp, #8
+ 241              		@ sp needed
+ 242 0022 80BD     		pop	{r7, pc}
+ 243              	.L23:
+ARM GAS  /tmp/ccYlNqb7.s 			page 5
+
+
+ 244              		.align	2
+ 245              	.L22:
+ 246 0024 00100240 		.word	1073876992
+ 248              		.section	.text.LL_RCC_HSI48_Enable,"ax",%progbits
+ 249              		.align	1
+ 250              		.syntax unified
+ 251              		.code	16
+ 252              		.thumb_func
+ 254              	LL_RCC_HSI48_Enable:
+ 255              		@ args = 0, pretend = 0, frame = 0
+ 256              		@ frame_needed = 1, uses_anonymous_args = 0
+ 257 0000 80B5     		push	{r7, lr}
+ 258 0002 00AF     		add	r7, sp, #0
+ 259 0004 044B     		ldr	r3, .L25
+ 260 0006 5A6B     		ldr	r2, [r3, #52]
+ 261 0008 034B     		ldr	r3, .L25
+ 262 000a 8021     		movs	r1, #128
+ 263 000c 4902     		lsls	r1, r1, #9
+ 264 000e 0A43     		orrs	r2, r1
+ 265 0010 5A63     		str	r2, [r3, #52]
+ 266 0012 C046     		nop
+ 267 0014 BD46     		mov	sp, r7
+ 268              		@ sp needed
+ 269 0016 80BD     		pop	{r7, pc}
+ 270              	.L26:
+ 271              		.align	2
+ 272              	.L25:
+ 273 0018 00100240 		.word	1073876992
+ 275              		.section	.text.LL_RCC_HSI48_IsReady,"ax",%progbits
+ 276              		.align	1
+ 277              		.syntax unified
+ 278              		.code	16
+ 279              		.thumb_func
+ 281              	LL_RCC_HSI48_IsReady:
+ 282              		@ args = 0, pretend = 0, frame = 0
+ 283              		@ frame_needed = 1, uses_anonymous_args = 0
+ 284 0000 80B5     		push	{r7, lr}
+ 285 0002 00AF     		add	r7, sp, #0
+ 286 0004 054B     		ldr	r3, .L29
+ 287 0006 5A6B     		ldr	r2, [r3, #52]
+ 288 0008 8023     		movs	r3, #128
+ 289 000a 9B02     		lsls	r3, r3, #10
+ 290 000c 1340     		ands	r3, r2
+ 291 000e 9B03     		lsls	r3, r3, #14
+ 292 0010 DB0F     		lsrs	r3, r3, #31
+ 293 0012 DBB2     		uxtb	r3, r3
+ 294 0014 1800     		movs	r0, r3
+ 295 0016 BD46     		mov	sp, r7
+ 296              		@ sp needed
+ 297 0018 80BD     		pop	{r7, pc}
+ 298              	.L30:
+ 299 001a C046     		.align	2
+ 300              	.L29:
+ 301 001c 00100240 		.word	1073876992
+ 303              		.section	.text.LL_RCC_SetSysClkSource,"ax",%progbits
+ 304              		.align	1
+ 305              		.syntax unified
+ARM GAS  /tmp/ccYlNqb7.s 			page 6
+
+
+ 306              		.code	16
+ 307              		.thumb_func
+ 309              	LL_RCC_SetSysClkSource:
+ 310              		@ args = 0, pretend = 0, frame = 8
+ 311              		@ frame_needed = 1, uses_anonymous_args = 0
+ 312 0000 80B5     		push	{r7, lr}
+ 313 0002 82B0     		sub	sp, sp, #8
+ 314 0004 00AF     		add	r7, sp, #0
+ 315 0006 7860     		str	r0, [r7, #4]
+ 316 0008 064B     		ldr	r3, .L32
+ 317 000a 5B68     		ldr	r3, [r3, #4]
+ 318 000c 0322     		movs	r2, #3
+ 319 000e 9343     		bics	r3, r2
+ 320 0010 1900     		movs	r1, r3
+ 321 0012 044B     		ldr	r3, .L32
+ 322 0014 7A68     		ldr	r2, [r7, #4]
+ 323 0016 0A43     		orrs	r2, r1
+ 324 0018 5A60     		str	r2, [r3, #4]
+ 325 001a C046     		nop
+ 326 001c BD46     		mov	sp, r7
+ 327 001e 02B0     		add	sp, sp, #8
+ 328              		@ sp needed
+ 329 0020 80BD     		pop	{r7, pc}
+ 330              	.L33:
+ 331 0022 C046     		.align	2
+ 332              	.L32:
+ 333 0024 00100240 		.word	1073876992
+ 335              		.section	.text.LL_RCC_GetSysClkSource,"ax",%progbits
+ 336              		.align	1
+ 337              		.syntax unified
+ 338              		.code	16
+ 339              		.thumb_func
+ 341              	LL_RCC_GetSysClkSource:
+ 342              		@ args = 0, pretend = 0, frame = 0
+ 343              		@ frame_needed = 1, uses_anonymous_args = 0
+ 344 0000 80B5     		push	{r7, lr}
+ 345 0002 00AF     		add	r7, sp, #0
+ 346 0004 034B     		ldr	r3, .L36
+ 347 0006 5B68     		ldr	r3, [r3, #4]
+ 348 0008 0C22     		movs	r2, #12
+ 349 000a 1340     		ands	r3, r2
+ 350 000c 1800     		movs	r0, r3
+ 351 000e BD46     		mov	sp, r7
+ 352              		@ sp needed
+ 353 0010 80BD     		pop	{r7, pc}
+ 354              	.L37:
+ 355 0012 C046     		.align	2
+ 356              	.L36:
+ 357 0014 00100240 		.word	1073876992
+ 359              		.section	.text.LL_RCC_SetAHBPrescaler,"ax",%progbits
+ 360              		.align	1
+ 361              		.syntax unified
+ 362              		.code	16
+ 363              		.thumb_func
+ 365              	LL_RCC_SetAHBPrescaler:
+ 366              		@ args = 0, pretend = 0, frame = 8
+ 367              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  /tmp/ccYlNqb7.s 			page 7
+
+
+ 368 0000 80B5     		push	{r7, lr}
+ 369 0002 82B0     		sub	sp, sp, #8
+ 370 0004 00AF     		add	r7, sp, #0
+ 371 0006 7860     		str	r0, [r7, #4]
+ 372 0008 064B     		ldr	r3, .L39
+ 373 000a 5B68     		ldr	r3, [r3, #4]
+ 374 000c F022     		movs	r2, #240
+ 375 000e 9343     		bics	r3, r2
+ 376 0010 1900     		movs	r1, r3
+ 377 0012 044B     		ldr	r3, .L39
+ 378 0014 7A68     		ldr	r2, [r7, #4]
+ 379 0016 0A43     		orrs	r2, r1
+ 380 0018 5A60     		str	r2, [r3, #4]
+ 381 001a C046     		nop
+ 382 001c BD46     		mov	sp, r7
+ 383 001e 02B0     		add	sp, sp, #8
+ 384              		@ sp needed
+ 385 0020 80BD     		pop	{r7, pc}
+ 386              	.L40:
+ 387 0022 C046     		.align	2
+ 388              	.L39:
+ 389 0024 00100240 		.word	1073876992
+ 391              		.section	.text.LL_RCC_SetAPB1Prescaler,"ax",%progbits
+ 392              		.align	1
+ 393              		.syntax unified
+ 394              		.code	16
+ 395              		.thumb_func
+ 397              	LL_RCC_SetAPB1Prescaler:
+ 398              		@ args = 0, pretend = 0, frame = 8
+ 399              		@ frame_needed = 1, uses_anonymous_args = 0
+ 400 0000 80B5     		push	{r7, lr}
+ 401 0002 82B0     		sub	sp, sp, #8
+ 402 0004 00AF     		add	r7, sp, #0
+ 403 0006 7860     		str	r0, [r7, #4]
+ 404 0008 064B     		ldr	r3, .L42
+ 405 000a 5B68     		ldr	r3, [r3, #4]
+ 406 000c 064A     		ldr	r2, .L42+4
+ 407 000e 1340     		ands	r3, r2
+ 408 0010 1900     		movs	r1, r3
+ 409 0012 044B     		ldr	r3, .L42
+ 410 0014 7A68     		ldr	r2, [r7, #4]
+ 411 0016 0A43     		orrs	r2, r1
+ 412 0018 5A60     		str	r2, [r3, #4]
+ 413 001a C046     		nop
+ 414 001c BD46     		mov	sp, r7
+ 415 001e 02B0     		add	sp, sp, #8
+ 416              		@ sp needed
+ 417 0020 80BD     		pop	{r7, pc}
+ 418              	.L43:
+ 419 0022 C046     		.align	2
+ 420              	.L42:
+ 421 0024 00100240 		.word	1073876992
+ 422 0028 FFF8FFFF 		.word	-1793
+ 424              		.section	.text.LL_RCC_SetUSBClockSource,"ax",%progbits
+ 425              		.align	1
+ 426              		.syntax unified
+ 427              		.code	16
+ARM GAS  /tmp/ccYlNqb7.s 			page 8
+
+
+ 428              		.thumb_func
+ 430              	LL_RCC_SetUSBClockSource:
+ 431              		@ args = 0, pretend = 0, frame = 8
+ 432              		@ frame_needed = 1, uses_anonymous_args = 0
+ 433 0000 80B5     		push	{r7, lr}
+ 434 0002 82B0     		sub	sp, sp, #8
+ 435 0004 00AF     		add	r7, sp, #0
+ 436 0006 7860     		str	r0, [r7, #4]
+ 437 0008 064B     		ldr	r3, .L45
+ 438 000a 1B6B     		ldr	r3, [r3, #48]
+ 439 000c 8022     		movs	r2, #128
+ 440 000e 9343     		bics	r3, r2
+ 441 0010 1900     		movs	r1, r3
+ 442 0012 044B     		ldr	r3, .L45
+ 443 0014 7A68     		ldr	r2, [r7, #4]
+ 444 0016 0A43     		orrs	r2, r1
+ 445 0018 1A63     		str	r2, [r3, #48]
+ 446 001a C046     		nop
+ 447 001c BD46     		mov	sp, r7
+ 448 001e 02B0     		add	sp, sp, #8
+ 449              		@ sp needed
+ 450 0020 80BD     		pop	{r7, pc}
+ 451              	.L46:
+ 452 0022 C046     		.align	2
+ 453              	.L45:
+ 454 0024 00100240 		.word	1073876992
+ 456              		.section	.text.LL_RCC_PLL_Enable,"ax",%progbits
+ 457              		.align	1
+ 458              		.syntax unified
+ 459              		.code	16
+ 460              		.thumb_func
+ 462              	LL_RCC_PLL_Enable:
+ 463              		@ args = 0, pretend = 0, frame = 0
+ 464              		@ frame_needed = 1, uses_anonymous_args = 0
+ 465 0000 80B5     		push	{r7, lr}
+ 466 0002 00AF     		add	r7, sp, #0
+ 467 0004 044B     		ldr	r3, .L48
+ 468 0006 1A68     		ldr	r2, [r3]
+ 469 0008 034B     		ldr	r3, .L48
+ 470 000a 8021     		movs	r1, #128
+ 471 000c 4904     		lsls	r1, r1, #17
+ 472 000e 0A43     		orrs	r2, r1
+ 473 0010 1A60     		str	r2, [r3]
+ 474 0012 C046     		nop
+ 475 0014 BD46     		mov	sp, r7
+ 476              		@ sp needed
+ 477 0016 80BD     		pop	{r7, pc}
+ 478              	.L49:
+ 479              		.align	2
+ 480              	.L48:
+ 481 0018 00100240 		.word	1073876992
+ 483              		.section	.text.LL_RCC_PLL_IsReady,"ax",%progbits
+ 484              		.align	1
+ 485              		.syntax unified
+ 486              		.code	16
+ 487              		.thumb_func
+ 489              	LL_RCC_PLL_IsReady:
+ARM GAS  /tmp/ccYlNqb7.s 			page 9
+
+
+ 490              		@ args = 0, pretend = 0, frame = 0
+ 491              		@ frame_needed = 1, uses_anonymous_args = 0
+ 492 0000 80B5     		push	{r7, lr}
+ 493 0002 00AF     		add	r7, sp, #0
+ 494 0004 054B     		ldr	r3, .L52
+ 495 0006 1A68     		ldr	r2, [r3]
+ 496 0008 8023     		movs	r3, #128
+ 497 000a 9B04     		lsls	r3, r3, #18
+ 498 000c 1340     		ands	r3, r2
+ 499 000e 9B01     		lsls	r3, r3, #6
+ 500 0010 DB0F     		lsrs	r3, r3, #31
+ 501 0012 DBB2     		uxtb	r3, r3
+ 502 0014 1800     		movs	r0, r3
+ 503 0016 BD46     		mov	sp, r7
+ 504              		@ sp needed
+ 505 0018 80BD     		pop	{r7, pc}
+ 506              	.L53:
+ 507 001a C046     		.align	2
+ 508              	.L52:
+ 509 001c 00100240 		.word	1073876992
+ 511              		.section	.text.LL_RCC_PLL_ConfigDomain_SYS,"ax",%progbits
+ 512              		.align	1
+ 513              		.syntax unified
+ 514              		.code	16
+ 515              		.thumb_func
+ 517              	LL_RCC_PLL_ConfigDomain_SYS:
+ 518              		@ args = 0, pretend = 0, frame = 16
+ 519              		@ frame_needed = 1, uses_anonymous_args = 0
+ 520 0000 80B5     		push	{r7, lr}
+ 521 0002 84B0     		sub	sp, sp, #16
+ 522 0004 00AF     		add	r7, sp, #0
+ 523 0006 F860     		str	r0, [r7, #12]
+ 524 0008 B960     		str	r1, [r7, #8]
+ 525 000a 7A60     		str	r2, [r7, #4]
+ 526 000c 0B4B     		ldr	r3, .L55
+ 527 000e 5B68     		ldr	r3, [r3, #4]
+ 528 0010 0B4A     		ldr	r2, .L55+4
+ 529 0012 1340     		ands	r3, r2
+ 530 0014 1900     		movs	r1, r3
+ 531 0016 FA68     		ldr	r2, [r7, #12]
+ 532 0018 BB68     		ldr	r3, [r7, #8]
+ 533 001a 1A43     		orrs	r2, r3
+ 534 001c 074B     		ldr	r3, .L55
+ 535 001e 0A43     		orrs	r2, r1
+ 536 0020 5A60     		str	r2, [r3, #4]
+ 537 0022 064B     		ldr	r3, .L55
+ 538 0024 DB6A     		ldr	r3, [r3, #44]
+ 539 0026 0F22     		movs	r2, #15
+ 540 0028 9343     		bics	r3, r2
+ 541 002a 1900     		movs	r1, r3
+ 542 002c 034B     		ldr	r3, .L55
+ 543 002e 7A68     		ldr	r2, [r7, #4]
+ 544 0030 0A43     		orrs	r2, r1
+ 545 0032 DA62     		str	r2, [r3, #44]
+ 546 0034 C046     		nop
+ 547 0036 BD46     		mov	sp, r7
+ 548 0038 04B0     		add	sp, sp, #16
+ARM GAS  /tmp/ccYlNqb7.s 			page 10
+
+
+ 549              		@ sp needed
+ 550 003a 80BD     		pop	{r7, pc}
+ 551              	.L56:
+ 552              		.align	2
+ 553              	.L55:
+ 554 003c 00100240 		.word	1073876992
+ 555 0040 FF7FC2FF 		.word	-4030465
+ 557              		.section	.text.LL_AHB1_GRP1_EnableClock,"ax",%progbits
+ 558              		.align	1
+ 559              		.syntax unified
+ 560              		.code	16
+ 561              		.thumb_func
+ 563              	LL_AHB1_GRP1_EnableClock:
+ 564              		@ args = 0, pretend = 0, frame = 16
+ 565              		@ frame_needed = 1, uses_anonymous_args = 0
+ 566 0000 80B5     		push	{r7, lr}
+ 567 0002 84B0     		sub	sp, sp, #16
+ 568 0004 00AF     		add	r7, sp, #0
+ 569 0006 7860     		str	r0, [r7, #4]
+ 570 0008 074B     		ldr	r3, .L58
+ 571 000a 5969     		ldr	r1, [r3, #20]
+ 572 000c 064B     		ldr	r3, .L58
+ 573 000e 7A68     		ldr	r2, [r7, #4]
+ 574 0010 0A43     		orrs	r2, r1
+ 575 0012 5A61     		str	r2, [r3, #20]
+ 576 0014 044B     		ldr	r3, .L58
+ 577 0016 5B69     		ldr	r3, [r3, #20]
+ 578 0018 7A68     		ldr	r2, [r7, #4]
+ 579 001a 1340     		ands	r3, r2
+ 580 001c FB60     		str	r3, [r7, #12]
+ 581 001e FB68     		ldr	r3, [r7, #12]
+ 582 0020 C046     		nop
+ 583 0022 BD46     		mov	sp, r7
+ 584 0024 04B0     		add	sp, sp, #16
+ 585              		@ sp needed
+ 586 0026 80BD     		pop	{r7, pc}
+ 587              	.L59:
+ 588              		.align	2
+ 589              	.L58:
+ 590 0028 00100240 		.word	1073876992
+ 592              		.section	.text.LL_APB1_GRP1_EnableClock,"ax",%progbits
+ 593              		.align	1
+ 594              		.syntax unified
+ 595              		.code	16
+ 596              		.thumb_func
+ 598              	LL_APB1_GRP1_EnableClock:
+ 599              		@ args = 0, pretend = 0, frame = 16
+ 600              		@ frame_needed = 1, uses_anonymous_args = 0
+ 601 0000 80B5     		push	{r7, lr}
+ 602 0002 84B0     		sub	sp, sp, #16
+ 603 0004 00AF     		add	r7, sp, #0
+ 604 0006 7860     		str	r0, [r7, #4]
+ 605 0008 074B     		ldr	r3, .L61
+ 606 000a D969     		ldr	r1, [r3, #28]
+ 607 000c 064B     		ldr	r3, .L61
+ 608 000e 7A68     		ldr	r2, [r7, #4]
+ 609 0010 0A43     		orrs	r2, r1
+ARM GAS  /tmp/ccYlNqb7.s 			page 11
+
+
+ 610 0012 DA61     		str	r2, [r3, #28]
+ 611 0014 044B     		ldr	r3, .L61
+ 612 0016 DB69     		ldr	r3, [r3, #28]
+ 613 0018 7A68     		ldr	r2, [r7, #4]
+ 614 001a 1340     		ands	r3, r2
+ 615 001c FB60     		str	r3, [r7, #12]
+ 616 001e FB68     		ldr	r3, [r7, #12]
+ 617 0020 C046     		nop
+ 618 0022 BD46     		mov	sp, r7
+ 619 0024 04B0     		add	sp, sp, #16
+ 620              		@ sp needed
+ 621 0026 80BD     		pop	{r7, pc}
+ 622              	.L62:
+ 623              		.align	2
+ 624              	.L61:
+ 625 0028 00100240 		.word	1073876992
+ 627              		.section	.text.LL_FLASH_SetLatency,"ax",%progbits
+ 628              		.align	1
+ 629              		.syntax unified
+ 630              		.code	16
+ 631              		.thumb_func
+ 633              	LL_FLASH_SetLatency:
+ 634              		@ args = 0, pretend = 0, frame = 8
+ 635              		@ frame_needed = 1, uses_anonymous_args = 0
+ 636 0000 80B5     		push	{r7, lr}
+ 637 0002 82B0     		sub	sp, sp, #8
+ 638 0004 00AF     		add	r7, sp, #0
+ 639 0006 7860     		str	r0, [r7, #4]
+ 640 0008 064B     		ldr	r3, .L64
+ 641 000a 1B68     		ldr	r3, [r3]
+ 642 000c 0122     		movs	r2, #1
+ 643 000e 9343     		bics	r3, r2
+ 644 0010 1900     		movs	r1, r3
+ 645 0012 044B     		ldr	r3, .L64
+ 646 0014 7A68     		ldr	r2, [r7, #4]
+ 647 0016 0A43     		orrs	r2, r1
+ 648 0018 1A60     		str	r2, [r3]
+ 649 001a C046     		nop
+ 650 001c BD46     		mov	sp, r7
+ 651 001e 02B0     		add	sp, sp, #8
+ 652              		@ sp needed
+ 653 0020 80BD     		pop	{r7, pc}
+ 654              	.L65:
+ 655 0022 C046     		.align	2
+ 656              	.L64:
+ 657 0024 00200240 		.word	1073881088
+ 659              		.section	.text.LL_FLASH_GetLatency,"ax",%progbits
+ 660              		.align	1
+ 661              		.syntax unified
+ 662              		.code	16
+ 663              		.thumb_func
+ 665              	LL_FLASH_GetLatency:
+ 666              		@ args = 0, pretend = 0, frame = 0
+ 667              		@ frame_needed = 1, uses_anonymous_args = 0
+ 668 0000 80B5     		push	{r7, lr}
+ 669 0002 00AF     		add	r7, sp, #0
+ 670 0004 034B     		ldr	r3, .L68
+ARM GAS  /tmp/ccYlNqb7.s 			page 12
+
+
+ 671 0006 1B68     		ldr	r3, [r3]
+ 672 0008 0122     		movs	r2, #1
+ 673 000a 1340     		ands	r3, r2
+ 674 000c 1800     		movs	r0, r3
+ 675 000e BD46     		mov	sp, r7
+ 676              		@ sp needed
+ 677 0010 80BD     		pop	{r7, pc}
+ 678              	.L69:
+ 679 0012 C046     		.align	2
+ 680              	.L68:
+ 681 0014 00200240 		.word	1073881088
+ 683              		.section	.rodata.CHANNEL_OFFSET_TAB,"a"
+ 684              		.align	2
+ 687              	CHANNEL_OFFSET_TAB:
+ 688 0000 081C3044 		.ascii	"\010\0340DXl\200"
+ 688      586C80
+ 689              		.section	.rodata
+ 690              		.align	2
+ 691              	.LC0:
+ 692 0000 48656C6C 		.ascii	"Hello World\012\000"
+ 692      6F20576F 
+ 692      726C640A 
+ 692      00
+ 693              		.section	.text.main,"ax",%progbits
+ 694              		.align	1
+ 695              		.global	main
+ 696              		.syntax unified
+ 697              		.code	16
+ 698              		.thumb_func
+ 700              	main:
+ 701              		@ args = 0, pretend = 0, frame = 32
+ 702              		@ frame_needed = 1, uses_anonymous_args = 0
+ 703 0000 80B5     		push	{r7, lr}
+ 704 0002 88B0     		sub	sp, sp, #32
+ 705 0004 00AF     		add	r7, sp, #0
+ 706 0006 FFF7FEFF 		bl	HAL_Init
+ 707 000a FFF7FEFF 		bl	SystemClock_Config
+ 708 000e 5E4B     		ldr	r3, .L79
+ 709 0010 5A69     		ldr	r2, [r3, #20]
+ 710 0012 5D4B     		ldr	r3, .L79
+ 711 0014 8021     		movs	r1, #128
+ 712 0016 0903     		lsls	r1, r1, #12
+ 713 0018 0A43     		orrs	r2, r1
+ 714 001a 5A61     		str	r2, [r3, #20]
+ 715 001c 5B4B     		ldr	r3, .L79+4
+ 716 001e A022     		movs	r2, #160
+ 717 0020 D202     		lsls	r2, r2, #11
+ 718 0022 1A60     		str	r2, [r3]
+ 719 0024 3B1D     		adds	r3, r7, #4
+ 720 0026 8022     		movs	r2, #128
+ 721 0028 1A60     		str	r2, [r3]
+ 722 002a 3B1D     		adds	r3, r7, #4
+ 723 002c 0122     		movs	r2, #1
+ 724 002e 5A60     		str	r2, [r3, #4]
+ 725 0030 3B1D     		adds	r3, r7, #4
+ 726 0032 0022     		movs	r2, #0
+ 727 0034 DA60     		str	r2, [r3, #12]
+ARM GAS  /tmp/ccYlNqb7.s 			page 13
+
+
+ 728 0036 3B1D     		adds	r3, r7, #4
+ 729 0038 0022     		movs	r2, #0
+ 730 003a 1A61     		str	r2, [r3, #16]
+ 731 003c 3B1D     		adds	r3, r7, #4
+ 732 003e 0122     		movs	r2, #1
+ 733 0040 9A60     		str	r2, [r3, #8]
+ 734 0042 3B1D     		adds	r3, r7, #4
+ 735 0044 514A     		ldr	r2, .L79+4
+ 736 0046 1900     		movs	r1, r3
+ 737 0048 1000     		movs	r0, r2
+ 738 004a FFF7FEFF 		bl	LL_GPIO_Init
+ 739 004e FFF7FEFF 		bl	MX_USB_DEVICE_Init
+ 740 0052 1F20     		movs	r0, #31
+ 741 0054 3B18     		adds	r3, r7, r0
+ 742 0056 0A22     		movs	r2, #10
+ 743 0058 1A70     		strb	r2, [r3]
+ 744 005a 1E23     		movs	r3, #30
+ 745 005c FB18     		adds	r3, r7, r3
+ 746 005e 0122     		movs	r2, #1
+ 747 0060 1A70     		strb	r2, [r3]
+ 748 0062 494B     		ldr	r3, .L79
+ 749 0064 5A69     		ldr	r2, [r3, #20]
+ 750 0066 484B     		ldr	r3, .L79
+ 751 0068 8021     		movs	r1, #128
+ 752 006a C902     		lsls	r1, r1, #11
+ 753 006c 0A43     		orrs	r2, r1
+ 754 006e 5A61     		str	r2, [r3, #20]
+ 755 0070 454B     		ldr	r3, .L79
+ 756 0072 DA69     		ldr	r2, [r3, #28]
+ 757 0074 444B     		ldr	r3, .L79
+ 758 0076 8021     		movs	r1, #128
+ 759 0078 C903     		lsls	r1, r1, #15
+ 760 007a 0A43     		orrs	r2, r1
+ 761 007c DA61     		str	r2, [r3, #28]
+ 762 007e 444B     		ldr	r3, .L79+8
+ 763 0080 1A68     		ldr	r2, [r3]
+ 764 0082 434B     		ldr	r3, .L79+8
+ 765 0084 A021     		movs	r1, #160
+ 766 0086 0904     		lsls	r1, r1, #16
+ 767 0088 0A43     		orrs	r2, r1
+ 768 008a 1A60     		str	r2, [r3]
+ 769 008c 404B     		ldr	r3, .L79+8
+ 770 008e 5A6A     		ldr	r2, [r3, #36]
+ 771 0090 3F4B     		ldr	r3, .L79+8
+ 772 0092 8821     		movs	r1, #136
+ 773 0094 4901     		lsls	r1, r1, #5
+ 774 0096 0A43     		orrs	r2, r1
+ 775 0098 5A62     		str	r2, [r3, #36]
+ 776 009a 3D4B     		ldr	r3, .L79+8
+ 777 009c 5A68     		ldr	r2, [r3, #4]
+ 778 009e 3C4B     		ldr	r3, .L79+8
+ 779 00a0 C021     		movs	r1, #192
+ 780 00a2 0901     		lsls	r1, r1, #4
+ 781 00a4 0A43     		orrs	r2, r1
+ 782 00a6 5A60     		str	r2, [r3, #4]
+ 783 00a8 394B     		ldr	r3, .L79+8
+ 784 00aa 9A68     		ldr	r2, [r3, #8]
+ARM GAS  /tmp/ccYlNqb7.s 			page 14
+
+
+ 785 00ac 384B     		ldr	r3, .L79+8
+ 786 00ae F021     		movs	r1, #240
+ 787 00b0 0904     		lsls	r1, r1, #16
+ 788 00b2 0A43     		orrs	r2, r1
+ 789 00b4 9A60     		str	r2, [r3, #8]
+ 790 00b6 364B     		ldr	r3, .L79+8
+ 791 00b8 DA68     		ldr	r2, [r3, #12]
+ 792 00ba 354B     		ldr	r3, .L79+8
+ 793 00bc A021     		movs	r1, #160
+ 794 00be C903     		lsls	r1, r1, #15
+ 795 00c0 0A43     		orrs	r2, r1
+ 796 00c2 DA60     		str	r2, [r3, #12]
+ 797 00c4 334B     		ldr	r3, .L79+12
+ 798 00c6 1A68     		ldr	r2, [r3]
+ 799 00c8 324B     		ldr	r3, .L79+12
+ 800 00ca 0121     		movs	r1, #1
+ 801 00cc 8A43     		bics	r2, r1
+ 802 00ce 1A60     		str	r2, [r3]
+ 803 00d0 304B     		ldr	r3, .L79+12
+ 804 00d2 314A     		ldr	r2, .L79+16
+ 805 00d4 1A61     		str	r2, [r3, #16]
+ 806 00d6 2F4B     		ldr	r3, .L79+12
+ 807 00d8 1A68     		ldr	r2, [r3]
+ 808 00da 2E4B     		ldr	r3, .L79+12
+ 809 00dc 0121     		movs	r1, #1
+ 810 00de 0A43     		orrs	r2, r1
+ 811 00e0 1A60     		str	r2, [r3]
+ 812 00e2 3B18     		adds	r3, r7, r0
+ 813 00e4 1B78     		ldrb	r3, [r3]
+ 814 00e6 5A00     		lsls	r2, r3, #1
+ 815 00e8 2A4B     		ldr	r3, .L79+12
+ 816 00ea 9021     		movs	r1, #144
+ 817 00ec 4902     		lsls	r1, r1, #9
+ 818 00ee 0A43     		orrs	r2, r1
+ 819 00f0 5A60     		str	r2, [r3, #4]
+ 820 00f2 C046     		nop
+ 821              	.L71:
+ 822 00f4 274B     		ldr	r3, .L79+12
+ 823 00f6 9B69     		ldr	r3, [r3, #24]
+ 824 00f8 0222     		movs	r2, #2
+ 825 00fa 1340     		ands	r3, r2
+ 826 00fc FAD0     		beq	.L71
+ 827 00fe 254B     		ldr	r3, .L79+12
+ 828 0100 0022     		movs	r2, #0
+ 829 0102 9A62     		str	r2, [r3, #40]
+ 830 0104 05E0     		b	.L72
+ 831              	.L73:
+ 832 0106 214B     		ldr	r3, .L79+4
+ 833 0108 5A69     		ldr	r2, [r3, #20]
+ 834 010a 204B     		ldr	r3, .L79+4
+ 835 010c 8021     		movs	r1, #128
+ 836 010e 4A40     		eors	r2, r1
+ 837 0110 5A61     		str	r2, [r3, #20]
+ 838              	.L72:
+ 839 0112 204B     		ldr	r3, .L79+12
+ 840 0114 9B69     		ldr	r3, [r3, #24]
+ 841 0116 4022     		movs	r2, #64
+ARM GAS  /tmp/ccYlNqb7.s 			page 15
+
+
+ 842 0118 1340     		ands	r3, r2
+ 843 011a F4D0     		beq	.L73
+ 844 011c 1F23     		movs	r3, #31
+ 845 011e FB18     		adds	r3, r7, r3
+ 846 0120 1B78     		ldrb	r3, [r3]
+ 847 0122 5A00     		lsls	r2, r3, #1
+ 848 0124 1B4B     		ldr	r3, .L79+12
+ 849 0126 1D49     		ldr	r1, .L79+20
+ 850 0128 0A43     		orrs	r2, r1
+ 851 012a 5A60     		str	r2, [r3, #4]
+ 852 012c C046     		nop
+ 853              	.L74:
+ 854 012e 194B     		ldr	r3, .L79+12
+ 855 0130 9B69     		ldr	r3, [r3, #24]
+ 856 0132 0422     		movs	r2, #4
+ 857 0134 1340     		ands	r3, r2
+ 858 0136 FAD0     		beq	.L74
+ 859 0138 164B     		ldr	r3, .L79+12
+ 860 013a 5B6A     		ldr	r3, [r3, #36]
+ 861 013c DD2B     		cmp	r3, #221
+ 862 013e 06D1     		bne	.L78
+ 863 0140 124B     		ldr	r3, .L79+4
+ 864 0142 5A69     		ldr	r2, [r3, #20]
+ 865 0144 114B     		ldr	r3, .L79+4
+ 866 0146 8021     		movs	r1, #128
+ 867 0148 4900     		lsls	r1, r1, #1
+ 868 014a 4A40     		eors	r2, r1
+ 869 014c 5A61     		str	r2, [r3, #20]
+ 870              	.L78:
+ 871 014e C046     		nop
+ 872              	.L76:
+ 873 0150 104B     		ldr	r3, .L79+12
+ 874 0152 9B69     		ldr	r3, [r3, #24]
+ 875 0154 2022     		movs	r2, #32
+ 876 0156 1340     		ands	r3, r2
+ 877 0158 202B     		cmp	r3, #32
+ 878 015a F9D1     		bne	.L76
+ 879 015c 0D4B     		ldr	r3, .L79+12
+ 880 015e DA69     		ldr	r2, [r3, #28]
+ 881 0160 0C4B     		ldr	r3, .L79+12
+ 882 0162 2021     		movs	r1, #32
+ 883 0164 0A43     		orrs	r2, r1
+ 884 0166 DA61     		str	r2, [r3, #28]
+ 885 0168 0A4B     		ldr	r3, .L79+12
+ 886 016a 0022     		movs	r2, #0
+ 887 016c 5A60     		str	r2, [r3, #4]
+ 888              	.L77:
+ 889 016e 0C4B     		ldr	r3, .L79+24
+ 890 0170 0C21     		movs	r1, #12
+ 891 0172 1800     		movs	r0, r3
+ 892 0174 FFF7FEFF 		bl	CDC_Transmit_FS
+ 893 0178 FA23     		movs	r3, #250
+ 894 017a 9B00     		lsls	r3, r3, #2
+ 895 017c 1800     		movs	r0, r3
+ 896 017e FFF7FEFF 		bl	HAL_Delay
+ 897 0182 C046     		nop
+ 898 0184 F3E7     		b	.L77
+ARM GAS  /tmp/ccYlNqb7.s 			page 16
+
+
+ 899              	.L80:
+ 900 0186 C046     		.align	2
+ 901              	.L79:
+ 902 0188 00100240 		.word	1073876992
+ 903 018c 00080048 		.word	1207961600
+ 904 0190 00040048 		.word	1207960576
+ 905 0194 00580040 		.word	1073764352
+ 906 0198 130F4210 		.word	272764691
+ 907 019c 00240102 		.word	33629184
+ 908 01a0 00000000 		.word	.LC0
+ 910              		.section	.text.SystemClock_Config,"ax",%progbits
+ 911              		.align	1
+ 912              		.global	SystemClock_Config
+ 913              		.syntax unified
+ 914              		.code	16
+ 915              		.thumb_func
+ 917              	SystemClock_Config:
+ 918              		@ args = 0, pretend = 0, frame = 0
+ 919              		@ frame_needed = 1, uses_anonymous_args = 0
+ 920 0000 80B5     		push	{r7, lr}
+ 921 0002 00AF     		add	r7, sp, #0
+ 922 0004 0120     		movs	r0, #1
+ 923 0006 FFF7FEFF 		bl	LL_FLASH_SetLatency
+ 924 000a C046     		nop
+ 925              	.L82:
+ 926 000c FFF7FEFF 		bl	LL_FLASH_GetLatency
+ 927 0010 0300     		movs	r3, r0
+ 928 0012 012B     		cmp	r3, #1
+ 929 0014 FAD1     		bne	.L82
+ 930 0016 FFF7FEFF 		bl	LL_RCC_HSI_Enable
+ 931 001a C046     		nop
+ 932              	.L83:
+ 933 001c FFF7FEFF 		bl	LL_RCC_HSI_IsReady
+ 934 0020 0300     		movs	r3, r0
+ 935 0022 012B     		cmp	r3, #1
+ 936 0024 FAD1     		bne	.L83
+ 937 0026 1020     		movs	r0, #16
+ 938 0028 FFF7FEFF 		bl	LL_RCC_HSI_SetCalibTrimming
+ 939 002c FFF7FEFF 		bl	LL_RCC_HSI48_Enable
+ 940 0030 C046     		nop
+ 941              	.L84:
+ 942 0032 FFF7FEFF 		bl	LL_RCC_HSI48_IsReady
+ 943 0036 0300     		movs	r3, r0
+ 944 0038 012B     		cmp	r3, #1
+ 945 003a FAD1     		bne	.L84
+ 946 003c 8023     		movs	r3, #128
+ 947 003e 5903     		lsls	r1, r3, #13
+ 948 0040 8023     		movs	r3, #128
+ 949 0042 1B02     		lsls	r3, r3, #8
+ 950 0044 0022     		movs	r2, #0
+ 951 0046 1800     		movs	r0, r3
+ 952 0048 FFF7FEFF 		bl	LL_RCC_PLL_ConfigDomain_SYS
+ 953 004c FFF7FEFF 		bl	LL_RCC_PLL_Enable
+ 954 0050 C046     		nop
+ 955              	.L85:
+ 956 0052 FFF7FEFF 		bl	LL_RCC_PLL_IsReady
+ 957 0056 0300     		movs	r3, r0
+ARM GAS  /tmp/ccYlNqb7.s 			page 17
+
+
+ 958 0058 012B     		cmp	r3, #1
+ 959 005a FAD1     		bne	.L85
+ 960 005c 0020     		movs	r0, #0
+ 961 005e FFF7FEFF 		bl	LL_RCC_SetAHBPrescaler
+ 962 0062 0020     		movs	r0, #0
+ 963 0064 FFF7FEFF 		bl	LL_RCC_SetAPB1Prescaler
+ 964 0068 0220     		movs	r0, #2
+ 965 006a FFF7FEFF 		bl	LL_RCC_SetSysClkSource
+ 966 006e C046     		nop
+ 967              	.L86:
+ 968 0070 FFF7FEFF 		bl	LL_RCC_GetSysClkSource
+ 969 0074 0300     		movs	r3, r0
+ 970 0076 082B     		cmp	r3, #8
+ 971 0078 FAD1     		bne	.L86
+ 972 007a 084B     		ldr	r3, .L88
+ 973 007c 1800     		movs	r0, r3
+ 974 007e FFF7FEFF 		bl	LL_SetSystemCoreClock
+ 975 0082 0020     		movs	r0, #0
+ 976 0084 FFF7FEFF 		bl	HAL_InitTick
+ 977 0088 031E     		subs	r3, r0, #0
+ 978 008a 01D0     		beq	.L87
+ 979 008c FFF7FEFF 		bl	Error_Handler
+ 980              	.L87:
+ 981 0090 0020     		movs	r0, #0
+ 982 0092 FFF7FEFF 		bl	LL_RCC_SetUSBClockSource
+ 983 0096 C046     		nop
+ 984 0098 BD46     		mov	sp, r7
+ 985              		@ sp needed
+ 986 009a 80BD     		pop	{r7, pc}
+ 987              	.L89:
+ 988              		.align	2
+ 989              	.L88:
+ 990 009c 006CDC02 		.word	48000000
+ 992              		.section	.text.MX_I2C2_Init,"ax",%progbits
+ 993              		.align	1
+ 994              		.syntax unified
+ 995              		.code	16
+ 996              		.thumb_func
+ 998              	MX_I2C2_Init:
+ 999              		@ args = 0, pretend = 0, frame = 56
+ 1000              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1001 0000 90B5     		push	{r4, r7, lr}
+ 1002 0002 8FB0     		sub	sp, sp, #60
+ 1003 0004 00AF     		add	r7, sp, #0
+ 1004 0006 1C24     		movs	r4, #28
+ 1005 0008 3B19     		adds	r3, r7, r4
+ 1006 000a 1800     		movs	r0, r3
+ 1007 000c 1C23     		movs	r3, #28
+ 1008 000e 1A00     		movs	r2, r3
+ 1009 0010 0021     		movs	r1, #0
+ 1010 0012 FFF7FEFF 		bl	memset
+ 1011 0016 3B1D     		adds	r3, r7, #4
+ 1012 0018 1800     		movs	r0, r3
+ 1013 001a 1823     		movs	r3, #24
+ 1014 001c 1A00     		movs	r2, r3
+ 1015 001e 0021     		movs	r1, #0
+ 1016 0020 FFF7FEFF 		bl	memset
+ARM GAS  /tmp/ccYlNqb7.s 			page 18
+
+
+ 1017 0024 8023     		movs	r3, #128
+ 1018 0026 DB02     		lsls	r3, r3, #11
+ 1019 0028 1800     		movs	r0, r3
+ 1020 002a FFF7FEFF 		bl	LL_AHB1_GRP1_EnableClock
+ 1021 002e 3B1D     		adds	r3, r7, #4
+ 1022 0030 8022     		movs	r2, #128
+ 1023 0032 D200     		lsls	r2, r2, #3
+ 1024 0034 1A60     		str	r2, [r3]
+ 1025 0036 3B1D     		adds	r3, r7, #4
+ 1026 0038 0222     		movs	r2, #2
+ 1027 003a 5A60     		str	r2, [r3, #4]
+ 1028 003c 3B1D     		adds	r3, r7, #4
+ 1029 003e 0322     		movs	r2, #3
+ 1030 0040 9A60     		str	r2, [r3, #8]
+ 1031 0042 3B1D     		adds	r3, r7, #4
+ 1032 0044 0122     		movs	r2, #1
+ 1033 0046 DA60     		str	r2, [r3, #12]
+ 1034 0048 3B1D     		adds	r3, r7, #4
+ 1035 004a 0122     		movs	r2, #1
+ 1036 004c 1A61     		str	r2, [r3, #16]
+ 1037 004e 3B1D     		adds	r3, r7, #4
+ 1038 0050 0122     		movs	r2, #1
+ 1039 0052 5A61     		str	r2, [r3, #20]
+ 1040 0054 3B1D     		adds	r3, r7, #4
+ 1041 0056 2C4A     		ldr	r2, .L91
+ 1042 0058 1900     		movs	r1, r3
+ 1043 005a 1000     		movs	r0, r2
+ 1044 005c FFF7FEFF 		bl	LL_GPIO_Init
+ 1045 0060 3B1D     		adds	r3, r7, #4
+ 1046 0062 8022     		movs	r2, #128
+ 1047 0064 1201     		lsls	r2, r2, #4
+ 1048 0066 1A60     		str	r2, [r3]
+ 1049 0068 3B1D     		adds	r3, r7, #4
+ 1050 006a 0222     		movs	r2, #2
+ 1051 006c 5A60     		str	r2, [r3, #4]
+ 1052 006e 3B1D     		adds	r3, r7, #4
+ 1053 0070 0322     		movs	r2, #3
+ 1054 0072 9A60     		str	r2, [r3, #8]
+ 1055 0074 3B1D     		adds	r3, r7, #4
+ 1056 0076 0122     		movs	r2, #1
+ 1057 0078 DA60     		str	r2, [r3, #12]
+ 1058 007a 3B1D     		adds	r3, r7, #4
+ 1059 007c 0122     		movs	r2, #1
+ 1060 007e 1A61     		str	r2, [r3, #16]
+ 1061 0080 3B1D     		adds	r3, r7, #4
+ 1062 0082 0122     		movs	r2, #1
+ 1063 0084 5A61     		str	r2, [r3, #20]
+ 1064 0086 3B1D     		adds	r3, r7, #4
+ 1065 0088 1F4A     		ldr	r2, .L91
+ 1066 008a 1900     		movs	r1, r3
+ 1067 008c 1000     		movs	r0, r2
+ 1068 008e FFF7FEFF 		bl	LL_GPIO_Init
+ 1069 0092 8023     		movs	r3, #128
+ 1070 0094 DB03     		lsls	r3, r3, #15
+ 1071 0096 1800     		movs	r0, r3
+ 1072 0098 FFF7FEFF 		bl	LL_APB1_GRP1_EnableClock
+ 1073 009c 1B4B     		ldr	r3, .L91+4
+ARM GAS  /tmp/ccYlNqb7.s 			page 19
+
+
+ 1074 009e 1800     		movs	r0, r3
+ 1075 00a0 FFF7FEFF 		bl	LL_I2C_DisableOwnAddress2
+ 1076 00a4 194B     		ldr	r3, .L91+4
+ 1077 00a6 1800     		movs	r0, r3
+ 1078 00a8 FFF7FEFF 		bl	LL_I2C_DisableGeneralCall
+ 1079 00ac 174B     		ldr	r3, .L91+4
+ 1080 00ae 1800     		movs	r0, r3
+ 1081 00b0 FFF7FEFF 		bl	LL_I2C_EnableClockStretching
+ 1082 00b4 2100     		movs	r1, r4
+ 1083 00b6 7B18     		adds	r3, r7, r1
+ 1084 00b8 0022     		movs	r2, #0
+ 1085 00ba 1A60     		str	r2, [r3]
+ 1086 00bc 7B18     		adds	r3, r7, r1
+ 1087 00be 144A     		ldr	r2, .L91+8
+ 1088 00c0 5A60     		str	r2, [r3, #4]
+ 1089 00c2 7B18     		adds	r3, r7, r1
+ 1090 00c4 0022     		movs	r2, #0
+ 1091 00c6 9A60     		str	r2, [r3, #8]
+ 1092 00c8 7B18     		adds	r3, r7, r1
+ 1093 00ca 0022     		movs	r2, #0
+ 1094 00cc DA60     		str	r2, [r3, #12]
+ 1095 00ce 7B18     		adds	r3, r7, r1
+ 1096 00d0 0022     		movs	r2, #0
+ 1097 00d2 1A61     		str	r2, [r3, #16]
+ 1098 00d4 7B18     		adds	r3, r7, r1
+ 1099 00d6 0022     		movs	r2, #0
+ 1100 00d8 5A61     		str	r2, [r3, #20]
+ 1101 00da 7B18     		adds	r3, r7, r1
+ 1102 00dc 0022     		movs	r2, #0
+ 1103 00de 9A61     		str	r2, [r3, #24]
+ 1104 00e0 7B18     		adds	r3, r7, r1
+ 1105 00e2 0A4A     		ldr	r2, .L91+4
+ 1106 00e4 1900     		movs	r1, r3
+ 1107 00e6 1000     		movs	r0, r2
+ 1108 00e8 FFF7FEFF 		bl	LL_I2C_Init
+ 1109 00ec 074B     		ldr	r3, .L91+4
+ 1110 00ee 1800     		movs	r0, r3
+ 1111 00f0 FFF7FEFF 		bl	LL_I2C_EnableAutoEndMode
+ 1112 00f4 054B     		ldr	r3, .L91+4
+ 1113 00f6 0022     		movs	r2, #0
+ 1114 00f8 0021     		movs	r1, #0
+ 1115 00fa 1800     		movs	r0, r3
+ 1116 00fc FFF7FEFF 		bl	LL_I2C_SetOwnAddress2
+ 1117 0100 C046     		nop
+ 1118 0102 BD46     		mov	sp, r7
+ 1119 0104 0FB0     		add	sp, sp, #60
+ 1120              		@ sp needed
+ 1121 0106 90BD     		pop	{r4, r7, pc}
+ 1122              	.L92:
+ 1123              		.align	2
+ 1124              	.L91:
+ 1125 0108 00040048 		.word	1207960576
+ 1126 010c 00580040 		.word	1073764352
+ 1127 0110 5D3E3020 		.word	540032605
+ 1129              		.section	.text.Error_Handler,"ax",%progbits
+ 1130              		.align	1
+ 1131              		.global	Error_Handler
+ARM GAS  /tmp/ccYlNqb7.s 			page 20
+
+
+ 1132              		.syntax unified
+ 1133              		.code	16
+ 1134              		.thumb_func
+ 1136              	Error_Handler:
+ 1137              		@ args = 0, pretend = 0, frame = 0
+ 1138              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1139 0000 80B5     		push	{r7, lr}
+ 1140 0002 00AF     		add	r7, sp, #0
+ 1141              		.syntax divided
+ 1142              	@ 142 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
+ 1143 0004 72B6     		cpsid i
+ 1144              	@ 0 "" 2
+ 1145              		.thumb
+ 1146              		.syntax unified
+ 1147 0006 C046     		nop
+ 1148              	.L94:
+ 1149 0008 C046     		nop
+ 1150 000a FDE7     		b	.L94
+ 1152              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccYlNqb7.s 			page 21
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+     /tmp/ccYlNqb7.s:15     .text.LL_I2C_EnableClockStretching:00000000 $t
+     /tmp/ccYlNqb7.s:20     .text.LL_I2C_EnableClockStretching:00000000 LL_I2C_EnableClockStretching
+     /tmp/ccYlNqb7.s:41     .text.LL_I2C_EnableClockStretching:0000001c $d
+     /tmp/ccYlNqb7.s:44     .text.LL_I2C_DisableGeneralCall:00000000 $t
+     /tmp/ccYlNqb7.s:49     .text.LL_I2C_DisableGeneralCall:00000000 LL_I2C_DisableGeneralCall
+     /tmp/ccYlNqb7.s:70     .text.LL_I2C_DisableGeneralCall:0000001c $d
+     /tmp/ccYlNqb7.s:73     .text.LL_I2C_SetOwnAddress2:00000000 $t
+     /tmp/ccYlNqb7.s:78     .text.LL_I2C_SetOwnAddress2:00000000 LL_I2C_SetOwnAddress2
+     /tmp/ccYlNqb7.s:105    .text.LL_I2C_SetOwnAddress2:00000028 $d
+     /tmp/ccYlNqb7.s:108    .text.LL_I2C_DisableOwnAddress2:00000000 $t
+     /tmp/ccYlNqb7.s:113    .text.LL_I2C_DisableOwnAddress2:00000000 LL_I2C_DisableOwnAddress2
+     /tmp/ccYlNqb7.s:134    .text.LL_I2C_DisableOwnAddress2:0000001c $d
+     /tmp/ccYlNqb7.s:137    .text.LL_I2C_EnableAutoEndMode:00000000 $t
+     /tmp/ccYlNqb7.s:142    .text.LL_I2C_EnableAutoEndMode:00000000 LL_I2C_EnableAutoEndMode
+     /tmp/ccYlNqb7.s:163    .text.LL_RCC_HSI_Enable:00000000 $t
+     /tmp/ccYlNqb7.s:168    .text.LL_RCC_HSI_Enable:00000000 LL_RCC_HSI_Enable
+     /tmp/ccYlNqb7.s:186    .text.LL_RCC_HSI_Enable:00000018 $d
+     /tmp/ccYlNqb7.s:189    .text.LL_RCC_HSI_IsReady:00000000 $t
+     /tmp/ccYlNqb7.s:194    .text.LL_RCC_HSI_IsReady:00000000 LL_RCC_HSI_IsReady
+     /tmp/ccYlNqb7.s:213    .text.LL_RCC_HSI_IsReady:00000018 $d
+     /tmp/ccYlNqb7.s:216    .text.LL_RCC_HSI_SetCalibTrimming:00000000 $t
+     /tmp/ccYlNqb7.s:221    .text.LL_RCC_HSI_SetCalibTrimming:00000000 LL_RCC_HSI_SetCalibTrimming
+     /tmp/ccYlNqb7.s:246    .text.LL_RCC_HSI_SetCalibTrimming:00000024 $d
+     /tmp/ccYlNqb7.s:249    .text.LL_RCC_HSI48_Enable:00000000 $t
+     /tmp/ccYlNqb7.s:254    .text.LL_RCC_HSI48_Enable:00000000 LL_RCC_HSI48_Enable
+     /tmp/ccYlNqb7.s:273    .text.LL_RCC_HSI48_Enable:00000018 $d
+     /tmp/ccYlNqb7.s:276    .text.LL_RCC_HSI48_IsReady:00000000 $t
+     /tmp/ccYlNqb7.s:281    .text.LL_RCC_HSI48_IsReady:00000000 LL_RCC_HSI48_IsReady
+     /tmp/ccYlNqb7.s:301    .text.LL_RCC_HSI48_IsReady:0000001c $d
+     /tmp/ccYlNqb7.s:304    .text.LL_RCC_SetSysClkSource:00000000 $t
+     /tmp/ccYlNqb7.s:309    .text.LL_RCC_SetSysClkSource:00000000 LL_RCC_SetSysClkSource
+     /tmp/ccYlNqb7.s:333    .text.LL_RCC_SetSysClkSource:00000024 $d
+     /tmp/ccYlNqb7.s:336    .text.LL_RCC_GetSysClkSource:00000000 $t
+     /tmp/ccYlNqb7.s:341    .text.LL_RCC_GetSysClkSource:00000000 LL_RCC_GetSysClkSource
+     /tmp/ccYlNqb7.s:357    .text.LL_RCC_GetSysClkSource:00000014 $d
+     /tmp/ccYlNqb7.s:360    .text.LL_RCC_SetAHBPrescaler:00000000 $t
+     /tmp/ccYlNqb7.s:365    .text.LL_RCC_SetAHBPrescaler:00000000 LL_RCC_SetAHBPrescaler
+     /tmp/ccYlNqb7.s:389    .text.LL_RCC_SetAHBPrescaler:00000024 $d
+     /tmp/ccYlNqb7.s:392    .text.LL_RCC_SetAPB1Prescaler:00000000 $t
+     /tmp/ccYlNqb7.s:397    .text.LL_RCC_SetAPB1Prescaler:00000000 LL_RCC_SetAPB1Prescaler
+     /tmp/ccYlNqb7.s:421    .text.LL_RCC_SetAPB1Prescaler:00000024 $d
+     /tmp/ccYlNqb7.s:425    .text.LL_RCC_SetUSBClockSource:00000000 $t
+     /tmp/ccYlNqb7.s:430    .text.LL_RCC_SetUSBClockSource:00000000 LL_RCC_SetUSBClockSource
+     /tmp/ccYlNqb7.s:454    .text.LL_RCC_SetUSBClockSource:00000024 $d
+     /tmp/ccYlNqb7.s:457    .text.LL_RCC_PLL_Enable:00000000 $t
+     /tmp/ccYlNqb7.s:462    .text.LL_RCC_PLL_Enable:00000000 LL_RCC_PLL_Enable
+     /tmp/ccYlNqb7.s:481    .text.LL_RCC_PLL_Enable:00000018 $d
+     /tmp/ccYlNqb7.s:484    .text.LL_RCC_PLL_IsReady:00000000 $t
+     /tmp/ccYlNqb7.s:489    .text.LL_RCC_PLL_IsReady:00000000 LL_RCC_PLL_IsReady
+     /tmp/ccYlNqb7.s:509    .text.LL_RCC_PLL_IsReady:0000001c $d
+     /tmp/ccYlNqb7.s:512    .text.LL_RCC_PLL_ConfigDomain_SYS:00000000 $t
+     /tmp/ccYlNqb7.s:517    .text.LL_RCC_PLL_ConfigDomain_SYS:00000000 LL_RCC_PLL_ConfigDomain_SYS
+     /tmp/ccYlNqb7.s:554    .text.LL_RCC_PLL_ConfigDomain_SYS:0000003c $d
+     /tmp/ccYlNqb7.s:558    .text.LL_AHB1_GRP1_EnableClock:00000000 $t
+     /tmp/ccYlNqb7.s:563    .text.LL_AHB1_GRP1_EnableClock:00000000 LL_AHB1_GRP1_EnableClock
+ARM GAS  /tmp/ccYlNqb7.s 			page 22
+
+
+     /tmp/ccYlNqb7.s:590    .text.LL_AHB1_GRP1_EnableClock:00000028 $d
+     /tmp/ccYlNqb7.s:593    .text.LL_APB1_GRP1_EnableClock:00000000 $t
+     /tmp/ccYlNqb7.s:598    .text.LL_APB1_GRP1_EnableClock:00000000 LL_APB1_GRP1_EnableClock
+     /tmp/ccYlNqb7.s:625    .text.LL_APB1_GRP1_EnableClock:00000028 $d
+     /tmp/ccYlNqb7.s:628    .text.LL_FLASH_SetLatency:00000000 $t
+     /tmp/ccYlNqb7.s:633    .text.LL_FLASH_SetLatency:00000000 LL_FLASH_SetLatency
+     /tmp/ccYlNqb7.s:657    .text.LL_FLASH_SetLatency:00000024 $d
+     /tmp/ccYlNqb7.s:660    .text.LL_FLASH_GetLatency:00000000 $t
+     /tmp/ccYlNqb7.s:665    .text.LL_FLASH_GetLatency:00000000 LL_FLASH_GetLatency
+     /tmp/ccYlNqb7.s:681    .text.LL_FLASH_GetLatency:00000014 $d
+     /tmp/ccYlNqb7.s:684    .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+     /tmp/ccYlNqb7.s:687    .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+     /tmp/ccYlNqb7.s:690    .rodata:00000000 $d
+     /tmp/ccYlNqb7.s:694    .text.main:00000000 $t
+     /tmp/ccYlNqb7.s:700    .text.main:00000000 main
+     /tmp/ccYlNqb7.s:917    .text.SystemClock_Config:00000000 SystemClock_Config
+     /tmp/ccYlNqb7.s:902    .text.main:00000188 $d
+     /tmp/ccYlNqb7.s:911    .text.SystemClock_Config:00000000 $t
+     /tmp/ccYlNqb7.s:1136   .text.Error_Handler:00000000 Error_Handler
+     /tmp/ccYlNqb7.s:990    .text.SystemClock_Config:0000009c $d
+     /tmp/ccYlNqb7.s:993    .text.MX_I2C2_Init:00000000 $t
+     /tmp/ccYlNqb7.s:998    .text.MX_I2C2_Init:00000000 MX_I2C2_Init
+     /tmp/ccYlNqb7.s:1125   .text.MX_I2C2_Init:00000108 $d
+     /tmp/ccYlNqb7.s:1130   .text.Error_Handler:00000000 $t
+
+UNDEFINED SYMBOLS
+HAL_Init
+LL_GPIO_Init
+MX_USB_DEVICE_Init
+CDC_Transmit_FS
+HAL_Delay
+LL_SetSystemCoreClock
+HAL_InitTick
+memset
+LL_I2C_Init

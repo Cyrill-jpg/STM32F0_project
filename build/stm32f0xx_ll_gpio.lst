@@ -1,0 +1,640 @@
+ARM GAS  /tmp/cc8ua89R.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"stm32f0xx_ll_gpio.c"
+  13              		.text
+  14              		.section	.text.LL_GPIO_SetPinMode,"ax",%progbits
+  15              		.align	1
+  16              		.syntax unified
+  17              		.code	16
+  18              		.thumb_func
+  20              	LL_GPIO_SetPinMode:
+  21              		@ args = 0, pretend = 0, frame = 16
+  22              		@ frame_needed = 1, uses_anonymous_args = 0
+  23 0000 80B5     		push	{r7, lr}
+  24 0002 84B0     		sub	sp, sp, #16
+  25 0004 00AF     		add	r7, sp, #0
+  26 0006 F860     		str	r0, [r7, #12]
+  27 0008 B960     		str	r1, [r7, #8]
+  28 000a 7A60     		str	r2, [r7, #4]
+  29 000c FB68     		ldr	r3, [r7, #12]
+  30 000e 1968     		ldr	r1, [r3]
+  31 0010 BB68     		ldr	r3, [r7, #8]
+  32 0012 5B43     		muls	r3, r3
+  33 0014 1A00     		movs	r2, r3
+  34 0016 1300     		movs	r3, r2
+  35 0018 5B00     		lsls	r3, r3, #1
+  36 001a 9B18     		adds	r3, r3, r2
+  37 001c DB43     		mvns	r3, r3
+  38 001e 0B40     		ands	r3, r1
+  39 0020 1A00     		movs	r2, r3
+  40 0022 BB68     		ldr	r3, [r7, #8]
+  41 0024 5B43     		muls	r3, r3
+  42 0026 7968     		ldr	r1, [r7, #4]
+  43 0028 4B43     		muls	r3, r1
+  44 002a 1A43     		orrs	r2, r3
+  45 002c FB68     		ldr	r3, [r7, #12]
+  46 002e 1A60     		str	r2, [r3]
+  47 0030 C046     		nop
+  48 0032 BD46     		mov	sp, r7
+  49 0034 04B0     		add	sp, sp, #16
+  50              		@ sp needed
+  51 0036 80BD     		pop	{r7, pc}
+  53              		.section	.text.LL_GPIO_SetPinOutputType,"ax",%progbits
+  54              		.align	1
+  55              		.syntax unified
+  56              		.code	16
+  57              		.thumb_func
+  59              	LL_GPIO_SetPinOutputType:
+  60              		@ args = 0, pretend = 0, frame = 16
+ARM GAS  /tmp/cc8ua89R.s 			page 2
+
+
+  61              		@ frame_needed = 1, uses_anonymous_args = 0
+  62 0000 80B5     		push	{r7, lr}
+  63 0002 84B0     		sub	sp, sp, #16
+  64 0004 00AF     		add	r7, sp, #0
+  65 0006 F860     		str	r0, [r7, #12]
+  66 0008 B960     		str	r1, [r7, #8]
+  67 000a 7A60     		str	r2, [r7, #4]
+  68 000c FB68     		ldr	r3, [r7, #12]
+  69 000e 5B68     		ldr	r3, [r3, #4]
+  70 0010 BA68     		ldr	r2, [r7, #8]
+  71 0012 D243     		mvns	r2, r2
+  72 0014 1A40     		ands	r2, r3
+  73 0016 BB68     		ldr	r3, [r7, #8]
+  74 0018 7968     		ldr	r1, [r7, #4]
+  75 001a 4B43     		muls	r3, r1
+  76 001c 1A43     		orrs	r2, r3
+  77 001e FB68     		ldr	r3, [r7, #12]
+  78 0020 5A60     		str	r2, [r3, #4]
+  79 0022 C046     		nop
+  80 0024 BD46     		mov	sp, r7
+  81 0026 04B0     		add	sp, sp, #16
+  82              		@ sp needed
+  83 0028 80BD     		pop	{r7, pc}
+  85              		.section	.text.LL_GPIO_SetPinSpeed,"ax",%progbits
+  86              		.align	1
+  87              		.syntax unified
+  88              		.code	16
+  89              		.thumb_func
+  91              	LL_GPIO_SetPinSpeed:
+  92              		@ args = 0, pretend = 0, frame = 16
+  93              		@ frame_needed = 1, uses_anonymous_args = 0
+  94 0000 80B5     		push	{r7, lr}
+  95 0002 84B0     		sub	sp, sp, #16
+  96 0004 00AF     		add	r7, sp, #0
+  97 0006 F860     		str	r0, [r7, #12]
+  98 0008 B960     		str	r1, [r7, #8]
+  99 000a 7A60     		str	r2, [r7, #4]
+ 100 000c FB68     		ldr	r3, [r7, #12]
+ 101 000e 9968     		ldr	r1, [r3, #8]
+ 102 0010 BB68     		ldr	r3, [r7, #8]
+ 103 0012 5B43     		muls	r3, r3
+ 104 0014 1A00     		movs	r2, r3
+ 105 0016 1300     		movs	r3, r2
+ 106 0018 5B00     		lsls	r3, r3, #1
+ 107 001a 9B18     		adds	r3, r3, r2
+ 108 001c DB43     		mvns	r3, r3
+ 109 001e 0B40     		ands	r3, r1
+ 110 0020 1A00     		movs	r2, r3
+ 111 0022 BB68     		ldr	r3, [r7, #8]
+ 112 0024 5B43     		muls	r3, r3
+ 113 0026 7968     		ldr	r1, [r7, #4]
+ 114 0028 4B43     		muls	r3, r1
+ 115 002a 1A43     		orrs	r2, r3
+ 116 002c FB68     		ldr	r3, [r7, #12]
+ 117 002e 9A60     		str	r2, [r3, #8]
+ 118 0030 C046     		nop
+ 119 0032 BD46     		mov	sp, r7
+ARM GAS  /tmp/cc8ua89R.s 			page 3
+
+
+ 120 0034 04B0     		add	sp, sp, #16
+ 121              		@ sp needed
+ 122 0036 80BD     		pop	{r7, pc}
+ 124              		.section	.text.LL_GPIO_SetPinPull,"ax",%progbits
+ 125              		.align	1
+ 126              		.syntax unified
+ 127              		.code	16
+ 128              		.thumb_func
+ 130              	LL_GPIO_SetPinPull:
+ 131              		@ args = 0, pretend = 0, frame = 16
+ 132              		@ frame_needed = 1, uses_anonymous_args = 0
+ 133 0000 80B5     		push	{r7, lr}
+ 134 0002 84B0     		sub	sp, sp, #16
+ 135 0004 00AF     		add	r7, sp, #0
+ 136 0006 F860     		str	r0, [r7, #12]
+ 137 0008 B960     		str	r1, [r7, #8]
+ 138 000a 7A60     		str	r2, [r7, #4]
+ 139 000c FB68     		ldr	r3, [r7, #12]
+ 140 000e D968     		ldr	r1, [r3, #12]
+ 141 0010 BB68     		ldr	r3, [r7, #8]
+ 142 0012 5B43     		muls	r3, r3
+ 143 0014 1A00     		movs	r2, r3
+ 144 0016 1300     		movs	r3, r2
+ 145 0018 5B00     		lsls	r3, r3, #1
+ 146 001a 9B18     		adds	r3, r3, r2
+ 147 001c DB43     		mvns	r3, r3
+ 148 001e 0B40     		ands	r3, r1
+ 149 0020 1A00     		movs	r2, r3
+ 150 0022 BB68     		ldr	r3, [r7, #8]
+ 151 0024 5B43     		muls	r3, r3
+ 152 0026 7968     		ldr	r1, [r7, #4]
+ 153 0028 4B43     		muls	r3, r1
+ 154 002a 1A43     		orrs	r2, r3
+ 155 002c FB68     		ldr	r3, [r7, #12]
+ 156 002e DA60     		str	r2, [r3, #12]
+ 157 0030 C046     		nop
+ 158 0032 BD46     		mov	sp, r7
+ 159 0034 04B0     		add	sp, sp, #16
+ 160              		@ sp needed
+ 161 0036 80BD     		pop	{r7, pc}
+ 163              		.section	.text.LL_GPIO_SetAFPin_0_7,"ax",%progbits
+ 164              		.align	1
+ 165              		.syntax unified
+ 166              		.code	16
+ 167              		.thumb_func
+ 169              	LL_GPIO_SetAFPin_0_7:
+ 170              		@ args = 0, pretend = 0, frame = 16
+ 171              		@ frame_needed = 1, uses_anonymous_args = 0
+ 172 0000 80B5     		push	{r7, lr}
+ 173 0002 84B0     		sub	sp, sp, #16
+ 174 0004 00AF     		add	r7, sp, #0
+ 175 0006 F860     		str	r0, [r7, #12]
+ 176 0008 B960     		str	r1, [r7, #8]
+ 177 000a 7A60     		str	r2, [r7, #4]
+ 178 000c FB68     		ldr	r3, [r7, #12]
+ 179 000e 196A     		ldr	r1, [r3, #32]
+ 180 0010 BB68     		ldr	r3, [r7, #8]
+ARM GAS  /tmp/cc8ua89R.s 			page 4
+
+
+ 181 0012 5B43     		muls	r3, r3
+ 182 0014 BA68     		ldr	r2, [r7, #8]
+ 183 0016 5343     		muls	r3, r2
+ 184 0018 BA68     		ldr	r2, [r7, #8]
+ 185 001a 5A43     		muls	r2, r3
+ 186 001c 1300     		movs	r3, r2
+ 187 001e 1B01     		lsls	r3, r3, #4
+ 188 0020 9B1A     		subs	r3, r3, r2
+ 189 0022 DB43     		mvns	r3, r3
+ 190 0024 0B40     		ands	r3, r1
+ 191 0026 1A00     		movs	r2, r3
+ 192 0028 BB68     		ldr	r3, [r7, #8]
+ 193 002a 5B43     		muls	r3, r3
+ 194 002c B968     		ldr	r1, [r7, #8]
+ 195 002e 4B43     		muls	r3, r1
+ 196 0030 B968     		ldr	r1, [r7, #8]
+ 197 0032 4B43     		muls	r3, r1
+ 198 0034 7968     		ldr	r1, [r7, #4]
+ 199 0036 4B43     		muls	r3, r1
+ 200 0038 1A43     		orrs	r2, r3
+ 201 003a FB68     		ldr	r3, [r7, #12]
+ 202 003c 1A62     		str	r2, [r3, #32]
+ 203 003e C046     		nop
+ 204 0040 BD46     		mov	sp, r7
+ 205 0042 04B0     		add	sp, sp, #16
+ 206              		@ sp needed
+ 207 0044 80BD     		pop	{r7, pc}
+ 209              		.section	.text.LL_GPIO_SetAFPin_8_15,"ax",%progbits
+ 210              		.align	1
+ 211              		.syntax unified
+ 212              		.code	16
+ 213              		.thumb_func
+ 215              	LL_GPIO_SetAFPin_8_15:
+ 216              		@ args = 0, pretend = 0, frame = 16
+ 217              		@ frame_needed = 1, uses_anonymous_args = 0
+ 218 0000 80B5     		push	{r7, lr}
+ 219 0002 84B0     		sub	sp, sp, #16
+ 220 0004 00AF     		add	r7, sp, #0
+ 221 0006 F860     		str	r0, [r7, #12]
+ 222 0008 B960     		str	r1, [r7, #8]
+ 223 000a 7A60     		str	r2, [r7, #4]
+ 224 000c FB68     		ldr	r3, [r7, #12]
+ 225 000e 596A     		ldr	r1, [r3, #36]
+ 226 0010 BB68     		ldr	r3, [r7, #8]
+ 227 0012 1B0A     		lsrs	r3, r3, #8
+ 228 0014 BA68     		ldr	r2, [r7, #8]
+ 229 0016 120A     		lsrs	r2, r2, #8
+ 230 0018 5343     		muls	r3, r2
+ 231 001a BA68     		ldr	r2, [r7, #8]
+ 232 001c 120A     		lsrs	r2, r2, #8
+ 233 001e 5343     		muls	r3, r2
+ 234 0020 BA68     		ldr	r2, [r7, #8]
+ 235 0022 120A     		lsrs	r2, r2, #8
+ 236 0024 5A43     		muls	r2, r3
+ 237 0026 1300     		movs	r3, r2
+ 238 0028 1B01     		lsls	r3, r3, #4
+ 239 002a 9B1A     		subs	r3, r3, r2
+ARM GAS  /tmp/cc8ua89R.s 			page 5
+
+
+ 240 002c DB43     		mvns	r3, r3
+ 241 002e 0B40     		ands	r3, r1
+ 242 0030 1A00     		movs	r2, r3
+ 243 0032 BB68     		ldr	r3, [r7, #8]
+ 244 0034 1B0A     		lsrs	r3, r3, #8
+ 245 0036 B968     		ldr	r1, [r7, #8]
+ 246 0038 090A     		lsrs	r1, r1, #8
+ 247 003a 4B43     		muls	r3, r1
+ 248 003c B968     		ldr	r1, [r7, #8]
+ 249 003e 090A     		lsrs	r1, r1, #8
+ 250 0040 4B43     		muls	r3, r1
+ 251 0042 B968     		ldr	r1, [r7, #8]
+ 252 0044 090A     		lsrs	r1, r1, #8
+ 253 0046 4B43     		muls	r3, r1
+ 254 0048 7968     		ldr	r1, [r7, #4]
+ 255 004a 4B43     		muls	r3, r1
+ 256 004c 1A43     		orrs	r2, r3
+ 257 004e FB68     		ldr	r3, [r7, #12]
+ 258 0050 5A62     		str	r2, [r3, #36]
+ 259 0052 C046     		nop
+ 260 0054 BD46     		mov	sp, r7
+ 261 0056 04B0     		add	sp, sp, #16
+ 262              		@ sp needed
+ 263 0058 80BD     		pop	{r7, pc}
+ 265              		.section	.text.LL_AHB1_GRP1_ForceReset,"ax",%progbits
+ 266              		.align	1
+ 267              		.syntax unified
+ 268              		.code	16
+ 269              		.thumb_func
+ 271              	LL_AHB1_GRP1_ForceReset:
+ 272              		@ args = 0, pretend = 0, frame = 8
+ 273              		@ frame_needed = 1, uses_anonymous_args = 0
+ 274 0000 80B5     		push	{r7, lr}
+ 275 0002 82B0     		sub	sp, sp, #8
+ 276 0004 00AF     		add	r7, sp, #0
+ 277 0006 7860     		str	r0, [r7, #4]
+ 278 0008 044B     		ldr	r3, .L8
+ 279 000a 996A     		ldr	r1, [r3, #40]
+ 280 000c 034B     		ldr	r3, .L8
+ 281 000e 7A68     		ldr	r2, [r7, #4]
+ 282 0010 0A43     		orrs	r2, r1
+ 283 0012 9A62     		str	r2, [r3, #40]
+ 284 0014 C046     		nop
+ 285 0016 BD46     		mov	sp, r7
+ 286 0018 02B0     		add	sp, sp, #8
+ 287              		@ sp needed
+ 288 001a 80BD     		pop	{r7, pc}
+ 289              	.L9:
+ 290              		.align	2
+ 291              	.L8:
+ 292 001c 00100240 		.word	1073876992
+ 294              		.section	.text.LL_AHB1_GRP1_ReleaseReset,"ax",%progbits
+ 295              		.align	1
+ 296              		.syntax unified
+ 297              		.code	16
+ 298              		.thumb_func
+ 300              	LL_AHB1_GRP1_ReleaseReset:
+ARM GAS  /tmp/cc8ua89R.s 			page 6
+
+
+ 301              		@ args = 0, pretend = 0, frame = 8
+ 302              		@ frame_needed = 1, uses_anonymous_args = 0
+ 303 0000 80B5     		push	{r7, lr}
+ 304 0002 82B0     		sub	sp, sp, #8
+ 305 0004 00AF     		add	r7, sp, #0
+ 306 0006 7860     		str	r0, [r7, #4]
+ 307 0008 054B     		ldr	r3, .L11
+ 308 000a 9A6A     		ldr	r2, [r3, #40]
+ 309 000c 7B68     		ldr	r3, [r7, #4]
+ 310 000e D943     		mvns	r1, r3
+ 311 0010 034B     		ldr	r3, .L11
+ 312 0012 0A40     		ands	r2, r1
+ 313 0014 9A62     		str	r2, [r3, #40]
+ 314 0016 C046     		nop
+ 315 0018 BD46     		mov	sp, r7
+ 316 001a 02B0     		add	sp, sp, #8
+ 317              		@ sp needed
+ 318 001c 80BD     		pop	{r7, pc}
+ 319              	.L12:
+ 320 001e C046     		.align	2
+ 321              	.L11:
+ 322 0020 00100240 		.word	1073876992
+ 324              		.section	.text.LL_GPIO_DeInit,"ax",%progbits
+ 325              		.align	1
+ 326              		.global	LL_GPIO_DeInit
+ 327              		.syntax unified
+ 328              		.code	16
+ 329              		.thumb_func
+ 331              	LL_GPIO_DeInit:
+ 332              		@ args = 0, pretend = 0, frame = 16
+ 333              		@ frame_needed = 1, uses_anonymous_args = 0
+ 334 0000 80B5     		push	{r7, lr}
+ 335 0002 84B0     		sub	sp, sp, #16
+ 336 0004 00AF     		add	r7, sp, #0
+ 337 0006 7860     		str	r0, [r7, #4]
+ 338 0008 0F23     		movs	r3, #15
+ 339 000a FB18     		adds	r3, r7, r3
+ 340 000c 0022     		movs	r2, #0
+ 341 000e 1A70     		strb	r2, [r3]
+ 342 0010 7A68     		ldr	r2, [r7, #4]
+ 343 0012 9023     		movs	r3, #144
+ 344 0014 DB05     		lsls	r3, r3, #23
+ 345 0016 9A42     		cmp	r2, r3
+ 346 0018 0AD1     		bne	.L14
+ 347 001a 8023     		movs	r3, #128
+ 348 001c 9B02     		lsls	r3, r3, #10
+ 349 001e 1800     		movs	r0, r3
+ 350 0020 FFF7FEFF 		bl	LL_AHB1_GRP1_ForceReset
+ 351 0024 8023     		movs	r3, #128
+ 352 0026 9B02     		lsls	r3, r3, #10
+ 353 0028 1800     		movs	r0, r3
+ 354 002a FFF7FEFF 		bl	LL_AHB1_GRP1_ReleaseReset
+ 355 002e 4EE0     		b	.L15
+ 356              	.L14:
+ 357 0030 7B68     		ldr	r3, [r7, #4]
+ 358 0032 2A4A     		ldr	r2, .L22
+ 359 0034 9342     		cmp	r3, r2
+ARM GAS  /tmp/cc8ua89R.s 			page 7
+
+
+ 360 0036 0AD1     		bne	.L16
+ 361 0038 8023     		movs	r3, #128
+ 362 003a DB02     		lsls	r3, r3, #11
+ 363 003c 1800     		movs	r0, r3
+ 364 003e FFF7FEFF 		bl	LL_AHB1_GRP1_ForceReset
+ 365 0042 8023     		movs	r3, #128
+ 366 0044 DB02     		lsls	r3, r3, #11
+ 367 0046 1800     		movs	r0, r3
+ 368 0048 FFF7FEFF 		bl	LL_AHB1_GRP1_ReleaseReset
+ 369 004c 3FE0     		b	.L15
+ 370              	.L16:
+ 371 004e 7B68     		ldr	r3, [r7, #4]
+ 372 0050 234A     		ldr	r2, .L22+4
+ 373 0052 9342     		cmp	r3, r2
+ 374 0054 0AD1     		bne	.L17
+ 375 0056 8023     		movs	r3, #128
+ 376 0058 1B03     		lsls	r3, r3, #12
+ 377 005a 1800     		movs	r0, r3
+ 378 005c FFF7FEFF 		bl	LL_AHB1_GRP1_ForceReset
+ 379 0060 8023     		movs	r3, #128
+ 380 0062 1B03     		lsls	r3, r3, #12
+ 381 0064 1800     		movs	r0, r3
+ 382 0066 FFF7FEFF 		bl	LL_AHB1_GRP1_ReleaseReset
+ 383 006a 30E0     		b	.L15
+ 384              	.L17:
+ 385 006c 7B68     		ldr	r3, [r7, #4]
+ 386 006e 1D4A     		ldr	r2, .L22+8
+ 387 0070 9342     		cmp	r3, r2
+ 388 0072 0AD1     		bne	.L18
+ 389 0074 8023     		movs	r3, #128
+ 390 0076 5B03     		lsls	r3, r3, #13
+ 391 0078 1800     		movs	r0, r3
+ 392 007a FFF7FEFF 		bl	LL_AHB1_GRP1_ForceReset
+ 393 007e 8023     		movs	r3, #128
+ 394 0080 5B03     		lsls	r3, r3, #13
+ 395 0082 1800     		movs	r0, r3
+ 396 0084 FFF7FEFF 		bl	LL_AHB1_GRP1_ReleaseReset
+ 397 0088 21E0     		b	.L15
+ 398              	.L18:
+ 399 008a 7B68     		ldr	r3, [r7, #4]
+ 400 008c 164A     		ldr	r2, .L22+12
+ 401 008e 9342     		cmp	r3, r2
+ 402 0090 0AD1     		bne	.L19
+ 403 0092 8023     		movs	r3, #128
+ 404 0094 9B03     		lsls	r3, r3, #14
+ 405 0096 1800     		movs	r0, r3
+ 406 0098 FFF7FEFF 		bl	LL_AHB1_GRP1_ForceReset
+ 407 009c 8023     		movs	r3, #128
+ 408 009e 9B03     		lsls	r3, r3, #14
+ 409 00a0 1800     		movs	r0, r3
+ 410 00a2 FFF7FEFF 		bl	LL_AHB1_GRP1_ReleaseReset
+ 411 00a6 12E0     		b	.L15
+ 412              	.L19:
+ 413 00a8 7B68     		ldr	r3, [r7, #4]
+ 414 00aa 104A     		ldr	r2, .L22+16
+ 415 00ac 9342     		cmp	r3, r2
+ 416 00ae 0AD1     		bne	.L20
+ARM GAS  /tmp/cc8ua89R.s 			page 8
+
+
+ 417 00b0 8023     		movs	r3, #128
+ 418 00b2 DB03     		lsls	r3, r3, #15
+ 419 00b4 1800     		movs	r0, r3
+ 420 00b6 FFF7FEFF 		bl	LL_AHB1_GRP1_ForceReset
+ 421 00ba 8023     		movs	r3, #128
+ 422 00bc DB03     		lsls	r3, r3, #15
+ 423 00be 1800     		movs	r0, r3
+ 424 00c0 FFF7FEFF 		bl	LL_AHB1_GRP1_ReleaseReset
+ 425 00c4 03E0     		b	.L15
+ 426              	.L20:
+ 427 00c6 0F23     		movs	r3, #15
+ 428 00c8 FB18     		adds	r3, r7, r3
+ 429 00ca 0122     		movs	r2, #1
+ 430 00cc 1A70     		strb	r2, [r3]
+ 431              	.L15:
+ 432 00ce 0F23     		movs	r3, #15
+ 433 00d0 FB18     		adds	r3, r7, r3
+ 434 00d2 1B78     		ldrb	r3, [r3]
+ 435 00d4 1800     		movs	r0, r3
+ 436 00d6 BD46     		mov	sp, r7
+ 437 00d8 04B0     		add	sp, sp, #16
+ 438              		@ sp needed
+ 439 00da 80BD     		pop	{r7, pc}
+ 440              	.L23:
+ 441              		.align	2
+ 442              	.L22:
+ 443 00dc 00040048 		.word	1207960576
+ 444 00e0 00080048 		.word	1207961600
+ 445 00e4 000C0048 		.word	1207962624
+ 446 00e8 00100048 		.word	1207963648
+ 447 00ec 00140048 		.word	1207964672
+ 449              		.section	.text.LL_GPIO_Init,"ax",%progbits
+ 450              		.align	1
+ 451              		.global	LL_GPIO_Init
+ 452              		.syntax unified
+ 453              		.code	16
+ 454              		.thumb_func
+ 456              	LL_GPIO_Init:
+ 457              		@ args = 0, pretend = 0, frame = 16
+ 458              		@ frame_needed = 1, uses_anonymous_args = 0
+ 459 0000 80B5     		push	{r7, lr}
+ 460 0002 84B0     		sub	sp, sp, #16
+ 461 0004 00AF     		add	r7, sp, #0
+ 462 0006 7860     		str	r0, [r7, #4]
+ 463 0008 3960     		str	r1, [r7]
+ 464 000a 0023     		movs	r3, #0
+ 465 000c FB60     		str	r3, [r7, #12]
+ 466 000e 48E0     		b	.L25
+ 467              	.L31:
+ 468 0010 3B68     		ldr	r3, [r7]
+ 469 0012 1B68     		ldr	r3, [r3]
+ 470 0014 0121     		movs	r1, #1
+ 471 0016 FA68     		ldr	r2, [r7, #12]
+ 472 0018 9140     		lsls	r1, r1, r2
+ 473 001a 0A00     		movs	r2, r1
+ 474 001c 1340     		ands	r3, r2
+ 475 001e BB60     		str	r3, [r7, #8]
+ARM GAS  /tmp/cc8ua89R.s 			page 9
+
+
+ 476 0020 BB68     		ldr	r3, [r7, #8]
+ 477 0022 002B     		cmp	r3, #0
+ 478 0024 3AD0     		beq	.L26
+ 479 0026 3B68     		ldr	r3, [r7]
+ 480 0028 5B68     		ldr	r3, [r3, #4]
+ 481 002a 012B     		cmp	r3, #1
+ 482 002c 03D0     		beq	.L27
+ 483 002e 3B68     		ldr	r3, [r7]
+ 484 0030 5B68     		ldr	r3, [r3, #4]
+ 485 0032 022B     		cmp	r3, #2
+ 486 0034 0ED1     		bne	.L28
+ 487              	.L27:
+ 488 0036 3B68     		ldr	r3, [r7]
+ 489 0038 9A68     		ldr	r2, [r3, #8]
+ 490 003a B968     		ldr	r1, [r7, #8]
+ 491 003c 7B68     		ldr	r3, [r7, #4]
+ 492 003e 1800     		movs	r0, r3
+ 493 0040 FFF7FEFF 		bl	LL_GPIO_SetPinSpeed
+ 494 0044 3B68     		ldr	r3, [r7]
+ 495 0046 1968     		ldr	r1, [r3]
+ 496 0048 3B68     		ldr	r3, [r7]
+ 497 004a DA68     		ldr	r2, [r3, #12]
+ 498 004c 7B68     		ldr	r3, [r7, #4]
+ 499 004e 1800     		movs	r0, r3
+ 500 0050 FFF7FEFF 		bl	LL_GPIO_SetPinOutputType
+ 501              	.L28:
+ 502 0054 3B68     		ldr	r3, [r7]
+ 503 0056 1A69     		ldr	r2, [r3, #16]
+ 504 0058 B968     		ldr	r1, [r7, #8]
+ 505 005a 7B68     		ldr	r3, [r7, #4]
+ 506 005c 1800     		movs	r0, r3
+ 507 005e FFF7FEFF 		bl	LL_GPIO_SetPinPull
+ 508 0062 3B68     		ldr	r3, [r7]
+ 509 0064 5B68     		ldr	r3, [r3, #4]
+ 510 0066 022B     		cmp	r3, #2
+ 511 0068 11D1     		bne	.L29
+ 512 006a BB68     		ldr	r3, [r7, #8]
+ 513 006c FF2B     		cmp	r3, #255
+ 514 006e 07D8     		bhi	.L30
+ 515 0070 3B68     		ldr	r3, [r7]
+ 516 0072 5A69     		ldr	r2, [r3, #20]
+ 517 0074 B968     		ldr	r1, [r7, #8]
+ 518 0076 7B68     		ldr	r3, [r7, #4]
+ 519 0078 1800     		movs	r0, r3
+ 520 007a FFF7FEFF 		bl	LL_GPIO_SetAFPin_0_7
+ 521 007e 06E0     		b	.L29
+ 522              	.L30:
+ 523 0080 3B68     		ldr	r3, [r7]
+ 524 0082 5A69     		ldr	r2, [r3, #20]
+ 525 0084 B968     		ldr	r1, [r7, #8]
+ 526 0086 7B68     		ldr	r3, [r7, #4]
+ 527 0088 1800     		movs	r0, r3
+ 528 008a FFF7FEFF 		bl	LL_GPIO_SetAFPin_8_15
+ 529              	.L29:
+ 530 008e 3B68     		ldr	r3, [r7]
+ 531 0090 5A68     		ldr	r2, [r3, #4]
+ 532 0092 B968     		ldr	r1, [r7, #8]
+ARM GAS  /tmp/cc8ua89R.s 			page 10
+
+
+ 533 0094 7B68     		ldr	r3, [r7, #4]
+ 534 0096 1800     		movs	r0, r3
+ 535 0098 FFF7FEFF 		bl	LL_GPIO_SetPinMode
+ 536              	.L26:
+ 537 009c FB68     		ldr	r3, [r7, #12]
+ 538 009e 0133     		adds	r3, r3, #1
+ 539 00a0 FB60     		str	r3, [r7, #12]
+ 540              	.L25:
+ 541 00a2 3B68     		ldr	r3, [r7]
+ 542 00a4 1A68     		ldr	r2, [r3]
+ 543 00a6 FB68     		ldr	r3, [r7, #12]
+ 544 00a8 DA40     		lsrs	r2, r2, r3
+ 545 00aa 131E     		subs	r3, r2, #0
+ 546 00ac B0D1     		bne	.L31
+ 547 00ae 0023     		movs	r3, #0
+ 548 00b0 1800     		movs	r0, r3
+ 549 00b2 BD46     		mov	sp, r7
+ 550 00b4 04B0     		add	sp, sp, #16
+ 551              		@ sp needed
+ 552 00b6 80BD     		pop	{r7, pc}
+ 554              		.section	.text.LL_GPIO_StructInit,"ax",%progbits
+ 555              		.align	1
+ 556              		.global	LL_GPIO_StructInit
+ 557              		.syntax unified
+ 558              		.code	16
+ 559              		.thumb_func
+ 561              	LL_GPIO_StructInit:
+ 562              		@ args = 0, pretend = 0, frame = 8
+ 563              		@ frame_needed = 1, uses_anonymous_args = 0
+ 564 0000 80B5     		push	{r7, lr}
+ 565 0002 82B0     		sub	sp, sp, #8
+ 566 0004 00AF     		add	r7, sp, #0
+ 567 0006 7860     		str	r0, [r7, #4]
+ 568 0008 7B68     		ldr	r3, [r7, #4]
+ 569 000a 0A4A     		ldr	r2, .L34
+ 570 000c 1A60     		str	r2, [r3]
+ 571 000e 7B68     		ldr	r3, [r7, #4]
+ 572 0010 0322     		movs	r2, #3
+ 573 0012 5A60     		str	r2, [r3, #4]
+ 574 0014 7B68     		ldr	r3, [r7, #4]
+ 575 0016 0022     		movs	r2, #0
+ 576 0018 9A60     		str	r2, [r3, #8]
+ 577 001a 7B68     		ldr	r3, [r7, #4]
+ 578 001c 0022     		movs	r2, #0
+ 579 001e DA60     		str	r2, [r3, #12]
+ 580 0020 7B68     		ldr	r3, [r7, #4]
+ 581 0022 0022     		movs	r2, #0
+ 582 0024 1A61     		str	r2, [r3, #16]
+ 583 0026 7B68     		ldr	r3, [r7, #4]
+ 584 0028 0022     		movs	r2, #0
+ 585 002a 5A61     		str	r2, [r3, #20]
+ 586 002c C046     		nop
+ 587 002e BD46     		mov	sp, r7
+ 588 0030 02B0     		add	sp, sp, #8
+ 589              		@ sp needed
+ 590 0032 80BD     		pop	{r7, pc}
+ 591              	.L35:
+ARM GAS  /tmp/cc8ua89R.s 			page 11
+
+
+ 592              		.align	2
+ 593              	.L34:
+ 594 0034 FFFF0000 		.word	65535
+ 596              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/cc8ua89R.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_ll_gpio.c
+     /tmp/cc8ua89R.s:15     .text.LL_GPIO_SetPinMode:00000000 $t
+     /tmp/cc8ua89R.s:20     .text.LL_GPIO_SetPinMode:00000000 LL_GPIO_SetPinMode
+     /tmp/cc8ua89R.s:54     .text.LL_GPIO_SetPinOutputType:00000000 $t
+     /tmp/cc8ua89R.s:59     .text.LL_GPIO_SetPinOutputType:00000000 LL_GPIO_SetPinOutputType
+     /tmp/cc8ua89R.s:86     .text.LL_GPIO_SetPinSpeed:00000000 $t
+     /tmp/cc8ua89R.s:91     .text.LL_GPIO_SetPinSpeed:00000000 LL_GPIO_SetPinSpeed
+     /tmp/cc8ua89R.s:125    .text.LL_GPIO_SetPinPull:00000000 $t
+     /tmp/cc8ua89R.s:130    .text.LL_GPIO_SetPinPull:00000000 LL_GPIO_SetPinPull
+     /tmp/cc8ua89R.s:164    .text.LL_GPIO_SetAFPin_0_7:00000000 $t
+     /tmp/cc8ua89R.s:169    .text.LL_GPIO_SetAFPin_0_7:00000000 LL_GPIO_SetAFPin_0_7
+     /tmp/cc8ua89R.s:210    .text.LL_GPIO_SetAFPin_8_15:00000000 $t
+     /tmp/cc8ua89R.s:215    .text.LL_GPIO_SetAFPin_8_15:00000000 LL_GPIO_SetAFPin_8_15
+     /tmp/cc8ua89R.s:266    .text.LL_AHB1_GRP1_ForceReset:00000000 $t
+     /tmp/cc8ua89R.s:271    .text.LL_AHB1_GRP1_ForceReset:00000000 LL_AHB1_GRP1_ForceReset
+     /tmp/cc8ua89R.s:292    .text.LL_AHB1_GRP1_ForceReset:0000001c $d
+     /tmp/cc8ua89R.s:295    .text.LL_AHB1_GRP1_ReleaseReset:00000000 $t
+     /tmp/cc8ua89R.s:300    .text.LL_AHB1_GRP1_ReleaseReset:00000000 LL_AHB1_GRP1_ReleaseReset
+     /tmp/cc8ua89R.s:322    .text.LL_AHB1_GRP1_ReleaseReset:00000020 $d
+     /tmp/cc8ua89R.s:325    .text.LL_GPIO_DeInit:00000000 $t
+     /tmp/cc8ua89R.s:331    .text.LL_GPIO_DeInit:00000000 LL_GPIO_DeInit
+     /tmp/cc8ua89R.s:443    .text.LL_GPIO_DeInit:000000dc $d
+     /tmp/cc8ua89R.s:450    .text.LL_GPIO_Init:00000000 $t
+     /tmp/cc8ua89R.s:456    .text.LL_GPIO_Init:00000000 LL_GPIO_Init
+     /tmp/cc8ua89R.s:555    .text.LL_GPIO_StructInit:00000000 $t
+     /tmp/cc8ua89R.s:561    .text.LL_GPIO_StructInit:00000000 LL_GPIO_StructInit
+     /tmp/cc8ua89R.s:594    .text.LL_GPIO_StructInit:00000034 $d
+
+NO UNDEFINED SYMBOLS

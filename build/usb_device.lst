@@ -1,0 +1,112 @@
+ARM GAS  /tmp/ccq5AZgr.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"usb_device.c"
+  13              		.text
+  14              		.section	.rodata.CHANNEL_OFFSET_TAB,"a"
+  15              		.align	2
+  18              	CHANNEL_OFFSET_TAB:
+  19 0000 081C3044 		.ascii	"\010\0340DXl\200"
+  19      586C80
+  20              		.global	hUsbDeviceFS
+  21              		.section	.bss.hUsbDeviceFS,"aw",%nobits
+  22              		.align	2
+  25              	hUsbDeviceFS:
+  26 0000 00000000 		.space	708
+  26      00000000 
+  26      00000000 
+  26      00000000 
+  26      00000000 
+  27              		.section	.text.MX_USB_DEVICE_Init,"ax",%progbits
+  28              		.align	1
+  29              		.global	MX_USB_DEVICE_Init
+  30              		.syntax unified
+  31              		.code	16
+  32              		.thumb_func
+  34              	MX_USB_DEVICE_Init:
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 1, uses_anonymous_args = 0
+  37 0000 80B5     		push	{r7, lr}
+  38 0002 00AF     		add	r7, sp, #0
+  39 0004 1449     		ldr	r1, .L7
+  40 0006 154B     		ldr	r3, .L7+4
+  41 0008 0022     		movs	r2, #0
+  42 000a 1800     		movs	r0, r3
+  43 000c FFF7FEFF 		bl	USBD_Init
+  44 0010 031E     		subs	r3, r0, #0
+  45 0012 01D0     		beq	.L2
+  46 0014 FFF7FEFF 		bl	Error_Handler
+  47              	.L2:
+  48 0018 114A     		ldr	r2, .L7+8
+  49 001a 104B     		ldr	r3, .L7+4
+  50 001c 1100     		movs	r1, r2
+  51 001e 1800     		movs	r0, r3
+  52 0020 FFF7FEFF 		bl	USBD_RegisterClass
+  53 0024 031E     		subs	r3, r0, #0
+  54 0026 01D0     		beq	.L3
+  55 0028 FFF7FEFF 		bl	Error_Handler
+  56              	.L3:
+  57 002c 0D4A     		ldr	r2, .L7+12
+ARM GAS  /tmp/ccq5AZgr.s 			page 2
+
+
+  58 002e 0B4B     		ldr	r3, .L7+4
+  59 0030 1100     		movs	r1, r2
+  60 0032 1800     		movs	r0, r3
+  61 0034 FFF7FEFF 		bl	USBD_CDC_RegisterInterface
+  62 0038 031E     		subs	r3, r0, #0
+  63 003a 01D0     		beq	.L4
+  64 003c FFF7FEFF 		bl	Error_Handler
+  65              	.L4:
+  66 0040 064B     		ldr	r3, .L7+4
+  67 0042 1800     		movs	r0, r3
+  68 0044 FFF7FEFF 		bl	USBD_Start
+  69 0048 031E     		subs	r3, r0, #0
+  70 004a 01D0     		beq	.L6
+  71 004c FFF7FEFF 		bl	Error_Handler
+  72              	.L6:
+  73 0050 C046     		nop
+  74 0052 BD46     		mov	sp, r7
+  75              		@ sp needed
+  76 0054 80BD     		pop	{r7, pc}
+  77              	.L8:
+  78 0056 C046     		.align	2
+  79              	.L7:
+  80 0058 00000000 		.word	FS_Desc
+  81 005c 00000000 		.word	hUsbDeviceFS
+  82 0060 00000000 		.word	USBD_CDC
+  83 0064 00000000 		.word	USBD_Interface_fops_FS
+  85              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccq5AZgr.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 usb_device.c
+     /tmp/ccq5AZgr.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+     /tmp/ccq5AZgr.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+     /tmp/ccq5AZgr.s:25     .bss.hUsbDeviceFS:00000000 hUsbDeviceFS
+     /tmp/ccq5AZgr.s:22     .bss.hUsbDeviceFS:00000000 $d
+     /tmp/ccq5AZgr.s:28     .text.MX_USB_DEVICE_Init:00000000 $t
+     /tmp/ccq5AZgr.s:34     .text.MX_USB_DEVICE_Init:00000000 MX_USB_DEVICE_Init
+     /tmp/ccq5AZgr.s:80     .text.MX_USB_DEVICE_Init:00000058 $d
+
+UNDEFINED SYMBOLS
+USBD_Init
+Error_Handler
+USBD_RegisterClass
+USBD_CDC_RegisterInterface
+USBD_Start
+FS_Desc
+USBD_CDC
+USBD_Interface_fops_FS

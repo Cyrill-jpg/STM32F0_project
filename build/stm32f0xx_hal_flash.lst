@@ -1,0 +1,1038 @@
+ARM GAS  /tmp/ccVcJCCG.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"stm32f0xx_hal_flash.c"
+  13              		.text
+  14              		.global	pFlash
+  15              		.section	.bss.pFlash,"aw",%nobits
+  16              		.align	3
+  19              	pFlash:
+  20 0000 00000000 		.space	32
+  20      00000000 
+  20      00000000 
+  20      00000000 
+  20      00000000 
+  21              		.section	.text.HAL_FLASH_Program,"ax",%progbits
+  22              		.align	1
+  23              		.global	HAL_FLASH_Program
+  24              		.syntax unified
+  25              		.code	16
+  26              		.thumb_func
+  28              	HAL_FLASH_Program:
+  29              		@ args = 0, pretend = 0, frame = 24
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  32 0002 87B0     		sub	sp, sp, #28
+  33 0004 00AF     		add	r7, sp, #0
+  34 0006 F860     		str	r0, [r7, #12]
+  35 0008 B960     		str	r1, [r7, #8]
+  36 000a 3A60     		str	r2, [r7]
+  37 000c 7B60     		str	r3, [r7, #4]
+  38 000e 1723     		movs	r3, #23
+  39 0010 FB18     		adds	r3, r7, r3
+  40 0012 0122     		movs	r2, #1
+  41 0014 1A70     		strb	r2, [r3]
+  42 0016 1623     		movs	r3, #22
+  43 0018 FB18     		adds	r3, r7, r3
+  44 001a 0022     		movs	r2, #0
+  45 001c 1A70     		strb	r2, [r3]
+  46 001e 1523     		movs	r3, #21
+  47 0020 FB18     		adds	r3, r7, r3
+  48 0022 0022     		movs	r2, #0
+  49 0024 1A70     		strb	r2, [r3]
+  50 0026 3E4B     		ldr	r3, .L14
+  51 0028 1B7E     		ldrb	r3, [r3, #24]
+  52 002a 012B     		cmp	r3, #1
+  53 002c 01D1     		bne	.L2
+  54 002e 0223     		movs	r3, #2
+  55 0030 72E0     		b	.L3
+  56              	.L2:
+ARM GAS  /tmp/ccVcJCCG.s 			page 2
+
+
+  57 0032 3B4B     		ldr	r3, .L14
+  58 0034 0122     		movs	r2, #1
+  59 0036 1A76     		strb	r2, [r3, #24]
+  60 0038 1723     		movs	r3, #23
+  61 003a FE18     		adds	r6, r7, r3
+  62 003c 394B     		ldr	r3, .L14+4
+  63 003e 1800     		movs	r0, r3
+  64 0040 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+  65 0044 0300     		movs	r3, r0
+  66 0046 3370     		strb	r3, [r6]
+  67 0048 1723     		movs	r3, #23
+  68 004a FB18     		adds	r3, r7, r3
+  69 004c 1B78     		ldrb	r3, [r3]
+  70 004e 002B     		cmp	r3, #0
+  71 0050 5CD1     		bne	.L4
+  72 0052 FB68     		ldr	r3, [r7, #12]
+  73 0054 012B     		cmp	r3, #1
+  74 0056 04D1     		bne	.L5
+  75 0058 1523     		movs	r3, #21
+  76 005a FB18     		adds	r3, r7, r3
+  77 005c 0122     		movs	r2, #1
+  78 005e 1A70     		strb	r2, [r3]
+  79 0060 0BE0     		b	.L6
+  80              	.L5:
+  81 0062 FB68     		ldr	r3, [r7, #12]
+  82 0064 022B     		cmp	r3, #2
+  83 0066 04D1     		bne	.L7
+  84 0068 1523     		movs	r3, #21
+  85 006a FB18     		adds	r3, r7, r3
+  86 006c 0222     		movs	r2, #2
+  87 006e 1A70     		strb	r2, [r3]
+  88 0070 03E0     		b	.L6
+  89              	.L7:
+  90 0072 1523     		movs	r3, #21
+  91 0074 FB18     		adds	r3, r7, r3
+  92 0076 0422     		movs	r2, #4
+  93 0078 1A70     		strb	r2, [r3]
+  94              	.L6:
+  95 007a 1623     		movs	r3, #22
+  96 007c FB18     		adds	r3, r7, r3
+  97 007e 0022     		movs	r2, #0
+  98 0080 1A70     		strb	r2, [r3]
+  99 0082 39E0     		b	.L8
+ 100              	.L12:
+ 101 0084 1621     		movs	r1, #22
+ 102 0086 7B18     		adds	r3, r7, r1
+ 103 0088 1B78     		ldrb	r3, [r3]
+ 104 008a 5A00     		lsls	r2, r3, #1
+ 105 008c BB68     		ldr	r3, [r7, #8]
+ 106 008e D018     		adds	r0, r2, r3
+ 107 0090 7B18     		adds	r3, r7, r1
+ 108 0092 1B78     		ldrb	r3, [r3]
+ 109 0094 1B01     		lsls	r3, r3, #4
+ 110 0096 1A00     		movs	r2, r3
+ 111 0098 203A     		subs	r2, r2, #32
+ 112 009a 002A     		cmp	r2, #0
+ 113 009c 03DB     		blt	.L9
+ARM GAS  /tmp/ccVcJCCG.s 			page 3
+
+
+ 114 009e 7968     		ldr	r1, [r7, #4]
+ 115 00a0 D140     		lsrs	r1, r1, r2
+ 116 00a2 0C00     		movs	r4, r1
+ 117 00a4 08E0     		b	.L10
+ 118              	.L9:
+ 119 00a6 2022     		movs	r2, #32
+ 120 00a8 D21A     		subs	r2, r2, r3
+ 121 00aa 7968     		ldr	r1, [r7, #4]
+ 122 00ac 9140     		lsls	r1, r1, r2
+ 123 00ae 0A00     		movs	r2, r1
+ 124 00b0 3968     		ldr	r1, [r7]
+ 125 00b2 D940     		lsrs	r1, r1, r3
+ 126 00b4 0C00     		movs	r4, r1
+ 127 00b6 1419     		adds	r4, r2, r4
+ 128              	.L10:
+ 129 00b8 7A68     		ldr	r2, [r7, #4]
+ 130 00ba DA40     		lsrs	r2, r2, r3
+ 131 00bc 1500     		movs	r5, r2
+ 132 00be A3B2     		uxth	r3, r4
+ 133 00c0 1900     		movs	r1, r3
+ 134 00c2 FFF7FEFF 		bl	FLASH_Program_HalfWord
+ 135 00c6 1723     		movs	r3, #23
+ 136 00c8 FE18     		adds	r6, r7, r3
+ 137 00ca 164B     		ldr	r3, .L14+4
+ 138 00cc 1800     		movs	r0, r3
+ 139 00ce FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 140 00d2 0300     		movs	r3, r0
+ 141 00d4 3370     		strb	r3, [r6]
+ 142 00d6 144B     		ldr	r3, .L14+8
+ 143 00d8 1A69     		ldr	r2, [r3, #16]
+ 144 00da 134B     		ldr	r3, .L14+8
+ 145 00dc 0121     		movs	r1, #1
+ 146 00de 8A43     		bics	r2, r1
+ 147 00e0 1A61     		str	r2, [r3, #16]
+ 148 00e2 1723     		movs	r3, #23
+ 149 00e4 FB18     		adds	r3, r7, r3
+ 150 00e6 1B78     		ldrb	r3, [r3]
+ 151 00e8 002B     		cmp	r3, #0
+ 152 00ea 0ED1     		bne	.L13
+ 153 00ec 1621     		movs	r1, #22
+ 154 00ee 7B18     		adds	r3, r7, r1
+ 155 00f0 1A78     		ldrb	r2, [r3]
+ 156 00f2 7B18     		adds	r3, r7, r1
+ 157 00f4 0132     		adds	r2, r2, #1
+ 158 00f6 1A70     		strb	r2, [r3]
+ 159              	.L8:
+ 160 00f8 1623     		movs	r3, #22
+ 161 00fa FA18     		adds	r2, r7, r3
+ 162 00fc 1523     		movs	r3, #21
+ 163 00fe FB18     		adds	r3, r7, r3
+ 164 0100 1278     		ldrb	r2, [r2]
+ 165 0102 1B78     		ldrb	r3, [r3]
+ 166 0104 9A42     		cmp	r2, r3
+ 167 0106 BDD3     		bcc	.L12
+ 168 0108 00E0     		b	.L4
+ 169              	.L13:
+ 170 010a C046     		nop
+ARM GAS  /tmp/ccVcJCCG.s 			page 4
+
+
+ 171              	.L4:
+ 172 010c 044B     		ldr	r3, .L14
+ 173 010e 0022     		movs	r2, #0
+ 174 0110 1A76     		strb	r2, [r3, #24]
+ 175 0112 1723     		movs	r3, #23
+ 176 0114 FB18     		adds	r3, r7, r3
+ 177 0116 1B78     		ldrb	r3, [r3]
+ 178              	.L3:
+ 179 0118 1800     		movs	r0, r3
+ 180 011a BD46     		mov	sp, r7
+ 181 011c 07B0     		add	sp, sp, #28
+ 182              		@ sp needed
+ 183 011e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 184              	.L15:
+ 185              		.align	2
+ 186              	.L14:
+ 187 0120 00000000 		.word	pFlash
+ 188 0124 50C30000 		.word	50000
+ 189 0128 00200240 		.word	1073881088
+ 191              		.section	.text.HAL_FLASH_Program_IT,"ax",%progbits
+ 192              		.align	1
+ 193              		.global	HAL_FLASH_Program_IT
+ 194              		.syntax unified
+ 195              		.code	16
+ 196              		.thumb_func
+ 198              	HAL_FLASH_Program_IT:
+ 199              		@ args = 0, pretend = 0, frame = 24
+ 200              		@ frame_needed = 1, uses_anonymous_args = 0
+ 201 0000 80B5     		push	{r7, lr}
+ 202 0002 86B0     		sub	sp, sp, #24
+ 203 0004 00AF     		add	r7, sp, #0
+ 204 0006 F860     		str	r0, [r7, #12]
+ 205 0008 B960     		str	r1, [r7, #8]
+ 206 000a 3A60     		str	r2, [r7]
+ 207 000c 7B60     		str	r3, [r7, #4]
+ 208 000e 1723     		movs	r3, #23
+ 209 0010 FB18     		adds	r3, r7, r3
+ 210 0012 0022     		movs	r2, #0
+ 211 0014 1A70     		strb	r2, [r3]
+ 212 0016 214B     		ldr	r3, .L22
+ 213 0018 1B7E     		ldrb	r3, [r3, #24]
+ 214 001a 012B     		cmp	r3, #1
+ 215 001c 01D1     		bne	.L17
+ 216 001e 0223     		movs	r3, #2
+ 217 0020 37E0     		b	.L18
+ 218              	.L17:
+ 219 0022 1E4B     		ldr	r3, .L22
+ 220 0024 0122     		movs	r2, #1
+ 221 0026 1A76     		strb	r2, [r3, #24]
+ 222 0028 1D4B     		ldr	r3, .L22+4
+ 223 002a 1A69     		ldr	r2, [r3, #16]
+ 224 002c 1C4B     		ldr	r3, .L22+4
+ 225 002e A021     		movs	r1, #160
+ 226 0030 4901     		lsls	r1, r1, #5
+ 227 0032 0A43     		orrs	r2, r1
+ 228 0034 1A61     		str	r2, [r3, #16]
+ 229 0036 194B     		ldr	r3, .L22
+ARM GAS  /tmp/ccVcJCCG.s 			page 5
+
+
+ 230 0038 BA68     		ldr	r2, [r7, #8]
+ 231 003a 9A60     		str	r2, [r3, #8]
+ 232 003c 1749     		ldr	r1, .L22
+ 233 003e 3A68     		ldr	r2, [r7]
+ 234 0040 7B68     		ldr	r3, [r7, #4]
+ 235 0042 0A61     		str	r2, [r1, #16]
+ 236 0044 4B61     		str	r3, [r1, #20]
+ 237 0046 FB68     		ldr	r3, [r7, #12]
+ 238 0048 012B     		cmp	r3, #1
+ 239 004a 06D1     		bne	.L19
+ 240 004c 134B     		ldr	r3, .L22
+ 241 004e 0322     		movs	r2, #3
+ 242 0050 1A70     		strb	r2, [r3]
+ 243 0052 124B     		ldr	r3, .L22
+ 244 0054 0122     		movs	r2, #1
+ 245 0056 5A60     		str	r2, [r3, #4]
+ 246 0058 0FE0     		b	.L20
+ 247              	.L19:
+ 248 005a FB68     		ldr	r3, [r7, #12]
+ 249 005c 022B     		cmp	r3, #2
+ 250 005e 06D1     		bne	.L21
+ 251 0060 0E4B     		ldr	r3, .L22
+ 252 0062 0422     		movs	r2, #4
+ 253 0064 1A70     		strb	r2, [r3]
+ 254 0066 0D4B     		ldr	r3, .L22
+ 255 0068 0222     		movs	r2, #2
+ 256 006a 5A60     		str	r2, [r3, #4]
+ 257 006c 05E0     		b	.L20
+ 258              	.L21:
+ 259 006e 0B4B     		ldr	r3, .L22
+ 260 0070 0522     		movs	r2, #5
+ 261 0072 1A70     		strb	r2, [r3]
+ 262 0074 094B     		ldr	r3, .L22
+ 263 0076 0422     		movs	r2, #4
+ 264 0078 5A60     		str	r2, [r3, #4]
+ 265              	.L20:
+ 266 007a 3A68     		ldr	r2, [r7]
+ 267 007c 7B68     		ldr	r3, [r7, #4]
+ 268 007e 131C     		adds	r3, r2, #0
+ 269 0080 9AB2     		uxth	r2, r3
+ 270 0082 BB68     		ldr	r3, [r7, #8]
+ 271 0084 1100     		movs	r1, r2
+ 272 0086 1800     		movs	r0, r3
+ 273 0088 FFF7FEFF 		bl	FLASH_Program_HalfWord
+ 274 008c 1723     		movs	r3, #23
+ 275 008e FB18     		adds	r3, r7, r3
+ 276 0090 1B78     		ldrb	r3, [r3]
+ 277              	.L18:
+ 278 0092 1800     		movs	r0, r3
+ 279 0094 BD46     		mov	sp, r7
+ 280 0096 06B0     		add	sp, sp, #24
+ 281              		@ sp needed
+ 282 0098 80BD     		pop	{r7, pc}
+ 283              	.L23:
+ 284 009a C046     		.align	2
+ 285              	.L22:
+ 286 009c 00000000 		.word	pFlash
+ARM GAS  /tmp/ccVcJCCG.s 			page 6
+
+
+ 287 00a0 00200240 		.word	1073881088
+ 289              		.section	.text.HAL_FLASH_IRQHandler,"ax",%progbits
+ 290              		.align	1
+ 291              		.global	HAL_FLASH_IRQHandler
+ 292              		.syntax unified
+ 293              		.code	16
+ 294              		.thumb_func
+ 296              	HAL_FLASH_IRQHandler:
+ 297              		@ args = 0, pretend = 0, frame = 8
+ 298              		@ frame_needed = 1, uses_anonymous_args = 0
+ 299 0000 B0B5     		push	{r4, r5, r7, lr}
+ 300 0002 82B0     		sub	sp, sp, #8
+ 301 0004 00AF     		add	r7, sp, #0
+ 302 0006 0023     		movs	r3, #0
+ 303 0008 7B60     		str	r3, [r7, #4]
+ 304 000a 6E4B     		ldr	r3, .L37
+ 305 000c DB68     		ldr	r3, [r3, #12]
+ 306 000e 1022     		movs	r2, #16
+ 307 0010 1340     		ands	r3, r2
+ 308 0012 102B     		cmp	r3, #16
+ 309 0014 05D0     		beq	.L25
+ 310 0016 6B4B     		ldr	r3, .L37
+ 311 0018 DB68     		ldr	r3, [r3, #12]
+ 312 001a 0422     		movs	r2, #4
+ 313 001c 1340     		ands	r3, r2
+ 314 001e 042B     		cmp	r3, #4
+ 315 0020 0FD1     		bne	.L26
+ 316              	.L25:
+ 317 0022 694B     		ldr	r3, .L37+4
+ 318 0024 9B68     		ldr	r3, [r3, #8]
+ 319 0026 7B60     		str	r3, [r7, #4]
+ 320 0028 674B     		ldr	r3, .L37+4
+ 321 002a 0122     		movs	r2, #1
+ 322 002c 5242     		rsbs	r2, r2, #0
+ 323 002e 9A60     		str	r2, [r3, #8]
+ 324 0030 FFF7FEFF 		bl	FLASH_SetErrorCode
+ 325 0034 7B68     		ldr	r3, [r7, #4]
+ 326 0036 1800     		movs	r0, r3
+ 327 0038 FFF7FEFF 		bl	HAL_FLASH_OperationErrorCallback
+ 328 003c 624B     		ldr	r3, .L37+4
+ 329 003e 0022     		movs	r2, #0
+ 330 0040 1A70     		strb	r2, [r3]
+ 331              	.L26:
+ 332 0042 604B     		ldr	r3, .L37
+ 333 0044 DB68     		ldr	r3, [r3, #12]
+ 334 0046 2022     		movs	r2, #32
+ 335 0048 1340     		ands	r3, r2
+ 336 004a 202B     		cmp	r3, #32
+ 337 004c 00D0     		beq	.LCB344
+ 338 004e A1E0     		b	.L27	@long jump
+ 339              	.LCB344:
+ 340 0050 5C4B     		ldr	r3, .L37
+ 341 0052 2022     		movs	r2, #32
+ 342 0054 DA60     		str	r2, [r3, #12]
+ 343 0056 5C4B     		ldr	r3, .L37+4
+ 344 0058 1B78     		ldrb	r3, [r3]
+ 345 005a DBB2     		uxtb	r3, r3
+ARM GAS  /tmp/ccVcJCCG.s 			page 7
+
+
+ 346 005c 002B     		cmp	r3, #0
+ 347 005e 00D1     		bne	.LCB352
+ 348 0060 98E0     		b	.L27	@long jump
+ 349              	.LCB352:
+ 350 0062 594B     		ldr	r3, .L37+4
+ 351 0064 1B78     		ldrb	r3, [r3]
+ 352 0066 DBB2     		uxtb	r3, r3
+ 353 0068 012B     		cmp	r3, #1
+ 354 006a 32D1     		bne	.L28
+ 355 006c 564B     		ldr	r3, .L37+4
+ 356 006e 5B68     		ldr	r3, [r3, #4]
+ 357 0070 5A1E     		subs	r2, r3, #1
+ 358 0072 554B     		ldr	r3, .L37+4
+ 359 0074 5A60     		str	r2, [r3, #4]
+ 360 0076 544B     		ldr	r3, .L37+4
+ 361 0078 5B68     		ldr	r3, [r3, #4]
+ 362 007a 002B     		cmp	r3, #0
+ 363 007c 1BD0     		beq	.L29
+ 364 007e 524B     		ldr	r3, .L37+4
+ 365 0080 9B68     		ldr	r3, [r3, #8]
+ 366 0082 7B60     		str	r3, [r7, #4]
+ 367 0084 7B68     		ldr	r3, [r7, #4]
+ 368 0086 1800     		movs	r0, r3
+ 369 0088 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 370 008c 4E4B     		ldr	r3, .L37+4
+ 371 008e 9B68     		ldr	r3, [r3, #8]
+ 372 0090 8022     		movs	r2, #128
+ 373 0092 1201     		lsls	r2, r2, #4
+ 374 0094 9446     		mov	ip, r2
+ 375 0096 6344     		add	r3, r3, ip
+ 376 0098 7B60     		str	r3, [r7, #4]
+ 377 009a 4B4B     		ldr	r3, .L37+4
+ 378 009c 7A68     		ldr	r2, [r7, #4]
+ 379 009e 9A60     		str	r2, [r3, #8]
+ 380 00a0 484B     		ldr	r3, .L37
+ 381 00a2 1A69     		ldr	r2, [r3, #16]
+ 382 00a4 474B     		ldr	r3, .L37
+ 383 00a6 0221     		movs	r1, #2
+ 384 00a8 8A43     		bics	r2, r1
+ 385 00aa 1A61     		str	r2, [r3, #16]
+ 386 00ac 7B68     		ldr	r3, [r7, #4]
+ 387 00ae 1800     		movs	r0, r3
+ 388 00b0 FFF7FEFF 		bl	FLASH_PageErase
+ 389 00b4 6EE0     		b	.L27
+ 390              	.L29:
+ 391 00b6 0123     		movs	r3, #1
+ 392 00b8 5B42     		rsbs	r3, r3, #0
+ 393 00ba 7B60     		str	r3, [r7, #4]
+ 394 00bc 424B     		ldr	r3, .L37+4
+ 395 00be 7A68     		ldr	r2, [r7, #4]
+ 396 00c0 9A60     		str	r2, [r3, #8]
+ 397 00c2 414B     		ldr	r3, .L37+4
+ 398 00c4 0022     		movs	r2, #0
+ 399 00c6 1A70     		strb	r2, [r3]
+ 400 00c8 7B68     		ldr	r3, [r7, #4]
+ 401 00ca 1800     		movs	r0, r3
+ 402 00cc FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ARM GAS  /tmp/ccVcJCCG.s 			page 8
+
+
+ 403 00d0 60E0     		b	.L27
+ 404              	.L28:
+ 405 00d2 3D4B     		ldr	r3, .L37+4
+ 406 00d4 1B78     		ldrb	r3, [r3]
+ 407 00d6 DBB2     		uxtb	r3, r3
+ 408 00d8 022B     		cmp	r3, #2
+ 409 00da 0CD1     		bne	.L30
+ 410 00dc 394B     		ldr	r3, .L37
+ 411 00de 1A69     		ldr	r2, [r3, #16]
+ 412 00e0 384B     		ldr	r3, .L37
+ 413 00e2 0421     		movs	r1, #4
+ 414 00e4 8A43     		bics	r2, r1
+ 415 00e6 1A61     		str	r2, [r3, #16]
+ 416 00e8 0020     		movs	r0, #0
+ 417 00ea FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 418 00ee 364B     		ldr	r3, .L37+4
+ 419 00f0 0022     		movs	r2, #0
+ 420 00f2 1A70     		strb	r2, [r3]
+ 421 00f4 4EE0     		b	.L27
+ 422              	.L30:
+ 423 00f6 344B     		ldr	r3, .L37+4
+ 424 00f8 5B68     		ldr	r3, [r3, #4]
+ 425 00fa 5A1E     		subs	r2, r3, #1
+ 426 00fc 324B     		ldr	r3, .L37+4
+ 427 00fe 5A60     		str	r2, [r3, #4]
+ 428 0100 314B     		ldr	r3, .L37+4
+ 429 0102 5B68     		ldr	r3, [r3, #4]
+ 430 0104 002B     		cmp	r3, #0
+ 431 0106 21D0     		beq	.L31
+ 432 0108 2F4B     		ldr	r3, .L37+4
+ 433 010a 9B68     		ldr	r3, [r3, #8]
+ 434 010c 9A1C     		adds	r2, r3, #2
+ 435 010e 2E4B     		ldr	r3, .L37+4
+ 436 0110 9A60     		str	r2, [r3, #8]
+ 437 0112 2D4B     		ldr	r3, .L37+4
+ 438 0114 9B68     		ldr	r3, [r3, #8]
+ 439 0116 7B60     		str	r3, [r7, #4]
+ 440 0118 2B4B     		ldr	r3, .L37+4
+ 441 011a 1A69     		ldr	r2, [r3, #16]
+ 442 011c 5B69     		ldr	r3, [r3, #20]
+ 443 011e 1904     		lsls	r1, r3, #16
+ 444 0120 140C     		lsrs	r4, r2, #16
+ 445 0122 0C19     		adds	r4, r1, r4
+ 446 0124 1D0C     		lsrs	r5, r3, #16
+ 447 0126 284B     		ldr	r3, .L37+4
+ 448 0128 1C61     		str	r4, [r3, #16]
+ 449 012a 5D61     		str	r5, [r3, #20]
+ 450 012c 254B     		ldr	r3, .L37
+ 451 012e 1A69     		ldr	r2, [r3, #16]
+ 452 0130 244B     		ldr	r3, .L37
+ 453 0132 0121     		movs	r1, #1
+ 454 0134 8A43     		bics	r2, r1
+ 455 0136 1A61     		str	r2, [r3, #16]
+ 456 0138 234B     		ldr	r3, .L37+4
+ 457 013a 1A69     		ldr	r2, [r3, #16]
+ 458 013c 5B69     		ldr	r3, [r3, #20]
+ 459 013e 92B2     		uxth	r2, r2
+ARM GAS  /tmp/ccVcJCCG.s 			page 9
+
+
+ 460 0140 7B68     		ldr	r3, [r7, #4]
+ 461 0142 1100     		movs	r1, r2
+ 462 0144 1800     		movs	r0, r3
+ 463 0146 FFF7FEFF 		bl	FLASH_Program_HalfWord
+ 464 014a 23E0     		b	.L27
+ 465              	.L31:
+ 466 014c 1E4B     		ldr	r3, .L37+4
+ 467 014e 1B78     		ldrb	r3, [r3]
+ 468 0150 DBB2     		uxtb	r3, r3
+ 469 0152 032B     		cmp	r3, #3
+ 470 0154 05D1     		bne	.L32
+ 471 0156 1C4B     		ldr	r3, .L37+4
+ 472 0158 9B68     		ldr	r3, [r3, #8]
+ 473 015a 1800     		movs	r0, r3
+ 474 015c FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 475 0160 11E0     		b	.L33
+ 476              	.L32:
+ 477 0162 194B     		ldr	r3, .L37+4
+ 478 0164 1B78     		ldrb	r3, [r3]
+ 479 0166 DBB2     		uxtb	r3, r3
+ 480 0168 042B     		cmp	r3, #4
+ 481 016a 06D1     		bne	.L34
+ 482 016c 164B     		ldr	r3, .L37+4
+ 483 016e 9B68     		ldr	r3, [r3, #8]
+ 484 0170 023B     		subs	r3, r3, #2
+ 485 0172 1800     		movs	r0, r3
+ 486 0174 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 487 0178 05E0     		b	.L33
+ 488              	.L34:
+ 489 017a 134B     		ldr	r3, .L37+4
+ 490 017c 9B68     		ldr	r3, [r3, #8]
+ 491 017e 063B     		subs	r3, r3, #6
+ 492 0180 1800     		movs	r0, r3
+ 493 0182 FFF7FEFF 		bl	HAL_FLASH_EndOfOperationCallback
+ 494              	.L33:
+ 495 0186 104B     		ldr	r3, .L37+4
+ 496 0188 0122     		movs	r2, #1
+ 497 018a 5242     		rsbs	r2, r2, #0
+ 498 018c 9A60     		str	r2, [r3, #8]
+ 499 018e 0E4B     		ldr	r3, .L37+4
+ 500 0190 0022     		movs	r2, #0
+ 501 0192 1A70     		strb	r2, [r3]
+ 502              	.L27:
+ 503 0194 0C4B     		ldr	r3, .L37+4
+ 504 0196 1B78     		ldrb	r3, [r3]
+ 505 0198 DBB2     		uxtb	r3, r3
+ 506 019a 002B     		cmp	r3, #0
+ 507 019c 0ED1     		bne	.L36
+ 508 019e 094B     		ldr	r3, .L37
+ 509 01a0 1A69     		ldr	r2, [r3, #16]
+ 510 01a2 084B     		ldr	r3, .L37
+ 511 01a4 0721     		movs	r1, #7
+ 512 01a6 8A43     		bics	r2, r1
+ 513 01a8 1A61     		str	r2, [r3, #16]
+ 514 01aa 064B     		ldr	r3, .L37
+ 515 01ac 1A69     		ldr	r2, [r3, #16]
+ 516 01ae 054B     		ldr	r3, .L37
+ARM GAS  /tmp/ccVcJCCG.s 			page 10
+
+
+ 517 01b0 0649     		ldr	r1, .L37+8
+ 518 01b2 0A40     		ands	r2, r1
+ 519 01b4 1A61     		str	r2, [r3, #16]
+ 520 01b6 044B     		ldr	r3, .L37+4
+ 521 01b8 0022     		movs	r2, #0
+ 522 01ba 1A76     		strb	r2, [r3, #24]
+ 523              	.L36:
+ 524 01bc C046     		nop
+ 525 01be BD46     		mov	sp, r7
+ 526 01c0 02B0     		add	sp, sp, #8
+ 527              		@ sp needed
+ 528 01c2 B0BD     		pop	{r4, r5, r7, pc}
+ 529              	.L38:
+ 530              		.align	2
+ 531              	.L37:
+ 532 01c4 00200240 		.word	1073881088
+ 533 01c8 00000000 		.word	pFlash
+ 534 01cc FFEBFFFF 		.word	-5121
+ 536              		.section	.text.HAL_FLASH_EndOfOperationCallback,"ax",%progbits
+ 537              		.align	1
+ 538              		.weak	HAL_FLASH_EndOfOperationCallback
+ 539              		.syntax unified
+ 540              		.code	16
+ 541              		.thumb_func
+ 543              	HAL_FLASH_EndOfOperationCallback:
+ 544              		@ args = 0, pretend = 0, frame = 8
+ 545              		@ frame_needed = 1, uses_anonymous_args = 0
+ 546 0000 80B5     		push	{r7, lr}
+ 547 0002 82B0     		sub	sp, sp, #8
+ 548 0004 00AF     		add	r7, sp, #0
+ 549 0006 7860     		str	r0, [r7, #4]
+ 550 0008 C046     		nop
+ 551 000a BD46     		mov	sp, r7
+ 552 000c 02B0     		add	sp, sp, #8
+ 553              		@ sp needed
+ 554 000e 80BD     		pop	{r7, pc}
+ 556              		.section	.text.HAL_FLASH_OperationErrorCallback,"ax",%progbits
+ 557              		.align	1
+ 558              		.weak	HAL_FLASH_OperationErrorCallback
+ 559              		.syntax unified
+ 560              		.code	16
+ 561              		.thumb_func
+ 563              	HAL_FLASH_OperationErrorCallback:
+ 564              		@ args = 0, pretend = 0, frame = 8
+ 565              		@ frame_needed = 1, uses_anonymous_args = 0
+ 566 0000 80B5     		push	{r7, lr}
+ 567 0002 82B0     		sub	sp, sp, #8
+ 568 0004 00AF     		add	r7, sp, #0
+ 569 0006 7860     		str	r0, [r7, #4]
+ 570 0008 C046     		nop
+ 571 000a BD46     		mov	sp, r7
+ 572 000c 02B0     		add	sp, sp, #8
+ 573              		@ sp needed
+ 574 000e 80BD     		pop	{r7, pc}
+ 576              		.section	.text.HAL_FLASH_Unlock,"ax",%progbits
+ 577              		.align	1
+ 578              		.global	HAL_FLASH_Unlock
+ARM GAS  /tmp/ccVcJCCG.s 			page 11
+
+
+ 579              		.syntax unified
+ 580              		.code	16
+ 581              		.thumb_func
+ 583              	HAL_FLASH_Unlock:
+ 584              		@ args = 0, pretend = 0, frame = 8
+ 585              		@ frame_needed = 1, uses_anonymous_args = 0
+ 586 0000 80B5     		push	{r7, lr}
+ 587 0002 82B0     		sub	sp, sp, #8
+ 588 0004 00AF     		add	r7, sp, #0
+ 589 0006 FB1D     		adds	r3, r7, #7
+ 590 0008 0022     		movs	r2, #0
+ 591 000a 1A70     		strb	r2, [r3]
+ 592 000c 0C4B     		ldr	r3, .L44
+ 593 000e 1B69     		ldr	r3, [r3, #16]
+ 594 0010 8022     		movs	r2, #128
+ 595 0012 1340     		ands	r3, r2
+ 596 0014 0DD0     		beq	.L42
+ 597 0016 0A4B     		ldr	r3, .L44
+ 598 0018 0A4A     		ldr	r2, .L44+4
+ 599 001a 5A60     		str	r2, [r3, #4]
+ 600 001c 084B     		ldr	r3, .L44
+ 601 001e 0A4A     		ldr	r2, .L44+8
+ 602 0020 5A60     		str	r2, [r3, #4]
+ 603 0022 074B     		ldr	r3, .L44
+ 604 0024 1B69     		ldr	r3, [r3, #16]
+ 605 0026 8022     		movs	r2, #128
+ 606 0028 1340     		ands	r3, r2
+ 607 002a 02D0     		beq	.L42
+ 608 002c FB1D     		adds	r3, r7, #7
+ 609 002e 0122     		movs	r2, #1
+ 610 0030 1A70     		strb	r2, [r3]
+ 611              	.L42:
+ 612 0032 FB1D     		adds	r3, r7, #7
+ 613 0034 1B78     		ldrb	r3, [r3]
+ 614 0036 1800     		movs	r0, r3
+ 615 0038 BD46     		mov	sp, r7
+ 616 003a 02B0     		add	sp, sp, #8
+ 617              		@ sp needed
+ 618 003c 80BD     		pop	{r7, pc}
+ 619              	.L45:
+ 620 003e C046     		.align	2
+ 621              	.L44:
+ 622 0040 00200240 		.word	1073881088
+ 623 0044 23016745 		.word	1164378403
+ 624 0048 AB89EFCD 		.word	-839939669
+ 626              		.section	.text.HAL_FLASH_Lock,"ax",%progbits
+ 627              		.align	1
+ 628              		.global	HAL_FLASH_Lock
+ 629              		.syntax unified
+ 630              		.code	16
+ 631              		.thumb_func
+ 633              	HAL_FLASH_Lock:
+ 634              		@ args = 0, pretend = 0, frame = 0
+ 635              		@ frame_needed = 1, uses_anonymous_args = 0
+ 636 0000 80B5     		push	{r7, lr}
+ 637 0002 00AF     		add	r7, sp, #0
+ 638 0004 044B     		ldr	r3, .L48
+ARM GAS  /tmp/ccVcJCCG.s 			page 12
+
+
+ 639 0006 1A69     		ldr	r2, [r3, #16]
+ 640 0008 034B     		ldr	r3, .L48
+ 641 000a 8021     		movs	r1, #128
+ 642 000c 0A43     		orrs	r2, r1
+ 643 000e 1A61     		str	r2, [r3, #16]
+ 644 0010 0023     		movs	r3, #0
+ 645 0012 1800     		movs	r0, r3
+ 646 0014 BD46     		mov	sp, r7
+ 647              		@ sp needed
+ 648 0016 80BD     		pop	{r7, pc}
+ 649              	.L49:
+ 650              		.align	2
+ 651              	.L48:
+ 652 0018 00200240 		.word	1073881088
+ 654              		.section	.text.HAL_FLASH_OB_Unlock,"ax",%progbits
+ 655              		.align	1
+ 656              		.global	HAL_FLASH_OB_Unlock
+ 657              		.syntax unified
+ 658              		.code	16
+ 659              		.thumb_func
+ 661              	HAL_FLASH_OB_Unlock:
+ 662              		@ args = 0, pretend = 0, frame = 0
+ 663              		@ frame_needed = 1, uses_anonymous_args = 0
+ 664 0000 80B5     		push	{r7, lr}
+ 665 0002 00AF     		add	r7, sp, #0
+ 666 0004 084B     		ldr	r3, .L54
+ 667 0006 1A69     		ldr	r2, [r3, #16]
+ 668 0008 8023     		movs	r3, #128
+ 669 000a 9B00     		lsls	r3, r3, #2
+ 670 000c 1340     		ands	r3, r2
+ 671 000e 07D1     		bne	.L51
+ 672 0010 054B     		ldr	r3, .L54
+ 673 0012 064A     		ldr	r2, .L54+4
+ 674 0014 9A60     		str	r2, [r3, #8]
+ 675 0016 044B     		ldr	r3, .L54
+ 676 0018 054A     		ldr	r2, .L54+8
+ 677 001a 9A60     		str	r2, [r3, #8]
+ 678 001c 0023     		movs	r3, #0
+ 679 001e 00E0     		b	.L53
+ 680              	.L51:
+ 681 0020 0123     		movs	r3, #1
+ 682              	.L53:
+ 683 0022 1800     		movs	r0, r3
+ 684 0024 BD46     		mov	sp, r7
+ 685              		@ sp needed
+ 686 0026 80BD     		pop	{r7, pc}
+ 687              	.L55:
+ 688              		.align	2
+ 689              	.L54:
+ 690 0028 00200240 		.word	1073881088
+ 691 002c 23016745 		.word	1164378403
+ 692 0030 AB89EFCD 		.word	-839939669
+ 694              		.section	.text.HAL_FLASH_OB_Lock,"ax",%progbits
+ 695              		.align	1
+ 696              		.global	HAL_FLASH_OB_Lock
+ 697              		.syntax unified
+ 698              		.code	16
+ARM GAS  /tmp/ccVcJCCG.s 			page 13
+
+
+ 699              		.thumb_func
+ 701              	HAL_FLASH_OB_Lock:
+ 702              		@ args = 0, pretend = 0, frame = 0
+ 703              		@ frame_needed = 1, uses_anonymous_args = 0
+ 704 0000 80B5     		push	{r7, lr}
+ 705 0002 00AF     		add	r7, sp, #0
+ 706 0004 044B     		ldr	r3, .L58
+ 707 0006 1A69     		ldr	r2, [r3, #16]
+ 708 0008 034B     		ldr	r3, .L58
+ 709 000a 0449     		ldr	r1, .L58+4
+ 710 000c 0A40     		ands	r2, r1
+ 711 000e 1A61     		str	r2, [r3, #16]
+ 712 0010 0023     		movs	r3, #0
+ 713 0012 1800     		movs	r0, r3
+ 714 0014 BD46     		mov	sp, r7
+ 715              		@ sp needed
+ 716 0016 80BD     		pop	{r7, pc}
+ 717              	.L59:
+ 718              		.align	2
+ 719              	.L58:
+ 720 0018 00200240 		.word	1073881088
+ 721 001c FFFDFFFF 		.word	-513
+ 723              		.section	.text.HAL_FLASH_OB_Launch,"ax",%progbits
+ 724              		.align	1
+ 725              		.global	HAL_FLASH_OB_Launch
+ 726              		.syntax unified
+ 727              		.code	16
+ 728              		.thumb_func
+ 730              	HAL_FLASH_OB_Launch:
+ 731              		@ args = 0, pretend = 0, frame = 0
+ 732              		@ frame_needed = 1, uses_anonymous_args = 0
+ 733 0000 80B5     		push	{r7, lr}
+ 734 0002 00AF     		add	r7, sp, #0
+ 735 0004 074B     		ldr	r3, .L62
+ 736 0006 1A69     		ldr	r2, [r3, #16]
+ 737 0008 064B     		ldr	r3, .L62
+ 738 000a 8021     		movs	r1, #128
+ 739 000c 8901     		lsls	r1, r1, #6
+ 740 000e 0A43     		orrs	r2, r1
+ 741 0010 1A61     		str	r2, [r3, #16]
+ 742 0012 054B     		ldr	r3, .L62+4
+ 743 0014 1800     		movs	r0, r3
+ 744 0016 FFF7FEFF 		bl	FLASH_WaitForLastOperation
+ 745 001a 0300     		movs	r3, r0
+ 746 001c 1800     		movs	r0, r3
+ 747 001e BD46     		mov	sp, r7
+ 748              		@ sp needed
+ 749 0020 80BD     		pop	{r7, pc}
+ 750              	.L63:
+ 751 0022 C046     		.align	2
+ 752              	.L62:
+ 753 0024 00200240 		.word	1073881088
+ 754 0028 50C30000 		.word	50000
+ 756              		.section	.text.HAL_FLASH_GetError,"ax",%progbits
+ 757              		.align	1
+ 758              		.global	HAL_FLASH_GetError
+ 759              		.syntax unified
+ARM GAS  /tmp/ccVcJCCG.s 			page 14
+
+
+ 760              		.code	16
+ 761              		.thumb_func
+ 763              	HAL_FLASH_GetError:
+ 764              		@ args = 0, pretend = 0, frame = 0
+ 765              		@ frame_needed = 1, uses_anonymous_args = 0
+ 766 0000 80B5     		push	{r7, lr}
+ 767 0002 00AF     		add	r7, sp, #0
+ 768 0004 024B     		ldr	r3, .L66
+ 769 0006 DB69     		ldr	r3, [r3, #28]
+ 770 0008 1800     		movs	r0, r3
+ 771 000a BD46     		mov	sp, r7
+ 772              		@ sp needed
+ 773 000c 80BD     		pop	{r7, pc}
+ 774              	.L67:
+ 775 000e C046     		.align	2
+ 776              	.L66:
+ 777 0010 00000000 		.word	pFlash
+ 779              		.section	.text.FLASH_Program_HalfWord,"ax",%progbits
+ 780              		.align	1
+ 781              		.syntax unified
+ 782              		.code	16
+ 783              		.thumb_func
+ 785              	FLASH_Program_HalfWord:
+ 786              		@ args = 0, pretend = 0, frame = 8
+ 787              		@ frame_needed = 1, uses_anonymous_args = 0
+ 788 0000 80B5     		push	{r7, lr}
+ 789 0002 82B0     		sub	sp, sp, #8
+ 790 0004 00AF     		add	r7, sp, #0
+ 791 0006 7860     		str	r0, [r7, #4]
+ 792 0008 0A00     		movs	r2, r1
+ 793 000a BB1C     		adds	r3, r7, #2
+ 794 000c 1A80     		strh	r2, [r3]
+ 795 000e 084B     		ldr	r3, .L69
+ 796 0010 0022     		movs	r2, #0
+ 797 0012 DA61     		str	r2, [r3, #28]
+ 798 0014 074B     		ldr	r3, .L69+4
+ 799 0016 1A69     		ldr	r2, [r3, #16]
+ 800 0018 064B     		ldr	r3, .L69+4
+ 801 001a 0121     		movs	r1, #1
+ 802 001c 0A43     		orrs	r2, r1
+ 803 001e 1A61     		str	r2, [r3, #16]
+ 804 0020 7B68     		ldr	r3, [r7, #4]
+ 805 0022 BA1C     		adds	r2, r7, #2
+ 806 0024 1288     		ldrh	r2, [r2]
+ 807 0026 1A80     		strh	r2, [r3]
+ 808 0028 C046     		nop
+ 809 002a BD46     		mov	sp, r7
+ 810 002c 02B0     		add	sp, sp, #8
+ 811              		@ sp needed
+ 812 002e 80BD     		pop	{r7, pc}
+ 813              	.L70:
+ 814              		.align	2
+ 815              	.L69:
+ 816 0030 00000000 		.word	pFlash
+ 817 0034 00200240 		.word	1073881088
+ 819              		.section	.text.FLASH_WaitForLastOperation,"ax",%progbits
+ 820              		.align	1
+ARM GAS  /tmp/ccVcJCCG.s 			page 15
+
+
+ 821              		.global	FLASH_WaitForLastOperation
+ 822              		.syntax unified
+ 823              		.code	16
+ 824              		.thumb_func
+ 826              	FLASH_WaitForLastOperation:
+ 827              		@ args = 0, pretend = 0, frame = 16
+ 828              		@ frame_needed = 1, uses_anonymous_args = 0
+ 829 0000 80B5     		push	{r7, lr}
+ 830 0002 84B0     		sub	sp, sp, #16
+ 831 0004 00AF     		add	r7, sp, #0
+ 832 0006 7860     		str	r0, [r7, #4]
+ 833 0008 FFF7FEFF 		bl	HAL_GetTick
+ 834 000c 0300     		movs	r3, r0
+ 835 000e FB60     		str	r3, [r7, #12]
+ 836 0010 0FE0     		b	.L73
+ 837              	.L76:
+ 838 0012 7B68     		ldr	r3, [r7, #4]
+ 839 0014 0133     		adds	r3, r3, #1
+ 840 0016 0CD0     		beq	.L73
+ 841 0018 7B68     		ldr	r3, [r7, #4]
+ 842 001a 002B     		cmp	r3, #0
+ 843 001c 07D0     		beq	.L74
+ 844 001e FFF7FEFF 		bl	HAL_GetTick
+ 845 0022 0200     		movs	r2, r0
+ 846 0024 FB68     		ldr	r3, [r7, #12]
+ 847 0026 D31A     		subs	r3, r2, r3
+ 848 0028 7A68     		ldr	r2, [r7, #4]
+ 849 002a 9A42     		cmp	r2, r3
+ 850 002c 01D2     		bcs	.L73
+ 851              	.L74:
+ 852 002e 0323     		movs	r3, #3
+ 853 0030 1FE0     		b	.L75
+ 854              	.L73:
+ 855 0032 124B     		ldr	r3, .L81
+ 856 0034 DB68     		ldr	r3, [r3, #12]
+ 857 0036 0122     		movs	r2, #1
+ 858 0038 1340     		ands	r3, r2
+ 859 003a 012B     		cmp	r3, #1
+ 860 003c E9D0     		beq	.L76
+ 861 003e 0F4B     		ldr	r3, .L81
+ 862 0040 DB68     		ldr	r3, [r3, #12]
+ 863 0042 2022     		movs	r2, #32
+ 864 0044 1340     		ands	r3, r2
+ 865 0046 202B     		cmp	r3, #32
+ 866 0048 02D1     		bne	.L77
+ 867 004a 0C4B     		ldr	r3, .L81
+ 868 004c 2022     		movs	r2, #32
+ 869 004e DA60     		str	r2, [r3, #12]
+ 870              	.L77:
+ 871 0050 0A4B     		ldr	r3, .L81
+ 872 0052 DB68     		ldr	r3, [r3, #12]
+ 873 0054 1022     		movs	r2, #16
+ 874 0056 1340     		ands	r3, r2
+ 875 0058 102B     		cmp	r3, #16
+ 876 005a 05D0     		beq	.L78
+ 877 005c 074B     		ldr	r3, .L81
+ 878 005e DB68     		ldr	r3, [r3, #12]
+ARM GAS  /tmp/ccVcJCCG.s 			page 16
+
+
+ 879 0060 0422     		movs	r2, #4
+ 880 0062 1340     		ands	r3, r2
+ 881 0064 042B     		cmp	r3, #4
+ 882 0066 03D1     		bne	.L79
+ 883              	.L78:
+ 884 0068 FFF7FEFF 		bl	FLASH_SetErrorCode
+ 885 006c 0123     		movs	r3, #1
+ 886 006e 00E0     		b	.L75
+ 887              	.L79:
+ 888 0070 0023     		movs	r3, #0
+ 889              	.L75:
+ 890 0072 1800     		movs	r0, r3
+ 891 0074 BD46     		mov	sp, r7
+ 892 0076 04B0     		add	sp, sp, #16
+ 893              		@ sp needed
+ 894 0078 80BD     		pop	{r7, pc}
+ 895              	.L82:
+ 896 007a C046     		.align	2
+ 897              	.L81:
+ 898 007c 00200240 		.word	1073881088
+ 900              		.section	.text.FLASH_SetErrorCode,"ax",%progbits
+ 901              		.align	1
+ 902              		.syntax unified
+ 903              		.code	16
+ 904              		.thumb_func
+ 906              	FLASH_SetErrorCode:
+ 907              		@ args = 0, pretend = 0, frame = 8
+ 908              		@ frame_needed = 1, uses_anonymous_args = 0
+ 909 0000 80B5     		push	{r7, lr}
+ 910 0002 82B0     		sub	sp, sp, #8
+ 911 0004 00AF     		add	r7, sp, #0
+ 912 0006 0023     		movs	r3, #0
+ 913 0008 7B60     		str	r3, [r7, #4]
+ 914 000a 134B     		ldr	r3, .L86
+ 915 000c DB68     		ldr	r3, [r3, #12]
+ 916 000e 1022     		movs	r2, #16
+ 917 0010 1340     		ands	r3, r2
+ 918 0012 102B     		cmp	r3, #16
+ 919 0014 09D1     		bne	.L84
+ 920 0016 114B     		ldr	r3, .L86+4
+ 921 0018 DB69     		ldr	r3, [r3, #28]
+ 922 001a 0222     		movs	r2, #2
+ 923 001c 1A43     		orrs	r2, r3
+ 924 001e 0F4B     		ldr	r3, .L86+4
+ 925 0020 DA61     		str	r2, [r3, #28]
+ 926 0022 7B68     		ldr	r3, [r7, #4]
+ 927 0024 1022     		movs	r2, #16
+ 928 0026 1343     		orrs	r3, r2
+ 929 0028 7B60     		str	r3, [r7, #4]
+ 930              	.L84:
+ 931 002a 0B4B     		ldr	r3, .L86
+ 932 002c DB68     		ldr	r3, [r3, #12]
+ 933 002e 0422     		movs	r2, #4
+ 934 0030 1340     		ands	r3, r2
+ 935 0032 042B     		cmp	r3, #4
+ 936 0034 09D1     		bne	.L85
+ 937 0036 094B     		ldr	r3, .L86+4
+ARM GAS  /tmp/ccVcJCCG.s 			page 17
+
+
+ 938 0038 DB69     		ldr	r3, [r3, #28]
+ 939 003a 0122     		movs	r2, #1
+ 940 003c 1A43     		orrs	r2, r3
+ 941 003e 074B     		ldr	r3, .L86+4
+ 942 0040 DA61     		str	r2, [r3, #28]
+ 943 0042 7B68     		ldr	r3, [r7, #4]
+ 944 0044 0422     		movs	r2, #4
+ 945 0046 1343     		orrs	r3, r2
+ 946 0048 7B60     		str	r3, [r7, #4]
+ 947              	.L85:
+ 948 004a 034B     		ldr	r3, .L86
+ 949 004c 7A68     		ldr	r2, [r7, #4]
+ 950 004e DA60     		str	r2, [r3, #12]
+ 951 0050 C046     		nop
+ 952 0052 BD46     		mov	sp, r7
+ 953 0054 02B0     		add	sp, sp, #8
+ 954              		@ sp needed
+ 955 0056 80BD     		pop	{r7, pc}
+ 956              	.L87:
+ 957              		.align	2
+ 958              	.L86:
+ 959 0058 00200240 		.word	1073881088
+ 960 005c 00000000 		.word	pFlash
+ 962              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccVcJCCG.s 			page 18
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_hal_flash.c
+     /tmp/ccVcJCCG.s:19     .bss.pFlash:00000000 pFlash
+     /tmp/ccVcJCCG.s:16     .bss.pFlash:00000000 $d
+     /tmp/ccVcJCCG.s:22     .text.HAL_FLASH_Program:00000000 $t
+     /tmp/ccVcJCCG.s:28     .text.HAL_FLASH_Program:00000000 HAL_FLASH_Program
+     /tmp/ccVcJCCG.s:826    .text.FLASH_WaitForLastOperation:00000000 FLASH_WaitForLastOperation
+     /tmp/ccVcJCCG.s:785    .text.FLASH_Program_HalfWord:00000000 FLASH_Program_HalfWord
+     /tmp/ccVcJCCG.s:187    .text.HAL_FLASH_Program:00000120 $d
+     /tmp/ccVcJCCG.s:192    .text.HAL_FLASH_Program_IT:00000000 $t
+     /tmp/ccVcJCCG.s:198    .text.HAL_FLASH_Program_IT:00000000 HAL_FLASH_Program_IT
+     /tmp/ccVcJCCG.s:286    .text.HAL_FLASH_Program_IT:0000009c $d
+     /tmp/ccVcJCCG.s:290    .text.HAL_FLASH_IRQHandler:00000000 $t
+     /tmp/ccVcJCCG.s:296    .text.HAL_FLASH_IRQHandler:00000000 HAL_FLASH_IRQHandler
+     /tmp/ccVcJCCG.s:906    .text.FLASH_SetErrorCode:00000000 FLASH_SetErrorCode
+     /tmp/ccVcJCCG.s:563    .text.HAL_FLASH_OperationErrorCallback:00000000 HAL_FLASH_OperationErrorCallback
+     /tmp/ccVcJCCG.s:543    .text.HAL_FLASH_EndOfOperationCallback:00000000 HAL_FLASH_EndOfOperationCallback
+     /tmp/ccVcJCCG.s:532    .text.HAL_FLASH_IRQHandler:000001c4 $d
+     /tmp/ccVcJCCG.s:537    .text.HAL_FLASH_EndOfOperationCallback:00000000 $t
+     /tmp/ccVcJCCG.s:557    .text.HAL_FLASH_OperationErrorCallback:00000000 $t
+     /tmp/ccVcJCCG.s:577    .text.HAL_FLASH_Unlock:00000000 $t
+     /tmp/ccVcJCCG.s:583    .text.HAL_FLASH_Unlock:00000000 HAL_FLASH_Unlock
+     /tmp/ccVcJCCG.s:622    .text.HAL_FLASH_Unlock:00000040 $d
+     /tmp/ccVcJCCG.s:627    .text.HAL_FLASH_Lock:00000000 $t
+     /tmp/ccVcJCCG.s:633    .text.HAL_FLASH_Lock:00000000 HAL_FLASH_Lock
+     /tmp/ccVcJCCG.s:652    .text.HAL_FLASH_Lock:00000018 $d
+     /tmp/ccVcJCCG.s:655    .text.HAL_FLASH_OB_Unlock:00000000 $t
+     /tmp/ccVcJCCG.s:661    .text.HAL_FLASH_OB_Unlock:00000000 HAL_FLASH_OB_Unlock
+     /tmp/ccVcJCCG.s:690    .text.HAL_FLASH_OB_Unlock:00000028 $d
+     /tmp/ccVcJCCG.s:695    .text.HAL_FLASH_OB_Lock:00000000 $t
+     /tmp/ccVcJCCG.s:701    .text.HAL_FLASH_OB_Lock:00000000 HAL_FLASH_OB_Lock
+     /tmp/ccVcJCCG.s:720    .text.HAL_FLASH_OB_Lock:00000018 $d
+     /tmp/ccVcJCCG.s:724    .text.HAL_FLASH_OB_Launch:00000000 $t
+     /tmp/ccVcJCCG.s:730    .text.HAL_FLASH_OB_Launch:00000000 HAL_FLASH_OB_Launch
+     /tmp/ccVcJCCG.s:753    .text.HAL_FLASH_OB_Launch:00000024 $d
+     /tmp/ccVcJCCG.s:757    .text.HAL_FLASH_GetError:00000000 $t
+     /tmp/ccVcJCCG.s:763    .text.HAL_FLASH_GetError:00000000 HAL_FLASH_GetError
+     /tmp/ccVcJCCG.s:777    .text.HAL_FLASH_GetError:00000010 $d
+     /tmp/ccVcJCCG.s:780    .text.FLASH_Program_HalfWord:00000000 $t
+     /tmp/ccVcJCCG.s:816    .text.FLASH_Program_HalfWord:00000030 $d
+     /tmp/ccVcJCCG.s:820    .text.FLASH_WaitForLastOperation:00000000 $t
+     /tmp/ccVcJCCG.s:898    .text.FLASH_WaitForLastOperation:0000007c $d
+     /tmp/ccVcJCCG.s:901    .text.FLASH_SetErrorCode:00000000 $t
+     /tmp/ccVcJCCG.s:959    .text.FLASH_SetErrorCode:00000058 $d
+
+UNDEFINED SYMBOLS
+FLASH_PageErase
+HAL_GetTick

@@ -1,0 +1,510 @@
+ARM GAS  /tmp/cc6TegyB.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"stm32f0xx_ll_exti.c"
+  13              		.text
+  14              		.section	.text.LL_EXTI_EnableIT_0_31,"ax",%progbits
+  15              		.align	1
+  16              		.syntax unified
+  17              		.code	16
+  18              		.thumb_func
+  20              	LL_EXTI_EnableIT_0_31:
+  21              		@ args = 0, pretend = 0, frame = 8
+  22              		@ frame_needed = 1, uses_anonymous_args = 0
+  23 0000 80B5     		push	{r7, lr}
+  24 0002 82B0     		sub	sp, sp, #8
+  25 0004 00AF     		add	r7, sp, #0
+  26 0006 7860     		str	r0, [r7, #4]
+  27 0008 044B     		ldr	r3, .L2
+  28 000a 1968     		ldr	r1, [r3]
+  29 000c 034B     		ldr	r3, .L2
+  30 000e 7A68     		ldr	r2, [r7, #4]
+  31 0010 0A43     		orrs	r2, r1
+  32 0012 1A60     		str	r2, [r3]
+  33 0014 C046     		nop
+  34 0016 BD46     		mov	sp, r7
+  35 0018 02B0     		add	sp, sp, #8
+  36              		@ sp needed
+  37 001a 80BD     		pop	{r7, pc}
+  38              	.L3:
+  39              		.align	2
+  40              	.L2:
+  41 001c 00040140 		.word	1073808384
+  43              		.section	.text.LL_EXTI_DisableIT_0_31,"ax",%progbits
+  44              		.align	1
+  45              		.syntax unified
+  46              		.code	16
+  47              		.thumb_func
+  49              	LL_EXTI_DisableIT_0_31:
+  50              		@ args = 0, pretend = 0, frame = 8
+  51              		@ frame_needed = 1, uses_anonymous_args = 0
+  52 0000 80B5     		push	{r7, lr}
+  53 0002 82B0     		sub	sp, sp, #8
+  54 0004 00AF     		add	r7, sp, #0
+  55 0006 7860     		str	r0, [r7, #4]
+  56 0008 054B     		ldr	r3, .L5
+  57 000a 1A68     		ldr	r2, [r3]
+  58 000c 7B68     		ldr	r3, [r7, #4]
+  59 000e D943     		mvns	r1, r3
+  60 0010 034B     		ldr	r3, .L5
+ARM GAS  /tmp/cc6TegyB.s 			page 2
+
+
+  61 0012 0A40     		ands	r2, r1
+  62 0014 1A60     		str	r2, [r3]
+  63 0016 C046     		nop
+  64 0018 BD46     		mov	sp, r7
+  65 001a 02B0     		add	sp, sp, #8
+  66              		@ sp needed
+  67 001c 80BD     		pop	{r7, pc}
+  68              	.L6:
+  69 001e C046     		.align	2
+  70              	.L5:
+  71 0020 00040140 		.word	1073808384
+  73              		.section	.text.LL_EXTI_EnableEvent_0_31,"ax",%progbits
+  74              		.align	1
+  75              		.syntax unified
+  76              		.code	16
+  77              		.thumb_func
+  79              	LL_EXTI_EnableEvent_0_31:
+  80              		@ args = 0, pretend = 0, frame = 8
+  81              		@ frame_needed = 1, uses_anonymous_args = 0
+  82 0000 80B5     		push	{r7, lr}
+  83 0002 82B0     		sub	sp, sp, #8
+  84 0004 00AF     		add	r7, sp, #0
+  85 0006 7860     		str	r0, [r7, #4]
+  86 0008 044B     		ldr	r3, .L8
+  87 000a 5968     		ldr	r1, [r3, #4]
+  88 000c 034B     		ldr	r3, .L8
+  89 000e 7A68     		ldr	r2, [r7, #4]
+  90 0010 0A43     		orrs	r2, r1
+  91 0012 5A60     		str	r2, [r3, #4]
+  92 0014 C046     		nop
+  93 0016 BD46     		mov	sp, r7
+  94 0018 02B0     		add	sp, sp, #8
+  95              		@ sp needed
+  96 001a 80BD     		pop	{r7, pc}
+  97              	.L9:
+  98              		.align	2
+  99              	.L8:
+ 100 001c 00040140 		.word	1073808384
+ 102              		.section	.text.LL_EXTI_DisableEvent_0_31,"ax",%progbits
+ 103              		.align	1
+ 104              		.syntax unified
+ 105              		.code	16
+ 106              		.thumb_func
+ 108              	LL_EXTI_DisableEvent_0_31:
+ 109              		@ args = 0, pretend = 0, frame = 8
+ 110              		@ frame_needed = 1, uses_anonymous_args = 0
+ 111 0000 80B5     		push	{r7, lr}
+ 112 0002 82B0     		sub	sp, sp, #8
+ 113 0004 00AF     		add	r7, sp, #0
+ 114 0006 7860     		str	r0, [r7, #4]
+ 115 0008 054B     		ldr	r3, .L11
+ 116 000a 5A68     		ldr	r2, [r3, #4]
+ 117 000c 7B68     		ldr	r3, [r7, #4]
+ 118 000e D943     		mvns	r1, r3
+ 119 0010 034B     		ldr	r3, .L11
+ 120 0012 0A40     		ands	r2, r1
+ 121 0014 5A60     		str	r2, [r3, #4]
+ARM GAS  /tmp/cc6TegyB.s 			page 3
+
+
+ 122 0016 C046     		nop
+ 123 0018 BD46     		mov	sp, r7
+ 124 001a 02B0     		add	sp, sp, #8
+ 125              		@ sp needed
+ 126 001c 80BD     		pop	{r7, pc}
+ 127              	.L12:
+ 128 001e C046     		.align	2
+ 129              	.L11:
+ 130 0020 00040140 		.word	1073808384
+ 132              		.section	.text.LL_EXTI_EnableRisingTrig_0_31,"ax",%progbits
+ 133              		.align	1
+ 134              		.syntax unified
+ 135              		.code	16
+ 136              		.thumb_func
+ 138              	LL_EXTI_EnableRisingTrig_0_31:
+ 139              		@ args = 0, pretend = 0, frame = 8
+ 140              		@ frame_needed = 1, uses_anonymous_args = 0
+ 141 0000 80B5     		push	{r7, lr}
+ 142 0002 82B0     		sub	sp, sp, #8
+ 143 0004 00AF     		add	r7, sp, #0
+ 144 0006 7860     		str	r0, [r7, #4]
+ 145 0008 044B     		ldr	r3, .L14
+ 146 000a 9968     		ldr	r1, [r3, #8]
+ 147 000c 034B     		ldr	r3, .L14
+ 148 000e 7A68     		ldr	r2, [r7, #4]
+ 149 0010 0A43     		orrs	r2, r1
+ 150 0012 9A60     		str	r2, [r3, #8]
+ 151 0014 C046     		nop
+ 152 0016 BD46     		mov	sp, r7
+ 153 0018 02B0     		add	sp, sp, #8
+ 154              		@ sp needed
+ 155 001a 80BD     		pop	{r7, pc}
+ 156              	.L15:
+ 157              		.align	2
+ 158              	.L14:
+ 159 001c 00040140 		.word	1073808384
+ 161              		.section	.text.LL_EXTI_DisableRisingTrig_0_31,"ax",%progbits
+ 162              		.align	1
+ 163              		.syntax unified
+ 164              		.code	16
+ 165              		.thumb_func
+ 167              	LL_EXTI_DisableRisingTrig_0_31:
+ 168              		@ args = 0, pretend = 0, frame = 8
+ 169              		@ frame_needed = 1, uses_anonymous_args = 0
+ 170 0000 80B5     		push	{r7, lr}
+ 171 0002 82B0     		sub	sp, sp, #8
+ 172 0004 00AF     		add	r7, sp, #0
+ 173 0006 7860     		str	r0, [r7, #4]
+ 174 0008 054B     		ldr	r3, .L17
+ 175 000a 9A68     		ldr	r2, [r3, #8]
+ 176 000c 7B68     		ldr	r3, [r7, #4]
+ 177 000e D943     		mvns	r1, r3
+ 178 0010 034B     		ldr	r3, .L17
+ 179 0012 0A40     		ands	r2, r1
+ 180 0014 9A60     		str	r2, [r3, #8]
+ 181 0016 C046     		nop
+ 182 0018 BD46     		mov	sp, r7
+ARM GAS  /tmp/cc6TegyB.s 			page 4
+
+
+ 183 001a 02B0     		add	sp, sp, #8
+ 184              		@ sp needed
+ 185 001c 80BD     		pop	{r7, pc}
+ 186              	.L18:
+ 187 001e C046     		.align	2
+ 188              	.L17:
+ 189 0020 00040140 		.word	1073808384
+ 191              		.section	.text.LL_EXTI_EnableFallingTrig_0_31,"ax",%progbits
+ 192              		.align	1
+ 193              		.syntax unified
+ 194              		.code	16
+ 195              		.thumb_func
+ 197              	LL_EXTI_EnableFallingTrig_0_31:
+ 198              		@ args = 0, pretend = 0, frame = 8
+ 199              		@ frame_needed = 1, uses_anonymous_args = 0
+ 200 0000 80B5     		push	{r7, lr}
+ 201 0002 82B0     		sub	sp, sp, #8
+ 202 0004 00AF     		add	r7, sp, #0
+ 203 0006 7860     		str	r0, [r7, #4]
+ 204 0008 044B     		ldr	r3, .L20
+ 205 000a D968     		ldr	r1, [r3, #12]
+ 206 000c 034B     		ldr	r3, .L20
+ 207 000e 7A68     		ldr	r2, [r7, #4]
+ 208 0010 0A43     		orrs	r2, r1
+ 209 0012 DA60     		str	r2, [r3, #12]
+ 210 0014 C046     		nop
+ 211 0016 BD46     		mov	sp, r7
+ 212 0018 02B0     		add	sp, sp, #8
+ 213              		@ sp needed
+ 214 001a 80BD     		pop	{r7, pc}
+ 215              	.L21:
+ 216              		.align	2
+ 217              	.L20:
+ 218 001c 00040140 		.word	1073808384
+ 220              		.section	.text.LL_EXTI_DisableFallingTrig_0_31,"ax",%progbits
+ 221              		.align	1
+ 222              		.syntax unified
+ 223              		.code	16
+ 224              		.thumb_func
+ 226              	LL_EXTI_DisableFallingTrig_0_31:
+ 227              		@ args = 0, pretend = 0, frame = 8
+ 228              		@ frame_needed = 1, uses_anonymous_args = 0
+ 229 0000 80B5     		push	{r7, lr}
+ 230 0002 82B0     		sub	sp, sp, #8
+ 231 0004 00AF     		add	r7, sp, #0
+ 232 0006 7860     		str	r0, [r7, #4]
+ 233 0008 054B     		ldr	r3, .L23
+ 234 000a DA68     		ldr	r2, [r3, #12]
+ 235 000c 7B68     		ldr	r3, [r7, #4]
+ 236 000e D943     		mvns	r1, r3
+ 237 0010 034B     		ldr	r3, .L23
+ 238 0012 0A40     		ands	r2, r1
+ 239 0014 DA60     		str	r2, [r3, #12]
+ 240 0016 C046     		nop
+ 241 0018 BD46     		mov	sp, r7
+ 242 001a 02B0     		add	sp, sp, #8
+ 243              		@ sp needed
+ARM GAS  /tmp/cc6TegyB.s 			page 5
+
+
+ 244 001c 80BD     		pop	{r7, pc}
+ 245              	.L24:
+ 246 001e C046     		.align	2
+ 247              	.L23:
+ 248 0020 00040140 		.word	1073808384
+ 250              		.section	.text.LL_EXTI_DeInit,"ax",%progbits
+ 251              		.align	1
+ 252              		.global	LL_EXTI_DeInit
+ 253              		.syntax unified
+ 254              		.code	16
+ 255              		.thumb_func
+ 257              	LL_EXTI_DeInit:
+ 258              		@ args = 0, pretend = 0, frame = 0
+ 259              		@ frame_needed = 1, uses_anonymous_args = 0
+ 260 0000 80B5     		push	{r7, lr}
+ 261 0002 00AF     		add	r7, sp, #0
+ 262 0004 0A4B     		ldr	r3, .L27
+ 263 0006 0B4A     		ldr	r2, .L27+4
+ 264 0008 1A60     		str	r2, [r3]
+ 265 000a 094B     		ldr	r3, .L27
+ 266 000c 0022     		movs	r2, #0
+ 267 000e 5A60     		str	r2, [r3, #4]
+ 268 0010 074B     		ldr	r3, .L27
+ 269 0012 0022     		movs	r2, #0
+ 270 0014 9A60     		str	r2, [r3, #8]
+ 271 0016 064B     		ldr	r3, .L27
+ 272 0018 0022     		movs	r2, #0
+ 273 001a DA60     		str	r2, [r3, #12]
+ 274 001c 044B     		ldr	r3, .L27
+ 275 001e 0022     		movs	r2, #0
+ 276 0020 1A61     		str	r2, [r3, #16]
+ 277 0022 034B     		ldr	r3, .L27
+ 278 0024 044A     		ldr	r2, .L27+8
+ 279 0026 5A61     		str	r2, [r3, #20]
+ 280 0028 0023     		movs	r3, #0
+ 281 002a 1800     		movs	r0, r3
+ 282 002c BD46     		mov	sp, r7
+ 283              		@ sp needed
+ 284 002e 80BD     		pop	{r7, pc}
+ 285              	.L28:
+ 286              		.align	2
+ 287              	.L27:
+ 288 0030 00040140 		.word	1073808384
+ 289 0034 0000847F 		.word	2139357184
+ 290 0038 FFFF7B00 		.word	8126463
+ 292              		.section	.text.LL_EXTI_Init,"ax",%progbits
+ 293              		.align	1
+ 294              		.global	LL_EXTI_Init
+ 295              		.syntax unified
+ 296              		.code	16
+ 297              		.thumb_func
+ 299              	LL_EXTI_Init:
+ 300              		@ args = 0, pretend = 0, frame = 16
+ 301              		@ frame_needed = 1, uses_anonymous_args = 0
+ 302 0000 80B5     		push	{r7, lr}
+ 303 0002 84B0     		sub	sp, sp, #16
+ 304 0004 00AF     		add	r7, sp, #0
+ARM GAS  /tmp/cc6TegyB.s 			page 6
+
+
+ 305 0006 7860     		str	r0, [r7, #4]
+ 306 0008 0F23     		movs	r3, #15
+ 307 000a FB18     		adds	r3, r7, r3
+ 308 000c 0022     		movs	r2, #0
+ 309 000e 1A70     		strb	r2, [r3]
+ 310 0010 7B68     		ldr	r3, [r7, #4]
+ 311 0012 1B79     		ldrb	r3, [r3, #4]
+ 312 0014 002B     		cmp	r3, #0
+ 313 0016 00D1     		bne	.LCB310
+ 314 0018 68E0     		b	.L30	@long jump
+ 315              	.LCB310:
+ 316 001a 7B68     		ldr	r3, [r7, #4]
+ 317 001c 1B68     		ldr	r3, [r3]
+ 318 001e 002B     		cmp	r3, #0
+ 319 0020 00D1     		bne	.LCB314
+ 320 0022 6DE0     		b	.L41	@long jump
+ 321              	.LCB314:
+ 322 0024 7B68     		ldr	r3, [r7, #4]
+ 323 0026 5B79     		ldrb	r3, [r3, #5]
+ 324 0028 022B     		cmp	r3, #2
+ 325 002a 1BD0     		beq	.L32
+ 326 002c 25DC     		bgt	.L33
+ 327 002e 002B     		cmp	r3, #0
+ 328 0030 02D0     		beq	.L34
+ 329 0032 012B     		cmp	r3, #1
+ 330 0034 0BD0     		beq	.L35
+ 331 0036 20E0     		b	.L33
+ 332              	.L34:
+ 333 0038 7B68     		ldr	r3, [r7, #4]
+ 334 003a 1B68     		ldr	r3, [r3]
+ 335 003c 1800     		movs	r0, r3
+ 336 003e FFF7FEFF 		bl	LL_EXTI_DisableEvent_0_31
+ 337 0042 7B68     		ldr	r3, [r7, #4]
+ 338 0044 1B68     		ldr	r3, [r3]
+ 339 0046 1800     		movs	r0, r3
+ 340 0048 FFF7FEFF 		bl	LL_EXTI_EnableIT_0_31
+ 341 004c 1AE0     		b	.L36
+ 342              	.L35:
+ 343 004e 7B68     		ldr	r3, [r7, #4]
+ 344 0050 1B68     		ldr	r3, [r3]
+ 345 0052 1800     		movs	r0, r3
+ 346 0054 FFF7FEFF 		bl	LL_EXTI_DisableIT_0_31
+ 347 0058 7B68     		ldr	r3, [r7, #4]
+ 348 005a 1B68     		ldr	r3, [r3]
+ 349 005c 1800     		movs	r0, r3
+ 350 005e FFF7FEFF 		bl	LL_EXTI_EnableEvent_0_31
+ 351 0062 0FE0     		b	.L36
+ 352              	.L32:
+ 353 0064 7B68     		ldr	r3, [r7, #4]
+ 354 0066 1B68     		ldr	r3, [r3]
+ 355 0068 1800     		movs	r0, r3
+ 356 006a FFF7FEFF 		bl	LL_EXTI_EnableIT_0_31
+ 357 006e 7B68     		ldr	r3, [r7, #4]
+ 358 0070 1B68     		ldr	r3, [r3]
+ 359 0072 1800     		movs	r0, r3
+ 360 0074 FFF7FEFF 		bl	LL_EXTI_EnableEvent_0_31
+ 361 0078 04E0     		b	.L36
+ARM GAS  /tmp/cc6TegyB.s 			page 7
+
+
+ 362              	.L33:
+ 363 007a 0F23     		movs	r3, #15
+ 364 007c FB18     		adds	r3, r7, r3
+ 365 007e 0122     		movs	r2, #1
+ 366 0080 1A70     		strb	r2, [r3]
+ 367 0082 C046     		nop
+ 368              	.L36:
+ 369 0084 7B68     		ldr	r3, [r7, #4]
+ 370 0086 9B79     		ldrb	r3, [r3, #6]
+ 371 0088 002B     		cmp	r3, #0
+ 372 008a 39D0     		beq	.L41
+ 373 008c 7B68     		ldr	r3, [r7, #4]
+ 374 008e 9B79     		ldrb	r3, [r3, #6]
+ 375 0090 032B     		cmp	r3, #3
+ 376 0092 1BD0     		beq	.L37
+ 377 0094 25DC     		bgt	.L38
+ 378 0096 012B     		cmp	r3, #1
+ 379 0098 02D0     		beq	.L39
+ 380 009a 022B     		cmp	r3, #2
+ 381 009c 0BD0     		beq	.L40
+ 382 009e 20E0     		b	.L38
+ 383              	.L39:
+ 384 00a0 7B68     		ldr	r3, [r7, #4]
+ 385 00a2 1B68     		ldr	r3, [r3]
+ 386 00a4 1800     		movs	r0, r3
+ 387 00a6 FFF7FEFF 		bl	LL_EXTI_DisableFallingTrig_0_31
+ 388 00aa 7B68     		ldr	r3, [r7, #4]
+ 389 00ac 1B68     		ldr	r3, [r3]
+ 390 00ae 1800     		movs	r0, r3
+ 391 00b0 FFF7FEFF 		bl	LL_EXTI_EnableRisingTrig_0_31
+ 392 00b4 24E0     		b	.L41
+ 393              	.L40:
+ 394 00b6 7B68     		ldr	r3, [r7, #4]
+ 395 00b8 1B68     		ldr	r3, [r3]
+ 396 00ba 1800     		movs	r0, r3
+ 397 00bc FFF7FEFF 		bl	LL_EXTI_DisableRisingTrig_0_31
+ 398 00c0 7B68     		ldr	r3, [r7, #4]
+ 399 00c2 1B68     		ldr	r3, [r3]
+ 400 00c4 1800     		movs	r0, r3
+ 401 00c6 FFF7FEFF 		bl	LL_EXTI_EnableFallingTrig_0_31
+ 402 00ca 19E0     		b	.L41
+ 403              	.L37:
+ 404 00cc 7B68     		ldr	r3, [r7, #4]
+ 405 00ce 1B68     		ldr	r3, [r3]
+ 406 00d0 1800     		movs	r0, r3
+ 407 00d2 FFF7FEFF 		bl	LL_EXTI_EnableRisingTrig_0_31
+ 408 00d6 7B68     		ldr	r3, [r7, #4]
+ 409 00d8 1B68     		ldr	r3, [r3]
+ 410 00da 1800     		movs	r0, r3
+ 411 00dc FFF7FEFF 		bl	LL_EXTI_EnableFallingTrig_0_31
+ 412 00e0 0EE0     		b	.L41
+ 413              	.L38:
+ 414 00e2 0F23     		movs	r3, #15
+ 415 00e4 FB18     		adds	r3, r7, r3
+ 416 00e6 0122     		movs	r2, #1
+ 417 00e8 1A70     		strb	r2, [r3]
+ 418 00ea 09E0     		b	.L41
+ARM GAS  /tmp/cc6TegyB.s 			page 8
+
+
+ 419              	.L30:
+ 420 00ec 7B68     		ldr	r3, [r7, #4]
+ 421 00ee 1B68     		ldr	r3, [r3]
+ 422 00f0 1800     		movs	r0, r3
+ 423 00f2 FFF7FEFF 		bl	LL_EXTI_DisableIT_0_31
+ 424 00f6 7B68     		ldr	r3, [r7, #4]
+ 425 00f8 1B68     		ldr	r3, [r3]
+ 426 00fa 1800     		movs	r0, r3
+ 427 00fc FFF7FEFF 		bl	LL_EXTI_DisableEvent_0_31
+ 428              	.L41:
+ 429 0100 0F23     		movs	r3, #15
+ 430 0102 FB18     		adds	r3, r7, r3
+ 431 0104 1B78     		ldrb	r3, [r3]
+ 432 0106 1800     		movs	r0, r3
+ 433 0108 BD46     		mov	sp, r7
+ 434 010a 04B0     		add	sp, sp, #16
+ 435              		@ sp needed
+ 436 010c 80BD     		pop	{r7, pc}
+ 438              		.section	.text.LL_EXTI_StructInit,"ax",%progbits
+ 439              		.align	1
+ 440              		.global	LL_EXTI_StructInit
+ 441              		.syntax unified
+ 442              		.code	16
+ 443              		.thumb_func
+ 445              	LL_EXTI_StructInit:
+ 446              		@ args = 0, pretend = 0, frame = 8
+ 447              		@ frame_needed = 1, uses_anonymous_args = 0
+ 448 0000 80B5     		push	{r7, lr}
+ 449 0002 82B0     		sub	sp, sp, #8
+ 450 0004 00AF     		add	r7, sp, #0
+ 451 0006 7860     		str	r0, [r7, #4]
+ 452 0008 7B68     		ldr	r3, [r7, #4]
+ 453 000a 0022     		movs	r2, #0
+ 454 000c 1A60     		str	r2, [r3]
+ 455 000e 7B68     		ldr	r3, [r7, #4]
+ 456 0010 0022     		movs	r2, #0
+ 457 0012 1A71     		strb	r2, [r3, #4]
+ 458 0014 7B68     		ldr	r3, [r7, #4]
+ 459 0016 0022     		movs	r2, #0
+ 460 0018 5A71     		strb	r2, [r3, #5]
+ 461 001a 7B68     		ldr	r3, [r7, #4]
+ 462 001c 0222     		movs	r2, #2
+ 463 001e 9A71     		strb	r2, [r3, #6]
+ 464 0020 C046     		nop
+ 465 0022 BD46     		mov	sp, r7
+ 466 0024 02B0     		add	sp, sp, #8
+ 467              		@ sp needed
+ 468 0026 80BD     		pop	{r7, pc}
+ 470              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/cc6TegyB.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_ll_exti.c
+     /tmp/cc6TegyB.s:15     .text.LL_EXTI_EnableIT_0_31:00000000 $t
+     /tmp/cc6TegyB.s:20     .text.LL_EXTI_EnableIT_0_31:00000000 LL_EXTI_EnableIT_0_31
+     /tmp/cc6TegyB.s:41     .text.LL_EXTI_EnableIT_0_31:0000001c $d
+     /tmp/cc6TegyB.s:44     .text.LL_EXTI_DisableIT_0_31:00000000 $t
+     /tmp/cc6TegyB.s:49     .text.LL_EXTI_DisableIT_0_31:00000000 LL_EXTI_DisableIT_0_31
+     /tmp/cc6TegyB.s:71     .text.LL_EXTI_DisableIT_0_31:00000020 $d
+     /tmp/cc6TegyB.s:74     .text.LL_EXTI_EnableEvent_0_31:00000000 $t
+     /tmp/cc6TegyB.s:79     .text.LL_EXTI_EnableEvent_0_31:00000000 LL_EXTI_EnableEvent_0_31
+     /tmp/cc6TegyB.s:100    .text.LL_EXTI_EnableEvent_0_31:0000001c $d
+     /tmp/cc6TegyB.s:103    .text.LL_EXTI_DisableEvent_0_31:00000000 $t
+     /tmp/cc6TegyB.s:108    .text.LL_EXTI_DisableEvent_0_31:00000000 LL_EXTI_DisableEvent_0_31
+     /tmp/cc6TegyB.s:130    .text.LL_EXTI_DisableEvent_0_31:00000020 $d
+     /tmp/cc6TegyB.s:133    .text.LL_EXTI_EnableRisingTrig_0_31:00000000 $t
+     /tmp/cc6TegyB.s:138    .text.LL_EXTI_EnableRisingTrig_0_31:00000000 LL_EXTI_EnableRisingTrig_0_31
+     /tmp/cc6TegyB.s:159    .text.LL_EXTI_EnableRisingTrig_0_31:0000001c $d
+     /tmp/cc6TegyB.s:162    .text.LL_EXTI_DisableRisingTrig_0_31:00000000 $t
+     /tmp/cc6TegyB.s:167    .text.LL_EXTI_DisableRisingTrig_0_31:00000000 LL_EXTI_DisableRisingTrig_0_31
+     /tmp/cc6TegyB.s:189    .text.LL_EXTI_DisableRisingTrig_0_31:00000020 $d
+     /tmp/cc6TegyB.s:192    .text.LL_EXTI_EnableFallingTrig_0_31:00000000 $t
+     /tmp/cc6TegyB.s:197    .text.LL_EXTI_EnableFallingTrig_0_31:00000000 LL_EXTI_EnableFallingTrig_0_31
+     /tmp/cc6TegyB.s:218    .text.LL_EXTI_EnableFallingTrig_0_31:0000001c $d
+     /tmp/cc6TegyB.s:221    .text.LL_EXTI_DisableFallingTrig_0_31:00000000 $t
+     /tmp/cc6TegyB.s:226    .text.LL_EXTI_DisableFallingTrig_0_31:00000000 LL_EXTI_DisableFallingTrig_0_31
+     /tmp/cc6TegyB.s:248    .text.LL_EXTI_DisableFallingTrig_0_31:00000020 $d
+     /tmp/cc6TegyB.s:251    .text.LL_EXTI_DeInit:00000000 $t
+     /tmp/cc6TegyB.s:257    .text.LL_EXTI_DeInit:00000000 LL_EXTI_DeInit
+     /tmp/cc6TegyB.s:288    .text.LL_EXTI_DeInit:00000030 $d
+     /tmp/cc6TegyB.s:293    .text.LL_EXTI_Init:00000000 $t
+     /tmp/cc6TegyB.s:299    .text.LL_EXTI_Init:00000000 LL_EXTI_Init
+     /tmp/cc6TegyB.s:439    .text.LL_EXTI_StructInit:00000000 $t
+     /tmp/cc6TegyB.s:445    .text.LL_EXTI_StructInit:00000000 LL_EXTI_StructInit
+
+NO UNDEFINED SYMBOLS

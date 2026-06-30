@@ -1,0 +1,227 @@
+ARM GAS  /tmp/ccAFmAlN.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"system_stm32f0xx.c"
+  13              		.text
+  14              		.global	SystemCoreClock
+  15              		.section	.data.SystemCoreClock,"aw"
+  16              		.align	2
+  19              	SystemCoreClock:
+  20 0000 00127A00 		.word	8000000
+  21              		.global	AHBPrescTable
+  22              		.section	.rodata.AHBPrescTable,"a"
+  23              		.align	2
+  26              	AHBPrescTable:
+  27 0000 00000000 		.ascii	"\000\000\000\000\000\000\000\000\001\002\003\004\006"
+  27      00000000 
+  27      01020304 
+  27      06
+  28 000d 070809   		.ascii	"\007\010\011"
+  29              		.global	APBPrescTable
+  30              		.section	.rodata.APBPrescTable,"a"
+  31              		.align	2
+  34              	APBPrescTable:
+  35 0000 00000000 		.ascii	"\000\000\000\000\001\002\003\004"
+  35      01020304 
+  36              		.section	.text.SystemInit,"ax",%progbits
+  37              		.align	1
+  38              		.global	SystemInit
+  39              		.syntax unified
+  40              		.code	16
+  41              		.thumb_func
+  43              	SystemInit:
+  44              		@ args = 0, pretend = 0, frame = 0
+  45              		@ frame_needed = 1, uses_anonymous_args = 0
+  46 0000 80B5     		push	{r7, lr}
+  47 0002 00AF     		add	r7, sp, #0
+  48 0004 C046     		nop
+  49 0006 BD46     		mov	sp, r7
+  50              		@ sp needed
+  51 0008 80BD     		pop	{r7, pc}
+  53              		.section	.text.SystemCoreClockUpdate,"ax",%progbits
+  54              		.align	1
+  55              		.global	SystemCoreClockUpdate
+  56              		.syntax unified
+  57              		.code	16
+  58              		.thumb_func
+  60              	SystemCoreClockUpdate:
+  61              		@ args = 0, pretend = 0, frame = 16
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  /tmp/ccAFmAlN.s 			page 2
+
+
+  63 0000 80B5     		push	{r7, lr}
+  64 0002 84B0     		sub	sp, sp, #16
+  65 0004 00AF     		add	r7, sp, #0
+  66 0006 0023     		movs	r3, #0
+  67 0008 FB60     		str	r3, [r7, #12]
+  68 000a 0023     		movs	r3, #0
+  69 000c BB60     		str	r3, [r7, #8]
+  70 000e 0023     		movs	r3, #0
+  71 0010 7B60     		str	r3, [r7, #4]
+  72 0012 0023     		movs	r3, #0
+  73 0014 3B60     		str	r3, [r7]
+  74 0016 384B     		ldr	r3, .L11
+  75 0018 5B68     		ldr	r3, [r3, #4]
+  76 001a 0C22     		movs	r2, #12
+  77 001c 1340     		ands	r3, r2
+  78 001e FB60     		str	r3, [r7, #12]
+  79 0020 FB68     		ldr	r3, [r7, #12]
+  80 0022 082B     		cmp	r3, #8
+  81 0024 11D0     		beq	.L3
+  82 0026 FB68     		ldr	r3, [r7, #12]
+  83 0028 082B     		cmp	r3, #8
+  84 002a 4FD8     		bhi	.L4
+  85 002c FB68     		ldr	r3, [r7, #12]
+  86 002e 002B     		cmp	r3, #0
+  87 0030 03D0     		beq	.L5
+  88 0032 FB68     		ldr	r3, [r7, #12]
+  89 0034 042B     		cmp	r3, #4
+  90 0036 04D0     		beq	.L6
+  91 0038 48E0     		b	.L4
+  92              	.L5:
+  93 003a 304B     		ldr	r3, .L11+4
+  94 003c 304A     		ldr	r2, .L11+8
+  95 003e 1A60     		str	r2, [r3]
+  96 0040 48E0     		b	.L7
+  97              	.L6:
+  98 0042 2E4B     		ldr	r3, .L11+4
+  99 0044 2E4A     		ldr	r2, .L11+8
+ 100 0046 1A60     		str	r2, [r3]
+ 101 0048 44E0     		b	.L7
+ 102              	.L3:
+ 103 004a 2B4B     		ldr	r3, .L11
+ 104 004c 5A68     		ldr	r2, [r3, #4]
+ 105 004e F023     		movs	r3, #240
+ 106 0050 9B03     		lsls	r3, r3, #14
+ 107 0052 1340     		ands	r3, r2
+ 108 0054 BB60     		str	r3, [r7, #8]
+ 109 0056 284B     		ldr	r3, .L11
+ 110 0058 5A68     		ldr	r2, [r3, #4]
+ 111 005a C023     		movs	r3, #192
+ 112 005c 5B02     		lsls	r3, r3, #9
+ 113 005e 1340     		ands	r3, r2
+ 114 0060 7B60     		str	r3, [r7, #4]
+ 115 0062 BB68     		ldr	r3, [r7, #8]
+ 116 0064 9B0C     		lsrs	r3, r3, #18
+ 117 0066 0233     		adds	r3, r3, #2
+ 118 0068 BB60     		str	r3, [r7, #8]
+ 119 006a 234B     		ldr	r3, .L11
+ARM GAS  /tmp/ccAFmAlN.s 			page 3
+
+
+ 120 006c DB6A     		ldr	r3, [r3, #44]
+ 121 006e 0F22     		movs	r2, #15
+ 122 0070 1340     		ands	r3, r2
+ 123 0072 0133     		adds	r3, r3, #1
+ 124 0074 3B60     		str	r3, [r7]
+ 125 0076 7A68     		ldr	r2, [r7, #4]
+ 126 0078 8023     		movs	r3, #128
+ 127 007a 5B02     		lsls	r3, r3, #9
+ 128 007c 9A42     		cmp	r2, r3
+ 129 007e 0AD1     		bne	.L8
+ 130 0080 3968     		ldr	r1, [r7]
+ 131 0082 1F48     		ldr	r0, .L11+8
+ 132 0084 FFF7FEFF 		bl	__aeabi_uidiv
+ 133 0088 0300     		movs	r3, r0
+ 134 008a 1A00     		movs	r2, r3
+ 135 008c BB68     		ldr	r3, [r7, #8]
+ 136 008e 5A43     		muls	r2, r3
+ 137 0090 1A4B     		ldr	r3, .L11+4
+ 138 0092 1A60     		str	r2, [r3]
+ 139 0094 1EE0     		b	.L7
+ 140              	.L8:
+ 141 0096 7A68     		ldr	r2, [r7, #4]
+ 142 0098 C023     		movs	r3, #192
+ 143 009a 5B02     		lsls	r3, r3, #9
+ 144 009c 9A42     		cmp	r2, r3
+ 145 009e 0AD1     		bne	.L10
+ 146 00a0 3968     		ldr	r1, [r7]
+ 147 00a2 1848     		ldr	r0, .L11+12
+ 148 00a4 FFF7FEFF 		bl	__aeabi_uidiv
+ 149 00a8 0300     		movs	r3, r0
+ 150 00aa 1A00     		movs	r2, r3
+ 151 00ac BB68     		ldr	r3, [r7, #8]
+ 152 00ae 5A43     		muls	r2, r3
+ 153 00b0 124B     		ldr	r3, .L11+4
+ 154 00b2 1A60     		str	r2, [r3]
+ 155 00b4 0EE0     		b	.L7
+ 156              	.L10:
+ 157 00b6 3968     		ldr	r1, [r7]
+ 158 00b8 1148     		ldr	r0, .L11+8
+ 159 00ba FFF7FEFF 		bl	__aeabi_uidiv
+ 160 00be 0300     		movs	r3, r0
+ 161 00c0 1A00     		movs	r2, r3
+ 162 00c2 BB68     		ldr	r3, [r7, #8]
+ 163 00c4 5A43     		muls	r2, r3
+ 164 00c6 0D4B     		ldr	r3, .L11+4
+ 165 00c8 1A60     		str	r2, [r3]
+ 166 00ca 03E0     		b	.L7
+ 167              	.L4:
+ 168 00cc 0B4B     		ldr	r3, .L11+4
+ 169 00ce 0C4A     		ldr	r2, .L11+8
+ 170 00d0 1A60     		str	r2, [r3]
+ 171 00d2 C046     		nop
+ 172              	.L7:
+ 173 00d4 084B     		ldr	r3, .L11
+ 174 00d6 5B68     		ldr	r3, [r3, #4]
+ 175 00d8 1B09     		lsrs	r3, r3, #4
+ 176 00da 0F22     		movs	r2, #15
+ARM GAS  /tmp/ccAFmAlN.s 			page 4
+
+
+ 177 00dc 1340     		ands	r3, r2
+ 178 00de 0A4A     		ldr	r2, .L11+16
+ 179 00e0 D35C     		ldrb	r3, [r2, r3]
+ 180 00e2 FB60     		str	r3, [r7, #12]
+ 181 00e4 054B     		ldr	r3, .L11+4
+ 182 00e6 1A68     		ldr	r2, [r3]
+ 183 00e8 FB68     		ldr	r3, [r7, #12]
+ 184 00ea DA40     		lsrs	r2, r2, r3
+ 185 00ec 034B     		ldr	r3, .L11+4
+ 186 00ee 1A60     		str	r2, [r3]
+ 187 00f0 C046     		nop
+ 188 00f2 BD46     		mov	sp, r7
+ 189 00f4 04B0     		add	sp, sp, #16
+ 190              		@ sp needed
+ 191 00f6 80BD     		pop	{r7, pc}
+ 192              	.L12:
+ 193              		.align	2
+ 194              	.L11:
+ 195 00f8 00100240 		.word	1073876992
+ 196 00fc 00000000 		.word	SystemCoreClock
+ 197 0100 00127A00 		.word	8000000
+ 198 0104 006CDC02 		.word	48000000
+ 199 0108 00000000 		.word	AHBPrescTable
+ 201              		.global	__aeabi_uidiv
+ 202              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccAFmAlN.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 system_stm32f0xx.c
+     /tmp/ccAFmAlN.s:19     .data.SystemCoreClock:00000000 SystemCoreClock
+     /tmp/ccAFmAlN.s:16     .data.SystemCoreClock:00000000 $d
+     /tmp/ccAFmAlN.s:26     .rodata.AHBPrescTable:00000000 AHBPrescTable
+     /tmp/ccAFmAlN.s:23     .rodata.AHBPrescTable:00000000 $d
+     /tmp/ccAFmAlN.s:34     .rodata.APBPrescTable:00000000 APBPrescTable
+     /tmp/ccAFmAlN.s:31     .rodata.APBPrescTable:00000000 $d
+     /tmp/ccAFmAlN.s:37     .text.SystemInit:00000000 $t
+     /tmp/ccAFmAlN.s:43     .text.SystemInit:00000000 SystemInit
+     /tmp/ccAFmAlN.s:54     .text.SystemCoreClockUpdate:00000000 $t
+     /tmp/ccAFmAlN.s:60     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+     /tmp/ccAFmAlN.s:195    .text.SystemCoreClockUpdate:000000f8 $d
+
+UNDEFINED SYMBOLS
+__aeabi_uidiv

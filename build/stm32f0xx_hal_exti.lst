@@ -1,0 +1,748 @@
+ARM GAS  /tmp/ccy05Bbq.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"stm32f0xx_hal_exti.c"
+  13              		.text
+  14              		.section	.text.HAL_EXTI_SetConfigLine,"ax",%progbits
+  15              		.align	1
+  16              		.global	HAL_EXTI_SetConfigLine
+  17              		.syntax unified
+  18              		.code	16
+  19              		.thumb_func
+  21              	HAL_EXTI_SetConfigLine:
+  22              		@ args = 0, pretend = 0, frame = 24
+  23              		@ frame_needed = 1, uses_anonymous_args = 0
+  24 0000 80B5     		push	{r7, lr}
+  25 0002 86B0     		sub	sp, sp, #24
+  26 0004 00AF     		add	r7, sp, #0
+  27 0006 7860     		str	r0, [r7, #4]
+  28 0008 3960     		str	r1, [r7]
+  29 000a 7B68     		ldr	r3, [r7, #4]
+  30 000c 002B     		cmp	r3, #0
+  31 000e 02D0     		beq	.L2
+  32 0010 3B68     		ldr	r3, [r7]
+  33 0012 002B     		cmp	r3, #0
+  34 0014 01D1     		bne	.L3
+  35              	.L2:
+  36 0016 0123     		movs	r3, #1
+  37 0018 8DE0     		b	.L4
+  38              	.L3:
+  39 001a 3B68     		ldr	r3, [r7]
+  40 001c 1A68     		ldr	r2, [r3]
+  41 001e 7B68     		ldr	r3, [r7, #4]
+  42 0020 1A60     		str	r2, [r3]
+  43 0022 3B68     		ldr	r3, [r7]
+  44 0024 1B68     		ldr	r3, [r3]
+  45 0026 1F22     		movs	r2, #31
+  46 0028 1340     		ands	r3, r2
+  47 002a 7B61     		str	r3, [r7, #20]
+  48 002c 0122     		movs	r2, #1
+  49 002e 7B69     		ldr	r3, [r7, #20]
+  50 0030 9A40     		lsls	r2, r2, r3
+  51 0032 1300     		movs	r3, r2
+  52 0034 3B61     		str	r3, [r7, #16]
+  53 0036 3B68     		ldr	r3, [r7]
+  54 0038 1A68     		ldr	r2, [r3]
+  55 003a 8023     		movs	r3, #128
+  56 003c 9B04     		lsls	r3, r3, #18
+  57 003e 1340     		ands	r3, r2
+  58 0040 52D0     		beq	.L5
+ARM GAS  /tmp/ccy05Bbq.s 			page 2
+
+
+  59 0042 3B68     		ldr	r3, [r7]
+  60 0044 9B68     		ldr	r3, [r3, #8]
+  61 0046 0122     		movs	r2, #1
+  62 0048 1340     		ands	r3, r2
+  63 004a 06D0     		beq	.L6
+  64 004c 3C4B     		ldr	r3, .L14
+  65 004e 9968     		ldr	r1, [r3, #8]
+  66 0050 3B4B     		ldr	r3, .L14
+  67 0052 3A69     		ldr	r2, [r7, #16]
+  68 0054 0A43     		orrs	r2, r1
+  69 0056 9A60     		str	r2, [r3, #8]
+  70 0058 06E0     		b	.L7
+  71              	.L6:
+  72 005a 394B     		ldr	r3, .L14
+  73 005c 9A68     		ldr	r2, [r3, #8]
+  74 005e 3B69     		ldr	r3, [r7, #16]
+  75 0060 D943     		mvns	r1, r3
+  76 0062 374B     		ldr	r3, .L14
+  77 0064 0A40     		ands	r2, r1
+  78 0066 9A60     		str	r2, [r3, #8]
+  79              	.L7:
+  80 0068 3B68     		ldr	r3, [r7]
+  81 006a 9B68     		ldr	r3, [r3, #8]
+  82 006c 0222     		movs	r2, #2
+  83 006e 1340     		ands	r3, r2
+  84 0070 06D0     		beq	.L8
+  85 0072 334B     		ldr	r3, .L14
+  86 0074 D968     		ldr	r1, [r3, #12]
+  87 0076 324B     		ldr	r3, .L14
+  88 0078 3A69     		ldr	r2, [r7, #16]
+  89 007a 0A43     		orrs	r2, r1
+  90 007c DA60     		str	r2, [r3, #12]
+  91 007e 06E0     		b	.L9
+  92              	.L8:
+  93 0080 2F4B     		ldr	r3, .L14
+  94 0082 DA68     		ldr	r2, [r3, #12]
+  95 0084 3B69     		ldr	r3, [r7, #16]
+  96 0086 D943     		mvns	r1, r3
+  97 0088 2D4B     		ldr	r3, .L14
+  98 008a 0A40     		ands	r2, r1
+  99 008c DA60     		str	r2, [r3, #12]
+ 100              	.L9:
+ 101 008e 3B68     		ldr	r3, [r7]
+ 102 0090 1A68     		ldr	r2, [r3]
+ 103 0092 C023     		movs	r3, #192
+ 104 0094 DB04     		lsls	r3, r3, #19
+ 105 0096 1A40     		ands	r2, r3
+ 106 0098 C023     		movs	r3, #192
+ 107 009a DB04     		lsls	r3, r3, #19
+ 108 009c 9A42     		cmp	r2, r3
+ 109 009e 23D1     		bne	.L5
+ 110 00a0 284A     		ldr	r2, .L14+4
+ 111 00a2 7B69     		ldr	r3, [r7, #20]
+ 112 00a4 9B08     		lsrs	r3, r3, #2
+ 113 00a6 0233     		adds	r3, r3, #2
+ 114 00a8 9B00     		lsls	r3, r3, #2
+ 115 00aa 9B58     		ldr	r3, [r3, r2]
+ARM GAS  /tmp/ccy05Bbq.s 			page 3
+
+
+ 116 00ac FB60     		str	r3, [r7, #12]
+ 117 00ae 7B69     		ldr	r3, [r7, #20]
+ 118 00b0 0322     		movs	r2, #3
+ 119 00b2 1340     		ands	r3, r2
+ 120 00b4 9B00     		lsls	r3, r3, #2
+ 121 00b6 0F22     		movs	r2, #15
+ 122 00b8 9A40     		lsls	r2, r2, r3
+ 123 00ba 1300     		movs	r3, r2
+ 124 00bc DA43     		mvns	r2, r3
+ 125 00be FB68     		ldr	r3, [r7, #12]
+ 126 00c0 1340     		ands	r3, r2
+ 127 00c2 FB60     		str	r3, [r7, #12]
+ 128 00c4 3B68     		ldr	r3, [r7]
+ 129 00c6 DA68     		ldr	r2, [r3, #12]
+ 130 00c8 7B69     		ldr	r3, [r7, #20]
+ 131 00ca 0321     		movs	r1, #3
+ 132 00cc 0B40     		ands	r3, r1
+ 133 00ce 9B00     		lsls	r3, r3, #2
+ 134 00d0 9A40     		lsls	r2, r2, r3
+ 135 00d2 1300     		movs	r3, r2
+ 136 00d4 FA68     		ldr	r2, [r7, #12]
+ 137 00d6 1343     		orrs	r3, r2
+ 138 00d8 FB60     		str	r3, [r7, #12]
+ 139 00da 1A49     		ldr	r1, .L14+4
+ 140 00dc 7B69     		ldr	r3, [r7, #20]
+ 141 00de 9B08     		lsrs	r3, r3, #2
+ 142 00e0 0233     		adds	r3, r3, #2
+ 143 00e2 9B00     		lsls	r3, r3, #2
+ 144 00e4 FA68     		ldr	r2, [r7, #12]
+ 145 00e6 5A50     		str	r2, [r3, r1]
+ 146              	.L5:
+ 147 00e8 3B68     		ldr	r3, [r7]
+ 148 00ea 5B68     		ldr	r3, [r3, #4]
+ 149 00ec 0122     		movs	r2, #1
+ 150 00ee 1340     		ands	r3, r2
+ 151 00f0 06D0     		beq	.L10
+ 152 00f2 134B     		ldr	r3, .L14
+ 153 00f4 1968     		ldr	r1, [r3]
+ 154 00f6 124B     		ldr	r3, .L14
+ 155 00f8 3A69     		ldr	r2, [r7, #16]
+ 156 00fa 0A43     		orrs	r2, r1
+ 157 00fc 1A60     		str	r2, [r3]
+ 158 00fe 06E0     		b	.L11
+ 159              	.L10:
+ 160 0100 0F4B     		ldr	r3, .L14
+ 161 0102 1A68     		ldr	r2, [r3]
+ 162 0104 3B69     		ldr	r3, [r7, #16]
+ 163 0106 D943     		mvns	r1, r3
+ 164 0108 0D4B     		ldr	r3, .L14
+ 165 010a 0A40     		ands	r2, r1
+ 166 010c 1A60     		str	r2, [r3]
+ 167              	.L11:
+ 168 010e 3B68     		ldr	r3, [r7]
+ 169 0110 5B68     		ldr	r3, [r3, #4]
+ 170 0112 0222     		movs	r2, #2
+ 171 0114 1340     		ands	r3, r2
+ 172 0116 06D0     		beq	.L12
+ARM GAS  /tmp/ccy05Bbq.s 			page 4
+
+
+ 173 0118 094B     		ldr	r3, .L14
+ 174 011a 5968     		ldr	r1, [r3, #4]
+ 175 011c 084B     		ldr	r3, .L14
+ 176 011e 3A69     		ldr	r2, [r7, #16]
+ 177 0120 0A43     		orrs	r2, r1
+ 178 0122 5A60     		str	r2, [r3, #4]
+ 179 0124 06E0     		b	.L13
+ 180              	.L12:
+ 181 0126 064B     		ldr	r3, .L14
+ 182 0128 5A68     		ldr	r2, [r3, #4]
+ 183 012a 3B69     		ldr	r3, [r7, #16]
+ 184 012c D943     		mvns	r1, r3
+ 185 012e 044B     		ldr	r3, .L14
+ 186 0130 0A40     		ands	r2, r1
+ 187 0132 5A60     		str	r2, [r3, #4]
+ 188              	.L13:
+ 189 0134 0023     		movs	r3, #0
+ 190              	.L4:
+ 191 0136 1800     		movs	r0, r3
+ 192 0138 BD46     		mov	sp, r7
+ 193 013a 06B0     		add	sp, sp, #24
+ 194              		@ sp needed
+ 195 013c 80BD     		pop	{r7, pc}
+ 196              	.L15:
+ 197 013e C046     		.align	2
+ 198              	.L14:
+ 199 0140 00040140 		.word	1073808384
+ 200 0144 00000140 		.word	1073807360
+ 202              		.section	.text.HAL_EXTI_GetConfigLine,"ax",%progbits
+ 203              		.align	1
+ 204              		.global	HAL_EXTI_GetConfigLine
+ 205              		.syntax unified
+ 206              		.code	16
+ 207              		.thumb_func
+ 209              	HAL_EXTI_GetConfigLine:
+ 210              		@ args = 0, pretend = 0, frame = 24
+ 211              		@ frame_needed = 1, uses_anonymous_args = 0
+ 212 0000 80B5     		push	{r7, lr}
+ 213 0002 86B0     		sub	sp, sp, #24
+ 214 0004 00AF     		add	r7, sp, #0
+ 215 0006 7860     		str	r0, [r7, #4]
+ 216 0008 3960     		str	r1, [r7]
+ 217 000a 7B68     		ldr	r3, [r7, #4]
+ 218 000c 002B     		cmp	r3, #0
+ 219 000e 02D0     		beq	.L17
+ 220 0010 3B68     		ldr	r3, [r7]
+ 221 0012 002B     		cmp	r3, #0
+ 222 0014 01D1     		bne	.L18
+ 223              	.L17:
+ 224 0016 0123     		movs	r3, #1
+ 225 0018 5FE0     		b	.L19
+ 226              	.L18:
+ 227 001a 7B68     		ldr	r3, [r7, #4]
+ 228 001c 1A68     		ldr	r2, [r3]
+ 229 001e 3B68     		ldr	r3, [r7]
+ 230 0020 1A60     		str	r2, [r3]
+ 231 0022 3B68     		ldr	r3, [r7]
+ARM GAS  /tmp/ccy05Bbq.s 			page 5
+
+
+ 232 0024 1B68     		ldr	r3, [r3]
+ 233 0026 1F22     		movs	r2, #31
+ 234 0028 1340     		ands	r3, r2
+ 235 002a 7B61     		str	r3, [r7, #20]
+ 236 002c 0122     		movs	r2, #1
+ 237 002e 7B69     		ldr	r3, [r7, #20]
+ 238 0030 9A40     		lsls	r2, r2, r3
+ 239 0032 1300     		movs	r3, r2
+ 240 0034 3B61     		str	r3, [r7, #16]
+ 241 0036 2B4B     		ldr	r3, .L26
+ 242 0038 1B68     		ldr	r3, [r3]
+ 243 003a 3A69     		ldr	r2, [r7, #16]
+ 244 003c 1340     		ands	r3, r2
+ 245 003e 03D0     		beq	.L20
+ 246 0040 3B68     		ldr	r3, [r7]
+ 247 0042 0122     		movs	r2, #1
+ 248 0044 5A60     		str	r2, [r3, #4]
+ 249 0046 02E0     		b	.L21
+ 250              	.L20:
+ 251 0048 3B68     		ldr	r3, [r7]
+ 252 004a 0022     		movs	r2, #0
+ 253 004c 5A60     		str	r2, [r3, #4]
+ 254              	.L21:
+ 255 004e 254B     		ldr	r3, .L26
+ 256 0050 5B68     		ldr	r3, [r3, #4]
+ 257 0052 3A69     		ldr	r2, [r7, #16]
+ 258 0054 1340     		ands	r3, r2
+ 259 0056 05D0     		beq	.L22
+ 260 0058 3B68     		ldr	r3, [r7]
+ 261 005a 5B68     		ldr	r3, [r3, #4]
+ 262 005c 0222     		movs	r2, #2
+ 263 005e 1A43     		orrs	r2, r3
+ 264 0060 3B68     		ldr	r3, [r7]
+ 265 0062 5A60     		str	r2, [r3, #4]
+ 266              	.L22:
+ 267 0064 3B68     		ldr	r3, [r7]
+ 268 0066 0022     		movs	r2, #0
+ 269 0068 9A60     		str	r2, [r3, #8]
+ 270 006a 3B68     		ldr	r3, [r7]
+ 271 006c 0022     		movs	r2, #0
+ 272 006e DA60     		str	r2, [r3, #12]
+ 273 0070 3B68     		ldr	r3, [r7]
+ 274 0072 1A68     		ldr	r2, [r3]
+ 275 0074 8023     		movs	r3, #128
+ 276 0076 9B04     		lsls	r3, r3, #18
+ 277 0078 1340     		ands	r3, r2
+ 278 007a 2DD0     		beq	.L23
+ 279 007c 194B     		ldr	r3, .L26
+ 280 007e 9B68     		ldr	r3, [r3, #8]
+ 281 0080 3A69     		ldr	r2, [r7, #16]
+ 282 0082 1340     		ands	r3, r2
+ 283 0084 02D0     		beq	.L24
+ 284 0086 3B68     		ldr	r3, [r7]
+ 285 0088 0122     		movs	r2, #1
+ 286 008a 9A60     		str	r2, [r3, #8]
+ 287              	.L24:
+ 288 008c 154B     		ldr	r3, .L26
+ARM GAS  /tmp/ccy05Bbq.s 			page 6
+
+
+ 289 008e DB68     		ldr	r3, [r3, #12]
+ 290 0090 3A69     		ldr	r2, [r7, #16]
+ 291 0092 1340     		ands	r3, r2
+ 292 0094 05D0     		beq	.L25
+ 293 0096 3B68     		ldr	r3, [r7]
+ 294 0098 9B68     		ldr	r3, [r3, #8]
+ 295 009a 0222     		movs	r2, #2
+ 296 009c 1A43     		orrs	r2, r3
+ 297 009e 3B68     		ldr	r3, [r7]
+ 298 00a0 9A60     		str	r2, [r3, #8]
+ 299              	.L25:
+ 300 00a2 3B68     		ldr	r3, [r7]
+ 301 00a4 1A68     		ldr	r2, [r3]
+ 302 00a6 C023     		movs	r3, #192
+ 303 00a8 DB04     		lsls	r3, r3, #19
+ 304 00aa 1A40     		ands	r2, r3
+ 305 00ac C023     		movs	r3, #192
+ 306 00ae DB04     		lsls	r3, r3, #19
+ 307 00b0 9A42     		cmp	r2, r3
+ 308 00b2 11D1     		bne	.L23
+ 309 00b4 0C4A     		ldr	r2, .L26+4
+ 310 00b6 7B69     		ldr	r3, [r7, #20]
+ 311 00b8 9B08     		lsrs	r3, r3, #2
+ 312 00ba 0233     		adds	r3, r3, #2
+ 313 00bc 9B00     		lsls	r3, r3, #2
+ 314 00be 9B58     		ldr	r3, [r3, r2]
+ 315 00c0 FB60     		str	r3, [r7, #12]
+ 316 00c2 7B69     		ldr	r3, [r7, #20]
+ 317 00c4 0322     		movs	r2, #3
+ 318 00c6 1340     		ands	r3, r2
+ 319 00c8 9B00     		lsls	r3, r3, #2
+ 320 00ca FA68     		ldr	r2, [r7, #12]
+ 321 00cc DA40     		lsrs	r2, r2, r3
+ 322 00ce 1300     		movs	r3, r2
+ 323 00d0 0F22     		movs	r2, #15
+ 324 00d2 1A40     		ands	r2, r3
+ 325 00d4 3B68     		ldr	r3, [r7]
+ 326 00d6 DA60     		str	r2, [r3, #12]
+ 327              	.L23:
+ 328 00d8 0023     		movs	r3, #0
+ 329              	.L19:
+ 330 00da 1800     		movs	r0, r3
+ 331 00dc BD46     		mov	sp, r7
+ 332 00de 06B0     		add	sp, sp, #24
+ 333              		@ sp needed
+ 334 00e0 80BD     		pop	{r7, pc}
+ 335              	.L27:
+ 336 00e2 C046     		.align	2
+ 337              	.L26:
+ 338 00e4 00040140 		.word	1073808384
+ 339 00e8 00000140 		.word	1073807360
+ 341              		.section	.text.HAL_EXTI_ClearConfigLine,"ax",%progbits
+ 342              		.align	1
+ 343              		.global	HAL_EXTI_ClearConfigLine
+ 344              		.syntax unified
+ 345              		.code	16
+ 346              		.thumb_func
+ARM GAS  /tmp/ccy05Bbq.s 			page 7
+
+
+ 348              	HAL_EXTI_ClearConfigLine:
+ 349              		@ args = 0, pretend = 0, frame = 24
+ 350              		@ frame_needed = 1, uses_anonymous_args = 0
+ 351 0000 80B5     		push	{r7, lr}
+ 352 0002 86B0     		sub	sp, sp, #24
+ 353 0004 00AF     		add	r7, sp, #0
+ 354 0006 7860     		str	r0, [r7, #4]
+ 355 0008 7B68     		ldr	r3, [r7, #4]
+ 356 000a 002B     		cmp	r3, #0
+ 357 000c 01D1     		bne	.L29
+ 358 000e 0123     		movs	r3, #1
+ 359 0010 4EE0     		b	.L30
+ 360              	.L29:
+ 361 0012 7B68     		ldr	r3, [r7, #4]
+ 362 0014 1B68     		ldr	r3, [r3]
+ 363 0016 1F22     		movs	r2, #31
+ 364 0018 1340     		ands	r3, r2
+ 365 001a 7B61     		str	r3, [r7, #20]
+ 366 001c 0122     		movs	r2, #1
+ 367 001e 7B69     		ldr	r3, [r7, #20]
+ 368 0020 9A40     		lsls	r2, r2, r3
+ 369 0022 1300     		movs	r3, r2
+ 370 0024 3B61     		str	r3, [r7, #16]
+ 371 0026 244B     		ldr	r3, .L32
+ 372 0028 1A68     		ldr	r2, [r3]
+ 373 002a 3B69     		ldr	r3, [r7, #16]
+ 374 002c D943     		mvns	r1, r3
+ 375 002e 224B     		ldr	r3, .L32
+ 376 0030 0A40     		ands	r2, r1
+ 377 0032 1A60     		str	r2, [r3]
+ 378 0034 204B     		ldr	r3, .L32
+ 379 0036 5A68     		ldr	r2, [r3, #4]
+ 380 0038 3B69     		ldr	r3, [r7, #16]
+ 381 003a D943     		mvns	r1, r3
+ 382 003c 1E4B     		ldr	r3, .L32
+ 383 003e 0A40     		ands	r2, r1
+ 384 0040 5A60     		str	r2, [r3, #4]
+ 385 0042 7B68     		ldr	r3, [r7, #4]
+ 386 0044 1A68     		ldr	r2, [r3]
+ 387 0046 8023     		movs	r3, #128
+ 388 0048 9B04     		lsls	r3, r3, #18
+ 389 004a 1340     		ands	r3, r2
+ 390 004c 2FD0     		beq	.L31
+ 391 004e 1A4B     		ldr	r3, .L32
+ 392 0050 9A68     		ldr	r2, [r3, #8]
+ 393 0052 3B69     		ldr	r3, [r7, #16]
+ 394 0054 D943     		mvns	r1, r3
+ 395 0056 184B     		ldr	r3, .L32
+ 396 0058 0A40     		ands	r2, r1
+ 397 005a 9A60     		str	r2, [r3, #8]
+ 398 005c 164B     		ldr	r3, .L32
+ 399 005e DA68     		ldr	r2, [r3, #12]
+ 400 0060 3B69     		ldr	r3, [r7, #16]
+ 401 0062 D943     		mvns	r1, r3
+ 402 0064 144B     		ldr	r3, .L32
+ 403 0066 0A40     		ands	r2, r1
+ 404 0068 DA60     		str	r2, [r3, #12]
+ARM GAS  /tmp/ccy05Bbq.s 			page 8
+
+
+ 405 006a 7B68     		ldr	r3, [r7, #4]
+ 406 006c 1A68     		ldr	r2, [r3]
+ 407 006e C023     		movs	r3, #192
+ 408 0070 DB04     		lsls	r3, r3, #19
+ 409 0072 1A40     		ands	r2, r3
+ 410 0074 C023     		movs	r3, #192
+ 411 0076 DB04     		lsls	r3, r3, #19
+ 412 0078 9A42     		cmp	r2, r3
+ 413 007a 18D1     		bne	.L31
+ 414 007c 0F4A     		ldr	r2, .L32+4
+ 415 007e 7B69     		ldr	r3, [r7, #20]
+ 416 0080 9B08     		lsrs	r3, r3, #2
+ 417 0082 0233     		adds	r3, r3, #2
+ 418 0084 9B00     		lsls	r3, r3, #2
+ 419 0086 9B58     		ldr	r3, [r3, r2]
+ 420 0088 FB60     		str	r3, [r7, #12]
+ 421 008a 7B69     		ldr	r3, [r7, #20]
+ 422 008c 0322     		movs	r2, #3
+ 423 008e 1340     		ands	r3, r2
+ 424 0090 9B00     		lsls	r3, r3, #2
+ 425 0092 0F22     		movs	r2, #15
+ 426 0094 9A40     		lsls	r2, r2, r3
+ 427 0096 1300     		movs	r3, r2
+ 428 0098 DA43     		mvns	r2, r3
+ 429 009a FB68     		ldr	r3, [r7, #12]
+ 430 009c 1340     		ands	r3, r2
+ 431 009e FB60     		str	r3, [r7, #12]
+ 432 00a0 0649     		ldr	r1, .L32+4
+ 433 00a2 7B69     		ldr	r3, [r7, #20]
+ 434 00a4 9B08     		lsrs	r3, r3, #2
+ 435 00a6 0233     		adds	r3, r3, #2
+ 436 00a8 9B00     		lsls	r3, r3, #2
+ 437 00aa FA68     		ldr	r2, [r7, #12]
+ 438 00ac 5A50     		str	r2, [r3, r1]
+ 439              	.L31:
+ 440 00ae 0023     		movs	r3, #0
+ 441              	.L30:
+ 442 00b0 1800     		movs	r0, r3
+ 443 00b2 BD46     		mov	sp, r7
+ 444 00b4 06B0     		add	sp, sp, #24
+ 445              		@ sp needed
+ 446 00b6 80BD     		pop	{r7, pc}
+ 447              	.L33:
+ 448              		.align	2
+ 449              	.L32:
+ 450 00b8 00040140 		.word	1073808384
+ 451 00bc 00000140 		.word	1073807360
+ 453              		.section	.text.HAL_EXTI_RegisterCallback,"ax",%progbits
+ 454              		.align	1
+ 455              		.global	HAL_EXTI_RegisterCallback
+ 456              		.syntax unified
+ 457              		.code	16
+ 458              		.thumb_func
+ 460              	HAL_EXTI_RegisterCallback:
+ 461              		@ args = 0, pretend = 0, frame = 24
+ 462              		@ frame_needed = 1, uses_anonymous_args = 0
+ 463 0000 80B5     		push	{r7, lr}
+ARM GAS  /tmp/ccy05Bbq.s 			page 9
+
+
+ 464 0002 86B0     		sub	sp, sp, #24
+ 465 0004 00AF     		add	r7, sp, #0
+ 466 0006 F860     		str	r0, [r7, #12]
+ 467 0008 7A60     		str	r2, [r7, #4]
+ 468 000a 0B20     		movs	r0, #11
+ 469 000c 3B18     		adds	r3, r7, r0
+ 470 000e 0A1C     		adds	r2, r1, #0
+ 471 0010 1A70     		strb	r2, [r3]
+ 472 0012 1723     		movs	r3, #23
+ 473 0014 FB18     		adds	r3, r7, r3
+ 474 0016 0022     		movs	r2, #0
+ 475 0018 1A70     		strb	r2, [r3]
+ 476 001a 3B18     		adds	r3, r7, r0
+ 477 001c 1B78     		ldrb	r3, [r3]
+ 478 001e 002B     		cmp	r3, #0
+ 479 0020 03D1     		bne	.L35
+ 480 0022 FB68     		ldr	r3, [r7, #12]
+ 481 0024 7A68     		ldr	r2, [r7, #4]
+ 482 0026 5A60     		str	r2, [r3, #4]
+ 483 0028 04E0     		b	.L36
+ 484              	.L35:
+ 485 002a 1723     		movs	r3, #23
+ 486 002c FB18     		adds	r3, r7, r3
+ 487 002e 0122     		movs	r2, #1
+ 488 0030 1A70     		strb	r2, [r3]
+ 489 0032 C046     		nop
+ 490              	.L36:
+ 491 0034 1723     		movs	r3, #23
+ 492 0036 FB18     		adds	r3, r7, r3
+ 493 0038 1B78     		ldrb	r3, [r3]
+ 494 003a 1800     		movs	r0, r3
+ 495 003c BD46     		mov	sp, r7
+ 496 003e 06B0     		add	sp, sp, #24
+ 497              		@ sp needed
+ 498 0040 80BD     		pop	{r7, pc}
+ 500              		.section	.text.HAL_EXTI_GetHandle,"ax",%progbits
+ 501              		.align	1
+ 502              		.global	HAL_EXTI_GetHandle
+ 503              		.syntax unified
+ 504              		.code	16
+ 505              		.thumb_func
+ 507              	HAL_EXTI_GetHandle:
+ 508              		@ args = 0, pretend = 0, frame = 8
+ 509              		@ frame_needed = 1, uses_anonymous_args = 0
+ 510 0000 80B5     		push	{r7, lr}
+ 511 0002 82B0     		sub	sp, sp, #8
+ 512 0004 00AF     		add	r7, sp, #0
+ 513 0006 7860     		str	r0, [r7, #4]
+ 514 0008 3960     		str	r1, [r7]
+ 515 000a 7B68     		ldr	r3, [r7, #4]
+ 516 000c 002B     		cmp	r3, #0
+ 517 000e 01D1     		bne	.L39
+ 518 0010 0123     		movs	r3, #1
+ 519 0012 03E0     		b	.L40
+ 520              	.L39:
+ 521 0014 7B68     		ldr	r3, [r7, #4]
+ 522 0016 3A68     		ldr	r2, [r7]
+ARM GAS  /tmp/ccy05Bbq.s 			page 10
+
+
+ 523 0018 1A60     		str	r2, [r3]
+ 524 001a 0023     		movs	r3, #0
+ 525              	.L40:
+ 526 001c 1800     		movs	r0, r3
+ 527 001e BD46     		mov	sp, r7
+ 528 0020 02B0     		add	sp, sp, #8
+ 529              		@ sp needed
+ 530 0022 80BD     		pop	{r7, pc}
+ 532              		.section	.text.HAL_EXTI_IRQHandler,"ax",%progbits
+ 533              		.align	1
+ 534              		.global	HAL_EXTI_IRQHandler
+ 535              		.syntax unified
+ 536              		.code	16
+ 537              		.thumb_func
+ 539              	HAL_EXTI_IRQHandler:
+ 540              		@ args = 0, pretend = 0, frame = 16
+ 541              		@ frame_needed = 1, uses_anonymous_args = 0
+ 542 0000 80B5     		push	{r7, lr}
+ 543 0002 84B0     		sub	sp, sp, #16
+ 544 0004 00AF     		add	r7, sp, #0
+ 545 0006 7860     		str	r0, [r7, #4]
+ 546 0008 7B68     		ldr	r3, [r7, #4]
+ 547 000a 1B68     		ldr	r3, [r3]
+ 548 000c 1F22     		movs	r2, #31
+ 549 000e 1340     		ands	r3, r2
+ 550 0010 0122     		movs	r2, #1
+ 551 0012 9A40     		lsls	r2, r2, r3
+ 552 0014 1300     		movs	r3, r2
+ 553 0016 FB60     		str	r3, [r7, #12]
+ 554 0018 0A4B     		ldr	r3, .L44
+ 555 001a 5A69     		ldr	r2, [r3, #20]
+ 556 001c FB68     		ldr	r3, [r7, #12]
+ 557 001e 1340     		ands	r3, r2
+ 558 0020 BB60     		str	r3, [r7, #8]
+ 559 0022 BB68     		ldr	r3, [r7, #8]
+ 560 0024 002B     		cmp	r3, #0
+ 561 0026 09D0     		beq	.L43
+ 562 0028 064B     		ldr	r3, .L44
+ 563 002a FA68     		ldr	r2, [r7, #12]
+ 564 002c 5A61     		str	r2, [r3, #20]
+ 565 002e 7B68     		ldr	r3, [r7, #4]
+ 566 0030 5B68     		ldr	r3, [r3, #4]
+ 567 0032 002B     		cmp	r3, #0
+ 568 0034 02D0     		beq	.L43
+ 569 0036 7B68     		ldr	r3, [r7, #4]
+ 570 0038 5B68     		ldr	r3, [r3, #4]
+ 571 003a 9847     		blx	r3
+ 572              	.L43:
+ 573 003c C046     		nop
+ 574 003e BD46     		mov	sp, r7
+ 575 0040 04B0     		add	sp, sp, #16
+ 576              		@ sp needed
+ 577 0042 80BD     		pop	{r7, pc}
+ 578              	.L45:
+ 579              		.align	2
+ 580              	.L44:
+ 581 0044 00040140 		.word	1073808384
+ARM GAS  /tmp/ccy05Bbq.s 			page 11
+
+
+ 583              		.section	.text.HAL_EXTI_GetPending,"ax",%progbits
+ 584              		.align	1
+ 585              		.global	HAL_EXTI_GetPending
+ 586              		.syntax unified
+ 587              		.code	16
+ 588              		.thumb_func
+ 590              	HAL_EXTI_GetPending:
+ 591              		@ args = 0, pretend = 0, frame = 24
+ 592              		@ frame_needed = 1, uses_anonymous_args = 0
+ 593 0000 80B5     		push	{r7, lr}
+ 594 0002 86B0     		sub	sp, sp, #24
+ 595 0004 00AF     		add	r7, sp, #0
+ 596 0006 7860     		str	r0, [r7, #4]
+ 597 0008 3960     		str	r1, [r7]
+ 598 000a 7B68     		ldr	r3, [r7, #4]
+ 599 000c 1B68     		ldr	r3, [r3]
+ 600 000e 1F22     		movs	r2, #31
+ 601 0010 1340     		ands	r3, r2
+ 602 0012 7B61     		str	r3, [r7, #20]
+ 603 0014 0122     		movs	r2, #1
+ 604 0016 7B69     		ldr	r3, [r7, #20]
+ 605 0018 9A40     		lsls	r2, r2, r3
+ 606 001a 1300     		movs	r3, r2
+ 607 001c 3B61     		str	r3, [r7, #16]
+ 608 001e 064B     		ldr	r3, .L48
+ 609 0020 5B69     		ldr	r3, [r3, #20]
+ 610 0022 3A69     		ldr	r2, [r7, #16]
+ 611 0024 1A40     		ands	r2, r3
+ 612 0026 7B69     		ldr	r3, [r7, #20]
+ 613 0028 DA40     		lsrs	r2, r2, r3
+ 614 002a 1300     		movs	r3, r2
+ 615 002c FB60     		str	r3, [r7, #12]
+ 616 002e FB68     		ldr	r3, [r7, #12]
+ 617 0030 1800     		movs	r0, r3
+ 618 0032 BD46     		mov	sp, r7
+ 619 0034 06B0     		add	sp, sp, #24
+ 620              		@ sp needed
+ 621 0036 80BD     		pop	{r7, pc}
+ 622              	.L49:
+ 623              		.align	2
+ 624              	.L48:
+ 625 0038 00040140 		.word	1073808384
+ 627              		.section	.text.HAL_EXTI_ClearPending,"ax",%progbits
+ 628              		.align	1
+ 629              		.global	HAL_EXTI_ClearPending
+ 630              		.syntax unified
+ 631              		.code	16
+ 632              		.thumb_func
+ 634              	HAL_EXTI_ClearPending:
+ 635              		@ args = 0, pretend = 0, frame = 16
+ 636              		@ frame_needed = 1, uses_anonymous_args = 0
+ 637 0000 80B5     		push	{r7, lr}
+ 638 0002 84B0     		sub	sp, sp, #16
+ 639 0004 00AF     		add	r7, sp, #0
+ 640 0006 7860     		str	r0, [r7, #4]
+ 641 0008 3960     		str	r1, [r7]
+ 642 000a 7B68     		ldr	r3, [r7, #4]
+ARM GAS  /tmp/ccy05Bbq.s 			page 12
+
+
+ 643 000c 1B68     		ldr	r3, [r3]
+ 644 000e 1F22     		movs	r2, #31
+ 645 0010 1340     		ands	r3, r2
+ 646 0012 0122     		movs	r2, #1
+ 647 0014 9A40     		lsls	r2, r2, r3
+ 648 0016 1300     		movs	r3, r2
+ 649 0018 FB60     		str	r3, [r7, #12]
+ 650 001a 034B     		ldr	r3, .L51
+ 651 001c FA68     		ldr	r2, [r7, #12]
+ 652 001e 5A61     		str	r2, [r3, #20]
+ 653 0020 C046     		nop
+ 654 0022 BD46     		mov	sp, r7
+ 655 0024 04B0     		add	sp, sp, #16
+ 656              		@ sp needed
+ 657 0026 80BD     		pop	{r7, pc}
+ 658              	.L52:
+ 659              		.align	2
+ 660              	.L51:
+ 661 0028 00040140 		.word	1073808384
+ 663              		.section	.text.HAL_EXTI_GenerateSWI,"ax",%progbits
+ 664              		.align	1
+ 665              		.global	HAL_EXTI_GenerateSWI
+ 666              		.syntax unified
+ 667              		.code	16
+ 668              		.thumb_func
+ 670              	HAL_EXTI_GenerateSWI:
+ 671              		@ args = 0, pretend = 0, frame = 16
+ 672              		@ frame_needed = 1, uses_anonymous_args = 0
+ 673 0000 80B5     		push	{r7, lr}
+ 674 0002 84B0     		sub	sp, sp, #16
+ 675 0004 00AF     		add	r7, sp, #0
+ 676 0006 7860     		str	r0, [r7, #4]
+ 677 0008 7B68     		ldr	r3, [r7, #4]
+ 678 000a 1B68     		ldr	r3, [r3]
+ 679 000c 1F22     		movs	r2, #31
+ 680 000e 1340     		ands	r3, r2
+ 681 0010 0122     		movs	r2, #1
+ 682 0012 9A40     		lsls	r2, r2, r3
+ 683 0014 1300     		movs	r3, r2
+ 684 0016 FB60     		str	r3, [r7, #12]
+ 685 0018 034B     		ldr	r3, .L54
+ 686 001a FA68     		ldr	r2, [r7, #12]
+ 687 001c 1A61     		str	r2, [r3, #16]
+ 688 001e C046     		nop
+ 689 0020 BD46     		mov	sp, r7
+ 690 0022 04B0     		add	sp, sp, #16
+ 691              		@ sp needed
+ 692 0024 80BD     		pop	{r7, pc}
+ 693              	.L55:
+ 694 0026 C046     		.align	2
+ 695              	.L54:
+ 696 0028 00040140 		.word	1073808384
+ 698              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccy05Bbq.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_hal_exti.c
+     /tmp/ccy05Bbq.s:15     .text.HAL_EXTI_SetConfigLine:00000000 $t
+     /tmp/ccy05Bbq.s:21     .text.HAL_EXTI_SetConfigLine:00000000 HAL_EXTI_SetConfigLine
+     /tmp/ccy05Bbq.s:199    .text.HAL_EXTI_SetConfigLine:00000140 $d
+     /tmp/ccy05Bbq.s:203    .text.HAL_EXTI_GetConfigLine:00000000 $t
+     /tmp/ccy05Bbq.s:209    .text.HAL_EXTI_GetConfigLine:00000000 HAL_EXTI_GetConfigLine
+     /tmp/ccy05Bbq.s:338    .text.HAL_EXTI_GetConfigLine:000000e4 $d
+     /tmp/ccy05Bbq.s:342    .text.HAL_EXTI_ClearConfigLine:00000000 $t
+     /tmp/ccy05Bbq.s:348    .text.HAL_EXTI_ClearConfigLine:00000000 HAL_EXTI_ClearConfigLine
+     /tmp/ccy05Bbq.s:450    .text.HAL_EXTI_ClearConfigLine:000000b8 $d
+     /tmp/ccy05Bbq.s:454    .text.HAL_EXTI_RegisterCallback:00000000 $t
+     /tmp/ccy05Bbq.s:460    .text.HAL_EXTI_RegisterCallback:00000000 HAL_EXTI_RegisterCallback
+     /tmp/ccy05Bbq.s:501    .text.HAL_EXTI_GetHandle:00000000 $t
+     /tmp/ccy05Bbq.s:507    .text.HAL_EXTI_GetHandle:00000000 HAL_EXTI_GetHandle
+     /tmp/ccy05Bbq.s:533    .text.HAL_EXTI_IRQHandler:00000000 $t
+     /tmp/ccy05Bbq.s:539    .text.HAL_EXTI_IRQHandler:00000000 HAL_EXTI_IRQHandler
+     /tmp/ccy05Bbq.s:581    .text.HAL_EXTI_IRQHandler:00000044 $d
+     /tmp/ccy05Bbq.s:584    .text.HAL_EXTI_GetPending:00000000 $t
+     /tmp/ccy05Bbq.s:590    .text.HAL_EXTI_GetPending:00000000 HAL_EXTI_GetPending
+     /tmp/ccy05Bbq.s:625    .text.HAL_EXTI_GetPending:00000038 $d
+     /tmp/ccy05Bbq.s:628    .text.HAL_EXTI_ClearPending:00000000 $t
+     /tmp/ccy05Bbq.s:634    .text.HAL_EXTI_ClearPending:00000000 HAL_EXTI_ClearPending
+     /tmp/ccy05Bbq.s:661    .text.HAL_EXTI_ClearPending:00000028 $d
+     /tmp/ccy05Bbq.s:664    .text.HAL_EXTI_GenerateSWI:00000000 $t
+     /tmp/ccy05Bbq.s:670    .text.HAL_EXTI_GenerateSWI:00000000 HAL_EXTI_GenerateSWI
+     /tmp/ccy05Bbq.s:696    .text.HAL_EXTI_GenerateSWI:00000028 $d
+
+NO UNDEFINED SYMBOLS

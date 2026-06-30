@@ -1,0 +1,312 @@
+ARM GAS  /tmp/ccBptNfx.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"usbd_cdc_if.c"
+  13              		.text
+  14              		.section	.rodata.CHANNEL_OFFSET_TAB,"a"
+  15              		.align	2
+  18              	CHANNEL_OFFSET_TAB:
+  19 0000 081C3044 		.ascii	"\010\0340DXl\200"
+  19      586C80
+  20              		.global	UserRxBufferFS
+  21              		.section	.bss.UserRxBufferFS,"aw",%nobits
+  22              		.align	2
+  25              	UserRxBufferFS:
+  26 0000 00000000 		.space	1024
+  26      00000000 
+  26      00000000 
+  26      00000000 
+  26      00000000 
+  27              		.global	UserTxBufferFS
+  28              		.section	.bss.UserTxBufferFS,"aw",%nobits
+  29              		.align	2
+  32              	UserTxBufferFS:
+  33 0000 00000000 		.space	1024
+  33      00000000 
+  33      00000000 
+  33      00000000 
+  33      00000000 
+  34              		.global	USBD_Interface_fops_FS
+  35              		.section	.data.USBD_Interface_fops_FS,"aw"
+  36              		.align	2
+  39              	USBD_Interface_fops_FS:
+  40 0000 00000000 		.word	CDC_Init_FS
+  41 0004 00000000 		.word	CDC_DeInit_FS
+  42 0008 00000000 		.word	CDC_Control_FS
+  43 000c 00000000 		.word	CDC_Receive_FS
+  44              		.section	.text.CDC_Init_FS,"ax",%progbits
+  45              		.align	1
+  46              		.syntax unified
+  47              		.code	16
+  48              		.thumb_func
+  50              	CDC_Init_FS:
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 1, uses_anonymous_args = 0
+  53 0000 80B5     		push	{r7, lr}
+  54 0002 00AF     		add	r7, sp, #0
+  55 0004 0749     		ldr	r1, .L3
+  56 0006 084B     		ldr	r3, .L3+4
+  57 0008 0022     		movs	r2, #0
+ARM GAS  /tmp/ccBptNfx.s 			page 2
+
+
+  58 000a 1800     		movs	r0, r3
+  59 000c FFF7FEFF 		bl	USBD_CDC_SetTxBuffer
+  60 0010 064A     		ldr	r2, .L3+8
+  61 0012 054B     		ldr	r3, .L3+4
+  62 0014 1100     		movs	r1, r2
+  63 0016 1800     		movs	r0, r3
+  64 0018 FFF7FEFF 		bl	USBD_CDC_SetRxBuffer
+  65 001c 0023     		movs	r3, #0
+  66 001e 1800     		movs	r0, r3
+  67 0020 BD46     		mov	sp, r7
+  68              		@ sp needed
+  69 0022 80BD     		pop	{r7, pc}
+  70              	.L4:
+  71              		.align	2
+  72              	.L3:
+  73 0024 00000000 		.word	UserTxBufferFS
+  74 0028 00000000 		.word	hUsbDeviceFS
+  75 002c 00000000 		.word	UserRxBufferFS
+  77              		.section	.text.CDC_DeInit_FS,"ax",%progbits
+  78              		.align	1
+  79              		.syntax unified
+  80              		.code	16
+  81              		.thumb_func
+  83              	CDC_DeInit_FS:
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 1, uses_anonymous_args = 0
+  86 0000 80B5     		push	{r7, lr}
+  87 0002 00AF     		add	r7, sp, #0
+  88 0004 0023     		movs	r3, #0
+  89 0006 1800     		movs	r0, r3
+  90 0008 BD46     		mov	sp, r7
+  91              		@ sp needed
+  92 000a 80BD     		pop	{r7, pc}
+  94              		.section	.text.CDC_Control_FS,"ax",%progbits
+  95              		.align	1
+  96              		.syntax unified
+  97              		.code	16
+  98              		.thumb_func
+ 100              	CDC_Control_FS:
+ 101              		@ args = 0, pretend = 0, frame = 8
+ 102              		@ frame_needed = 1, uses_anonymous_args = 0
+ 103 0000 80B5     		push	{r7, lr}
+ 104 0002 82B0     		sub	sp, sp, #8
+ 105 0004 00AF     		add	r7, sp, #0
+ 106 0006 3960     		str	r1, [r7]
+ 107 0008 1100     		movs	r1, r2
+ 108 000a FB1D     		adds	r3, r7, #7
+ 109 000c 021C     		adds	r2, r0, #0
+ 110 000e 1A70     		strb	r2, [r3]
+ 111 0010 3B1D     		adds	r3, r7, #4
+ 112 0012 0A1C     		adds	r2, r1, #0
+ 113 0014 1A80     		strh	r2, [r3]
+ 114 0016 FB1D     		adds	r3, r7, #7
+ 115 0018 1B78     		ldrb	r3, [r3]
+ 116 001a 232B     		cmp	r3, #35
+ 117 001c 17D0     		beq	.L20
+ 118 001e 18DC     		bgt	.L21
+ARM GAS  /tmp/ccBptNfx.s 			page 3
+
+
+ 119 0020 222B     		cmp	r3, #34
+ 120 0022 18D0     		beq	.L22
+ 121 0024 15DC     		bgt	.L21
+ 122 0026 212B     		cmp	r3, #33
+ 123 0028 17D0     		beq	.L23
+ 124 002a 12DC     		bgt	.L21
+ 125 002c 202B     		cmp	r3, #32
+ 126 002e 16D0     		beq	.L24
+ 127 0030 0FDC     		bgt	.L21
+ 128 0032 042B     		cmp	r3, #4
+ 129 0034 15D0     		beq	.L25
+ 130 0036 0CDC     		bgt	.L21
+ 131 0038 032B     		cmp	r3, #3
+ 132 003a 14D0     		beq	.L26
+ 133 003c 09DC     		bgt	.L21
+ 134 003e 022B     		cmp	r3, #2
+ 135 0040 13D0     		beq	.L27
+ 136 0042 06DC     		bgt	.L21
+ 137 0044 002B     		cmp	r3, #0
+ 138 0046 12D0     		beq	.L28
+ 139 0048 012B     		cmp	r3, #1
+ 140 004a 12D0     		beq	.L29
+ 141 004c 01E0     		b	.L21
+ 142              	.L20:
+ 143 004e C046     		nop
+ 144 0050 10E0     		b	.L18
+ 145              	.L21:
+ 146 0052 C046     		nop
+ 147 0054 0EE0     		b	.L18
+ 148              	.L22:
+ 149 0056 C046     		nop
+ 150 0058 0CE0     		b	.L18
+ 151              	.L23:
+ 152 005a C046     		nop
+ 153 005c 0AE0     		b	.L18
+ 154              	.L24:
+ 155 005e C046     		nop
+ 156 0060 08E0     		b	.L18
+ 157              	.L25:
+ 158 0062 C046     		nop
+ 159 0064 06E0     		b	.L18
+ 160              	.L26:
+ 161 0066 C046     		nop
+ 162 0068 04E0     		b	.L18
+ 163              	.L27:
+ 164 006a C046     		nop
+ 165 006c 02E0     		b	.L18
+ 166              	.L28:
+ 167 006e C046     		nop
+ 168 0070 00E0     		b	.L18
+ 169              	.L29:
+ 170 0072 C046     		nop
+ 171              	.L18:
+ 172 0074 0023     		movs	r3, #0
+ 173 0076 1800     		movs	r0, r3
+ 174 0078 BD46     		mov	sp, r7
+ 175 007a 02B0     		add	sp, sp, #8
+ARM GAS  /tmp/ccBptNfx.s 			page 4
+
+
+ 176              		@ sp needed
+ 177 007c 80BD     		pop	{r7, pc}
+ 179              		.section	.text.CDC_Receive_FS,"ax",%progbits
+ 180              		.align	1
+ 181              		.syntax unified
+ 182              		.code	16
+ 183              		.thumb_func
+ 185              	CDC_Receive_FS:
+ 186              		@ args = 0, pretend = 0, frame = 8
+ 187              		@ frame_needed = 1, uses_anonymous_args = 0
+ 188 0000 80B5     		push	{r7, lr}
+ 189 0002 82B0     		sub	sp, sp, #8
+ 190 0004 00AF     		add	r7, sp, #0
+ 191 0006 7860     		str	r0, [r7, #4]
+ 192 0008 3960     		str	r1, [r7]
+ 193 000a 7A68     		ldr	r2, [r7, #4]
+ 194 000c 064B     		ldr	r3, .L32
+ 195 000e 1100     		movs	r1, r2
+ 196 0010 1800     		movs	r0, r3
+ 197 0012 FFF7FEFF 		bl	USBD_CDC_SetRxBuffer
+ 198 0016 044B     		ldr	r3, .L32
+ 199 0018 1800     		movs	r0, r3
+ 200 001a FFF7FEFF 		bl	USBD_CDC_ReceivePacket
+ 201 001e 0023     		movs	r3, #0
+ 202 0020 1800     		movs	r0, r3
+ 203 0022 BD46     		mov	sp, r7
+ 204 0024 02B0     		add	sp, sp, #8
+ 205              		@ sp needed
+ 206 0026 80BD     		pop	{r7, pc}
+ 207              	.L33:
+ 208              		.align	2
+ 209              	.L32:
+ 210 0028 00000000 		.word	hUsbDeviceFS
+ 212              		.section	.text.CDC_Transmit_FS,"ax",%progbits
+ 213              		.align	1
+ 214              		.global	CDC_Transmit_FS
+ 215              		.syntax unified
+ 216              		.code	16
+ 217              		.thumb_func
+ 219              	CDC_Transmit_FS:
+ 220              		@ args = 0, pretend = 0, frame = 16
+ 221              		@ frame_needed = 1, uses_anonymous_args = 0
+ 222 0000 B0B5     		push	{r4, r5, r7, lr}
+ 223 0002 84B0     		sub	sp, sp, #16
+ 224 0004 00AF     		add	r7, sp, #0
+ 225 0006 7860     		str	r0, [r7, #4]
+ 226 0008 0A00     		movs	r2, r1
+ 227 000a BB1C     		adds	r3, r7, #2
+ 228 000c 1A80     		strh	r2, [r3]
+ 229 000e 0F23     		movs	r3, #15
+ 230 0010 FB18     		adds	r3, r7, r3
+ 231 0012 0022     		movs	r2, #0
+ 232 0014 1A70     		strb	r2, [r3]
+ 233 0016 114A     		ldr	r2, .L37
+ 234 0018 AE23     		movs	r3, #174
+ 235 001a 9B00     		lsls	r3, r3, #2
+ 236 001c D358     		ldr	r3, [r2, r3]
+ARM GAS  /tmp/ccBptNfx.s 			page 5
+
+
+ 237 001e BB60     		str	r3, [r7, #8]
+ 238 0020 BA68     		ldr	r2, [r7, #8]
+ 239 0022 8523     		movs	r3, #133
+ 240 0024 9B00     		lsls	r3, r3, #2
+ 241 0026 D358     		ldr	r3, [r2, r3]
+ 242 0028 002B     		cmp	r3, #0
+ 243 002a 01D0     		beq	.L35
+ 244 002c 0123     		movs	r3, #1
+ 245 002e 10E0     		b	.L36
+ 246              	.L35:
+ 247 0030 BB1C     		adds	r3, r7, #2
+ 248 0032 1A88     		ldrh	r2, [r3]
+ 249 0034 7968     		ldr	r1, [r7, #4]
+ 250 0036 094B     		ldr	r3, .L37
+ 251 0038 1800     		movs	r0, r3
+ 252 003a FFF7FEFF 		bl	USBD_CDC_SetTxBuffer
+ 253 003e 0F25     		movs	r5, #15
+ 254 0040 7C19     		adds	r4, r7, r5
+ 255 0042 064B     		ldr	r3, .L37
+ 256 0044 1800     		movs	r0, r3
+ 257 0046 FFF7FEFF 		bl	USBD_CDC_TransmitPacket
+ 258 004a 0300     		movs	r3, r0
+ 259 004c 2370     		strb	r3, [r4]
+ 260 004e 7B19     		adds	r3, r7, r5
+ 261 0050 1B78     		ldrb	r3, [r3]
+ 262              	.L36:
+ 263 0052 1800     		movs	r0, r3
+ 264 0054 BD46     		mov	sp, r7
+ 265 0056 04B0     		add	sp, sp, #16
+ 266              		@ sp needed
+ 267 0058 B0BD     		pop	{r4, r5, r7, pc}
+ 268              	.L38:
+ 269 005a C046     		.align	2
+ 270              	.L37:
+ 271 005c 00000000 		.word	hUsbDeviceFS
+ 273              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccBptNfx.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 usbd_cdc_if.c
+     /tmp/ccBptNfx.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+     /tmp/ccBptNfx.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+     /tmp/ccBptNfx.s:25     .bss.UserRxBufferFS:00000000 UserRxBufferFS
+     /tmp/ccBptNfx.s:22     .bss.UserRxBufferFS:00000000 $d
+     /tmp/ccBptNfx.s:32     .bss.UserTxBufferFS:00000000 UserTxBufferFS
+     /tmp/ccBptNfx.s:29     .bss.UserTxBufferFS:00000000 $d
+     /tmp/ccBptNfx.s:39     .data.USBD_Interface_fops_FS:00000000 USBD_Interface_fops_FS
+     /tmp/ccBptNfx.s:36     .data.USBD_Interface_fops_FS:00000000 $d
+     /tmp/ccBptNfx.s:50     .text.CDC_Init_FS:00000000 CDC_Init_FS
+     /tmp/ccBptNfx.s:83     .text.CDC_DeInit_FS:00000000 CDC_DeInit_FS
+     /tmp/ccBptNfx.s:100    .text.CDC_Control_FS:00000000 CDC_Control_FS
+     /tmp/ccBptNfx.s:185    .text.CDC_Receive_FS:00000000 CDC_Receive_FS
+     /tmp/ccBptNfx.s:45     .text.CDC_Init_FS:00000000 $t
+     /tmp/ccBptNfx.s:73     .text.CDC_Init_FS:00000024 $d
+     /tmp/ccBptNfx.s:78     .text.CDC_DeInit_FS:00000000 $t
+     /tmp/ccBptNfx.s:95     .text.CDC_Control_FS:00000000 $t
+     /tmp/ccBptNfx.s:180    .text.CDC_Receive_FS:00000000 $t
+     /tmp/ccBptNfx.s:210    .text.CDC_Receive_FS:00000028 $d
+     /tmp/ccBptNfx.s:213    .text.CDC_Transmit_FS:00000000 $t
+     /tmp/ccBptNfx.s:219    .text.CDC_Transmit_FS:00000000 CDC_Transmit_FS
+     /tmp/ccBptNfx.s:271    .text.CDC_Transmit_FS:0000005c $d
+
+UNDEFINED SYMBOLS
+USBD_CDC_SetTxBuffer
+USBD_CDC_SetRxBuffer
+hUsbDeviceFS
+USBD_CDC_ReceivePacket
+USBD_CDC_TransmitPacket

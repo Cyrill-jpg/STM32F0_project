@@ -1,0 +1,552 @@
+ARM GAS  /tmp/ccMTjQIW.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"stm32f0xx_ll_i2c.c"
+  13              		.text
+  14              		.section	.text.LL_I2C_Enable,"ax",%progbits
+  15              		.align	1
+  16              		.syntax unified
+  17              		.code	16
+  18              		.thumb_func
+  20              	LL_I2C_Enable:
+  21              		@ args = 0, pretend = 0, frame = 8
+  22              		@ frame_needed = 1, uses_anonymous_args = 0
+  23 0000 80B5     		push	{r7, lr}
+  24 0002 82B0     		sub	sp, sp, #8
+  25 0004 00AF     		add	r7, sp, #0
+  26 0006 7860     		str	r0, [r7, #4]
+  27 0008 7B68     		ldr	r3, [r7, #4]
+  28 000a 1B68     		ldr	r3, [r3]
+  29 000c 0122     		movs	r2, #1
+  30 000e 1A43     		orrs	r2, r3
+  31 0010 7B68     		ldr	r3, [r7, #4]
+  32 0012 1A60     		str	r2, [r3]
+  33 0014 C046     		nop
+  34 0016 BD46     		mov	sp, r7
+  35 0018 02B0     		add	sp, sp, #8
+  36              		@ sp needed
+  37 001a 80BD     		pop	{r7, pc}
+  39              		.section	.text.LL_I2C_Disable,"ax",%progbits
+  40              		.align	1
+  41              		.syntax unified
+  42              		.code	16
+  43              		.thumb_func
+  45              	LL_I2C_Disable:
+  46              		@ args = 0, pretend = 0, frame = 8
+  47              		@ frame_needed = 1, uses_anonymous_args = 0
+  48 0000 80B5     		push	{r7, lr}
+  49 0002 82B0     		sub	sp, sp, #8
+  50 0004 00AF     		add	r7, sp, #0
+  51 0006 7860     		str	r0, [r7, #4]
+  52 0008 7B68     		ldr	r3, [r7, #4]
+  53 000a 1B68     		ldr	r3, [r3]
+  54 000c 0122     		movs	r2, #1
+  55 000e 9343     		bics	r3, r2
+  56 0010 1A00     		movs	r2, r3
+  57 0012 7B68     		ldr	r3, [r7, #4]
+  58 0014 1A60     		str	r2, [r3]
+  59 0016 C046     		nop
+  60 0018 BD46     		mov	sp, r7
+ARM GAS  /tmp/ccMTjQIW.s 			page 2
+
+
+  61 001a 02B0     		add	sp, sp, #8
+  62              		@ sp needed
+  63 001c 80BD     		pop	{r7, pc}
+  65              		.section	.text.LL_I2C_ConfigFilters,"ax",%progbits
+  66              		.align	1
+  67              		.syntax unified
+  68              		.code	16
+  69              		.thumb_func
+  71              	LL_I2C_ConfigFilters:
+  72              		@ args = 0, pretend = 0, frame = 16
+  73              		@ frame_needed = 1, uses_anonymous_args = 0
+  74 0000 80B5     		push	{r7, lr}
+  75 0002 84B0     		sub	sp, sp, #16
+  76 0004 00AF     		add	r7, sp, #0
+  77 0006 F860     		str	r0, [r7, #12]
+  78 0008 B960     		str	r1, [r7, #8]
+  79 000a 7A60     		str	r2, [r7, #4]
+  80 000c FB68     		ldr	r3, [r7, #12]
+  81 000e 1B68     		ldr	r3, [r3]
+  82 0010 064A     		ldr	r2, .L4
+  83 0012 1A40     		ands	r2, r3
+  84 0014 7B68     		ldr	r3, [r7, #4]
+  85 0016 1902     		lsls	r1, r3, #8
+  86 0018 BB68     		ldr	r3, [r7, #8]
+  87 001a 0B43     		orrs	r3, r1
+  88 001c 1A43     		orrs	r2, r3
+  89 001e FB68     		ldr	r3, [r7, #12]
+  90 0020 1A60     		str	r2, [r3]
+  91 0022 C046     		nop
+  92 0024 BD46     		mov	sp, r7
+  93 0026 04B0     		add	sp, sp, #16
+  94              		@ sp needed
+  95 0028 80BD     		pop	{r7, pc}
+  96              	.L5:
+  97 002a C046     		.align	2
+  98              	.L4:
+  99 002c FFE0FFFF 		.word	-7937
+ 101              		.section	.text.LL_I2C_SetOwnAddress1,"ax",%progbits
+ 102              		.align	1
+ 103              		.syntax unified
+ 104              		.code	16
+ 105              		.thumb_func
+ 107              	LL_I2C_SetOwnAddress1:
+ 108              		@ args = 0, pretend = 0, frame = 16
+ 109              		@ frame_needed = 1, uses_anonymous_args = 0
+ 110 0000 80B5     		push	{r7, lr}
+ 111 0002 84B0     		sub	sp, sp, #16
+ 112 0004 00AF     		add	r7, sp, #0
+ 113 0006 F860     		str	r0, [r7, #12]
+ 114 0008 B960     		str	r1, [r7, #8]
+ 115 000a 7A60     		str	r2, [r7, #4]
+ 116 000c FB68     		ldr	r3, [r7, #12]
+ 117 000e 9B68     		ldr	r3, [r3, #8]
+ 118 0010 DB0A     		lsrs	r3, r3, #11
+ 119 0012 DA02     		lsls	r2, r3, #11
+ 120 0014 B968     		ldr	r1, [r7, #8]
+ 121 0016 7B68     		ldr	r3, [r7, #4]
+ARM GAS  /tmp/ccMTjQIW.s 			page 3
+
+
+ 122 0018 0B43     		orrs	r3, r1
+ 123 001a 1A43     		orrs	r2, r3
+ 124 001c FB68     		ldr	r3, [r7, #12]
+ 125 001e 9A60     		str	r2, [r3, #8]
+ 126 0020 C046     		nop
+ 127 0022 BD46     		mov	sp, r7
+ 128 0024 04B0     		add	sp, sp, #16
+ 129              		@ sp needed
+ 130 0026 80BD     		pop	{r7, pc}
+ 132              		.section	.text.LL_I2C_EnableOwnAddress1,"ax",%progbits
+ 133              		.align	1
+ 134              		.syntax unified
+ 135              		.code	16
+ 136              		.thumb_func
+ 138              	LL_I2C_EnableOwnAddress1:
+ 139              		@ args = 0, pretend = 0, frame = 8
+ 140              		@ frame_needed = 1, uses_anonymous_args = 0
+ 141 0000 80B5     		push	{r7, lr}
+ 142 0002 82B0     		sub	sp, sp, #8
+ 143 0004 00AF     		add	r7, sp, #0
+ 144 0006 7860     		str	r0, [r7, #4]
+ 145 0008 7B68     		ldr	r3, [r7, #4]
+ 146 000a 9B68     		ldr	r3, [r3, #8]
+ 147 000c 8022     		movs	r2, #128
+ 148 000e 1202     		lsls	r2, r2, #8
+ 149 0010 1A43     		orrs	r2, r3
+ 150 0012 7B68     		ldr	r3, [r7, #4]
+ 151 0014 9A60     		str	r2, [r3, #8]
+ 152 0016 C046     		nop
+ 153 0018 BD46     		mov	sp, r7
+ 154 001a 02B0     		add	sp, sp, #8
+ 155              		@ sp needed
+ 156 001c 80BD     		pop	{r7, pc}
+ 158              		.section	.text.LL_I2C_DisableOwnAddress1,"ax",%progbits
+ 159              		.align	1
+ 160              		.syntax unified
+ 161              		.code	16
+ 162              		.thumb_func
+ 164              	LL_I2C_DisableOwnAddress1:
+ 165              		@ args = 0, pretend = 0, frame = 8
+ 166              		@ frame_needed = 1, uses_anonymous_args = 0
+ 167 0000 80B5     		push	{r7, lr}
+ 168 0002 82B0     		sub	sp, sp, #8
+ 169 0004 00AF     		add	r7, sp, #0
+ 170 0006 7860     		str	r0, [r7, #4]
+ 171 0008 7B68     		ldr	r3, [r7, #4]
+ 172 000a 9B68     		ldr	r3, [r3, #8]
+ 173 000c 034A     		ldr	r2, .L9
+ 174 000e 1A40     		ands	r2, r3
+ 175 0010 7B68     		ldr	r3, [r7, #4]
+ 176 0012 9A60     		str	r2, [r3, #8]
+ 177 0014 C046     		nop
+ 178 0016 BD46     		mov	sp, r7
+ 179 0018 02B0     		add	sp, sp, #8
+ 180              		@ sp needed
+ 181 001a 80BD     		pop	{r7, pc}
+ 182              	.L10:
+ARM GAS  /tmp/ccMTjQIW.s 			page 4
+
+
+ 183              		.align	2
+ 184              	.L9:
+ 185 001c FF7FFFFF 		.word	-32769
+ 187              		.section	.text.LL_I2C_SetTiming,"ax",%progbits
+ 188              		.align	1
+ 189              		.syntax unified
+ 190              		.code	16
+ 191              		.thumb_func
+ 193              	LL_I2C_SetTiming:
+ 194              		@ args = 0, pretend = 0, frame = 8
+ 195              		@ frame_needed = 1, uses_anonymous_args = 0
+ 196 0000 80B5     		push	{r7, lr}
+ 197 0002 82B0     		sub	sp, sp, #8
+ 198 0004 00AF     		add	r7, sp, #0
+ 199 0006 7860     		str	r0, [r7, #4]
+ 200 0008 3960     		str	r1, [r7]
+ 201 000a 7B68     		ldr	r3, [r7, #4]
+ 202 000c 3A68     		ldr	r2, [r7]
+ 203 000e 1A61     		str	r2, [r3, #16]
+ 204 0010 C046     		nop
+ 205 0012 BD46     		mov	sp, r7
+ 206 0014 02B0     		add	sp, sp, #8
+ 207              		@ sp needed
+ 208 0016 80BD     		pop	{r7, pc}
+ 210              		.section	.text.LL_I2C_SetMode,"ax",%progbits
+ 211              		.align	1
+ 212              		.syntax unified
+ 213              		.code	16
+ 214              		.thumb_func
+ 216              	LL_I2C_SetMode:
+ 217              		@ args = 0, pretend = 0, frame = 8
+ 218              		@ frame_needed = 1, uses_anonymous_args = 0
+ 219 0000 80B5     		push	{r7, lr}
+ 220 0002 82B0     		sub	sp, sp, #8
+ 221 0004 00AF     		add	r7, sp, #0
+ 222 0006 7860     		str	r0, [r7, #4]
+ 223 0008 3960     		str	r1, [r7]
+ 224 000a 7B68     		ldr	r3, [r7, #4]
+ 225 000c 1B68     		ldr	r3, [r3]
+ 226 000e 054A     		ldr	r2, .L13
+ 227 0010 1A40     		ands	r2, r3
+ 228 0012 3B68     		ldr	r3, [r7]
+ 229 0014 1A43     		orrs	r2, r3
+ 230 0016 7B68     		ldr	r3, [r7, #4]
+ 231 0018 1A60     		str	r2, [r3]
+ 232 001a C046     		nop
+ 233 001c BD46     		mov	sp, r7
+ 234 001e 02B0     		add	sp, sp, #8
+ 235              		@ sp needed
+ 236 0020 80BD     		pop	{r7, pc}
+ 237              	.L14:
+ 238 0022 C046     		.align	2
+ 239              	.L13:
+ 240 0024 FFFFCFFF 		.word	-3145729
+ 242              		.section	.text.LL_I2C_AcknowledgeNextData,"ax",%progbits
+ 243              		.align	1
+ 244              		.syntax unified
+ARM GAS  /tmp/ccMTjQIW.s 			page 5
+
+
+ 245              		.code	16
+ 246              		.thumb_func
+ 248              	LL_I2C_AcknowledgeNextData:
+ 249              		@ args = 0, pretend = 0, frame = 8
+ 250              		@ frame_needed = 1, uses_anonymous_args = 0
+ 251 0000 80B5     		push	{r7, lr}
+ 252 0002 82B0     		sub	sp, sp, #8
+ 253 0004 00AF     		add	r7, sp, #0
+ 254 0006 7860     		str	r0, [r7, #4]
+ 255 0008 3960     		str	r1, [r7]
+ 256 000a 7B68     		ldr	r3, [r7, #4]
+ 257 000c 5B68     		ldr	r3, [r3, #4]
+ 258 000e 054A     		ldr	r2, .L16
+ 259 0010 1A40     		ands	r2, r3
+ 260 0012 3B68     		ldr	r3, [r7]
+ 261 0014 1A43     		orrs	r2, r3
+ 262 0016 7B68     		ldr	r3, [r7, #4]
+ 263 0018 5A60     		str	r2, [r3, #4]
+ 264 001a C046     		nop
+ 265 001c BD46     		mov	sp, r7
+ 266 001e 02B0     		add	sp, sp, #8
+ 267              		@ sp needed
+ 268 0020 80BD     		pop	{r7, pc}
+ 269              	.L17:
+ 270 0022 C046     		.align	2
+ 271              	.L16:
+ 272 0024 FF7FFFFF 		.word	-32769
+ 274              		.section	.text.LL_APB1_GRP1_ForceReset,"ax",%progbits
+ 275              		.align	1
+ 276              		.syntax unified
+ 277              		.code	16
+ 278              		.thumb_func
+ 280              	LL_APB1_GRP1_ForceReset:
+ 281              		@ args = 0, pretend = 0, frame = 8
+ 282              		@ frame_needed = 1, uses_anonymous_args = 0
+ 283 0000 80B5     		push	{r7, lr}
+ 284 0002 82B0     		sub	sp, sp, #8
+ 285 0004 00AF     		add	r7, sp, #0
+ 286 0006 7860     		str	r0, [r7, #4]
+ 287 0008 044B     		ldr	r3, .L19
+ 288 000a 1969     		ldr	r1, [r3, #16]
+ 289 000c 034B     		ldr	r3, .L19
+ 290 000e 7A68     		ldr	r2, [r7, #4]
+ 291 0010 0A43     		orrs	r2, r1
+ 292 0012 1A61     		str	r2, [r3, #16]
+ 293 0014 C046     		nop
+ 294 0016 BD46     		mov	sp, r7
+ 295 0018 02B0     		add	sp, sp, #8
+ 296              		@ sp needed
+ 297 001a 80BD     		pop	{r7, pc}
+ 298              	.L20:
+ 299              		.align	2
+ 300              	.L19:
+ 301 001c 00100240 		.word	1073876992
+ 303              		.section	.text.LL_APB1_GRP1_ReleaseReset,"ax",%progbits
+ 304              		.align	1
+ 305              		.syntax unified
+ARM GAS  /tmp/ccMTjQIW.s 			page 6
+
+
+ 306              		.code	16
+ 307              		.thumb_func
+ 309              	LL_APB1_GRP1_ReleaseReset:
+ 310              		@ args = 0, pretend = 0, frame = 8
+ 311              		@ frame_needed = 1, uses_anonymous_args = 0
+ 312 0000 80B5     		push	{r7, lr}
+ 313 0002 82B0     		sub	sp, sp, #8
+ 314 0004 00AF     		add	r7, sp, #0
+ 315 0006 7860     		str	r0, [r7, #4]
+ 316 0008 054B     		ldr	r3, .L22
+ 317 000a 1A69     		ldr	r2, [r3, #16]
+ 318 000c 7B68     		ldr	r3, [r7, #4]
+ 319 000e D943     		mvns	r1, r3
+ 320 0010 034B     		ldr	r3, .L22
+ 321 0012 0A40     		ands	r2, r1
+ 322 0014 1A61     		str	r2, [r3, #16]
+ 323 0016 C046     		nop
+ 324 0018 BD46     		mov	sp, r7
+ 325 001a 02B0     		add	sp, sp, #8
+ 326              		@ sp needed
+ 327 001c 80BD     		pop	{r7, pc}
+ 328              	.L23:
+ 329 001e C046     		.align	2
+ 330              	.L22:
+ 331 0020 00100240 		.word	1073876992
+ 333              		.section	.text.LL_I2C_DeInit,"ax",%progbits
+ 334              		.align	1
+ 335              		.global	LL_I2C_DeInit
+ 336              		.syntax unified
+ 337              		.code	16
+ 338              		.thumb_func
+ 340              	LL_I2C_DeInit:
+ 341              		@ args = 0, pretend = 0, frame = 16
+ 342              		@ frame_needed = 1, uses_anonymous_args = 0
+ 343 0000 80B5     		push	{r7, lr}
+ 344 0002 84B0     		sub	sp, sp, #16
+ 345 0004 00AF     		add	r7, sp, #0
+ 346 0006 7860     		str	r0, [r7, #4]
+ 347 0008 0F23     		movs	r3, #15
+ 348 000a FB18     		adds	r3, r7, r3
+ 349 000c 0022     		movs	r2, #0
+ 350 000e 1A70     		strb	r2, [r3]
+ 351 0010 7B68     		ldr	r3, [r7, #4]
+ 352 0012 144A     		ldr	r2, .L29
+ 353 0014 9342     		cmp	r3, r2
+ 354 0016 0AD1     		bne	.L25
+ 355 0018 8023     		movs	r3, #128
+ 356 001a 9B03     		lsls	r3, r3, #14
+ 357 001c 1800     		movs	r0, r3
+ 358 001e FFF7FEFF 		bl	LL_APB1_GRP1_ForceReset
+ 359 0022 8023     		movs	r3, #128
+ 360 0024 9B03     		lsls	r3, r3, #14
+ 361 0026 1800     		movs	r0, r3
+ 362 0028 FFF7FEFF 		bl	LL_APB1_GRP1_ReleaseReset
+ 363 002c 12E0     		b	.L26
+ 364              	.L25:
+ 365 002e 7B68     		ldr	r3, [r7, #4]
+ARM GAS  /tmp/ccMTjQIW.s 			page 7
+
+
+ 366 0030 0D4A     		ldr	r2, .L29+4
+ 367 0032 9342     		cmp	r3, r2
+ 368 0034 0AD1     		bne	.L27
+ 369 0036 8023     		movs	r3, #128
+ 370 0038 DB03     		lsls	r3, r3, #15
+ 371 003a 1800     		movs	r0, r3
+ 372 003c FFF7FEFF 		bl	LL_APB1_GRP1_ForceReset
+ 373 0040 8023     		movs	r3, #128
+ 374 0042 DB03     		lsls	r3, r3, #15
+ 375 0044 1800     		movs	r0, r3
+ 376 0046 FFF7FEFF 		bl	LL_APB1_GRP1_ReleaseReset
+ 377 004a 03E0     		b	.L26
+ 378              	.L27:
+ 379 004c 0F23     		movs	r3, #15
+ 380 004e FB18     		adds	r3, r7, r3
+ 381 0050 0122     		movs	r2, #1
+ 382 0052 1A70     		strb	r2, [r3]
+ 383              	.L26:
+ 384 0054 0F23     		movs	r3, #15
+ 385 0056 FB18     		adds	r3, r7, r3
+ 386 0058 1B78     		ldrb	r3, [r3]
+ 387 005a 1800     		movs	r0, r3
+ 388 005c BD46     		mov	sp, r7
+ 389 005e 04B0     		add	sp, sp, #16
+ 390              		@ sp needed
+ 391 0060 80BD     		pop	{r7, pc}
+ 392              	.L30:
+ 393 0062 C046     		.align	2
+ 394              	.L29:
+ 395 0064 00540040 		.word	1073763328
+ 396 0068 00580040 		.word	1073764352
+ 398              		.section	.text.LL_I2C_Init,"ax",%progbits
+ 399              		.align	1
+ 400              		.global	LL_I2C_Init
+ 401              		.syntax unified
+ 402              		.code	16
+ 403              		.thumb_func
+ 405              	LL_I2C_Init:
+ 406              		@ args = 0, pretend = 0, frame = 8
+ 407              		@ frame_needed = 1, uses_anonymous_args = 0
+ 408 0000 80B5     		push	{r7, lr}
+ 409 0002 82B0     		sub	sp, sp, #8
+ 410 0004 00AF     		add	r7, sp, #0
+ 411 0006 7860     		str	r0, [r7, #4]
+ 412 0008 3960     		str	r1, [r7]
+ 413 000a 7B68     		ldr	r3, [r7, #4]
+ 414 000c 1800     		movs	r0, r3
+ 415 000e FFF7FEFF 		bl	LL_I2C_Disable
+ 416 0012 3B68     		ldr	r3, [r7]
+ 417 0014 9968     		ldr	r1, [r3, #8]
+ 418 0016 3B68     		ldr	r3, [r7]
+ 419 0018 DA68     		ldr	r2, [r3, #12]
+ 420 001a 7B68     		ldr	r3, [r7, #4]
+ 421 001c 1800     		movs	r0, r3
+ 422 001e FFF7FEFF 		bl	LL_I2C_ConfigFilters
+ 423 0022 3B68     		ldr	r3, [r7]
+ 424 0024 5A68     		ldr	r2, [r3, #4]
+ARM GAS  /tmp/ccMTjQIW.s 			page 8
+
+
+ 425 0026 7B68     		ldr	r3, [r7, #4]
+ 426 0028 1100     		movs	r1, r2
+ 427 002a 1800     		movs	r0, r3
+ 428 002c FFF7FEFF 		bl	LL_I2C_SetTiming
+ 429 0030 7B68     		ldr	r3, [r7, #4]
+ 430 0032 1800     		movs	r0, r3
+ 431 0034 FFF7FEFF 		bl	LL_I2C_Enable
+ 432 0038 7B68     		ldr	r3, [r7, #4]
+ 433 003a 1800     		movs	r0, r3
+ 434 003c FFF7FEFF 		bl	LL_I2C_DisableOwnAddress1
+ 435 0040 3B68     		ldr	r3, [r7]
+ 436 0042 1969     		ldr	r1, [r3, #16]
+ 437 0044 3B68     		ldr	r3, [r7]
+ 438 0046 9A69     		ldr	r2, [r3, #24]
+ 439 0048 7B68     		ldr	r3, [r7, #4]
+ 440 004a 1800     		movs	r0, r3
+ 441 004c FFF7FEFF 		bl	LL_I2C_SetOwnAddress1
+ 442 0050 3B68     		ldr	r3, [r7]
+ 443 0052 1B69     		ldr	r3, [r3, #16]
+ 444 0054 002B     		cmp	r3, #0
+ 445 0056 03D0     		beq	.L32
+ 446 0058 7B68     		ldr	r3, [r7, #4]
+ 447 005a 1800     		movs	r0, r3
+ 448 005c FFF7FEFF 		bl	LL_I2C_EnableOwnAddress1
+ 449              	.L32:
+ 450 0060 3B68     		ldr	r3, [r7]
+ 451 0062 1A68     		ldr	r2, [r3]
+ 452 0064 7B68     		ldr	r3, [r7, #4]
+ 453 0066 1100     		movs	r1, r2
+ 454 0068 1800     		movs	r0, r3
+ 455 006a FFF7FEFF 		bl	LL_I2C_SetMode
+ 456 006e 3B68     		ldr	r3, [r7]
+ 457 0070 5A69     		ldr	r2, [r3, #20]
+ 458 0072 7B68     		ldr	r3, [r7, #4]
+ 459 0074 1100     		movs	r1, r2
+ 460 0076 1800     		movs	r0, r3
+ 461 0078 FFF7FEFF 		bl	LL_I2C_AcknowledgeNextData
+ 462 007c 0023     		movs	r3, #0
+ 463 007e 1800     		movs	r0, r3
+ 464 0080 BD46     		mov	sp, r7
+ 465 0082 02B0     		add	sp, sp, #8
+ 466              		@ sp needed
+ 467 0084 80BD     		pop	{r7, pc}
+ 469              		.section	.text.LL_I2C_StructInit,"ax",%progbits
+ 470              		.align	1
+ 471              		.global	LL_I2C_StructInit
+ 472              		.syntax unified
+ 473              		.code	16
+ 474              		.thumb_func
+ 476              	LL_I2C_StructInit:
+ 477              		@ args = 0, pretend = 0, frame = 8
+ 478              		@ frame_needed = 1, uses_anonymous_args = 0
+ 479 0000 80B5     		push	{r7, lr}
+ 480 0002 82B0     		sub	sp, sp, #8
+ 481 0004 00AF     		add	r7, sp, #0
+ 482 0006 7860     		str	r0, [r7, #4]
+ 483 0008 7B68     		ldr	r3, [r7, #4]
+ARM GAS  /tmp/ccMTjQIW.s 			page 9
+
+
+ 484 000a 0022     		movs	r2, #0
+ 485 000c 1A60     		str	r2, [r3]
+ 486 000e 7B68     		ldr	r3, [r7, #4]
+ 487 0010 0022     		movs	r2, #0
+ 488 0012 5A60     		str	r2, [r3, #4]
+ 489 0014 7B68     		ldr	r3, [r7, #4]
+ 490 0016 0022     		movs	r2, #0
+ 491 0018 9A60     		str	r2, [r3, #8]
+ 492 001a 7B68     		ldr	r3, [r7, #4]
+ 493 001c 0022     		movs	r2, #0
+ 494 001e DA60     		str	r2, [r3, #12]
+ 495 0020 7B68     		ldr	r3, [r7, #4]
+ 496 0022 0022     		movs	r2, #0
+ 497 0024 1A61     		str	r2, [r3, #16]
+ 498 0026 7B68     		ldr	r3, [r7, #4]
+ 499 0028 8022     		movs	r2, #128
+ 500 002a 1202     		lsls	r2, r2, #8
+ 501 002c 5A61     		str	r2, [r3, #20]
+ 502 002e 7B68     		ldr	r3, [r7, #4]
+ 503 0030 0022     		movs	r2, #0
+ 504 0032 9A61     		str	r2, [r3, #24]
+ 505 0034 C046     		nop
+ 506 0036 BD46     		mov	sp, r7
+ 507 0038 02B0     		add	sp, sp, #8
+ 508              		@ sp needed
+ 509 003a 80BD     		pop	{r7, pc}
+ 511              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccMTjQIW.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_ll_i2c.c
+     /tmp/ccMTjQIW.s:15     .text.LL_I2C_Enable:00000000 $t
+     /tmp/ccMTjQIW.s:20     .text.LL_I2C_Enable:00000000 LL_I2C_Enable
+     /tmp/ccMTjQIW.s:40     .text.LL_I2C_Disable:00000000 $t
+     /tmp/ccMTjQIW.s:45     .text.LL_I2C_Disable:00000000 LL_I2C_Disable
+     /tmp/ccMTjQIW.s:66     .text.LL_I2C_ConfigFilters:00000000 $t
+     /tmp/ccMTjQIW.s:71     .text.LL_I2C_ConfigFilters:00000000 LL_I2C_ConfigFilters
+     /tmp/ccMTjQIW.s:99     .text.LL_I2C_ConfigFilters:0000002c $d
+     /tmp/ccMTjQIW.s:102    .text.LL_I2C_SetOwnAddress1:00000000 $t
+     /tmp/ccMTjQIW.s:107    .text.LL_I2C_SetOwnAddress1:00000000 LL_I2C_SetOwnAddress1
+     /tmp/ccMTjQIW.s:133    .text.LL_I2C_EnableOwnAddress1:00000000 $t
+     /tmp/ccMTjQIW.s:138    .text.LL_I2C_EnableOwnAddress1:00000000 LL_I2C_EnableOwnAddress1
+     /tmp/ccMTjQIW.s:159    .text.LL_I2C_DisableOwnAddress1:00000000 $t
+     /tmp/ccMTjQIW.s:164    .text.LL_I2C_DisableOwnAddress1:00000000 LL_I2C_DisableOwnAddress1
+     /tmp/ccMTjQIW.s:185    .text.LL_I2C_DisableOwnAddress1:0000001c $d
+     /tmp/ccMTjQIW.s:188    .text.LL_I2C_SetTiming:00000000 $t
+     /tmp/ccMTjQIW.s:193    .text.LL_I2C_SetTiming:00000000 LL_I2C_SetTiming
+     /tmp/ccMTjQIW.s:211    .text.LL_I2C_SetMode:00000000 $t
+     /tmp/ccMTjQIW.s:216    .text.LL_I2C_SetMode:00000000 LL_I2C_SetMode
+     /tmp/ccMTjQIW.s:240    .text.LL_I2C_SetMode:00000024 $d
+     /tmp/ccMTjQIW.s:243    .text.LL_I2C_AcknowledgeNextData:00000000 $t
+     /tmp/ccMTjQIW.s:248    .text.LL_I2C_AcknowledgeNextData:00000000 LL_I2C_AcknowledgeNextData
+     /tmp/ccMTjQIW.s:272    .text.LL_I2C_AcknowledgeNextData:00000024 $d
+     /tmp/ccMTjQIW.s:275    .text.LL_APB1_GRP1_ForceReset:00000000 $t
+     /tmp/ccMTjQIW.s:280    .text.LL_APB1_GRP1_ForceReset:00000000 LL_APB1_GRP1_ForceReset
+     /tmp/ccMTjQIW.s:301    .text.LL_APB1_GRP1_ForceReset:0000001c $d
+     /tmp/ccMTjQIW.s:304    .text.LL_APB1_GRP1_ReleaseReset:00000000 $t
+     /tmp/ccMTjQIW.s:309    .text.LL_APB1_GRP1_ReleaseReset:00000000 LL_APB1_GRP1_ReleaseReset
+     /tmp/ccMTjQIW.s:331    .text.LL_APB1_GRP1_ReleaseReset:00000020 $d
+     /tmp/ccMTjQIW.s:334    .text.LL_I2C_DeInit:00000000 $t
+     /tmp/ccMTjQIW.s:340    .text.LL_I2C_DeInit:00000000 LL_I2C_DeInit
+     /tmp/ccMTjQIW.s:395    .text.LL_I2C_DeInit:00000064 $d
+     /tmp/ccMTjQIW.s:399    .text.LL_I2C_Init:00000000 $t
+     /tmp/ccMTjQIW.s:405    .text.LL_I2C_Init:00000000 LL_I2C_Init
+     /tmp/ccMTjQIW.s:470    .text.LL_I2C_StructInit:00000000 $t
+     /tmp/ccMTjQIW.s:476    .text.LL_I2C_StructInit:00000000 LL_I2C_StructInit
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,496 @@
+ARM GAS  /tmp/ccetyOpf.s 			page 1
+
+
+   1              		.arch armv6s-m
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.file	"stm32f0xx_hal_pwr.c"
+  13              		.text
+  14              		.section	.text.HAL_PWR_DeInit,"ax",%progbits
+  15              		.align	1
+  16              		.global	HAL_PWR_DeInit
+  17              		.syntax unified
+  18              		.code	16
+  19              		.thumb_func
+  21              	HAL_PWR_DeInit:
+  22              		@ args = 0, pretend = 0, frame = 0
+  23              		@ frame_needed = 1, uses_anonymous_args = 0
+  24 0000 80B5     		push	{r7, lr}
+  25 0002 00AF     		add	r7, sp, #0
+  26 0004 074B     		ldr	r3, .L2
+  27 0006 1A69     		ldr	r2, [r3, #16]
+  28 0008 064B     		ldr	r3, .L2
+  29 000a 8021     		movs	r1, #128
+  30 000c 4905     		lsls	r1, r1, #21
+  31 000e 0A43     		orrs	r2, r1
+  32 0010 1A61     		str	r2, [r3, #16]
+  33 0012 044B     		ldr	r3, .L2
+  34 0014 1A69     		ldr	r2, [r3, #16]
+  35 0016 034B     		ldr	r3, .L2
+  36 0018 0349     		ldr	r1, .L2+4
+  37 001a 0A40     		ands	r2, r1
+  38 001c 1A61     		str	r2, [r3, #16]
+  39 001e C046     		nop
+  40 0020 BD46     		mov	sp, r7
+  41              		@ sp needed
+  42 0022 80BD     		pop	{r7, pc}
+  43              	.L3:
+  44              		.align	2
+  45              	.L2:
+  46 0024 00100240 		.word	1073876992
+  47 0028 FFFFFFEF 		.word	-268435457
+  49              		.section	.text.HAL_PWR_EnableBkUpAccess,"ax",%progbits
+  50              		.align	1
+  51              		.global	HAL_PWR_EnableBkUpAccess
+  52              		.syntax unified
+  53              		.code	16
+  54              		.thumb_func
+  56              	HAL_PWR_EnableBkUpAccess:
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 1, uses_anonymous_args = 0
+  59 0000 80B5     		push	{r7, lr}
+  60 0002 00AF     		add	r7, sp, #0
+ARM GAS  /tmp/ccetyOpf.s 			page 2
+
+
+  61 0004 044B     		ldr	r3, .L5
+  62 0006 1A68     		ldr	r2, [r3]
+  63 0008 034B     		ldr	r3, .L5
+  64 000a 8021     		movs	r1, #128
+  65 000c 4900     		lsls	r1, r1, #1
+  66 000e 0A43     		orrs	r2, r1
+  67 0010 1A60     		str	r2, [r3]
+  68 0012 C046     		nop
+  69 0014 BD46     		mov	sp, r7
+  70              		@ sp needed
+  71 0016 80BD     		pop	{r7, pc}
+  72              	.L6:
+  73              		.align	2
+  74              	.L5:
+  75 0018 00700040 		.word	1073770496
+  77              		.section	.text.HAL_PWR_DisableBkUpAccess,"ax",%progbits
+  78              		.align	1
+  79              		.global	HAL_PWR_DisableBkUpAccess
+  80              		.syntax unified
+  81              		.code	16
+  82              		.thumb_func
+  84              	HAL_PWR_DisableBkUpAccess:
+  85              		@ args = 0, pretend = 0, frame = 0
+  86              		@ frame_needed = 1, uses_anonymous_args = 0
+  87 0000 80B5     		push	{r7, lr}
+  88 0002 00AF     		add	r7, sp, #0
+  89 0004 044B     		ldr	r3, .L8
+  90 0006 1A68     		ldr	r2, [r3]
+  91 0008 034B     		ldr	r3, .L8
+  92 000a 0449     		ldr	r1, .L8+4
+  93 000c 0A40     		ands	r2, r1
+  94 000e 1A60     		str	r2, [r3]
+  95 0010 C046     		nop
+  96 0012 BD46     		mov	sp, r7
+  97              		@ sp needed
+  98 0014 80BD     		pop	{r7, pc}
+  99              	.L9:
+ 100 0016 C046     		.align	2
+ 101              	.L8:
+ 102 0018 00700040 		.word	1073770496
+ 103 001c FFFEFFFF 		.word	-257
+ 105              		.section	.text.HAL_PWR_EnableWakeUpPin,"ax",%progbits
+ 106              		.align	1
+ 107              		.global	HAL_PWR_EnableWakeUpPin
+ 108              		.syntax unified
+ 109              		.code	16
+ 110              		.thumb_func
+ 112              	HAL_PWR_EnableWakeUpPin:
+ 113              		@ args = 0, pretend = 0, frame = 8
+ 114              		@ frame_needed = 1, uses_anonymous_args = 0
+ 115 0000 80B5     		push	{r7, lr}
+ 116 0002 82B0     		sub	sp, sp, #8
+ 117 0004 00AF     		add	r7, sp, #0
+ 118 0006 7860     		str	r0, [r7, #4]
+ 119 0008 044B     		ldr	r3, .L11
+ 120 000a 5968     		ldr	r1, [r3, #4]
+ 121 000c 034B     		ldr	r3, .L11
+ARM GAS  /tmp/ccetyOpf.s 			page 3
+
+
+ 122 000e 7A68     		ldr	r2, [r7, #4]
+ 123 0010 0A43     		orrs	r2, r1
+ 124 0012 5A60     		str	r2, [r3, #4]
+ 125 0014 C046     		nop
+ 126 0016 BD46     		mov	sp, r7
+ 127 0018 02B0     		add	sp, sp, #8
+ 128              		@ sp needed
+ 129 001a 80BD     		pop	{r7, pc}
+ 130              	.L12:
+ 131              		.align	2
+ 132              	.L11:
+ 133 001c 00700040 		.word	1073770496
+ 135              		.section	.text.HAL_PWR_DisableWakeUpPin,"ax",%progbits
+ 136              		.align	1
+ 137              		.global	HAL_PWR_DisableWakeUpPin
+ 138              		.syntax unified
+ 139              		.code	16
+ 140              		.thumb_func
+ 142              	HAL_PWR_DisableWakeUpPin:
+ 143              		@ args = 0, pretend = 0, frame = 8
+ 144              		@ frame_needed = 1, uses_anonymous_args = 0
+ 145 0000 80B5     		push	{r7, lr}
+ 146 0002 82B0     		sub	sp, sp, #8
+ 147 0004 00AF     		add	r7, sp, #0
+ 148 0006 7860     		str	r0, [r7, #4]
+ 149 0008 054B     		ldr	r3, .L14
+ 150 000a 5A68     		ldr	r2, [r3, #4]
+ 151 000c 7B68     		ldr	r3, [r7, #4]
+ 152 000e D943     		mvns	r1, r3
+ 153 0010 034B     		ldr	r3, .L14
+ 154 0012 0A40     		ands	r2, r1
+ 155 0014 5A60     		str	r2, [r3, #4]
+ 156 0016 C046     		nop
+ 157 0018 BD46     		mov	sp, r7
+ 158 001a 02B0     		add	sp, sp, #8
+ 159              		@ sp needed
+ 160 001c 80BD     		pop	{r7, pc}
+ 161              	.L15:
+ 162 001e C046     		.align	2
+ 163              	.L14:
+ 164 0020 00700040 		.word	1073770496
+ 166              		.section	.text.HAL_PWR_EnterSLEEPMode,"ax",%progbits
+ 167              		.align	1
+ 168              		.global	HAL_PWR_EnterSLEEPMode
+ 169              		.syntax unified
+ 170              		.code	16
+ 171              		.thumb_func
+ 173              	HAL_PWR_EnterSLEEPMode:
+ 174              		@ args = 0, pretend = 0, frame = 8
+ 175              		@ frame_needed = 1, uses_anonymous_args = 0
+ 176 0000 80B5     		push	{r7, lr}
+ 177 0002 82B0     		sub	sp, sp, #8
+ 178 0004 00AF     		add	r7, sp, #0
+ 179 0006 7860     		str	r0, [r7, #4]
+ 180 0008 0A00     		movs	r2, r1
+ 181 000a FB1C     		adds	r3, r7, #3
+ 182 000c 1A70     		strb	r2, [r3]
+ARM GAS  /tmp/ccetyOpf.s 			page 4
+
+
+ 183 000e 094B     		ldr	r3, .L20
+ 184 0010 1A69     		ldr	r2, [r3, #16]
+ 185 0012 084B     		ldr	r3, .L20
+ 186 0014 0421     		movs	r1, #4
+ 187 0016 8A43     		bics	r2, r1
+ 188 0018 1A61     		str	r2, [r3, #16]
+ 189 001a FB1C     		adds	r3, r7, #3
+ 190 001c 1B78     		ldrb	r3, [r3]
+ 191 001e 012B     		cmp	r3, #1
+ 192 0020 01D1     		bne	.L17
+ 193              		.syntax divided
+ 194              	@ 280 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" 1
+ 195 0022 30BF     		wfi
+ 196              	@ 0 "" 2
+ 197              		.thumb
+ 198              		.syntax unified
+ 199 0024 02E0     		b	.L19
+ 200              	.L17:
+ 201              		.syntax divided
+ 202              	@ 285 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" 1
+ 203 0026 40BF     		sev
+ 204              	@ 0 "" 2
+ 205              	@ 286 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" 1
+ 206 0028 20BF     		wfe
+ 207              	@ 0 "" 2
+ 208              	@ 287 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" 1
+ 209 002a 20BF     		wfe
+ 210              	@ 0 "" 2
+ 211              		.thumb
+ 212              		.syntax unified
+ 213              	.L19:
+ 214 002c C046     		nop
+ 215 002e BD46     		mov	sp, r7
+ 216 0030 02B0     		add	sp, sp, #8
+ 217              		@ sp needed
+ 218 0032 80BD     		pop	{r7, pc}
+ 219              	.L21:
+ 220              		.align	2
+ 221              	.L20:
+ 222 0034 00ED00E0 		.word	-536810240
+ 224              		.section	.text.HAL_PWR_EnterSTOPMode,"ax",%progbits
+ 225              		.align	1
+ 226              		.global	HAL_PWR_EnterSTOPMode
+ 227              		.syntax unified
+ 228              		.code	16
+ 229              		.thumb_func
+ 231              	HAL_PWR_EnterSTOPMode:
+ 232              		@ args = 0, pretend = 0, frame = 16
+ 233              		@ frame_needed = 1, uses_anonymous_args = 0
+ 234 0000 80B5     		push	{r7, lr}
+ 235 0002 84B0     		sub	sp, sp, #16
+ 236 0004 00AF     		add	r7, sp, #0
+ 237 0006 7860     		str	r0, [r7, #4]
+ 238 0008 0A00     		movs	r2, r1
+ 239 000a FB1C     		adds	r3, r7, #3
+ 240 000c 1A70     		strb	r2, [r3]
+ 241 000e 0023     		movs	r3, #0
+ARM GAS  /tmp/ccetyOpf.s 			page 5
+
+
+ 242 0010 FB60     		str	r3, [r7, #12]
+ 243 0012 134B     		ldr	r3, .L25
+ 244 0014 1B68     		ldr	r3, [r3]
+ 245 0016 FB60     		str	r3, [r7, #12]
+ 246 0018 FB68     		ldr	r3, [r7, #12]
+ 247 001a 0322     		movs	r2, #3
+ 248 001c 9343     		bics	r3, r2
+ 249 001e FB60     		str	r3, [r7, #12]
+ 250 0020 FA68     		ldr	r2, [r7, #12]
+ 251 0022 7B68     		ldr	r3, [r7, #4]
+ 252 0024 1343     		orrs	r3, r2
+ 253 0026 FB60     		str	r3, [r7, #12]
+ 254 0028 0D4B     		ldr	r3, .L25
+ 255 002a FA68     		ldr	r2, [r7, #12]
+ 256 002c 1A60     		str	r2, [r3]
+ 257 002e 0D4B     		ldr	r3, .L25+4
+ 258 0030 1A69     		ldr	r2, [r3, #16]
+ 259 0032 0C4B     		ldr	r3, .L25+4
+ 260 0034 0421     		movs	r1, #4
+ 261 0036 0A43     		orrs	r2, r1
+ 262 0038 1A61     		str	r2, [r3, #16]
+ 263 003a FB1C     		adds	r3, r7, #3
+ 264 003c 1B78     		ldrb	r3, [r3]
+ 265 003e 012B     		cmp	r3, #1
+ 266 0040 01D1     		bne	.L23
+ 267              		.syntax divided
+ 268              	@ 337 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" 1
+ 269 0042 30BF     		wfi
+ 270              	@ 0 "" 2
+ 271              		.thumb
+ 272              		.syntax unified
+ 273 0044 02E0     		b	.L24
+ 274              	.L23:
+ 275              		.syntax divided
+ 276              	@ 342 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" 1
+ 277 0046 40BF     		sev
+ 278              	@ 0 "" 2
+ 279              	@ 343 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" 1
+ 280 0048 20BF     		wfe
+ 281              	@ 0 "" 2
+ 282              	@ 344 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" 1
+ 283 004a 20BF     		wfe
+ 284              	@ 0 "" 2
+ 285              		.thumb
+ 286              		.syntax unified
+ 287              	.L24:
+ 288 004c 054B     		ldr	r3, .L25+4
+ 289 004e 1A69     		ldr	r2, [r3, #16]
+ 290 0050 044B     		ldr	r3, .L25+4
+ 291 0052 0421     		movs	r1, #4
+ 292 0054 8A43     		bics	r2, r1
+ 293 0056 1A61     		str	r2, [r3, #16]
+ 294 0058 C046     		nop
+ 295 005a BD46     		mov	sp, r7
+ 296 005c 04B0     		add	sp, sp, #16
+ 297              		@ sp needed
+ 298 005e 80BD     		pop	{r7, pc}
+ARM GAS  /tmp/ccetyOpf.s 			page 6
+
+
+ 299              	.L26:
+ 300              		.align	2
+ 301              	.L25:
+ 302 0060 00700040 		.word	1073770496
+ 303 0064 00ED00E0 		.word	-536810240
+ 305              		.section	.text.HAL_PWR_EnterSTANDBYMode,"ax",%progbits
+ 306              		.align	1
+ 307              		.global	HAL_PWR_EnterSTANDBYMode
+ 308              		.syntax unified
+ 309              		.code	16
+ 310              		.thumb_func
+ 312              	HAL_PWR_EnterSTANDBYMode:
+ 313              		@ args = 0, pretend = 0, frame = 0
+ 314              		@ frame_needed = 1, uses_anonymous_args = 0
+ 315 0000 80B5     		push	{r7, lr}
+ 316 0002 00AF     		add	r7, sp, #0
+ 317 0004 074B     		ldr	r3, .L28
+ 318 0006 1A68     		ldr	r2, [r3]
+ 319 0008 064B     		ldr	r3, .L28
+ 320 000a 0221     		movs	r1, #2
+ 321 000c 0A43     		orrs	r2, r1
+ 322 000e 1A60     		str	r2, [r3]
+ 323 0010 054B     		ldr	r3, .L28+4
+ 324 0012 1A69     		ldr	r2, [r3, #16]
+ 325 0014 044B     		ldr	r3, .L28+4
+ 326 0016 0421     		movs	r1, #4
+ 327 0018 0A43     		orrs	r2, r1
+ 328 001a 1A61     		str	r2, [r3, #16]
+ 329              		.syntax divided
+ 330              	@ 378 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" 1
+ 331 001c 30BF     		wfi
+ 332              	@ 0 "" 2
+ 333              		.thumb
+ 334              		.syntax unified
+ 335 001e C046     		nop
+ 336 0020 BD46     		mov	sp, r7
+ 337              		@ sp needed
+ 338 0022 80BD     		pop	{r7, pc}
+ 339              	.L29:
+ 340              		.align	2
+ 341              	.L28:
+ 342 0024 00700040 		.word	1073770496
+ 343 0028 00ED00E0 		.word	-536810240
+ 345              		.section	.text.HAL_PWR_EnableSleepOnExit,"ax",%progbits
+ 346              		.align	1
+ 347              		.global	HAL_PWR_EnableSleepOnExit
+ 348              		.syntax unified
+ 349              		.code	16
+ 350              		.thumb_func
+ 352              	HAL_PWR_EnableSleepOnExit:
+ 353              		@ args = 0, pretend = 0, frame = 0
+ 354              		@ frame_needed = 1, uses_anonymous_args = 0
+ 355 0000 80B5     		push	{r7, lr}
+ 356 0002 00AF     		add	r7, sp, #0
+ 357 0004 044B     		ldr	r3, .L31
+ 358 0006 1A69     		ldr	r2, [r3, #16]
+ 359 0008 034B     		ldr	r3, .L31
+ARM GAS  /tmp/ccetyOpf.s 			page 7
+
+
+ 360 000a 0221     		movs	r1, #2
+ 361 000c 0A43     		orrs	r2, r1
+ 362 000e 1A61     		str	r2, [r3, #16]
+ 363 0010 C046     		nop
+ 364 0012 BD46     		mov	sp, r7
+ 365              		@ sp needed
+ 366 0014 80BD     		pop	{r7, pc}
+ 367              	.L32:
+ 368 0016 C046     		.align	2
+ 369              	.L31:
+ 370 0018 00ED00E0 		.word	-536810240
+ 372              		.section	.text.HAL_PWR_DisableSleepOnExit,"ax",%progbits
+ 373              		.align	1
+ 374              		.global	HAL_PWR_DisableSleepOnExit
+ 375              		.syntax unified
+ 376              		.code	16
+ 377              		.thumb_func
+ 379              	HAL_PWR_DisableSleepOnExit:
+ 380              		@ args = 0, pretend = 0, frame = 0
+ 381              		@ frame_needed = 1, uses_anonymous_args = 0
+ 382 0000 80B5     		push	{r7, lr}
+ 383 0002 00AF     		add	r7, sp, #0
+ 384 0004 044B     		ldr	r3, .L34
+ 385 0006 1A69     		ldr	r2, [r3, #16]
+ 386 0008 034B     		ldr	r3, .L34
+ 387 000a 0221     		movs	r1, #2
+ 388 000c 8A43     		bics	r2, r1
+ 389 000e 1A61     		str	r2, [r3, #16]
+ 390 0010 C046     		nop
+ 391 0012 BD46     		mov	sp, r7
+ 392              		@ sp needed
+ 393 0014 80BD     		pop	{r7, pc}
+ 394              	.L35:
+ 395 0016 C046     		.align	2
+ 396              	.L34:
+ 397 0018 00ED00E0 		.word	-536810240
+ 399              		.section	.text.HAL_PWR_EnableSEVOnPend,"ax",%progbits
+ 400              		.align	1
+ 401              		.global	HAL_PWR_EnableSEVOnPend
+ 402              		.syntax unified
+ 403              		.code	16
+ 404              		.thumb_func
+ 406              	HAL_PWR_EnableSEVOnPend:
+ 407              		@ args = 0, pretend = 0, frame = 0
+ 408              		@ frame_needed = 1, uses_anonymous_args = 0
+ 409 0000 80B5     		push	{r7, lr}
+ 410 0002 00AF     		add	r7, sp, #0
+ 411 0004 044B     		ldr	r3, .L37
+ 412 0006 1A69     		ldr	r2, [r3, #16]
+ 413 0008 034B     		ldr	r3, .L37
+ 414 000a 1021     		movs	r1, #16
+ 415 000c 0A43     		orrs	r2, r1
+ 416 000e 1A61     		str	r2, [r3, #16]
+ 417 0010 C046     		nop
+ 418 0012 BD46     		mov	sp, r7
+ 419              		@ sp needed
+ 420 0014 80BD     		pop	{r7, pc}
+ARM GAS  /tmp/ccetyOpf.s 			page 8
+
+
+ 421              	.L38:
+ 422 0016 C046     		.align	2
+ 423              	.L37:
+ 424 0018 00ED00E0 		.word	-536810240
+ 426              		.section	.text.HAL_PWR_DisableSEVOnPend,"ax",%progbits
+ 427              		.align	1
+ 428              		.global	HAL_PWR_DisableSEVOnPend
+ 429              		.syntax unified
+ 430              		.code	16
+ 431              		.thumb_func
+ 433              	HAL_PWR_DisableSEVOnPend:
+ 434              		@ args = 0, pretend = 0, frame = 0
+ 435              		@ frame_needed = 1, uses_anonymous_args = 0
+ 436 0000 80B5     		push	{r7, lr}
+ 437 0002 00AF     		add	r7, sp, #0
+ 438 0004 044B     		ldr	r3, .L40
+ 439 0006 1A69     		ldr	r2, [r3, #16]
+ 440 0008 034B     		ldr	r3, .L40
+ 441 000a 1021     		movs	r1, #16
+ 442 000c 8A43     		bics	r2, r1
+ 443 000e 1A61     		str	r2, [r3, #16]
+ 444 0010 C046     		nop
+ 445 0012 BD46     		mov	sp, r7
+ 446              		@ sp needed
+ 447 0014 80BD     		pop	{r7, pc}
+ 448              	.L41:
+ 449 0016 C046     		.align	2
+ 450              	.L40:
+ 451 0018 00ED00E0 		.word	-536810240
+ 453              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccetyOpf.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_hal_pwr.c
+     /tmp/ccetyOpf.s:15     .text.HAL_PWR_DeInit:00000000 $t
+     /tmp/ccetyOpf.s:21     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
+     /tmp/ccetyOpf.s:46     .text.HAL_PWR_DeInit:00000024 $d
+     /tmp/ccetyOpf.s:50     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
+     /tmp/ccetyOpf.s:56     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
+     /tmp/ccetyOpf.s:75     .text.HAL_PWR_EnableBkUpAccess:00000018 $d
+     /tmp/ccetyOpf.s:78     .text.HAL_PWR_DisableBkUpAccess:00000000 $t
+     /tmp/ccetyOpf.s:84     .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
+     /tmp/ccetyOpf.s:102    .text.HAL_PWR_DisableBkUpAccess:00000018 $d
+     /tmp/ccetyOpf.s:106    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
+     /tmp/ccetyOpf.s:112    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
+     /tmp/ccetyOpf.s:133    .text.HAL_PWR_EnableWakeUpPin:0000001c $d
+     /tmp/ccetyOpf.s:136    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
+     /tmp/ccetyOpf.s:142    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
+     /tmp/ccetyOpf.s:164    .text.HAL_PWR_DisableWakeUpPin:00000020 $d
+     /tmp/ccetyOpf.s:167    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
+     /tmp/ccetyOpf.s:173    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
+     /tmp/ccetyOpf.s:222    .text.HAL_PWR_EnterSLEEPMode:00000034 $d
+     /tmp/ccetyOpf.s:225    .text.HAL_PWR_EnterSTOPMode:00000000 $t
+     /tmp/ccetyOpf.s:231    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
+     /tmp/ccetyOpf.s:302    .text.HAL_PWR_EnterSTOPMode:00000060 $d
+     /tmp/ccetyOpf.s:306    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
+     /tmp/ccetyOpf.s:312    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
+     /tmp/ccetyOpf.s:342    .text.HAL_PWR_EnterSTANDBYMode:00000024 $d
+     /tmp/ccetyOpf.s:346    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
+     /tmp/ccetyOpf.s:352    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
+     /tmp/ccetyOpf.s:370    .text.HAL_PWR_EnableSleepOnExit:00000018 $d
+     /tmp/ccetyOpf.s:373    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
+     /tmp/ccetyOpf.s:379    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
+     /tmp/ccetyOpf.s:397    .text.HAL_PWR_DisableSleepOnExit:00000018 $d
+     /tmp/ccetyOpf.s:400    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
+     /tmp/ccetyOpf.s:406    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
+     /tmp/ccetyOpf.s:424    .text.HAL_PWR_EnableSEVOnPend:00000018 $d
+     /tmp/ccetyOpf.s:427    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
+     /tmp/ccetyOpf.s:433    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
+     /tmp/ccetyOpf.s:451    .text.HAL_PWR_DisableSEVOnPend:00000018 $d
+
+NO UNDEFINED SYMBOLS
