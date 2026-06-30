@@ -26,8 +26,12 @@
 void SystemClock_Config(void);
 void I2C_Read(uint8_t address, uint8_t reg, uint8_t nb, uint8_t *data);
 
-uint8_t PIN_SCL = 10, PIN_SDA = 11;
+#define PIN_SCL 10
+#define PIN_SDA 11
+#define SHIFT_AMOUNT 8
+#define SHIFT_MASK ((1 << SHIFT_AMOUNT) - 1)
 
+uint8_t axes;
 
 int main(void)
 {
@@ -58,10 +62,7 @@ int main(void)
   uint8_t address = 0x0A;
   uint8_t data[3];
   int8_t x,y,z;
-  uint32_t number;
-  uint8_t* pointer;
-  double Rx, Ry, Rz;
-  int8_t Arx, Ary, Arz;
+  int8_t Ar;
 
   char string[100];
 
@@ -93,19 +94,42 @@ int main(void)
 
 
   while (1){
+
     I2C_Read(address, (uint8_t)0x4, 3, data);
     x = (int8_t)data[0] / 4;
     y = (int8_t)data[1] / 4;
     z = (int8_t)data[2] / 4;
 
-    Rx = x / 16.0;
-    Ry = y / 16.0;
-    Rz = z / 16.0;
-    Arx = (int8_t)(atan(Rx/sqrt(pow(Ry,2) + pow(Rz, 2)))*180/M_PI);
-    Ary = (int8_t)(atan(Ry/sqrt(pow(Rx,2) + pow(Rz, 2)))*180/M_PI);
-    Arz = (int8_t)(atan(sqrt(pow(Rx,2) + pow(Ry, 2))/Rz)*180/M_PI);
+    switch(axes){
+      case 'x':
+        Ar = (int8_t)(atan(x/sqrt(pow(y,2) + pow(z, 2)))*180/M_PI);
+        break;
+      case 'y':
+        Ar = (int8_t)(atan(y/sqrt(pow(x,2) + pow(z, 2)))*180/M_PI);
+        break;
+      case 'z':
+        Ar = (int8_t)(atan(sqrt(pow(x,2) + pow(y, 2))/z)*180/M_PI);
+        break;
+      default:
+        sprintf(string, "Choose axes\n\r");
+        CDC_Transmit_FS((uint8_t*)string, strlen(string));
+        HAL_Delay(1000);
+        continue;
+        break;
+    }
+    /*float Rx = atan(x/sqrt(pow(y,2) + pow(z, 2)))*180/M_PI;
+    float Ry = atan(y/sqrt(pow(x,2) + pow(z, 2)))*180/M_PI;
+    float Rz = atan(sqrt(pow(x,2) + pow(y, 2))/z)*180/M_PI;
+    Arx = (int16_t) (Rx * 100) % 100;*/
 
-    sprintf(string, "x = %d\n\r y = %d\n\r z = %d\n\r", Arx, Ary, Arz);
+
+    /*Arx = (int8_t)(atan(x/sqrt(pow(y,2) + pow(z, 2)))*180/M_PI);
+    Ary = (int8_t)(atan(y/sqrt(pow(x,2) + pow(z, 2)))*180/M_PI);
+    Arz = (int8_t)(atan(sqrt(pow(x,2) + pow(y, 2))/z)*180/M_PI);*/
+    sprintf(string, "%c angle = %d\n\r", axes, Ar);
+    //sprintf(string, "x = %d\n\r", Arx);
+    //sprintf(string, "x = %d\n\r y = %d\n\r z = %d\n\r", Arx, Ary, Arz);
+    //sprintf(string, "x = %d.%d\n\r", (uint8_t)Rx, Arx);
     CDC_Transmit_FS((uint8_t*)string, strlen(string));
     HAL_Delay(1000);
   }
