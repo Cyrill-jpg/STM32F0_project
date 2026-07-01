@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccaxQBMZ.s 			page 1
+ARM GAS  /tmp/ccRtTuKs.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
   57 0032 04D0     		beq	.L5
   58 0034 FA68     		ldr	r2, [r7, #12]
   59 0036 AC23     		movs	r3, #172
-ARM GAS  /tmp/ccaxQBMZ.s 			page 2
+ARM GAS  /tmp/ccRtTuKs.s 			page 2
 
 
   60 0038 9B00     		lsls	r3, r3, #2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  116 002c FFF7FEFF 		bl	USBD_LL_Stop
  117 0030 7B68     		ldr	r3, [r7, #4]
  118 0032 1800     		movs	r0, r3
-ARM GAS  /tmp/ccaxQBMZ.s 			page 3
+ARM GAS  /tmp/ccRtTuKs.s 			page 3
 
 
  119 0034 FFF7FEFF 		bl	USBD_LL_DeInit
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  176              		.syntax unified
  177              		.code	16
  178              		.thumb_func
-ARM GAS  /tmp/ccaxQBMZ.s 			page 4
+ARM GAS  /tmp/ccRtTuKs.s 			page 4
 
 
  180              	USBD_Start:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  237              		.thumb_func
  239              	USBD_RunTestMode:
  240              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /tmp/ccaxQBMZ.s 			page 5
+ARM GAS  /tmp/ccRtTuKs.s 			page 5
 
 
  241              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  297 0042 FB18     		adds	r3, r7, r3
  298 0044 1B78     		ldrb	r3, [r3]
  299 0046 1800     		movs	r0, r3
-ARM GAS  /tmp/ccaxQBMZ.s 			page 6
+ARM GAS  /tmp/ccRtTuKs.s 			page 6
 
 
  300 0048 BD46     		mov	sp, r7
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  358 0012 6344     		add	r3, r3, ip
  359 0014 3A68     		ldr	r2, [r7]
  360 0016 1100     		movs	r1, r2
-ARM GAS  /tmp/ccaxQBMZ.s 			page 7
+ARM GAS  /tmp/ccRtTuKs.s 			page 7
 
 
  361 0018 1800     		movs	r0, r3
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  415 0084 9A18     		adds	r2, r3, r2
  416 0086 7B68     		ldr	r3, [r7, #4]
  417 0088 1100     		movs	r1, r2
-ARM GAS  /tmp/ccaxQBMZ.s 			page 8
+ARM GAS  /tmp/ccRtTuKs.s 			page 8
 
 
  418 008a 1800     		movs	r0, r3
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  474 0024 A523     		movs	r3, #165
  475 0026 9B00     		lsls	r3, r3, #2
  476 0028 D358     		ldr	r3, [r2, r3]
-ARM GAS  /tmp/ccaxQBMZ.s 			page 9
+ARM GAS  /tmp/ccRtTuKs.s 			page 9
 
 
  477 002a 032B     		cmp	r3, #3
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  531 0092 FA68     		ldr	r2, [r7, #12]
  532 0094 1000     		movs	r0, r2
  533 0096 9847     		blx	r3
-ARM GAS  /tmp/ccaxQBMZ.s 			page 10
+ARM GAS  /tmp/ccRtTuKs.s 			page 10
 
 
  534              	.L39:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  588 00fc 1800     		movs	r0, r3
  589 00fe BD46     		mov	sp, r7
  590 0100 06B0     		add	sp, sp, #24
-ARM GAS  /tmp/ccaxQBMZ.s 			page 11
+ARM GAS  /tmp/ccRtTuKs.s 			page 11
 
 
  591              		@ sp needed
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  647 0054 FFF7FEFF 		bl	USBD_CtlContinueSendData
  648 0058 F868     		ldr	r0, [r7, #12]
  649 005a 0023     		movs	r3, #0
-ARM GAS  /tmp/ccaxQBMZ.s 			page 12
+ARM GAS  /tmp/ccRtTuKs.s 			page 12
 
 
  650 005c 0022     		movs	r2, #0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  704 00cc 9B00     		lsls	r3, r3, #2
  705 00ce D35C     		ldrb	r3, [r2, r3]
  706 00d0 032B     		cmp	r3, #3
-ARM GAS  /tmp/ccaxQBMZ.s 			page 13
+ARM GAS  /tmp/ccRtTuKs.s 			page 13
 
 
  707 00d2 07D1     		bne	.L48
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  761 013c AD23     		movs	r3, #173
  762 013e 9B00     		lsls	r3, r3, #2
  763 0140 D358     		ldr	r3, [r2, r3]
-ARM GAS  /tmp/ccaxQBMZ.s 			page 14
+ARM GAS  /tmp/ccRtTuKs.s 			page 14
 
 
  764 0142 5B69     		ldr	r3, [r3, #20]
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  820 001c D150     		str	r1, [r2, r3]
  821 001e 7A68     		ldr	r2, [r7, #4]
  822 0020 B223     		movs	r3, #178
-ARM GAS  /tmp/ccaxQBMZ.s 			page 15
+ARM GAS  /tmp/ccRtTuKs.s 			page 15
 
 
  823 0022 5B00     		lsls	r3, r3, #1
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  877              		@ sp needed
  878 008e 80BD     		pop	{r7, pc}
  880              		.section	.text.USBD_LL_SetSpeed,"ax",%progbits
-ARM GAS  /tmp/ccaxQBMZ.s 			page 16
+ARM GAS  /tmp/ccRtTuKs.s 			page 16
 
 
  881              		.align	1
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  938              		@ sp needed
  939 0028 80BD     		pop	{r7, pc}
  940              	.L62:
-ARM GAS  /tmp/ccaxQBMZ.s 			page 17
+ARM GAS  /tmp/ccRtTuKs.s 			page 17
 
 
  941 002a C046     		.align	2
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  999 000a A723     		movs	r3, #167
  1000 000c 9B00     		lsls	r3, r3, #2
  1001 000e D35C     		ldrb	r3, [r2, r3]
-ARM GAS  /tmp/ccaxQBMZ.s 			page 18
+ARM GAS  /tmp/ccRtTuKs.s 			page 18
 
 
  1002 0010 032B     		cmp	r3, #3
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  1060              		@ frame_needed = 1, uses_anonymous_args = 0
  1061 0000 80B5     		push	{r7, lr}
  1062 0002 82B0     		sub	sp, sp, #8
-ARM GAS  /tmp/ccaxQBMZ.s 			page 19
+ARM GAS  /tmp/ccRtTuKs.s 			page 19
 
 
  1063 0004 00AF     		add	r7, sp, #0
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  1121 001e 5B68     		ldr	r3, [r3, #4]
  1122 0020 D9B2     		uxtb	r1, r3
  1123 0022 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/ccaxQBMZ.s 			page 20
+ARM GAS  /tmp/ccRtTuKs.s 			page 20
 
 
  1124 0024 1800     		movs	r0, r3
@@ -1151,56 +1151,56 @@ ARM GAS  /tmp/ccaxQBMZ.s 			page 1
  1131 0030 80BD     		pop	{r7, pc}
  1133              		.global	__aeabi_uidivmod
  1134              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccaxQBMZ.s 			page 21
+ARM GAS  /tmp/ccRtTuKs.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbd_core.c
-     /tmp/ccaxQBMZ.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
-     /tmp/ccaxQBMZ.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
-     /tmp/ccaxQBMZ.s:21     .text.USBD_Init:00000000 $t
-     /tmp/ccaxQBMZ.s:27     .text.USBD_Init:00000000 USBD_Init
-     /tmp/ccaxQBMZ.s:85     .text.USBD_DeInit:00000000 $t
-     /tmp/ccaxQBMZ.s:91     .text.USBD_DeInit:00000000 USBD_DeInit
-     /tmp/ccaxQBMZ.s:128    .text.USBD_RegisterClass:00000000 $t
-     /tmp/ccaxQBMZ.s:134    .text.USBD_RegisterClass:00000000 USBD_RegisterClass
-     /tmp/ccaxQBMZ.s:174    .text.USBD_Start:00000000 $t
-     /tmp/ccaxQBMZ.s:180    .text.USBD_Start:00000000 USBD_Start
-     /tmp/ccaxQBMZ.s:198    .text.USBD_Stop:00000000 $t
-     /tmp/ccaxQBMZ.s:204    .text.USBD_Stop:00000000 USBD_Stop
-     /tmp/ccaxQBMZ.s:233    .text.USBD_RunTestMode:00000000 $t
-     /tmp/ccaxQBMZ.s:239    .text.USBD_RunTestMode:00000000 USBD_RunTestMode
-     /tmp/ccaxQBMZ.s:254    .text.USBD_SetClassConfig:00000000 $t
-     /tmp/ccaxQBMZ.s:260    .text.USBD_SetClassConfig:00000000 USBD_SetClassConfig
-     /tmp/ccaxQBMZ.s:306    .text.USBD_ClrClassConfig:00000000 $t
-     /tmp/ccaxQBMZ.s:312    .text.USBD_ClrClassConfig:00000000 USBD_ClrClassConfig
-     /tmp/ccaxQBMZ.s:340    .text.USBD_LL_SetupStage:00000000 $t
-     /tmp/ccaxQBMZ.s:346    .text.USBD_LL_SetupStage:00000000 USBD_LL_SetupStage
-     /tmp/ccaxQBMZ.s:444    .text.USBD_LL_SetupStage:000000b8 $d
-     /tmp/ccaxQBMZ.s:447    .text.USBD_LL_DataOutStage:00000000 $t
-     /tmp/ccaxQBMZ.s:453    .text.USBD_LL_DataOutStage:00000000 USBD_LL_DataOutStage
-     /tmp/ccaxQBMZ.s:595    .text.USBD_LL_DataInStage:00000000 $t
-     /tmp/ccaxQBMZ.s:601    .text.USBD_LL_DataInStage:00000000 USBD_LL_DataInStage
-     /tmp/ccaxQBMZ.s:798    .text.USBD_LL_Reset:00000000 $t
-     /tmp/ccaxQBMZ.s:804    .text.USBD_LL_Reset:00000000 USBD_LL_Reset
-     /tmp/ccaxQBMZ.s:881    .text.USBD_LL_SetSpeed:00000000 $t
-     /tmp/ccaxQBMZ.s:887    .text.USBD_LL_SetSpeed:00000000 USBD_LL_SetSpeed
-     /tmp/ccaxQBMZ.s:909    .text.USBD_LL_Suspend:00000000 $t
-     /tmp/ccaxQBMZ.s:915    .text.USBD_LL_Suspend:00000000 USBD_LL_Suspend
-     /tmp/ccaxQBMZ.s:943    .text.USBD_LL_Suspend:0000002c $d
-     /tmp/ccaxQBMZ.s:946    .text.USBD_LL_Resume:00000000 $t
-     /tmp/ccaxQBMZ.s:952    .text.USBD_LL_Resume:00000000 USBD_LL_Resume
-     /tmp/ccaxQBMZ.s:982    .text.USBD_LL_Resume:0000002c $d
-     /tmp/ccaxQBMZ.s:985    .text.USBD_LL_SOF:00000000 $t
-     /tmp/ccaxQBMZ.s:991    .text.USBD_LL_SOF:00000000 USBD_LL_SOF
-     /tmp/ccaxQBMZ.s:1028   .text.USBD_LL_IsoINIncomplete:00000000 $t
-     /tmp/ccaxQBMZ.s:1034   .text.USBD_LL_IsoINIncomplete:00000000 USBD_LL_IsoINIncomplete
-     /tmp/ccaxQBMZ.s:1052   .text.USBD_LL_IsoOUTIncomplete:00000000 $t
-     /tmp/ccaxQBMZ.s:1058   .text.USBD_LL_IsoOUTIncomplete:00000000 USBD_LL_IsoOUTIncomplete
-     /tmp/ccaxQBMZ.s:1076   .text.USBD_LL_DevConnected:00000000 $t
-     /tmp/ccaxQBMZ.s:1082   .text.USBD_LL_DevConnected:00000000 USBD_LL_DevConnected
-     /tmp/ccaxQBMZ.s:1097   .text.USBD_LL_DevDisconnected:00000000 $t
-     /tmp/ccaxQBMZ.s:1103   .text.USBD_LL_DevDisconnected:00000000 USBD_LL_DevDisconnected
+     /tmp/ccRtTuKs.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+     /tmp/ccRtTuKs.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+     /tmp/ccRtTuKs.s:21     .text.USBD_Init:00000000 $t
+     /tmp/ccRtTuKs.s:27     .text.USBD_Init:00000000 USBD_Init
+     /tmp/ccRtTuKs.s:85     .text.USBD_DeInit:00000000 $t
+     /tmp/ccRtTuKs.s:91     .text.USBD_DeInit:00000000 USBD_DeInit
+     /tmp/ccRtTuKs.s:128    .text.USBD_RegisterClass:00000000 $t
+     /tmp/ccRtTuKs.s:134    .text.USBD_RegisterClass:00000000 USBD_RegisterClass
+     /tmp/ccRtTuKs.s:174    .text.USBD_Start:00000000 $t
+     /tmp/ccRtTuKs.s:180    .text.USBD_Start:00000000 USBD_Start
+     /tmp/ccRtTuKs.s:198    .text.USBD_Stop:00000000 $t
+     /tmp/ccRtTuKs.s:204    .text.USBD_Stop:00000000 USBD_Stop
+     /tmp/ccRtTuKs.s:233    .text.USBD_RunTestMode:00000000 $t
+     /tmp/ccRtTuKs.s:239    .text.USBD_RunTestMode:00000000 USBD_RunTestMode
+     /tmp/ccRtTuKs.s:254    .text.USBD_SetClassConfig:00000000 $t
+     /tmp/ccRtTuKs.s:260    .text.USBD_SetClassConfig:00000000 USBD_SetClassConfig
+     /tmp/ccRtTuKs.s:306    .text.USBD_ClrClassConfig:00000000 $t
+     /tmp/ccRtTuKs.s:312    .text.USBD_ClrClassConfig:00000000 USBD_ClrClassConfig
+     /tmp/ccRtTuKs.s:340    .text.USBD_LL_SetupStage:00000000 $t
+     /tmp/ccRtTuKs.s:346    .text.USBD_LL_SetupStage:00000000 USBD_LL_SetupStage
+     /tmp/ccRtTuKs.s:444    .text.USBD_LL_SetupStage:000000b8 $d
+     /tmp/ccRtTuKs.s:447    .text.USBD_LL_DataOutStage:00000000 $t
+     /tmp/ccRtTuKs.s:453    .text.USBD_LL_DataOutStage:00000000 USBD_LL_DataOutStage
+     /tmp/ccRtTuKs.s:595    .text.USBD_LL_DataInStage:00000000 $t
+     /tmp/ccRtTuKs.s:601    .text.USBD_LL_DataInStage:00000000 USBD_LL_DataInStage
+     /tmp/ccRtTuKs.s:798    .text.USBD_LL_Reset:00000000 $t
+     /tmp/ccRtTuKs.s:804    .text.USBD_LL_Reset:00000000 USBD_LL_Reset
+     /tmp/ccRtTuKs.s:881    .text.USBD_LL_SetSpeed:00000000 $t
+     /tmp/ccRtTuKs.s:887    .text.USBD_LL_SetSpeed:00000000 USBD_LL_SetSpeed
+     /tmp/ccRtTuKs.s:909    .text.USBD_LL_Suspend:00000000 $t
+     /tmp/ccRtTuKs.s:915    .text.USBD_LL_Suspend:00000000 USBD_LL_Suspend
+     /tmp/ccRtTuKs.s:943    .text.USBD_LL_Suspend:0000002c $d
+     /tmp/ccRtTuKs.s:946    .text.USBD_LL_Resume:00000000 $t
+     /tmp/ccRtTuKs.s:952    .text.USBD_LL_Resume:00000000 USBD_LL_Resume
+     /tmp/ccRtTuKs.s:982    .text.USBD_LL_Resume:0000002c $d
+     /tmp/ccRtTuKs.s:985    .text.USBD_LL_SOF:00000000 $t
+     /tmp/ccRtTuKs.s:991    .text.USBD_LL_SOF:00000000 USBD_LL_SOF
+     /tmp/ccRtTuKs.s:1028   .text.USBD_LL_IsoINIncomplete:00000000 $t
+     /tmp/ccRtTuKs.s:1034   .text.USBD_LL_IsoINIncomplete:00000000 USBD_LL_IsoINIncomplete
+     /tmp/ccRtTuKs.s:1052   .text.USBD_LL_IsoOUTIncomplete:00000000 $t
+     /tmp/ccRtTuKs.s:1058   .text.USBD_LL_IsoOUTIncomplete:00000000 USBD_LL_IsoOUTIncomplete
+     /tmp/ccRtTuKs.s:1076   .text.USBD_LL_DevConnected:00000000 $t
+     /tmp/ccRtTuKs.s:1082   .text.USBD_LL_DevConnected:00000000 USBD_LL_DevConnected
+     /tmp/ccRtTuKs.s:1097   .text.USBD_LL_DevDisconnected:00000000 $t
+     /tmp/ccRtTuKs.s:1103   .text.USBD_LL_DevDisconnected:00000000 USBD_LL_DevDisconnected
 
 UNDEFINED SYMBOLS
 USBD_LL_Init
@@ -1211,7 +1211,7 @@ USBD_ParseSetupRequest
 USBD_StdDevReq
 USBD_StdItfReq
 USBD_StdEPReq
-ARM GAS  /tmp/ccaxQBMZ.s 			page 22
+ARM GAS  /tmp/ccRtTuKs.s 			page 22
 
 
 USBD_LL_StallEP

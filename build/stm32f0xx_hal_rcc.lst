@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccDqfDAJ.s 			page 1
+ARM GAS  /tmp/cc8ynCaH.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
   56 0040 0A40     		ands	r2, r1
   57 0042 5A60     		str	r2, [r3, #4]
   58 0044 09E0     		b	.L5
-ARM GAS  /tmp/ccDqfDAJ.s 			page 2
+ARM GAS  /tmp/cc8ynCaH.s 			page 2
 
 
   59              	.L6:
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  113 00b0 0E4B     		ldr	r3, .L10
  114 00b2 1A68     		ldr	r2, [r3]
  115 00b4 8023     		movs	r3, #128
-ARM GAS  /tmp/ccDqfDAJ.s 			page 3
+ARM GAS  /tmp/cc8ynCaH.s 			page 3
 
 
  116 00b6 9B04     		lsls	r3, r3, #18
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  172 000a 002B     		cmp	r3, #0
  173 000c 02D1     		bne	.L13
  174 000e 0123     		movs	r3, #1
-ARM GAS  /tmp/ccDqfDAJ.s 			page 4
+ARM GAS  /tmp/cc8ynCaH.s 			page 4
 
 
  175 0010 00F076FB 		bl	.L14	@ far jump
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  229 0074 B04B     		ldr	r3, .L87
  230 0076 8021     		movs	r1, #128
  231 0078 4902     		lsls	r1, r1, #9
-ARM GAS  /tmp/ccDqfDAJ.s 			page 5
+ARM GAS  /tmp/cc8ynCaH.s 			page 5
 
 
  232 007a 0A43     		orrs	r2, r1
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  286              	.L20:
  287 00e0 7B68     		ldr	r3, [r7, #4]
  288 00e2 5B68     		ldr	r3, [r3, #4]
-ARM GAS  /tmp/ccDqfDAJ.s 			page 6
+ARM GAS  /tmp/cc8ynCaH.s 			page 6
 
 
  289 00e4 002B     		cmp	r3, #0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  343              	.LCB364:
  344 014a 7B4B     		ldr	r3, .L87
  345 014c 5B68     		ldr	r3, [r3, #4]
-ARM GAS  /tmp/ccDqfDAJ.s 			page 7
+ARM GAS  /tmp/cc8ynCaH.s 			page 7
 
 
  346 014e 0C22     		movs	r2, #12
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  400 01b4 FFF7FEFF 		bl	HAL_GetTick
  401 01b8 0300     		movs	r3, r0
  402 01ba BB61     		str	r3, [r7, #24]
-ARM GAS  /tmp/ccDqfDAJ.s 			page 8
+ARM GAS  /tmp/cc8ynCaH.s 			page 8
 
 
  403 01bc 08E0     		b	.L33
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  457              	.L28:
  458 0224 7B68     		ldr	r3, [r7, #4]
  459 0226 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccDqfDAJ.s 			page 9
+ARM GAS  /tmp/cc8ynCaH.s 			page 9
 
 
  460 0228 0822     		movs	r2, #8
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  514 0292 294B     		ldr	r3, .L87
  515 0294 5B6A     		ldr	r3, [r3, #36]
  516 0296 0222     		movs	r2, #2
-ARM GAS  /tmp/ccDqfDAJ.s 			page 10
+ARM GAS  /tmp/cc8ynCaH.s 			page 10
 
 
  517 0298 1340     		ands	r3, r2
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  571 0300 08E0     		b	.L46
  572              	.L47:
  573 0302 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  /tmp/ccDqfDAJ.s 			page 11
+ARM GAS  /tmp/cc8ynCaH.s 			page 11
 
 
  574 0306 0200     		movs	r2, r0
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  628 036e 052B     		cmp	r3, #5
  629 0370 0CD1     		bne	.L51
  630 0372 C24B     		ldr	r3, .L89
-ARM GAS  /tmp/ccDqfDAJ.s 			page 12
+ARM GAS  /tmp/cc8ynCaH.s 			page 12
 
 
  631 0374 1A6A     		ldr	r2, [r3, #32]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  685 03dc BB61     		str	r3, [r7, #24]
  686 03de 09E0     		b	.L56
  687              	.L57:
-ARM GAS  /tmp/ccDqfDAJ.s 			page 13
+ARM GAS  /tmp/cc8ynCaH.s 			page 13
 
 
  688 03e0 FFF7FEFF 		bl	HAL_GetTick
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  742 0448 FFF7FEFF 		bl	HAL_GetTick
  743 044c 0200     		movs	r2, r0
  744 044e BB69     		ldr	r3, [r7, #24]
-ARM GAS  /tmp/ccDqfDAJ.s 			page 14
+ARM GAS  /tmp/cc8ynCaH.s 			page 14
 
 
  745 0450 D31A     		subs	r3, r2, r3
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  799 04b6 5A6B     		ldr	r2, [r3, #52]
  800 04b8 704B     		ldr	r3, .L89
  801 04ba 0121     		movs	r1, #1
-ARM GAS  /tmp/ccDqfDAJ.s 			page 15
+ARM GAS  /tmp/cc8ynCaH.s 			page 15
 
 
  802 04bc 8A43     		bics	r2, r1
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  856 0524 40D0     		beq	.L86
  857 0526 7B68     		ldr	r3, [r7, #4]
  858 0528 1B6A     		ldr	r3, [r3, #32]
-ARM GAS  /tmp/ccDqfDAJ.s 			page 16
+ARM GAS  /tmp/cc8ynCaH.s 			page 16
 
 
  859 052a 012B     		cmp	r3, #1
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  913 0594 01D9     		bls	.L72
  914 0596 0323     		movs	r3, #3
  915 0598 B2E0     		b	.L14
-ARM GAS  /tmp/ccDqfDAJ.s 			page 17
+ARM GAS  /tmp/cc8ynCaH.s 			page 17
 
 
  916              	.L72:
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  970 05fc F0D1     		bne	.L78
  971 05fe 1F4B     		ldr	r3, .L89
  972 0600 DB6A     		ldr	r3, [r3, #44]
-ARM GAS  /tmp/ccDqfDAJ.s 			page 18
+ARM GAS  /tmp/cc8ynCaH.s 			page 18
 
 
  973 0602 0F22     		movs	r2, #15
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1027 066c 0A40     		ands	r2, r1
  1028 066e 1A60     		str	r2, [r3]
  1029 0670 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  /tmp/ccDqfDAJ.s 			page 19
+ARM GAS  /tmp/cc8ynCaH.s 			page 19
 
 
  1030 0674 0300     		movs	r3, r0
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1084 06e2 7B68     		ldr	r3, [r7, #4]
  1085 06e4 1B6B     		ldr	r3, [r3, #48]
  1086 06e6 9A42     		cmp	r2, r3
-ARM GAS  /tmp/ccDqfDAJ.s 			page 20
+ARM GAS  /tmp/cc8ynCaH.s 			page 20
 
 
  1087 06e8 07D1     		bne	.L84
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1143 0028 9343     		bics	r3, r2
  1144 002a 1900     		movs	r1, r3
  1145 002c 5B4B     		ldr	r3, .L108
-ARM GAS  /tmp/ccDqfDAJ.s 			page 21
+ARM GAS  /tmp/cc8ynCaH.s 			page 21
 
 
  1146 002e 3A68     		ldr	r2, [r7]
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1200 0094 9B02     		lsls	r3, r3, #10
  1201 0096 1340     		ands	r3, r2
  1202 0098 20D1     		bne	.L101
-ARM GAS  /tmp/ccDqfDAJ.s 			page 22
+ARM GAS  /tmp/cc8ynCaH.s 			page 22
 
 
  1203 009a 0123     		movs	r3, #1
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1257 0100 FB68     		ldr	r3, [r7, #12]
  1258 0102 D31A     		subs	r3, r2, r3
  1259 0104 274A     		ldr	r2, .L108+8
-ARM GAS  /tmp/ccDqfDAJ.s 			page 23
+ARM GAS  /tmp/cc8ynCaH.s 			page 23
 
 
  1260 0106 9342     		cmp	r3, r2
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1314 016c 0A43     		orrs	r2, r1
  1315 016e 5A60     		str	r2, [r3, #4]
  1316              	.L107:
-ARM GAS  /tmp/ccDqfDAJ.s 			page 24
+ARM GAS  /tmp/cc8ynCaH.s 			page 24
 
 
  1317 0170 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1373 001c 0022     		movs	r2, #0
  1374 001e 9A60     		str	r2, [r3, #8]
  1375 0020 3B18     		adds	r3, r7, r0
-ARM GAS  /tmp/ccDqfDAJ.s 			page 25
+ARM GAS  /tmp/cc8ynCaH.s 			page 25
 
 
  1376 0022 8022     		movs	r2, #128
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1432              		@ args = 0, pretend = 0, frame = 0
  1433              		@ frame_needed = 1, uses_anonymous_args = 0
  1434 0000 80B5     		push	{r7, lr}
-ARM GAS  /tmp/ccDqfDAJ.s 			page 26
+ARM GAS  /tmp/cc8ynCaH.s 			page 26
 
 
  1435 0002 00AF     		add	r7, sp, #0
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1493 0006 0023     		movs	r3, #0
  1494 0008 FB60     		str	r3, [r7, #12]
  1495 000a 0023     		movs	r3, #0
-ARM GAS  /tmp/ccDqfDAJ.s 			page 27
+ARM GAS  /tmp/cc8ynCaH.s 			page 27
 
 
  1496 000c BB60     		str	r3, [r7, #8]
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1550 0076 5343     		muls	r3, r2
  1551 0078 7B61     		str	r3, [r7, #20]
  1552 007a 1AE0     		b	.L126
-ARM GAS  /tmp/ccDqfDAJ.s 			page 28
+ARM GAS  /tmp/cc8ynCaH.s 			page 28
 
 
  1553              	.L125:
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1608              		.section	.text.HAL_RCC_GetHCLKFreq,"ax",%progbits
  1609              		.align	1
  1610              		.global	HAL_RCC_GetHCLKFreq
-ARM GAS  /tmp/ccDqfDAJ.s 			page 29
+ARM GAS  /tmp/cc8ynCaH.s 			page 29
 
 
  1611              		.syntax unified
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1669              		.thumb_func
  1671              	HAL_RCC_GetOscConfig:
  1672              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /tmp/ccDqfDAJ.s 			page 30
+ARM GAS  /tmp/cc8ynCaH.s 			page 30
 
 
  1673              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1727 0064 DA60     		str	r2, [r3, #12]
  1728 0066 02E0     		b	.L144
  1729              	.L143:
-ARM GAS  /tmp/ccDqfDAJ.s 			page 31
+ARM GAS  /tmp/cc8ynCaH.s 			page 31
 
 
  1730 0068 7B68     		ldr	r3, [r7, #4]
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1784 00c8 0122     		movs	r2, #1
  1785 00ca 1340     		ands	r3, r2
  1786 00cc 012B     		cmp	r3, #1
-ARM GAS  /tmp/ccDqfDAJ.s 			page 32
+ARM GAS  /tmp/cc8ynCaH.s 			page 32
 
 
  1787 00ce 03D1     		bne	.L150
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1841 0132 5A68     		ldr	r2, [r3, #4]
  1842 0134 F023     		movs	r3, #240
  1843 0136 9B03     		lsls	r3, r3, #14
-ARM GAS  /tmp/ccDqfDAJ.s 			page 33
+ARM GAS  /tmp/cc8ynCaH.s 			page 33
 
 
  1844 0138 1A40     		ands	r2, r3
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1900 0036 064B     		ldr	r3, .L157+4
  1901 0038 1B68     		ldr	r3, [r3]
  1902 003a 0122     		movs	r2, #1
-ARM GAS  /tmp/ccDqfDAJ.s 			page 34
+ARM GAS  /tmp/cc8ynCaH.s 			page 34
 
 
  1903 003c 1A40     		ands	r2, r3
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1961 0002 00AF     		add	r7, sp, #0
  1962 0004 C046     		nop
  1963 0006 BD46     		mov	sp, r7
-ARM GAS  /tmp/ccDqfDAJ.s 			page 35
+ARM GAS  /tmp/cc8ynCaH.s 			page 35
 
 
  1964              		@ sp needed
@@ -2061,57 +2061,57 @@ ARM GAS  /tmp/ccDqfDAJ.s 			page 1
  1980 000d 0E0F10   		.ascii	"\016\017\020"
  1981              		.global	__aeabi_uidiv
  1982              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccDqfDAJ.s 			page 36
+ARM GAS  /tmp/cc8ynCaH.s 			page 36
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_rcc.c
-     /tmp/ccDqfDAJ.s:15     .text.HAL_RCC_DeInit:00000000 $t
-     /tmp/ccDqfDAJ.s:21     .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
-     /tmp/ccDqfDAJ.s:148    .text.HAL_RCC_DeInit:000000ec $d
-     /tmp/ccDqfDAJ.s:158    .text.HAL_RCC_OscConfig:00000000 $t
-     /tmp/ccDqfDAJ.s:164    .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
-     /tmp/ccDqfDAJ.s:603    .text.HAL_RCC_OscConfig:00000338 $d
-     /tmp/ccDqfDAJ.s:608    .text.HAL_RCC_OscConfig:00000348 $t
-     /tmp/ccDqfDAJ.s:1036   .text.HAL_RCC_OscConfig:0000067c $d
-     /tmp/ccDqfDAJ.s:1043   .text.HAL_RCC_OscConfig:00000694 $t
-     /tmp/ccDqfDAJ.s:1110   .text.HAL_RCC_OscConfig:00000708 $d
-     /tmp/ccDqfDAJ.s:1113   .text.HAL_RCC_ClockConfig:00000000 $t
-     /tmp/ccDqfDAJ.s:1119   .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
-     /tmp/ccDqfDAJ.s:1487   .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
-     /tmp/ccDqfDAJ.s:1342   .text.HAL_RCC_ClockConfig:0000019c $d
-     /tmp/ccDqfDAJ.s:1350   .text.HAL_RCC_MCOConfig:00000000 $t
-     /tmp/ccDqfDAJ.s:1356   .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
-     /tmp/ccDqfDAJ.s:1421   .text.HAL_RCC_MCOConfig:00000078 $d
-     /tmp/ccDqfDAJ.s:1425   .text.HAL_RCC_EnableCSS:00000000 $t
-     /tmp/ccDqfDAJ.s:1431   .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
-     /tmp/ccDqfDAJ.s:1450   .text.HAL_RCC_EnableCSS:00000018 $d
-     /tmp/ccDqfDAJ.s:1453   .text.HAL_RCC_DisableCSS:00000000 $t
-     /tmp/ccDqfDAJ.s:1459   .text.HAL_RCC_DisableCSS:00000000 HAL_RCC_DisableCSS
-     /tmp/ccDqfDAJ.s:1477   .text.HAL_RCC_DisableCSS:00000018 $d
-     /tmp/ccDqfDAJ.s:1481   .text.HAL_RCC_GetSysClockFreq:00000000 $t
-     /tmp/ccDqfDAJ.s:1602   .text.HAL_RCC_GetSysClockFreq:000000d0 $d
-     /tmp/ccDqfDAJ.s:1971   .rodata.aPLLMULFactorTable.1:00000000 aPLLMULFactorTable.1
-     /tmp/ccDqfDAJ.s:1978   .rodata.aPredivFactorTable.0:00000000 aPredivFactorTable.0
-     /tmp/ccDqfDAJ.s:1609   .text.HAL_RCC_GetHCLKFreq:00000000 $t
-     /tmp/ccDqfDAJ.s:1615   .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
-     /tmp/ccDqfDAJ.s:1629   .text.HAL_RCC_GetHCLKFreq:00000010 $d
-     /tmp/ccDqfDAJ.s:1632   .text.HAL_RCC_GetPCLK1Freq:00000000 $t
-     /tmp/ccDqfDAJ.s:1638   .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
-     /tmp/ccDqfDAJ.s:1661   .text.HAL_RCC_GetPCLK1Freq:00000024 $d
-     /tmp/ccDqfDAJ.s:1665   .text.HAL_RCC_GetOscConfig:00000000 $t
-     /tmp/ccDqfDAJ.s:1671   .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
-     /tmp/ccDqfDAJ.s:1861   .text.HAL_RCC_GetOscConfig:00000154 $d
-     /tmp/ccDqfDAJ.s:1864   .text.HAL_RCC_GetClockConfig:00000000 $t
-     /tmp/ccDqfDAJ.s:1870   .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
-     /tmp/ccDqfDAJ.s:1914   .text.HAL_RCC_GetClockConfig:0000004c $d
-     /tmp/ccDqfDAJ.s:1918   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
-     /tmp/ccDqfDAJ.s:1924   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
-     /tmp/ccDqfDAJ.s:1957   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
-     /tmp/ccDqfDAJ.s:1947   .text.HAL_RCC_NMI_IRQHandler:00000020 $d
-     /tmp/ccDqfDAJ.s:1951   .text.HAL_RCC_CSSCallback:00000000 $t
-     /tmp/ccDqfDAJ.s:1968   .rodata.aPLLMULFactorTable.1:00000000 $d
-     /tmp/ccDqfDAJ.s:1975   .rodata.aPredivFactorTable.0:00000000 $d
+     /tmp/cc8ynCaH.s:15     .text.HAL_RCC_DeInit:00000000 $t
+     /tmp/cc8ynCaH.s:21     .text.HAL_RCC_DeInit:00000000 HAL_RCC_DeInit
+     /tmp/cc8ynCaH.s:148    .text.HAL_RCC_DeInit:000000ec $d
+     /tmp/cc8ynCaH.s:158    .text.HAL_RCC_OscConfig:00000000 $t
+     /tmp/cc8ynCaH.s:164    .text.HAL_RCC_OscConfig:00000000 HAL_RCC_OscConfig
+     /tmp/cc8ynCaH.s:603    .text.HAL_RCC_OscConfig:00000338 $d
+     /tmp/cc8ynCaH.s:608    .text.HAL_RCC_OscConfig:00000348 $t
+     /tmp/cc8ynCaH.s:1036   .text.HAL_RCC_OscConfig:0000067c $d
+     /tmp/cc8ynCaH.s:1043   .text.HAL_RCC_OscConfig:00000694 $t
+     /tmp/cc8ynCaH.s:1110   .text.HAL_RCC_OscConfig:00000708 $d
+     /tmp/cc8ynCaH.s:1113   .text.HAL_RCC_ClockConfig:00000000 $t
+     /tmp/cc8ynCaH.s:1119   .text.HAL_RCC_ClockConfig:00000000 HAL_RCC_ClockConfig
+     /tmp/cc8ynCaH.s:1487   .text.HAL_RCC_GetSysClockFreq:00000000 HAL_RCC_GetSysClockFreq
+     /tmp/cc8ynCaH.s:1342   .text.HAL_RCC_ClockConfig:0000019c $d
+     /tmp/cc8ynCaH.s:1350   .text.HAL_RCC_MCOConfig:00000000 $t
+     /tmp/cc8ynCaH.s:1356   .text.HAL_RCC_MCOConfig:00000000 HAL_RCC_MCOConfig
+     /tmp/cc8ynCaH.s:1421   .text.HAL_RCC_MCOConfig:00000078 $d
+     /tmp/cc8ynCaH.s:1425   .text.HAL_RCC_EnableCSS:00000000 $t
+     /tmp/cc8ynCaH.s:1431   .text.HAL_RCC_EnableCSS:00000000 HAL_RCC_EnableCSS
+     /tmp/cc8ynCaH.s:1450   .text.HAL_RCC_EnableCSS:00000018 $d
+     /tmp/cc8ynCaH.s:1453   .text.HAL_RCC_DisableCSS:00000000 $t
+     /tmp/cc8ynCaH.s:1459   .text.HAL_RCC_DisableCSS:00000000 HAL_RCC_DisableCSS
+     /tmp/cc8ynCaH.s:1477   .text.HAL_RCC_DisableCSS:00000018 $d
+     /tmp/cc8ynCaH.s:1481   .text.HAL_RCC_GetSysClockFreq:00000000 $t
+     /tmp/cc8ynCaH.s:1602   .text.HAL_RCC_GetSysClockFreq:000000d0 $d
+     /tmp/cc8ynCaH.s:1971   .rodata.aPLLMULFactorTable.1:00000000 aPLLMULFactorTable.1
+     /tmp/cc8ynCaH.s:1978   .rodata.aPredivFactorTable.0:00000000 aPredivFactorTable.0
+     /tmp/cc8ynCaH.s:1609   .text.HAL_RCC_GetHCLKFreq:00000000 $t
+     /tmp/cc8ynCaH.s:1615   .text.HAL_RCC_GetHCLKFreq:00000000 HAL_RCC_GetHCLKFreq
+     /tmp/cc8ynCaH.s:1629   .text.HAL_RCC_GetHCLKFreq:00000010 $d
+     /tmp/cc8ynCaH.s:1632   .text.HAL_RCC_GetPCLK1Freq:00000000 $t
+     /tmp/cc8ynCaH.s:1638   .text.HAL_RCC_GetPCLK1Freq:00000000 HAL_RCC_GetPCLK1Freq
+     /tmp/cc8ynCaH.s:1661   .text.HAL_RCC_GetPCLK1Freq:00000024 $d
+     /tmp/cc8ynCaH.s:1665   .text.HAL_RCC_GetOscConfig:00000000 $t
+     /tmp/cc8ynCaH.s:1671   .text.HAL_RCC_GetOscConfig:00000000 HAL_RCC_GetOscConfig
+     /tmp/cc8ynCaH.s:1861   .text.HAL_RCC_GetOscConfig:00000154 $d
+     /tmp/cc8ynCaH.s:1864   .text.HAL_RCC_GetClockConfig:00000000 $t
+     /tmp/cc8ynCaH.s:1870   .text.HAL_RCC_GetClockConfig:00000000 HAL_RCC_GetClockConfig
+     /tmp/cc8ynCaH.s:1914   .text.HAL_RCC_GetClockConfig:0000004c $d
+     /tmp/cc8ynCaH.s:1918   .text.HAL_RCC_NMI_IRQHandler:00000000 $t
+     /tmp/cc8ynCaH.s:1924   .text.HAL_RCC_NMI_IRQHandler:00000000 HAL_RCC_NMI_IRQHandler
+     /tmp/cc8ynCaH.s:1957   .text.HAL_RCC_CSSCallback:00000000 HAL_RCC_CSSCallback
+     /tmp/cc8ynCaH.s:1947   .text.HAL_RCC_NMI_IRQHandler:00000020 $d
+     /tmp/cc8ynCaH.s:1951   .text.HAL_RCC_CSSCallback:00000000 $t
+     /tmp/cc8ynCaH.s:1968   .rodata.aPLLMULFactorTable.1:00000000 $d
+     /tmp/cc8ynCaH.s:1975   .rodata.aPredivFactorTable.0:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_GetTick
@@ -2121,7 +2121,7 @@ uwTickPrio
 AHBPrescTable
 HAL_GPIO_Init
 __aeabi_uidiv
-ARM GAS  /tmp/ccDqfDAJ.s 			page 37
+ARM GAS  /tmp/cc8ynCaH.s 			page 37
 
 
 APBPrescTable

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccBfu8hg.s 			page 1
+ARM GAS  /tmp/ccMgtgvm.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -19,129 +19,140 @@ ARM GAS  /tmp/ccBfu8hg.s 			page 1
   18              	CHANNEL_OFFSET_TAB:
   19 0000 081C3044 		.ascii	"\010\0340DXl\200"
   19      586C80
-  20              		.section	.text.NMI_Handler,"ax",%progbits
-  21              		.align	1
-  22              		.global	NMI_Handler
-  23              		.syntax unified
-  24              		.code	16
-  25              		.thumb_func
-  27              	NMI_Handler:
-  28              		@ args = 0, pretend = 0, frame = 0
-  29              		@ frame_needed = 1, uses_anonymous_args = 0
-  30 0000 80B5     		push	{r7, lr}
-  31 0002 00AF     		add	r7, sp, #0
-  32              	.L2:
-  33 0004 C046     		nop
-  34 0006 FDE7     		b	.L2
-  36              		.section	.text.HardFault_Handler,"ax",%progbits
-  37              		.align	1
-  38              		.global	HardFault_Handler
-  39              		.syntax unified
-  40              		.code	16
-  41              		.thumb_func
-  43              	HardFault_Handler:
-  44              		@ args = 0, pretend = 0, frame = 0
-  45              		@ frame_needed = 1, uses_anonymous_args = 0
-  46 0000 80B5     		push	{r7, lr}
-  47 0002 00AF     		add	r7, sp, #0
-  48              	.L4:
-  49 0004 C046     		nop
-  50 0006 FDE7     		b	.L4
-  52              		.section	.text.SVC_Handler,"ax",%progbits
-  53              		.align	1
-  54              		.global	SVC_Handler
-  55              		.syntax unified
-  56              		.code	16
-  57              		.thumb_func
-  59              	SVC_Handler:
-  60              		@ args = 0, pretend = 0, frame = 0
-  61              		@ frame_needed = 1, uses_anonymous_args = 0
-  62 0000 80B5     		push	{r7, lr}
-  63 0002 00AF     		add	r7, sp, #0
-ARM GAS  /tmp/ccBfu8hg.s 			page 2
+  20              		.global	string
+  21              		.section	.bss.string,"aw",%nobits
+  22              		.align	2
+  25              	string:
+  26 0000 00000000 		.space	100
+  26      00000000 
+  26      00000000 
+  26      00000000 
+  26      00000000 
+  27              		.section	.text.NMI_Handler,"ax",%progbits
+  28              		.align	1
+  29              		.global	NMI_Handler
+  30              		.syntax unified
+  31              		.code	16
+  32              		.thumb_func
+  34              	NMI_Handler:
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 1, uses_anonymous_args = 0
+  37 0000 80B5     		push	{r7, lr}
+  38 0002 00AF     		add	r7, sp, #0
+  39              	.L2:
+  40 0004 C046     		nop
+  41 0006 FDE7     		b	.L2
+  43              		.section	.text.HardFault_Handler,"ax",%progbits
+  44              		.align	1
+  45              		.global	HardFault_Handler
+  46              		.syntax unified
+  47              		.code	16
+  48              		.thumb_func
+  50              	HardFault_Handler:
+  51              		@ args = 0, pretend = 0, frame = 0
+  52              		@ frame_needed = 1, uses_anonymous_args = 0
+  53 0000 80B5     		push	{r7, lr}
+  54 0002 00AF     		add	r7, sp, #0
+  55              	.L4:
+  56 0004 C046     		nop
+  57 0006 FDE7     		b	.L4
+  59              		.section	.text.SVC_Handler,"ax",%progbits
+  60              		.align	1
+ARM GAS  /tmp/ccMgtgvm.s 			page 2
 
 
-  64 0004 C046     		nop
-  65 0006 BD46     		mov	sp, r7
-  66              		@ sp needed
-  67 0008 80BD     		pop	{r7, pc}
-  69              		.section	.text.PendSV_Handler,"ax",%progbits
-  70              		.align	1
-  71              		.global	PendSV_Handler
-  72              		.syntax unified
-  73              		.code	16
-  74              		.thumb_func
-  76              	PendSV_Handler:
-  77              		@ args = 0, pretend = 0, frame = 0
-  78              		@ frame_needed = 1, uses_anonymous_args = 0
-  79 0000 80B5     		push	{r7, lr}
-  80 0002 00AF     		add	r7, sp, #0
-  81 0004 C046     		nop
-  82 0006 BD46     		mov	sp, r7
-  83              		@ sp needed
-  84 0008 80BD     		pop	{r7, pc}
-  86              		.section	.text.SysTick_Handler,"ax",%progbits
-  87              		.align	1
-  88              		.global	SysTick_Handler
-  89              		.syntax unified
-  90              		.code	16
-  91              		.thumb_func
-  93              	SysTick_Handler:
-  94              		@ args = 0, pretend = 0, frame = 0
-  95              		@ frame_needed = 1, uses_anonymous_args = 0
-  96 0000 80B5     		push	{r7, lr}
-  97 0002 00AF     		add	r7, sp, #0
-  98 0004 FFF7FEFF 		bl	HAL_IncTick
-  99 0008 C046     		nop
- 100 000a BD46     		mov	sp, r7
- 101              		@ sp needed
- 102 000c 80BD     		pop	{r7, pc}
- 104              		.section	.text.USB_IRQHandler,"ax",%progbits
- 105              		.align	1
- 106              		.global	USB_IRQHandler
- 107              		.syntax unified
- 108              		.code	16
- 109              		.thumb_func
- 111              	USB_IRQHandler:
- 112              		@ args = 0, pretend = 0, frame = 0
- 113              		@ frame_needed = 1, uses_anonymous_args = 0
- 114 0000 80B5     		push	{r7, lr}
- 115 0002 00AF     		add	r7, sp, #0
- 116 0004 034B     		ldr	r3, .L9
- 117 0006 1800     		movs	r0, r3
- 118 0008 FFF7FEFF 		bl	HAL_PCD_IRQHandler
- 119 000c C046     		nop
- 120 000e BD46     		mov	sp, r7
- 121              		@ sp needed
- 122 0010 80BD     		pop	{r7, pc}
- 123              	.L10:
- 124 0012 C046     		.align	2
- 125              	.L9:
- 126 0014 00000000 		.word	hpcd_USB_FS
-ARM GAS  /tmp/ccBfu8hg.s 			page 3
+  61              		.global	SVC_Handler
+  62              		.syntax unified
+  63              		.code	16
+  64              		.thumb_func
+  66              	SVC_Handler:
+  67              		@ args = 0, pretend = 0, frame = 0
+  68              		@ frame_needed = 1, uses_anonymous_args = 0
+  69 0000 80B5     		push	{r7, lr}
+  70 0002 00AF     		add	r7, sp, #0
+  71 0004 C046     		nop
+  72 0006 BD46     		mov	sp, r7
+  73              		@ sp needed
+  74 0008 80BD     		pop	{r7, pc}
+  76              		.section	.text.PendSV_Handler,"ax",%progbits
+  77              		.align	1
+  78              		.global	PendSV_Handler
+  79              		.syntax unified
+  80              		.code	16
+  81              		.thumb_func
+  83              	PendSV_Handler:
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 1, uses_anonymous_args = 0
+  86 0000 80B5     		push	{r7, lr}
+  87 0002 00AF     		add	r7, sp, #0
+  88 0004 C046     		nop
+  89 0006 BD46     		mov	sp, r7
+  90              		@ sp needed
+  91 0008 80BD     		pop	{r7, pc}
+  93              		.section	.text.SysTick_Handler,"ax",%progbits
+  94              		.align	1
+  95              		.global	SysTick_Handler
+  96              		.syntax unified
+  97              		.code	16
+  98              		.thumb_func
+ 100              	SysTick_Handler:
+ 101              		@ args = 0, pretend = 0, frame = 0
+ 102              		@ frame_needed = 1, uses_anonymous_args = 0
+ 103 0000 80B5     		push	{r7, lr}
+ 104 0002 00AF     		add	r7, sp, #0
+ 105 0004 FFF7FEFF 		bl	HAL_IncTick
+ 106 0008 C046     		nop
+ 107 000a BD46     		mov	sp, r7
+ 108              		@ sp needed
+ 109 000c 80BD     		pop	{r7, pc}
+ 111              		.section	.text.USB_IRQHandler,"ax",%progbits
+ 112              		.align	1
+ 113              		.global	USB_IRQHandler
+ 114              		.syntax unified
+ 115              		.code	16
+ 116              		.thumb_func
+ 118              	USB_IRQHandler:
+ 119              		@ args = 0, pretend = 0, frame = 0
+ 120              		@ frame_needed = 1, uses_anonymous_args = 0
+ 121 0000 80B5     		push	{r7, lr}
+ 122 0002 00AF     		add	r7, sp, #0
+ 123 0004 034B     		ldr	r3, .L9
+ 124 0006 1800     		movs	r0, r3
+ARM GAS  /tmp/ccMgtgvm.s 			page 3
 
 
- 128              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccBfu8hg.s 			page 4
+ 125 0008 FFF7FEFF 		bl	HAL_PCD_IRQHandler
+ 126 000c C046     		nop
+ 127 000e BD46     		mov	sp, r7
+ 128              		@ sp needed
+ 129 0010 80BD     		pop	{r7, pc}
+ 130              	.L10:
+ 131 0012 C046     		.align	2
+ 132              	.L9:
+ 133 0014 00000000 		.word	hpcd_USB_FS
+ 135              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
+ARM GAS  /tmp/ccMgtgvm.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_it.c
-     /tmp/ccBfu8hg.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
-     /tmp/ccBfu8hg.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
-     /tmp/ccBfu8hg.s:21     .text.NMI_Handler:00000000 $t
-     /tmp/ccBfu8hg.s:27     .text.NMI_Handler:00000000 NMI_Handler
-     /tmp/ccBfu8hg.s:37     .text.HardFault_Handler:00000000 $t
-     /tmp/ccBfu8hg.s:43     .text.HardFault_Handler:00000000 HardFault_Handler
-     /tmp/ccBfu8hg.s:53     .text.SVC_Handler:00000000 $t
-     /tmp/ccBfu8hg.s:59     .text.SVC_Handler:00000000 SVC_Handler
-     /tmp/ccBfu8hg.s:70     .text.PendSV_Handler:00000000 $t
-     /tmp/ccBfu8hg.s:76     .text.PendSV_Handler:00000000 PendSV_Handler
-     /tmp/ccBfu8hg.s:87     .text.SysTick_Handler:00000000 $t
-     /tmp/ccBfu8hg.s:93     .text.SysTick_Handler:00000000 SysTick_Handler
-     /tmp/ccBfu8hg.s:105    .text.USB_IRQHandler:00000000 $t
-     /tmp/ccBfu8hg.s:111    .text.USB_IRQHandler:00000000 USB_IRQHandler
-     /tmp/ccBfu8hg.s:126    .text.USB_IRQHandler:00000014 $d
+     /tmp/ccMgtgvm.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+     /tmp/ccMgtgvm.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+     /tmp/ccMgtgvm.s:25     .bss.string:00000000 string
+     /tmp/ccMgtgvm.s:22     .bss.string:00000000 $d
+     /tmp/ccMgtgvm.s:28     .text.NMI_Handler:00000000 $t
+     /tmp/ccMgtgvm.s:34     .text.NMI_Handler:00000000 NMI_Handler
+     /tmp/ccMgtgvm.s:44     .text.HardFault_Handler:00000000 $t
+     /tmp/ccMgtgvm.s:50     .text.HardFault_Handler:00000000 HardFault_Handler
+     /tmp/ccMgtgvm.s:60     .text.SVC_Handler:00000000 $t
+     /tmp/ccMgtgvm.s:66     .text.SVC_Handler:00000000 SVC_Handler
+     /tmp/ccMgtgvm.s:77     .text.PendSV_Handler:00000000 $t
+     /tmp/ccMgtgvm.s:83     .text.PendSV_Handler:00000000 PendSV_Handler
+     /tmp/ccMgtgvm.s:94     .text.SysTick_Handler:00000000 $t
+     /tmp/ccMgtgvm.s:100    .text.SysTick_Handler:00000000 SysTick_Handler
+     /tmp/ccMgtgvm.s:112    .text.USB_IRQHandler:00000000 $t
+     /tmp/ccMgtgvm.s:118    .text.USB_IRQHandler:00000000 USB_IRQHandler
+     /tmp/ccMgtgvm.s:133    .text.USB_IRQHandler:00000014 $d
 
 UNDEFINED SYMBOLS
 HAL_IncTick

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cczAEoNR.s 			page 1
+ARM GAS  /tmp/ccKoLIqG.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
   56 003e DA61     		str	r2, [r3, #28]
   57 0040 674B     		ldr	r3, .L16
   58 0042 DA69     		ldr	r2, [r3, #28]
-ARM GAS  /tmp/cczAEoNR.s 			page 2
+ARM GAS  /tmp/ccKoLIqG.s 			page 2
 
 
   59 0044 8023     		movs	r3, #128
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  113 00ac C023     		movs	r3, #192
  114 00ae 9B00     		lsls	r3, r3, #2
  115 00b0 1340     		ands	r3, r2
-ARM GAS  /tmp/cczAEoNR.s 			page 3
+ARM GAS  /tmp/ccKoLIqG.s 			page 3
 
 
  116 00b2 FA68     		ldr	r2, [r7, #12]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  170 011c 7B68     		ldr	r3, [r7, #4]
  171 011e 5A68     		ldr	r2, [r3, #4]
  172 0120 2F4B     		ldr	r3, .L16
-ARM GAS  /tmp/cczAEoNR.s 			page 4
+ARM GAS  /tmp/ccKoLIqG.s 			page 4
 
 
  173 0122 0A43     		orrs	r2, r1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  227 0188 9343     		bics	r3, r2
  228 018a 1900     		movs	r1, r3
  229 018c 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/cczAEoNR.s 			page 5
+ARM GAS  /tmp/ccKoLIqG.s 			page 5
 
 
  230 018e 1A69     		ldr	r2, [r3, #16]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  284 01f4 FFFFFFEF 		.word	-268435457
  285 01f8 FFFFFCFF 		.word	-196609
  287              		.section	.text.HAL_RCCEx_GetPeriphCLKConfig,"ax",%progbits
-ARM GAS  /tmp/cczAEoNR.s 			page 6
+ARM GAS  /tmp/ccKoLIqG.s 			page 6
 
 
  288              		.align	1
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  343 005c 0C4B     		ldr	r3, .L19+4
  344 005e 1B6B     		ldr	r3, [r3, #48]
  345 0060 8022     		movs	r2, #128
-ARM GAS  /tmp/cczAEoNR.s 			page 7
+ARM GAS  /tmp/ccKoLIqG.s 			page 7
 
 
  346 0062 1A40     		ands	r2, r3
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  402 0026 E4E0     		b	.L22	@long jump
  403              	.LCB409:
  404 0028 7A68     		ldr	r2, [r7, #4]
-ARM GAS  /tmp/cczAEoNR.s 			page 8
+ARM GAS  /tmp/ccKoLIqG.s 			page 8
 
 
  405 002a 8023     		movs	r3, #128
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  459 0086 C023     		movs	r3, #192
  460 0088 9B00     		lsls	r3, r3, #2
  461 008a 1340     		ands	r3, r2
-ARM GAS  /tmp/cczAEoNR.s 			page 9
+ARM GAS  /tmp/ccKoLIqG.s 			page 9
 
 
  462 008c BB61     		str	r3, [r7, #24]
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  516 00ee FFE0     		b	.L52
  517              	.L27:
  518 00f0 874B     		ldr	r3, .L58
-ARM GAS  /tmp/cczAEoNR.s 			page 10
+ARM GAS  /tmp/ccKoLIqG.s 			page 10
 
 
  519 00f2 1B6B     		ldr	r3, [r3, #48]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  573 0156 9B02     		lsls	r3, r3, #10
  574 0158 1340     		ands	r3, r2
  575 015a BB61     		str	r3, [r7, #24]
-ARM GAS  /tmp/cczAEoNR.s 			page 11
+ARM GAS  /tmp/ccKoLIqG.s 			page 11
 
 
  576 015c BB69     		ldr	r3, [r7, #24]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  630 01c0 1B6B     		ldr	r3, [r3, #48]
  631 01c2 1022     		movs	r2, #16
  632 01c4 1340     		ands	r3, r2
-ARM GAS  /tmp/cczAEoNR.s 			page 12
+ARM GAS  /tmp/ccKoLIqG.s 			page 12
 
 
  633 01c6 BB61     		str	r3, [r7, #24]
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  687 022e 9B0C     		lsrs	r3, r3, #18
  688 0230 0233     		adds	r3, r3, #2
  689 0232 7B61     		str	r3, [r7, #20]
-ARM GAS  /tmp/cczAEoNR.s 			page 13
+ARM GAS  /tmp/ccKoLIqG.s 			page 13
 
 
  690 0234 364B     		ldr	r3, .L58
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  744 02a0 8023     		movs	r3, #128
  745 02a2 9B02     		lsls	r3, r3, #10
  746 02a4 9A42     		cmp	r2, r3
-ARM GAS  /tmp/cczAEoNR.s 			page 14
+ARM GAS  /tmp/ccKoLIqG.s 			page 14
 
 
  747 02a6 2BD1     		bne	.L56
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  801 0300 C046     		nop
  802 0302 00E0     		b	.L32
  803              	.L57:
-ARM GAS  /tmp/cczAEoNR.s 			page 15
+ARM GAS  /tmp/ccKoLIqG.s 			page 15
 
 
  804 0304 C046     		nop
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  860 003a DB68     		ldr	r3, [r3, #12]
  861 003c FA68     		ldr	r2, [r7, #12]
  862 003e 1343     		orrs	r3, r2
-ARM GAS  /tmp/cczAEoNR.s 			page 16
+ARM GAS  /tmp/ccKoLIqG.s 			page 16
 
 
  863 0040 FB60     		str	r3, [r7, #12]
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  919 000c 0A43     		orrs	r2, r1
  920 000e 1A60     		str	r2, [r3]
  921 0010 C046     		nop
-ARM GAS  /tmp/cczAEoNR.s 			page 17
+ARM GAS  /tmp/ccKoLIqG.s 			page 17
 
 
  922 0012 BD46     		mov	sp, r7
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  978              	.L67:
  979 0048 006C0040 		.word	1073769472
  981              		.section	.text.HAL_RCCEx_CRSWaitSynchronization,"ax",%progbits
-ARM GAS  /tmp/cczAEoNR.s 			page 18
+ARM GAS  /tmp/ccKoLIqG.s 			page 18
 
 
  982              		.align	1
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  1037 0058 1340     		ands	r3, r2
  1038 005a 022B     		cmp	r3, #2
  1039 005c 06D1     		bne	.L73
-ARM GAS  /tmp/cczAEoNR.s 			page 19
+ARM GAS  /tmp/ccKoLIqG.s 			page 19
 
 
  1040 005e FB68     		ldr	r3, [r7, #12]
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  1094 00c4 FB60     		str	r3, [r7, #12]
  1095 00c6 0A4B     		ldr	r3, .L81
  1096 00c8 0422     		movs	r2, #4
-ARM GAS  /tmp/cczAEoNR.s 			page 20
+ARM GAS  /tmp/ccKoLIqG.s 			page 20
 
 
  1097 00ca DA60     		str	r2, [r3, #12]
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  1153 0028 0122     		movs	r2, #1
  1154 002a DA60     		str	r2, [r3, #12]
  1155 002c FFF7FEFF 		bl	HAL_RCCEx_CRS_SyncOkCallback
-ARM GAS  /tmp/cczAEoNR.s 			page 21
+ARM GAS  /tmp/ccKoLIqG.s 			page 21
 
 
  1156 0030 46E0     		b	.L85
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  1210 0098 1022     		movs	r2, #16
  1211 009a 1343     		orrs	r3, r2
  1212 009c FB60     		str	r3, [r7, #12]
-ARM GAS  /tmp/cczAEoNR.s 			page 22
+ARM GAS  /tmp/ccKoLIqG.s 			page 22
 
 
  1213              	.L89:
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  1271 0002 00AF     		add	r7, sp, #0
  1272 0004 C046     		nop
  1273 0006 BD46     		mov	sp, r7
-ARM GAS  /tmp/cczAEoNR.s 			page 23
+ARM GAS  /tmp/ccKoLIqG.s 			page 23
 
 
  1274              		@ sp needed
@@ -1358,43 +1358,43 @@ ARM GAS  /tmp/cczAEoNR.s 			page 1
  1312 000e 80BD     		pop	{r7, pc}
  1314              		.global	__aeabi_uidiv
  1315              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/cczAEoNR.s 			page 24
+ARM GAS  /tmp/ccKoLIqG.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_rcc_ex.c
-     /tmp/cczAEoNR.s:15     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
-     /tmp/cczAEoNR.s:21     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
-     /tmp/cczAEoNR.s:279    .text.HAL_RCCEx_PeriphCLKConfig:000001e0 $d
-     /tmp/cczAEoNR.s:288    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
-     /tmp/cczAEoNR.s:294    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
-     /tmp/cczAEoNR.s:370    .text.HAL_RCCEx_GetPeriphCLKConfig:0000008c $d
-     /tmp/cczAEoNR.s:374    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
-     /tmp/cczAEoNR.s:380    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
-     /tmp/cczAEoNR.s:815    .text.HAL_RCCEx_GetPeriphCLKFreq:00000310 $d
-     /tmp/cczAEoNR.s:822    .text.HAL_RCCEx_CRSConfig:00000000 $t
-     /tmp/cczAEoNR.s:828    .text.HAL_RCCEx_CRSConfig:00000000 HAL_RCCEx_CRSConfig
-     /tmp/cczAEoNR.s:898    .text.HAL_RCCEx_CRSConfig:00000080 $d
-     /tmp/cczAEoNR.s:904    .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 $t
-     /tmp/cczAEoNR.s:910    .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 HAL_RCCEx_CRSSoftwareSynchronizationGenerate
-     /tmp/cczAEoNR.s:928    .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000018 $d
-     /tmp/cczAEoNR.s:931    .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 $t
-     /tmp/cczAEoNR.s:937    .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 HAL_RCCEx_CRSGetSynchronizationInfo
-     /tmp/cczAEoNR.s:979    .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000048 $d
-     /tmp/cczAEoNR.s:982    .text.HAL_RCCEx_CRSWaitSynchronization:00000000 $t
-     /tmp/cczAEoNR.s:988    .text.HAL_RCCEx_CRSWaitSynchronization:00000000 HAL_RCCEx_CRSWaitSynchronization
-     /tmp/cczAEoNR.s:1121   .text.HAL_RCCEx_CRSWaitSynchronization:000000f0 $d
-     /tmp/cczAEoNR.s:1124   .text.HAL_RCCEx_CRS_IRQHandler:00000000 $t
-     /tmp/cczAEoNR.s:1130   .text.HAL_RCCEx_CRS_IRQHandler:00000000 HAL_RCCEx_CRS_IRQHandler
-     /tmp/cczAEoNR.s:1250   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 HAL_RCCEx_CRS_SyncOkCallback
-     /tmp/cczAEoNR.s:1267   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 HAL_RCCEx_CRS_SyncWarnCallback
-     /tmp/cczAEoNR.s:1284   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 HAL_RCCEx_CRS_ExpectedSyncCallback
-     /tmp/cczAEoNR.s:1301   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 HAL_RCCEx_CRS_ErrorCallback
-     /tmp/cczAEoNR.s:1241   .text.HAL_RCCEx_CRS_IRQHandler:000000c8 $d
-     /tmp/cczAEoNR.s:1244   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 $t
-     /tmp/cczAEoNR.s:1261   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 $t
-     /tmp/cczAEoNR.s:1278   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 $t
-     /tmp/cczAEoNR.s:1295   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 $t
+     /tmp/ccKoLIqG.s:15     .text.HAL_RCCEx_PeriphCLKConfig:00000000 $t
+     /tmp/ccKoLIqG.s:21     .text.HAL_RCCEx_PeriphCLKConfig:00000000 HAL_RCCEx_PeriphCLKConfig
+     /tmp/ccKoLIqG.s:279    .text.HAL_RCCEx_PeriphCLKConfig:000001e0 $d
+     /tmp/ccKoLIqG.s:288    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 $t
+     /tmp/ccKoLIqG.s:294    .text.HAL_RCCEx_GetPeriphCLKConfig:00000000 HAL_RCCEx_GetPeriphCLKConfig
+     /tmp/ccKoLIqG.s:370    .text.HAL_RCCEx_GetPeriphCLKConfig:0000008c $d
+     /tmp/ccKoLIqG.s:374    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 $t
+     /tmp/ccKoLIqG.s:380    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000 HAL_RCCEx_GetPeriphCLKFreq
+     /tmp/ccKoLIqG.s:815    .text.HAL_RCCEx_GetPeriphCLKFreq:00000310 $d
+     /tmp/ccKoLIqG.s:822    .text.HAL_RCCEx_CRSConfig:00000000 $t
+     /tmp/ccKoLIqG.s:828    .text.HAL_RCCEx_CRSConfig:00000000 HAL_RCCEx_CRSConfig
+     /tmp/ccKoLIqG.s:898    .text.HAL_RCCEx_CRSConfig:00000080 $d
+     /tmp/ccKoLIqG.s:904    .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 $t
+     /tmp/ccKoLIqG.s:910    .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000000 HAL_RCCEx_CRSSoftwareSynchronizationGenerate
+     /tmp/ccKoLIqG.s:928    .text.HAL_RCCEx_CRSSoftwareSynchronizationGenerate:00000018 $d
+     /tmp/ccKoLIqG.s:931    .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 $t
+     /tmp/ccKoLIqG.s:937    .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000000 HAL_RCCEx_CRSGetSynchronizationInfo
+     /tmp/ccKoLIqG.s:979    .text.HAL_RCCEx_CRSGetSynchronizationInfo:00000048 $d
+     /tmp/ccKoLIqG.s:982    .text.HAL_RCCEx_CRSWaitSynchronization:00000000 $t
+     /tmp/ccKoLIqG.s:988    .text.HAL_RCCEx_CRSWaitSynchronization:00000000 HAL_RCCEx_CRSWaitSynchronization
+     /tmp/ccKoLIqG.s:1121   .text.HAL_RCCEx_CRSWaitSynchronization:000000f0 $d
+     /tmp/ccKoLIqG.s:1124   .text.HAL_RCCEx_CRS_IRQHandler:00000000 $t
+     /tmp/ccKoLIqG.s:1130   .text.HAL_RCCEx_CRS_IRQHandler:00000000 HAL_RCCEx_CRS_IRQHandler
+     /tmp/ccKoLIqG.s:1250   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 HAL_RCCEx_CRS_SyncOkCallback
+     /tmp/ccKoLIqG.s:1267   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 HAL_RCCEx_CRS_SyncWarnCallback
+     /tmp/ccKoLIqG.s:1284   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 HAL_RCCEx_CRS_ExpectedSyncCallback
+     /tmp/ccKoLIqG.s:1301   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 HAL_RCCEx_CRS_ErrorCallback
+     /tmp/ccKoLIqG.s:1241   .text.HAL_RCCEx_CRS_IRQHandler:000000c8 $d
+     /tmp/ccKoLIqG.s:1244   .text.HAL_RCCEx_CRS_SyncOkCallback:00000000 $t
+     /tmp/ccKoLIqG.s:1261   .text.HAL_RCCEx_CRS_SyncWarnCallback:00000000 $t
+     /tmp/ccKoLIqG.s:1278   .text.HAL_RCCEx_CRS_ExpectedSyncCallback:00000000 $t
+     /tmp/ccKoLIqG.s:1295   .text.HAL_RCCEx_CRS_ErrorCallback:00000000 $t
 
 UNDEFINED SYMBOLS
 HAL_GetTick

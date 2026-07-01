@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccjXUmXy.s 			page 1
+ARM GAS  /tmp/ccOpgMo4.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
   56 003c 9B04     		lsls	r3, r3, #18
   57 003e 1340     		ands	r3, r2
   58 0040 52D0     		beq	.L5
-ARM GAS  /tmp/ccjXUmXy.s 			page 2
+ARM GAS  /tmp/ccOpgMo4.s 			page 2
 
 
   59 0042 3B68     		ldr	r3, [r7]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  113 00a6 0233     		adds	r3, r3, #2
  114 00a8 9B00     		lsls	r3, r3, #2
  115 00aa 9B58     		ldr	r3, [r3, r2]
-ARM GAS  /tmp/ccjXUmXy.s 			page 3
+ARM GAS  /tmp/ccOpgMo4.s 			page 3
 
 
  116 00ac FB60     		str	r3, [r7, #12]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  170 0112 0222     		movs	r2, #2
  171 0114 1340     		ands	r3, r2
  172 0116 06D0     		beq	.L12
-ARM GAS  /tmp/ccjXUmXy.s 			page 4
+ARM GAS  /tmp/ccOpgMo4.s 			page 4
 
 
  173 0118 094B     		ldr	r3, .L14
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  229 001e 3B68     		ldr	r3, [r7]
  230 0020 1A60     		str	r2, [r3]
  231 0022 3B68     		ldr	r3, [r7]
-ARM GAS  /tmp/ccjXUmXy.s 			page 5
+ARM GAS  /tmp/ccOpgMo4.s 			page 5
 
 
  232 0024 1B68     		ldr	r3, [r3]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  286 008a 9A60     		str	r2, [r3, #8]
  287              	.L24:
  288 008c 154B     		ldr	r3, .L26
-ARM GAS  /tmp/ccjXUmXy.s 			page 6
+ARM GAS  /tmp/ccOpgMo4.s 			page 6
 
 
  289 008e DB68     		ldr	r3, [r3, #12]
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  344              		.syntax unified
  345              		.code	16
  346              		.thumb_func
-ARM GAS  /tmp/ccjXUmXy.s 			page 7
+ARM GAS  /tmp/ccOpgMo4.s 			page 7
 
 
  348              	HAL_EXTI_ClearConfigLine:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  402 0064 144B     		ldr	r3, .L32
  403 0066 0A40     		ands	r2, r1
  404 0068 DA60     		str	r2, [r3, #12]
-ARM GAS  /tmp/ccjXUmXy.s 			page 8
+ARM GAS  /tmp/ccOpgMo4.s 			page 8
 
 
  405 006a 7B68     		ldr	r3, [r7, #4]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  461              		@ args = 0, pretend = 0, frame = 24
  462              		@ frame_needed = 1, uses_anonymous_args = 0
  463 0000 80B5     		push	{r7, lr}
-ARM GAS  /tmp/ccjXUmXy.s 			page 9
+ARM GAS  /tmp/ccOpgMo4.s 			page 9
 
 
  464 0002 86B0     		sub	sp, sp, #24
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  520              	.L39:
  521 0014 7B68     		ldr	r3, [r7, #4]
  522 0016 3A68     		ldr	r2, [r7]
-ARM GAS  /tmp/ccjXUmXy.s 			page 10
+ARM GAS  /tmp/ccOpgMo4.s 			page 10
 
 
  523 0018 1A60     		str	r2, [r3]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  579              		.align	2
  580              	.L44:
  581 0044 00040140 		.word	1073808384
-ARM GAS  /tmp/ccjXUmXy.s 			page 11
+ARM GAS  /tmp/ccOpgMo4.s 			page 11
 
 
  583              		.section	.text.HAL_EXTI_GetPending,"ax",%progbits
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  640 0006 7860     		str	r0, [r7, #4]
  641 0008 3960     		str	r1, [r7]
  642 000a 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/ccjXUmXy.s 			page 12
+ARM GAS  /tmp/ccOpgMo4.s 			page 12
 
 
  643 000c 1B68     		ldr	r3, [r3]
@@ -714,35 +714,35 @@ ARM GAS  /tmp/ccjXUmXy.s 			page 1
  695              	.L54:
  696 0028 00040140 		.word	1073808384
  698              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccjXUmXy.s 			page 13
+ARM GAS  /tmp/ccOpgMo4.s 			page 13
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_exti.c
-     /tmp/ccjXUmXy.s:15     .text.HAL_EXTI_SetConfigLine:00000000 $t
-     /tmp/ccjXUmXy.s:21     .text.HAL_EXTI_SetConfigLine:00000000 HAL_EXTI_SetConfigLine
-     /tmp/ccjXUmXy.s:199    .text.HAL_EXTI_SetConfigLine:00000140 $d
-     /tmp/ccjXUmXy.s:203    .text.HAL_EXTI_GetConfigLine:00000000 $t
-     /tmp/ccjXUmXy.s:209    .text.HAL_EXTI_GetConfigLine:00000000 HAL_EXTI_GetConfigLine
-     /tmp/ccjXUmXy.s:338    .text.HAL_EXTI_GetConfigLine:000000e4 $d
-     /tmp/ccjXUmXy.s:342    .text.HAL_EXTI_ClearConfigLine:00000000 $t
-     /tmp/ccjXUmXy.s:348    .text.HAL_EXTI_ClearConfigLine:00000000 HAL_EXTI_ClearConfigLine
-     /tmp/ccjXUmXy.s:450    .text.HAL_EXTI_ClearConfigLine:000000b8 $d
-     /tmp/ccjXUmXy.s:454    .text.HAL_EXTI_RegisterCallback:00000000 $t
-     /tmp/ccjXUmXy.s:460    .text.HAL_EXTI_RegisterCallback:00000000 HAL_EXTI_RegisterCallback
-     /tmp/ccjXUmXy.s:501    .text.HAL_EXTI_GetHandle:00000000 $t
-     /tmp/ccjXUmXy.s:507    .text.HAL_EXTI_GetHandle:00000000 HAL_EXTI_GetHandle
-     /tmp/ccjXUmXy.s:533    .text.HAL_EXTI_IRQHandler:00000000 $t
-     /tmp/ccjXUmXy.s:539    .text.HAL_EXTI_IRQHandler:00000000 HAL_EXTI_IRQHandler
-     /tmp/ccjXUmXy.s:581    .text.HAL_EXTI_IRQHandler:00000044 $d
-     /tmp/ccjXUmXy.s:584    .text.HAL_EXTI_GetPending:00000000 $t
-     /tmp/ccjXUmXy.s:590    .text.HAL_EXTI_GetPending:00000000 HAL_EXTI_GetPending
-     /tmp/ccjXUmXy.s:625    .text.HAL_EXTI_GetPending:00000038 $d
-     /tmp/ccjXUmXy.s:628    .text.HAL_EXTI_ClearPending:00000000 $t
-     /tmp/ccjXUmXy.s:634    .text.HAL_EXTI_ClearPending:00000000 HAL_EXTI_ClearPending
-     /tmp/ccjXUmXy.s:661    .text.HAL_EXTI_ClearPending:00000028 $d
-     /tmp/ccjXUmXy.s:664    .text.HAL_EXTI_GenerateSWI:00000000 $t
-     /tmp/ccjXUmXy.s:670    .text.HAL_EXTI_GenerateSWI:00000000 HAL_EXTI_GenerateSWI
-     /tmp/ccjXUmXy.s:696    .text.HAL_EXTI_GenerateSWI:00000028 $d
+     /tmp/ccOpgMo4.s:15     .text.HAL_EXTI_SetConfigLine:00000000 $t
+     /tmp/ccOpgMo4.s:21     .text.HAL_EXTI_SetConfigLine:00000000 HAL_EXTI_SetConfigLine
+     /tmp/ccOpgMo4.s:199    .text.HAL_EXTI_SetConfigLine:00000140 $d
+     /tmp/ccOpgMo4.s:203    .text.HAL_EXTI_GetConfigLine:00000000 $t
+     /tmp/ccOpgMo4.s:209    .text.HAL_EXTI_GetConfigLine:00000000 HAL_EXTI_GetConfigLine
+     /tmp/ccOpgMo4.s:338    .text.HAL_EXTI_GetConfigLine:000000e4 $d
+     /tmp/ccOpgMo4.s:342    .text.HAL_EXTI_ClearConfigLine:00000000 $t
+     /tmp/ccOpgMo4.s:348    .text.HAL_EXTI_ClearConfigLine:00000000 HAL_EXTI_ClearConfigLine
+     /tmp/ccOpgMo4.s:450    .text.HAL_EXTI_ClearConfigLine:000000b8 $d
+     /tmp/ccOpgMo4.s:454    .text.HAL_EXTI_RegisterCallback:00000000 $t
+     /tmp/ccOpgMo4.s:460    .text.HAL_EXTI_RegisterCallback:00000000 HAL_EXTI_RegisterCallback
+     /tmp/ccOpgMo4.s:501    .text.HAL_EXTI_GetHandle:00000000 $t
+     /tmp/ccOpgMo4.s:507    .text.HAL_EXTI_GetHandle:00000000 HAL_EXTI_GetHandle
+     /tmp/ccOpgMo4.s:533    .text.HAL_EXTI_IRQHandler:00000000 $t
+     /tmp/ccOpgMo4.s:539    .text.HAL_EXTI_IRQHandler:00000000 HAL_EXTI_IRQHandler
+     /tmp/ccOpgMo4.s:581    .text.HAL_EXTI_IRQHandler:00000044 $d
+     /tmp/ccOpgMo4.s:584    .text.HAL_EXTI_GetPending:00000000 $t
+     /tmp/ccOpgMo4.s:590    .text.HAL_EXTI_GetPending:00000000 HAL_EXTI_GetPending
+     /tmp/ccOpgMo4.s:625    .text.HAL_EXTI_GetPending:00000038 $d
+     /tmp/ccOpgMo4.s:628    .text.HAL_EXTI_ClearPending:00000000 $t
+     /tmp/ccOpgMo4.s:634    .text.HAL_EXTI_ClearPending:00000000 HAL_EXTI_ClearPending
+     /tmp/ccOpgMo4.s:661    .text.HAL_EXTI_ClearPending:00000028 $d
+     /tmp/ccOpgMo4.s:664    .text.HAL_EXTI_GenerateSWI:00000000 $t
+     /tmp/ccOpgMo4.s:670    .text.HAL_EXTI_GenerateSWI:00000000 HAL_EXTI_GenerateSWI
+     /tmp/ccOpgMo4.s:696    .text.HAL_EXTI_GenerateSWI:00000028 $d
 
 NO UNDEFINED SYMBOLS

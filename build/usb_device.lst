@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccv92mbo.s 			page 1
+ARM GAS  /tmp/ccGZMK2a.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccv92mbo.s 			page 1
   55 0028 FFF7FEFF 		bl	Error_Handler
   56              	.L3:
   57 002c 0D4A     		ldr	r2, .L7+12
-ARM GAS  /tmp/ccv92mbo.s 			page 2
+ARM GAS  /tmp/ccGZMK2a.s 			page 2
 
 
   58 002e 0B4B     		ldr	r3, .L7+4
@@ -88,18 +88,18 @@ ARM GAS  /tmp/ccv92mbo.s 			page 1
   82 0060 00000000 		.word	USBD_CDC
   83 0064 00000000 		.word	USBD_Interface_fops_FS
   85              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccv92mbo.s 			page 3
+ARM GAS  /tmp/ccGZMK2a.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usb_device.c
-     /tmp/ccv92mbo.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
-     /tmp/ccv92mbo.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
-     /tmp/ccv92mbo.s:25     .bss.hUsbDeviceFS:00000000 hUsbDeviceFS
-     /tmp/ccv92mbo.s:22     .bss.hUsbDeviceFS:00000000 $d
-     /tmp/ccv92mbo.s:28     .text.MX_USB_DEVICE_Init:00000000 $t
-     /tmp/ccv92mbo.s:34     .text.MX_USB_DEVICE_Init:00000000 MX_USB_DEVICE_Init
-     /tmp/ccv92mbo.s:80     .text.MX_USB_DEVICE_Init:00000058 $d
+     /tmp/ccGZMK2a.s:15     .rodata.CHANNEL_OFFSET_TAB:00000000 $d
+     /tmp/ccGZMK2a.s:18     .rodata.CHANNEL_OFFSET_TAB:00000000 CHANNEL_OFFSET_TAB
+     /tmp/ccGZMK2a.s:25     .bss.hUsbDeviceFS:00000000 hUsbDeviceFS
+     /tmp/ccGZMK2a.s:22     .bss.hUsbDeviceFS:00000000 $d
+     /tmp/ccGZMK2a.s:28     .text.MX_USB_DEVICE_Init:00000000 $t
+     /tmp/ccGZMK2a.s:34     .text.MX_USB_DEVICE_Init:00000000 MX_USB_DEVICE_Init
+     /tmp/ccGZMK2a.s:80     .text.MX_USB_DEVICE_Init:00000058 $d
 
 UNDEFINED SYMBOLS
 USBD_Init

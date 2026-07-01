@@ -30,8 +30,13 @@ void I2C_Read(uint8_t address, uint8_t reg, uint8_t nb, uint8_t *data);
 #define PIN_SDA 11
 #define SHIFT_AMOUNT 8
 #define SHIFT_MASK ((1 << SHIFT_AMOUNT) - 1)
-
+#define I2C2_REG 0x4
+#define NB 3
 uint8_t axes;
+uint8_t address = 0x0A;
+uint8_t data[3];
+int8_t x,y,z;
+int8_t Ar;
 
 int main(void)
 {
@@ -59,13 +64,6 @@ int main(void)
 
   MX_USB_DEVICE_Init();
 
-  uint8_t address = 0x0A;
-  uint8_t data[3];
-  int8_t x,y,z;
-  int8_t Ar;
-
-  char string[100];
-
   RCC->AHBENR |= RCC_AHBENR_GPIOBEN; // enable the clock to GPIOB
   RCC->APB1ENR |= RCC_APB1ENR_I2C2EN; // enable the clock to I2C2
 
@@ -76,103 +74,67 @@ int main(void)
   GPIOB->OSPEEDR |= (LL_GPIO_SPEED_FREQ_HIGH << PIN_SCL*2) | (LL_GPIO_SPEED_FREQ_HIGH << PIN_SDA*2);
   GPIOB->PUPDR |= (LL_GPIO_PULL_UP << PIN_SCL*2) | (LL_GPIO_PULL_UP << PIN_SDA*2);
 
+
   //Setting I2C timmings
   I2C2->CR1 &= ~I2C_CR1_PE;
   I2C2->TIMINGR = (0x13) | (0xF << 8) | (0x2 << 16) | (0x4 << 20) | (1 << 28);
-  I2C2->CR1 |= I2C_CR1_PE;
-
-  //data = malloc(3*sizeof(uint8_t));
-
-  /*I2C_Read(address, (uint8_t)0x4, 3, data);
+  I2C2->CR1 |= I2C_CR1_PE | I2C_CR1_TXIE | I2C_CR1_RXIE | I2C_CR1_TCIE | I2C_CR1_STOPIE;
 
 
-  x = (int8_t)data[0] >> 2;
-  y = (int8_t)data[1] >> 2;
-  z = (int8_t)data[2] >> 2;
+  // Seting full scale to +-2g
+  I2C2->CR2 = (address << 1) | (1 << 16) | I2C_CR2_START;
 
-  sprintf(string, "x = %d\n\n y = %d\n\n z = %d\n\n", x, y, z);*/
+  while(!(I2C2->ISR & I2C_ISR_TXIS));
 
+  I2C2->TXDR = 0x22;
 
-  while (1){
+  while(!(I2C2->ISR & I2C_ISR_TC));
 
-    I2C_Read(address, (uint8_t)0x4, 3, data);
-    x = (int8_t)data[0] / 4;
-    y = (int8_t)data[1] / 4;
-    z = (int8_t)data[2] / 4;
+  I2C2->CR2 = (address << 1) | I2C_CR2_RD_WRN | (1 << 16) | I2C_CR2_START;
 
-    switch(axes){
-      case 'x':
-        Ar = (int8_t)(atan(x/sqrt(pow(y,2) + pow(z, 2)))*180/M_PI);
-        break;
-      case 'y':
-        Ar = (int8_t)(atan(y/sqrt(pow(x,2) + pow(z, 2)))*180/M_PI);
-        break;
-      case 'z':
-        Ar = (int8_t)(atan(sqrt(pow(x,2) + pow(y, 2))/z)*180/M_PI);
-        break;
-      default:
-        sprintf(string, "Choose axes\n\r");
-        CDC_Transmit_FS((uint8_t*)string, strlen(string));
-        HAL_Delay(1000);
-        continue;
-        break;
-    }
-    /*float Rx = atan(x/sqrt(pow(y,2) + pow(z, 2)))*180/M_PI;
-    float Ry = atan(y/sqrt(pow(x,2) + pow(z, 2)))*180/M_PI;
-    float Rz = atan(sqrt(pow(x,2) + pow(y, 2))/z)*180/M_PI;
-    Arx = (int16_t) (Rx * 100) % 100;*/
+  while(!(I2C2->ISR & I2C_ISR_RXNE));
+  uint8_t temp = I2C2->RXDR;
+  temp &= 0b11111100;
+  temp |= 0b00;
+
+  while(!(I2C2->ISR & I2C_ISR_TC));
+
+  I2C2->CR2 = (address << 1) | I2C_CR2_AUTOEND | (1 << 16) | I2C_CR2_START;
+
+  while(!(I2C2->ISR & I2C_ISR_TXIS));
+  I2C2->TXDR = temp;
+
+  while(!((I2C2->ISR & I2C_ISR_STOPF) == I2C_ISR_STOPF));
+
+  I2C2->ICR |= I2C_ICR_STOPCF;
+  I2C2->CR2 = 0x0;
 
 
-    /*Arx = (int8_t)(atan(x/sqrt(pow(y,2) + pow(z, 2)))*180/M_PI);
-    Ary = (int8_t)(atan(y/sqrt(pow(x,2) + pow(z, 2)))*180/M_PI);
-    Arz = (int8_t)(atan(sqrt(pow(x,2) + pow(y, 2))/z)*180/M_PI);*/
-    sprintf(string, "%c angle = %d\n\r", axes, Ar);
-    //sprintf(string, "x = %d\n\r", Arx);
-    //sprintf(string, "x = %d\n\r y = %d\n\r z = %d\n\r", Arx, Ary, Arz);
-    //sprintf(string, "x = %d.%d\n\r", (uint8_t)Rx, Arx);
-    CDC_Transmit_FS((uint8_t*)string, strlen(string));
-    HAL_Delay(1000);
-  }
+  // Enable NVIC Interrupt for I2C2
+  NVIC_SetPriority(I2C2_IRQn, 0);
+  NVIC_EnableIRQ(I2C2_IRQn);
 
+  RCC->APB1ENR |= RCC_APB1ENR_TIM2EN; // enable the clock to TIM2
 
+  // Seting prescaler (48 MHz / (47999+1) = 1 KHz clock speed)
+  TIM2->PSC = 47999;
 
-  /*I2C2->CR2 =  (address << 1) | (0b1 << 16) | I2C_CR2_START;
-   *
-   *  while((I2C2->ISR & I2C_ISR_TXIS) == 0);
-   *
-   *  I2C2->TXDR = (uint8_t)0x0;
-   *
-   *  while(!(I2C2->ISR & I2C_ISR_TC));
-   *
-   *
-   *  I2C2->CR2 = (address << 1) | I2C_CR2_RD_WRN | I2C_CR2_AUTOEND | (0b1 << 16) | I2C_CR2_START;
-   *
-   *  while((I2C2->ISR & I2C_ISR_RXNE) == 0);*/
+  // 1 KHz / (999+1) = 1Hz = 1s
+  TIM2->ARR = 999;
 
-  //sprintf(pointer, "%d ", (uint8_t)data);
+  /* Enable the Interrupt */
+  TIM2->DIER |= TIM_DIER_UIE;
 
-  /*sprintf(pointer, "%d ", I2C2->RXDR);
-   *  while (1){
-   *    CDC_Transmit_FS(pointer, strlen(pointer));
-   *    HAL_Delay(1000);
-}*/
+  /* Clear the Interrupt Status */
+  TIM2->SR &= ~TIM_SR_UIF;
 
+  /* Enable NVIC Interrupt for Timer 2 */
+  NVIC_EnableIRQ(TIM2_IRQn);
 
-  //if(data == 0xDD) GPIOC->ODR ^= (1 << 8);
+  /* Finally enable TIM2 module */
+  TIM2->CR1 = TIM_CR1_CEN;
 
-  //while(!((I2C2->ISR & I2C_ISR_STOPF) == I2C_ISR_STOPF));
-
-  //I2C2->ICR |= I2C_ICR_STOPCF;
-  //I2C2->CR2 = 0x0;
-
-
-
-  //sprintf(pointer, "%d ", (uint16_t)data);
-
-}
-
-void I2C_Write(){
-
+  while (1);
 }
 
 void I2C_Read(uint8_t address, uint8_t reg, uint8_t nb, uint8_t *data){
@@ -279,4 +241,66 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
+// TIM2 Interrupt Handler
+void TIM2_IRQHandler(void){
+  if(TIM2->SR & TIM_SR_UIF){
+    GPIOC->ODR ^= (1 << 8);
+    if(axes != 'x' && axes != 'y' && axes != 'z') {
+      char string[20];
+      sprintf(string, "Choose axes\n\r");
+      CDC_Transmit_FS((uint8_t*)string, strlen(string));
+    }
+    else I2C2->CR2 = (address << 1) | (1 << 16) | I2C_CR2_START;
+  }
+
+  TIM2->SR &= ~TIM_SR_UIF;
+}
+
+uint8_t NBN;
+
+// I2C2 Interrupt Handler
+void I2C2_IRQHandler(void){
+  if(I2C2->ISR & I2C_ISR_TXIS) {
+    I2C2->TXDR = I2C2_REG;
+  }
+  else if(I2C2->ISR & I2C_ISR_TC){
+    I2C2->CR2 = (address << 1) | I2C_CR2_RD_WRN | I2C_CR2_AUTOEND | (NB << 16) | I2C_CR2_START;
+    NBN = 0;
+  }
+  else if(I2C2->ISR & I2C_ISR_RXNE) {
+    data[NBN] = I2C2->RXDR;
+    NBN++;
+  }
+  else if(I2C2->ISR & I2C_ISR_STOPF){
+    I2C2->ICR |= I2C_ICR_STOPCF;
+    I2C2->CR2 = 0x0;
+    GPIOC->ODR ^= (1 << 7);
+
+    char string[20];
+
+    x = (int8_t)data[0] / 4;
+    y = (int8_t)data[1] / 4;
+    z = (int8_t)data[2] / 4;
+
+    switch(axes){
+      case 'x':
+        Ar = (int8_t)(atan(x/sqrt(pow(y,2) + pow(z, 2)))*180/M_PI);
+        sprintf(string, "%c angle = %d\n\r", axes, Ar);
+        break;
+      case 'y':
+        Ar = (int8_t)(atan(y/sqrt(pow(x,2) + pow(z, 2)))*180/M_PI);
+        sprintf(string, "%c angle = %d\n\r", axes, Ar);
+        break;
+      case 'z':
+        Ar = (int8_t)(atan(sqrt(pow(x,2) + pow(y, 2))/z)*180/M_PI);
+        sprintf(string, "%c angle = %d\n\r", axes, Ar);
+        break;
+      default:
+        sprintf(string, "Choose axes\n\r");
+        break;
+    }
+    CDC_Transmit_FS((uint8_t*)string, strlen(string));
+  }
+}
 

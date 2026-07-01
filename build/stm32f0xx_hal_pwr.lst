@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccl1A0DG.s 			page 1
+ARM GAS  /tmp/ccHchZTS.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccl1A0DG.s 			page 1
   58              		@ frame_needed = 1, uses_anonymous_args = 0
   59 0000 80B5     		push	{r7, lr}
   60 0002 00AF     		add	r7, sp, #0
-ARM GAS  /tmp/ccl1A0DG.s 			page 2
+ARM GAS  /tmp/ccHchZTS.s 			page 2
 
 
   61 0004 044B     		ldr	r3, .L5
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccl1A0DG.s 			page 1
  119 0008 044B     		ldr	r3, .L11
  120 000a 5968     		ldr	r1, [r3, #4]
  121 000c 034B     		ldr	r3, .L11
-ARM GAS  /tmp/ccl1A0DG.s 			page 3
+ARM GAS  /tmp/ccHchZTS.s 			page 3
 
 
  122 000e 7A68     		ldr	r2, [r7, #4]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccl1A0DG.s 			page 1
  180 0008 0A00     		movs	r2, r1
  181 000a FB1C     		adds	r3, r7, #3
  182 000c 1A70     		strb	r2, [r3]
-ARM GAS  /tmp/ccl1A0DG.s 			page 4
+ARM GAS  /tmp/ccHchZTS.s 			page 4
 
 
  183 000e 094B     		ldr	r3, .L20
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccl1A0DG.s 			page 1
  239 000a FB1C     		adds	r3, r7, #3
  240 000c 1A70     		strb	r2, [r3]
  241 000e 0023     		movs	r3, #0
-ARM GAS  /tmp/ccl1A0DG.s 			page 5
+ARM GAS  /tmp/ccHchZTS.s 			page 5
 
 
  242 0010 FB60     		str	r3, [r7, #12]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccl1A0DG.s 			page 1
  296 005c 04B0     		add	sp, sp, #16
  297              		@ sp needed
  298 005e 80BD     		pop	{r7, pc}
-ARM GAS  /tmp/ccl1A0DG.s 			page 6
+ARM GAS  /tmp/ccHchZTS.s 			page 6
 
 
  299              	.L26:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccl1A0DG.s 			page 1
  357 0004 044B     		ldr	r3, .L31
  358 0006 1A69     		ldr	r2, [r3, #16]
  359 0008 034B     		ldr	r3, .L31
-ARM GAS  /tmp/ccl1A0DG.s 			page 7
+ARM GAS  /tmp/ccHchZTS.s 			page 7
 
 
  360 000a 0221     		movs	r1, #2
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccl1A0DG.s 			page 1
  418 0012 BD46     		mov	sp, r7
  419              		@ sp needed
  420 0014 80BD     		pop	{r7, pc}
-ARM GAS  /tmp/ccl1A0DG.s 			page 8
+ARM GAS  /tmp/ccHchZTS.s 			page 8
 
 
  421              	.L38:
@@ -451,46 +451,46 @@ ARM GAS  /tmp/ccl1A0DG.s 			page 1
  450              	.L40:
  451 0018 00ED00E0 		.word	-536810240
  453              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccl1A0DG.s 			page 9
+ARM GAS  /tmp/ccHchZTS.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_pwr.c
-     /tmp/ccl1A0DG.s:15     .text.HAL_PWR_DeInit:00000000 $t
-     /tmp/ccl1A0DG.s:21     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
-     /tmp/ccl1A0DG.s:46     .text.HAL_PWR_DeInit:00000024 $d
-     /tmp/ccl1A0DG.s:50     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
-     /tmp/ccl1A0DG.s:56     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
-     /tmp/ccl1A0DG.s:75     .text.HAL_PWR_EnableBkUpAccess:00000018 $d
-     /tmp/ccl1A0DG.s:78     .text.HAL_PWR_DisableBkUpAccess:00000000 $t
-     /tmp/ccl1A0DG.s:84     .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
-     /tmp/ccl1A0DG.s:102    .text.HAL_PWR_DisableBkUpAccess:00000018 $d
-     /tmp/ccl1A0DG.s:106    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
-     /tmp/ccl1A0DG.s:112    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
-     /tmp/ccl1A0DG.s:133    .text.HAL_PWR_EnableWakeUpPin:0000001c $d
-     /tmp/ccl1A0DG.s:136    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
-     /tmp/ccl1A0DG.s:142    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
-     /tmp/ccl1A0DG.s:164    .text.HAL_PWR_DisableWakeUpPin:00000020 $d
-     /tmp/ccl1A0DG.s:167    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
-     /tmp/ccl1A0DG.s:173    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
-     /tmp/ccl1A0DG.s:222    .text.HAL_PWR_EnterSLEEPMode:00000034 $d
-     /tmp/ccl1A0DG.s:225    .text.HAL_PWR_EnterSTOPMode:00000000 $t
-     /tmp/ccl1A0DG.s:231    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
-     /tmp/ccl1A0DG.s:302    .text.HAL_PWR_EnterSTOPMode:00000060 $d
-     /tmp/ccl1A0DG.s:306    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
-     /tmp/ccl1A0DG.s:312    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
-     /tmp/ccl1A0DG.s:342    .text.HAL_PWR_EnterSTANDBYMode:00000024 $d
-     /tmp/ccl1A0DG.s:346    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
-     /tmp/ccl1A0DG.s:352    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
-     /tmp/ccl1A0DG.s:370    .text.HAL_PWR_EnableSleepOnExit:00000018 $d
-     /tmp/ccl1A0DG.s:373    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
-     /tmp/ccl1A0DG.s:379    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
-     /tmp/ccl1A0DG.s:397    .text.HAL_PWR_DisableSleepOnExit:00000018 $d
-     /tmp/ccl1A0DG.s:400    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
-     /tmp/ccl1A0DG.s:406    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
-     /tmp/ccl1A0DG.s:424    .text.HAL_PWR_EnableSEVOnPend:00000018 $d
-     /tmp/ccl1A0DG.s:427    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
-     /tmp/ccl1A0DG.s:433    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
-     /tmp/ccl1A0DG.s:451    .text.HAL_PWR_DisableSEVOnPend:00000018 $d
+     /tmp/ccHchZTS.s:15     .text.HAL_PWR_DeInit:00000000 $t
+     /tmp/ccHchZTS.s:21     .text.HAL_PWR_DeInit:00000000 HAL_PWR_DeInit
+     /tmp/ccHchZTS.s:46     .text.HAL_PWR_DeInit:00000024 $d
+     /tmp/ccHchZTS.s:50     .text.HAL_PWR_EnableBkUpAccess:00000000 $t
+     /tmp/ccHchZTS.s:56     .text.HAL_PWR_EnableBkUpAccess:00000000 HAL_PWR_EnableBkUpAccess
+     /tmp/ccHchZTS.s:75     .text.HAL_PWR_EnableBkUpAccess:00000018 $d
+     /tmp/ccHchZTS.s:78     .text.HAL_PWR_DisableBkUpAccess:00000000 $t
+     /tmp/ccHchZTS.s:84     .text.HAL_PWR_DisableBkUpAccess:00000000 HAL_PWR_DisableBkUpAccess
+     /tmp/ccHchZTS.s:102    .text.HAL_PWR_DisableBkUpAccess:00000018 $d
+     /tmp/ccHchZTS.s:106    .text.HAL_PWR_EnableWakeUpPin:00000000 $t
+     /tmp/ccHchZTS.s:112    .text.HAL_PWR_EnableWakeUpPin:00000000 HAL_PWR_EnableWakeUpPin
+     /tmp/ccHchZTS.s:133    .text.HAL_PWR_EnableWakeUpPin:0000001c $d
+     /tmp/ccHchZTS.s:136    .text.HAL_PWR_DisableWakeUpPin:00000000 $t
+     /tmp/ccHchZTS.s:142    .text.HAL_PWR_DisableWakeUpPin:00000000 HAL_PWR_DisableWakeUpPin
+     /tmp/ccHchZTS.s:164    .text.HAL_PWR_DisableWakeUpPin:00000020 $d
+     /tmp/ccHchZTS.s:167    .text.HAL_PWR_EnterSLEEPMode:00000000 $t
+     /tmp/ccHchZTS.s:173    .text.HAL_PWR_EnterSLEEPMode:00000000 HAL_PWR_EnterSLEEPMode
+     /tmp/ccHchZTS.s:222    .text.HAL_PWR_EnterSLEEPMode:00000034 $d
+     /tmp/ccHchZTS.s:225    .text.HAL_PWR_EnterSTOPMode:00000000 $t
+     /tmp/ccHchZTS.s:231    .text.HAL_PWR_EnterSTOPMode:00000000 HAL_PWR_EnterSTOPMode
+     /tmp/ccHchZTS.s:302    .text.HAL_PWR_EnterSTOPMode:00000060 $d
+     /tmp/ccHchZTS.s:306    .text.HAL_PWR_EnterSTANDBYMode:00000000 $t
+     /tmp/ccHchZTS.s:312    .text.HAL_PWR_EnterSTANDBYMode:00000000 HAL_PWR_EnterSTANDBYMode
+     /tmp/ccHchZTS.s:342    .text.HAL_PWR_EnterSTANDBYMode:00000024 $d
+     /tmp/ccHchZTS.s:346    .text.HAL_PWR_EnableSleepOnExit:00000000 $t
+     /tmp/ccHchZTS.s:352    .text.HAL_PWR_EnableSleepOnExit:00000000 HAL_PWR_EnableSleepOnExit
+     /tmp/ccHchZTS.s:370    .text.HAL_PWR_EnableSleepOnExit:00000018 $d
+     /tmp/ccHchZTS.s:373    .text.HAL_PWR_DisableSleepOnExit:00000000 $t
+     /tmp/ccHchZTS.s:379    .text.HAL_PWR_DisableSleepOnExit:00000000 HAL_PWR_DisableSleepOnExit
+     /tmp/ccHchZTS.s:397    .text.HAL_PWR_DisableSleepOnExit:00000018 $d
+     /tmp/ccHchZTS.s:400    .text.HAL_PWR_EnableSEVOnPend:00000000 $t
+     /tmp/ccHchZTS.s:406    .text.HAL_PWR_EnableSEVOnPend:00000000 HAL_PWR_EnableSEVOnPend
+     /tmp/ccHchZTS.s:424    .text.HAL_PWR_EnableSEVOnPend:00000018 $d
+     /tmp/ccHchZTS.s:427    .text.HAL_PWR_DisableSEVOnPend:00000000 $t
+     /tmp/ccHchZTS.s:433    .text.HAL_PWR_DisableSEVOnPend:00000000 HAL_PWR_DisableSEVOnPend
+     /tmp/ccHchZTS.s:451    .text.HAL_PWR_DisableSEVOnPend:00000018 $d
 
 NO UNDEFINED SYMBOLS

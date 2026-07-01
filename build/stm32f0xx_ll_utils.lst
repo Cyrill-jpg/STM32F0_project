@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccgYXqjj.s 			page 1
+ARM GAS  /tmp/cchjlTTM.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
   58 0010 C046     		nop
   59 0012 BD46     		mov	sp, r7
   60              		@ sp needed
-ARM GAS  /tmp/ccgYXqjj.s 			page 2
+ARM GAS  /tmp/cchjlTTM.s 			page 2
 
 
   61 0014 80BD     		pop	{r7, pc}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  119 001a C046     		.align	2
  120              	.L12:
  121 001c 00100240 		.word	1073876992
-ARM GAS  /tmp/ccgYXqjj.s 			page 3
+ARM GAS  /tmp/cchjlTTM.s 			page 3
 
 
  123              		.section	.text.LL_RCC_HSI_Enable,"ax",%progbits
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  182              	LL_RCC_HSI48_Enable:
  183              		@ args = 0, pretend = 0, frame = 0
  184              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  /tmp/ccgYXqjj.s 			page 4
+ARM GAS  /tmp/cchjlTTM.s 			page 4
 
 
  185 0000 80B5     		push	{r7, lr}
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  243 0006 7860     		str	r0, [r7, #4]
  244 0008 064B     		ldr	r3, .L29
  245 000a 5B68     		ldr	r3, [r3, #4]
-ARM GAS  /tmp/ccgYXqjj.s 			page 5
+ARM GAS  /tmp/cchjlTTM.s 			page 5
 
 
  246 000c 0322     		movs	r2, #3
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  304 0010 1900     		movs	r1, r3
  305 0012 044B     		ldr	r3, .L36
  306 0014 7A68     		ldr	r2, [r7, #4]
-ARM GAS  /tmp/ccgYXqjj.s 			page 6
+ARM GAS  /tmp/cchjlTTM.s 			page 6
 
 
  307 0016 0A43     		orrs	r2, r1
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  365 0008 F022     		movs	r2, #240
  366 000a 1340     		ands	r3, r2
  367 000c 1800     		movs	r0, r3
-ARM GAS  /tmp/ccgYXqjj.s 			page 7
+ARM GAS  /tmp/cchjlTTM.s 			page 7
 
 
  368 000e BD46     		mov	sp, r7
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  426              	.L51:
  427 001a C046     		.align	2
  428              	.L50:
-ARM GAS  /tmp/ccgYXqjj.s 			page 8
+ARM GAS  /tmp/cchjlTTM.s 			page 8
 
 
  429 001c 00100240 		.word	1073876992
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  487 0002 82B0     		sub	sp, sp, #8
  488 0004 00AF     		add	r7, sp, #0
  489 0006 7860     		str	r0, [r7, #4]
-ARM GAS  /tmp/ccgYXqjj.s 			page 9
+ARM GAS  /tmp/cchjlTTM.s 			page 9
 
 
  490 0008 3960     		str	r1, [r7]
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  547              		.section	.text.LL_FLASH_GetLatency,"ax",%progbits
  548              		.align	1
  549              		.syntax unified
-ARM GAS  /tmp/ccgYXqjj.s 			page 10
+ARM GAS  /tmp/cchjlTTM.s 			page 10
 
 
  550              		.code	16
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  609 0004 00AF     		add	r7, sp, #0
  610 0006 7860     		str	r0, [r7, #4]
  611 0008 0D4B     		ldr	r3, .L72
-ARM GAS  /tmp/ccgYXqjj.s 			page 11
+ARM GAS  /tmp/cchjlTTM.s 			page 11
 
 
  612 000a 1B68     		ldr	r3, [r3]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  668 0014 80BD     		pop	{r7, pc}
  669              	.L76:
  670 0016 C046     		.align	2
-ARM GAS  /tmp/ccgYXqjj.s 			page 12
+ARM GAS  /tmp/cchjlTTM.s 			page 12
 
 
  671              	.L75:
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  727 0052 7B69     		ldr	r3, [r7, #20]
  728 0054 002B     		cmp	r3, #0
  729 0056 F1D1     		bne	.L83
-ARM GAS  /tmp/ccgYXqjj.s 			page 13
+ARM GAS  /tmp/cchjlTTM.s 			page 13
 
 
  730              	.L82:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  786 0034 012B     		cmp	r3, #1
  787 0036 07D0     		beq	.L89
  788 0038 FFF7FEFF 		bl	LL_RCC_HSI_Enable
-ARM GAS  /tmp/ccgYXqjj.s 			page 14
+ARM GAS  /tmp/cchjlTTM.s 			page 14
 
 
  789 003c C046     		nop
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  845 0004 00AF     		add	r7, sp, #0
  846 0006 7860     		str	r0, [r7, #4]
  847 0008 3960     		str	r1, [r7]
-ARM GAS  /tmp/ccgYXqjj.s 			page 15
+ARM GAS  /tmp/cchjlTTM.s 			page 15
 
 
  848 000a 0F23     		movs	r3, #15
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  902 007c 1B78     		ldrb	r3, [r3]
  903 007e 1800     		movs	r0, r3
  904 0080 BD46     		mov	sp, r7
-ARM GAS  /tmp/ccgYXqjj.s 			page 16
+ARM GAS  /tmp/cchjlTTM.s 			page 16
 
 
  905 0082 05B0     		add	sp, sp, #20
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  961 0052 FFF7FEFF 		bl	LL_RCC_HSE_IsReady
  962 0056 0300     		movs	r3, r0
  963 0058 012B     		cmp	r3, #1
-ARM GAS  /tmp/ccgYXqjj.s 			page 17
+ARM GAS  /tmp/cchjlTTM.s 			page 17
 
 
  964 005a FAD1     		bne	.L108
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  1020 0018 1900     		movs	r1, r3
  1021 001a 7868     		ldr	r0, [r7, #4]
  1022 001c FFF7FEFF 		bl	__aeabi_uidiv
-ARM GAS  /tmp/ccgYXqjj.s 			page 18
+ARM GAS  /tmp/cchjlTTM.s 			page 18
 
 
  1023 0020 0300     		movs	r3, r0
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  1081 0004 00AF     		add	r7, sp, #0
  1082 0006 7860     		str	r0, [r7, #4]
  1083 0008 3960     		str	r1, [r7]
-ARM GAS  /tmp/ccgYXqjj.s 			page 19
+ARM GAS  /tmp/cchjlTTM.s 			page 19
 
 
  1084 000a 0F25     		movs	r5, #15
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  1138 007e FFF7FEFF 		bl	LL_RCC_SetAPB1Prescaler
  1139              	.L118:
  1140 0082 BA68     		ldr	r2, [r7, #8]
-ARM GAS  /tmp/ccgYXqjj.s 			page 20
+ARM GAS  /tmp/cchjlTTM.s 			page 20
 
 
  1141 0084 7B68     		ldr	r3, [r7, #4]
@@ -1185,97 +1185,97 @@ ARM GAS  /tmp/ccgYXqjj.s 			page 1
  1182 00d0 00000000 		.word	AHBPrescTable
  1184              		.global	__aeabi_uidiv
  1185              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccgYXqjj.s 			page 21
+ARM GAS  /tmp/cchjlTTM.s 			page 21
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_ll_utils.c
-     /tmp/ccgYXqjj.s:15     .text.LL_RCC_HSE_EnableBypass:00000000 $t
-     /tmp/ccgYXqjj.s:20     .text.LL_RCC_HSE_EnableBypass:00000000 LL_RCC_HSE_EnableBypass
-     /tmp/ccgYXqjj.s:39     .text.LL_RCC_HSE_EnableBypass:00000018 $d
-     /tmp/ccgYXqjj.s:42     .text.LL_RCC_HSE_DisableBypass:00000000 $t
-     /tmp/ccgYXqjj.s:47     .text.LL_RCC_HSE_DisableBypass:00000000 LL_RCC_HSE_DisableBypass
-     /tmp/ccgYXqjj.s:65     .text.LL_RCC_HSE_DisableBypass:00000018 $d
-     /tmp/ccgYXqjj.s:69     .text.LL_RCC_HSE_Enable:00000000 $t
-     /tmp/ccgYXqjj.s:74     .text.LL_RCC_HSE_Enable:00000000 LL_RCC_HSE_Enable
-     /tmp/ccgYXqjj.s:93     .text.LL_RCC_HSE_Enable:00000018 $d
-     /tmp/ccgYXqjj.s:96     .text.LL_RCC_HSE_IsReady:00000000 $t
-     /tmp/ccgYXqjj.s:101    .text.LL_RCC_HSE_IsReady:00000000 LL_RCC_HSE_IsReady
-     /tmp/ccgYXqjj.s:121    .text.LL_RCC_HSE_IsReady:0000001c $d
-     /tmp/ccgYXqjj.s:124    .text.LL_RCC_HSI_Enable:00000000 $t
-     /tmp/ccgYXqjj.s:129    .text.LL_RCC_HSI_Enable:00000000 LL_RCC_HSI_Enable
-     /tmp/ccgYXqjj.s:147    .text.LL_RCC_HSI_Enable:00000018 $d
-     /tmp/ccgYXqjj.s:150    .text.LL_RCC_HSI_IsReady:00000000 $t
-     /tmp/ccgYXqjj.s:155    .text.LL_RCC_HSI_IsReady:00000000 LL_RCC_HSI_IsReady
-     /tmp/ccgYXqjj.s:174    .text.LL_RCC_HSI_IsReady:00000018 $d
-     /tmp/ccgYXqjj.s:177    .text.LL_RCC_HSI48_Enable:00000000 $t
-     /tmp/ccgYXqjj.s:182    .text.LL_RCC_HSI48_Enable:00000000 LL_RCC_HSI48_Enable
-     /tmp/ccgYXqjj.s:201    .text.LL_RCC_HSI48_Enable:00000018 $d
-     /tmp/ccgYXqjj.s:204    .text.LL_RCC_HSI48_IsReady:00000000 $t
-     /tmp/ccgYXqjj.s:209    .text.LL_RCC_HSI48_IsReady:00000000 LL_RCC_HSI48_IsReady
-     /tmp/ccgYXqjj.s:229    .text.LL_RCC_HSI48_IsReady:0000001c $d
-     /tmp/ccgYXqjj.s:232    .text.LL_RCC_SetSysClkSource:00000000 $t
-     /tmp/ccgYXqjj.s:237    .text.LL_RCC_SetSysClkSource:00000000 LL_RCC_SetSysClkSource
-     /tmp/ccgYXqjj.s:261    .text.LL_RCC_SetSysClkSource:00000024 $d
-     /tmp/ccgYXqjj.s:264    .text.LL_RCC_GetSysClkSource:00000000 $t
-     /tmp/ccgYXqjj.s:269    .text.LL_RCC_GetSysClkSource:00000000 LL_RCC_GetSysClkSource
-     /tmp/ccgYXqjj.s:285    .text.LL_RCC_GetSysClkSource:00000014 $d
-     /tmp/ccgYXqjj.s:288    .text.LL_RCC_SetAHBPrescaler:00000000 $t
-     /tmp/ccgYXqjj.s:293    .text.LL_RCC_SetAHBPrescaler:00000000 LL_RCC_SetAHBPrescaler
-     /tmp/ccgYXqjj.s:317    .text.LL_RCC_SetAHBPrescaler:00000024 $d
-     /tmp/ccgYXqjj.s:320    .text.LL_RCC_SetAPB1Prescaler:00000000 $t
-     /tmp/ccgYXqjj.s:325    .text.LL_RCC_SetAPB1Prescaler:00000000 LL_RCC_SetAPB1Prescaler
-     /tmp/ccgYXqjj.s:349    .text.LL_RCC_SetAPB1Prescaler:00000024 $d
-     /tmp/ccgYXqjj.s:353    .text.LL_RCC_GetAHBPrescaler:00000000 $t
-     /tmp/ccgYXqjj.s:358    .text.LL_RCC_GetAHBPrescaler:00000000 LL_RCC_GetAHBPrescaler
-     /tmp/ccgYXqjj.s:374    .text.LL_RCC_GetAHBPrescaler:00000014 $d
-     /tmp/ccgYXqjj.s:377    .text.LL_RCC_PLL_Enable:00000000 $t
-     /tmp/ccgYXqjj.s:382    .text.LL_RCC_PLL_Enable:00000000 LL_RCC_PLL_Enable
-     /tmp/ccgYXqjj.s:401    .text.LL_RCC_PLL_Enable:00000018 $d
-     /tmp/ccgYXqjj.s:404    .text.LL_RCC_PLL_IsReady:00000000 $t
-     /tmp/ccgYXqjj.s:409    .text.LL_RCC_PLL_IsReady:00000000 LL_RCC_PLL_IsReady
-     /tmp/ccgYXqjj.s:429    .text.LL_RCC_PLL_IsReady:0000001c $d
-     /tmp/ccgYXqjj.s:432    .text.LL_RCC_PLL_ConfigDomain_SYS:00000000 $t
-     /tmp/ccgYXqjj.s:437    .text.LL_RCC_PLL_ConfigDomain_SYS:00000000 LL_RCC_PLL_ConfigDomain_SYS
-     /tmp/ccgYXqjj.s:474    .text.LL_RCC_PLL_ConfigDomain_SYS:0000003c $d
-     /tmp/ccgYXqjj.s:478    .text.LL_InitTick:00000000 $t
-     /tmp/ccgYXqjj.s:483    .text.LL_InitTick:00000000 LL_InitTick
-     /tmp/ccgYXqjj.s:513    .text.LL_InitTick:00000030 $d
-     /tmp/ccgYXqjj.s:516    .text.LL_FLASH_SetLatency:00000000 $t
-     /tmp/ccgYXqjj.s:521    .text.LL_FLASH_SetLatency:00000000 LL_FLASH_SetLatency
-     /tmp/ccgYXqjj.s:545    .text.LL_FLASH_SetLatency:00000024 $d
-     /tmp/ccgYXqjj.s:548    .text.LL_FLASH_GetLatency:00000000 $t
-ARM GAS  /tmp/ccgYXqjj.s 			page 22
+     /tmp/cchjlTTM.s:15     .text.LL_RCC_HSE_EnableBypass:00000000 $t
+     /tmp/cchjlTTM.s:20     .text.LL_RCC_HSE_EnableBypass:00000000 LL_RCC_HSE_EnableBypass
+     /tmp/cchjlTTM.s:39     .text.LL_RCC_HSE_EnableBypass:00000018 $d
+     /tmp/cchjlTTM.s:42     .text.LL_RCC_HSE_DisableBypass:00000000 $t
+     /tmp/cchjlTTM.s:47     .text.LL_RCC_HSE_DisableBypass:00000000 LL_RCC_HSE_DisableBypass
+     /tmp/cchjlTTM.s:65     .text.LL_RCC_HSE_DisableBypass:00000018 $d
+     /tmp/cchjlTTM.s:69     .text.LL_RCC_HSE_Enable:00000000 $t
+     /tmp/cchjlTTM.s:74     .text.LL_RCC_HSE_Enable:00000000 LL_RCC_HSE_Enable
+     /tmp/cchjlTTM.s:93     .text.LL_RCC_HSE_Enable:00000018 $d
+     /tmp/cchjlTTM.s:96     .text.LL_RCC_HSE_IsReady:00000000 $t
+     /tmp/cchjlTTM.s:101    .text.LL_RCC_HSE_IsReady:00000000 LL_RCC_HSE_IsReady
+     /tmp/cchjlTTM.s:121    .text.LL_RCC_HSE_IsReady:0000001c $d
+     /tmp/cchjlTTM.s:124    .text.LL_RCC_HSI_Enable:00000000 $t
+     /tmp/cchjlTTM.s:129    .text.LL_RCC_HSI_Enable:00000000 LL_RCC_HSI_Enable
+     /tmp/cchjlTTM.s:147    .text.LL_RCC_HSI_Enable:00000018 $d
+     /tmp/cchjlTTM.s:150    .text.LL_RCC_HSI_IsReady:00000000 $t
+     /tmp/cchjlTTM.s:155    .text.LL_RCC_HSI_IsReady:00000000 LL_RCC_HSI_IsReady
+     /tmp/cchjlTTM.s:174    .text.LL_RCC_HSI_IsReady:00000018 $d
+     /tmp/cchjlTTM.s:177    .text.LL_RCC_HSI48_Enable:00000000 $t
+     /tmp/cchjlTTM.s:182    .text.LL_RCC_HSI48_Enable:00000000 LL_RCC_HSI48_Enable
+     /tmp/cchjlTTM.s:201    .text.LL_RCC_HSI48_Enable:00000018 $d
+     /tmp/cchjlTTM.s:204    .text.LL_RCC_HSI48_IsReady:00000000 $t
+     /tmp/cchjlTTM.s:209    .text.LL_RCC_HSI48_IsReady:00000000 LL_RCC_HSI48_IsReady
+     /tmp/cchjlTTM.s:229    .text.LL_RCC_HSI48_IsReady:0000001c $d
+     /tmp/cchjlTTM.s:232    .text.LL_RCC_SetSysClkSource:00000000 $t
+     /tmp/cchjlTTM.s:237    .text.LL_RCC_SetSysClkSource:00000000 LL_RCC_SetSysClkSource
+     /tmp/cchjlTTM.s:261    .text.LL_RCC_SetSysClkSource:00000024 $d
+     /tmp/cchjlTTM.s:264    .text.LL_RCC_GetSysClkSource:00000000 $t
+     /tmp/cchjlTTM.s:269    .text.LL_RCC_GetSysClkSource:00000000 LL_RCC_GetSysClkSource
+     /tmp/cchjlTTM.s:285    .text.LL_RCC_GetSysClkSource:00000014 $d
+     /tmp/cchjlTTM.s:288    .text.LL_RCC_SetAHBPrescaler:00000000 $t
+     /tmp/cchjlTTM.s:293    .text.LL_RCC_SetAHBPrescaler:00000000 LL_RCC_SetAHBPrescaler
+     /tmp/cchjlTTM.s:317    .text.LL_RCC_SetAHBPrescaler:00000024 $d
+     /tmp/cchjlTTM.s:320    .text.LL_RCC_SetAPB1Prescaler:00000000 $t
+     /tmp/cchjlTTM.s:325    .text.LL_RCC_SetAPB1Prescaler:00000000 LL_RCC_SetAPB1Prescaler
+     /tmp/cchjlTTM.s:349    .text.LL_RCC_SetAPB1Prescaler:00000024 $d
+     /tmp/cchjlTTM.s:353    .text.LL_RCC_GetAHBPrescaler:00000000 $t
+     /tmp/cchjlTTM.s:358    .text.LL_RCC_GetAHBPrescaler:00000000 LL_RCC_GetAHBPrescaler
+     /tmp/cchjlTTM.s:374    .text.LL_RCC_GetAHBPrescaler:00000014 $d
+     /tmp/cchjlTTM.s:377    .text.LL_RCC_PLL_Enable:00000000 $t
+     /tmp/cchjlTTM.s:382    .text.LL_RCC_PLL_Enable:00000000 LL_RCC_PLL_Enable
+     /tmp/cchjlTTM.s:401    .text.LL_RCC_PLL_Enable:00000018 $d
+     /tmp/cchjlTTM.s:404    .text.LL_RCC_PLL_IsReady:00000000 $t
+     /tmp/cchjlTTM.s:409    .text.LL_RCC_PLL_IsReady:00000000 LL_RCC_PLL_IsReady
+     /tmp/cchjlTTM.s:429    .text.LL_RCC_PLL_IsReady:0000001c $d
+     /tmp/cchjlTTM.s:432    .text.LL_RCC_PLL_ConfigDomain_SYS:00000000 $t
+     /tmp/cchjlTTM.s:437    .text.LL_RCC_PLL_ConfigDomain_SYS:00000000 LL_RCC_PLL_ConfigDomain_SYS
+     /tmp/cchjlTTM.s:474    .text.LL_RCC_PLL_ConfigDomain_SYS:0000003c $d
+     /tmp/cchjlTTM.s:478    .text.LL_InitTick:00000000 $t
+     /tmp/cchjlTTM.s:483    .text.LL_InitTick:00000000 LL_InitTick
+     /tmp/cchjlTTM.s:513    .text.LL_InitTick:00000030 $d
+     /tmp/cchjlTTM.s:516    .text.LL_FLASH_SetLatency:00000000 $t
+     /tmp/cchjlTTM.s:521    .text.LL_FLASH_SetLatency:00000000 LL_FLASH_SetLatency
+     /tmp/cchjlTTM.s:545    .text.LL_FLASH_SetLatency:00000024 $d
+     /tmp/cchjlTTM.s:548    .text.LL_FLASH_GetLatency:00000000 $t
+ARM GAS  /tmp/cchjlTTM.s 			page 22
 
 
-     /tmp/ccgYXqjj.s:553    .text.LL_FLASH_GetLatency:00000000 LL_FLASH_GetLatency
-     /tmp/ccgYXqjj.s:569    .text.LL_FLASH_GetLatency:00000014 $d
-     /tmp/ccgYXqjj.s:572    .text.LL_Init1msTick:00000000 $t
-     /tmp/ccgYXqjj.s:578    .text.LL_Init1msTick:00000000 LL_Init1msTick
-     /tmp/ccgYXqjj.s:598    .text.LL_mDelay:00000000 $t
-     /tmp/ccgYXqjj.s:604    .text.LL_mDelay:00000000 LL_mDelay
-     /tmp/ccgYXqjj.s:645    .text.LL_mDelay:00000040 $d
-     /tmp/ccgYXqjj.s:648    .text.LL_SetSystemCoreClock:00000000 $t
-     /tmp/ccgYXqjj.s:654    .text.LL_SetSystemCoreClock:00000000 LL_SetSystemCoreClock
-     /tmp/ccgYXqjj.s:672    .text.LL_SetSystemCoreClock:00000018 $d
-     /tmp/ccgYXqjj.s:675    .text.LL_SetFlashLatency:00000000 $t
-     /tmp/ccgYXqjj.s:681    .text.LL_SetFlashLatency:00000000 LL_SetFlashLatency
-     /tmp/ccgYXqjj.s:751    .text.LL_SetFlashLatency:00000078 $d
-     /tmp/ccgYXqjj.s:754    .text.LL_PLL_ConfigSystemClock_HSI:00000000 $t
-     /tmp/ccgYXqjj.s:760    .text.LL_PLL_ConfigSystemClock_HSI:00000000 LL_PLL_ConfigSystemClock_HSI
-     /tmp/ccgYXqjj.s:1046   .text.UTILS_PLL_IsBusy:00000000 UTILS_PLL_IsBusy
-     /tmp/ccgYXqjj.s:1005   .text.UTILS_GetPLLOutputFrequency:00000000 UTILS_GetPLLOutputFrequency
-     /tmp/ccgYXqjj.s:1076   .text.UTILS_EnablePLLAndSwitchSystem:00000000 UTILS_EnablePLLAndSwitchSystem
-     /tmp/ccgYXqjj.s:831    .text.LL_PLL_ConfigSystemClock_HSI:00000088 $d
-     /tmp/ccgYXqjj.s:834    .text.LL_PLL_ConfigSystemClock_HSI48:00000000 $t
-     /tmp/ccgYXqjj.s:840    .text.LL_PLL_ConfigSystemClock_HSI48:00000000 LL_PLL_ConfigSystemClock_HSI48
-     /tmp/ccgYXqjj.s:911    .text.LL_PLL_ConfigSystemClock_HSI48:00000088 $d
-     /tmp/ccgYXqjj.s:914    .text.LL_PLL_ConfigSystemClock_HSE:00000000 $t
-     /tmp/ccgYXqjj.s:920    .text.LL_PLL_ConfigSystemClock_HSE:00000000 LL_PLL_ConfigSystemClock_HSE
-     /tmp/ccgYXqjj.s:1000   .text.UTILS_GetPLLOutputFrequency:00000000 $t
-     /tmp/ccgYXqjj.s:1041   .text.UTILS_PLL_IsBusy:00000000 $t
-     /tmp/ccgYXqjj.s:1071   .text.UTILS_EnablePLLAndSwitchSystem:00000000 $t
-     /tmp/ccgYXqjj.s:1181   .text.UTILS_EnablePLLAndSwitchSystem:000000cc $d
+     /tmp/cchjlTTM.s:553    .text.LL_FLASH_GetLatency:00000000 LL_FLASH_GetLatency
+     /tmp/cchjlTTM.s:569    .text.LL_FLASH_GetLatency:00000014 $d
+     /tmp/cchjlTTM.s:572    .text.LL_Init1msTick:00000000 $t
+     /tmp/cchjlTTM.s:578    .text.LL_Init1msTick:00000000 LL_Init1msTick
+     /tmp/cchjlTTM.s:598    .text.LL_mDelay:00000000 $t
+     /tmp/cchjlTTM.s:604    .text.LL_mDelay:00000000 LL_mDelay
+     /tmp/cchjlTTM.s:645    .text.LL_mDelay:00000040 $d
+     /tmp/cchjlTTM.s:648    .text.LL_SetSystemCoreClock:00000000 $t
+     /tmp/cchjlTTM.s:654    .text.LL_SetSystemCoreClock:00000000 LL_SetSystemCoreClock
+     /tmp/cchjlTTM.s:672    .text.LL_SetSystemCoreClock:00000018 $d
+     /tmp/cchjlTTM.s:675    .text.LL_SetFlashLatency:00000000 $t
+     /tmp/cchjlTTM.s:681    .text.LL_SetFlashLatency:00000000 LL_SetFlashLatency
+     /tmp/cchjlTTM.s:751    .text.LL_SetFlashLatency:00000078 $d
+     /tmp/cchjlTTM.s:754    .text.LL_PLL_ConfigSystemClock_HSI:00000000 $t
+     /tmp/cchjlTTM.s:760    .text.LL_PLL_ConfigSystemClock_HSI:00000000 LL_PLL_ConfigSystemClock_HSI
+     /tmp/cchjlTTM.s:1046   .text.UTILS_PLL_IsBusy:00000000 UTILS_PLL_IsBusy
+     /tmp/cchjlTTM.s:1005   .text.UTILS_GetPLLOutputFrequency:00000000 UTILS_GetPLLOutputFrequency
+     /tmp/cchjlTTM.s:1076   .text.UTILS_EnablePLLAndSwitchSystem:00000000 UTILS_EnablePLLAndSwitchSystem
+     /tmp/cchjlTTM.s:831    .text.LL_PLL_ConfigSystemClock_HSI:00000088 $d
+     /tmp/cchjlTTM.s:834    .text.LL_PLL_ConfigSystemClock_HSI48:00000000 $t
+     /tmp/cchjlTTM.s:840    .text.LL_PLL_ConfigSystemClock_HSI48:00000000 LL_PLL_ConfigSystemClock_HSI48
+     /tmp/cchjlTTM.s:911    .text.LL_PLL_ConfigSystemClock_HSI48:00000088 $d
+     /tmp/cchjlTTM.s:914    .text.LL_PLL_ConfigSystemClock_HSE:00000000 $t
+     /tmp/cchjlTTM.s:920    .text.LL_PLL_ConfigSystemClock_HSE:00000000 LL_PLL_ConfigSystemClock_HSE
+     /tmp/cchjlTTM.s:1000   .text.UTILS_GetPLLOutputFrequency:00000000 $t
+     /tmp/cchjlTTM.s:1041   .text.UTILS_PLL_IsBusy:00000000 $t
+     /tmp/cchjlTTM.s:1071   .text.UTILS_EnablePLLAndSwitchSystem:00000000 $t
+     /tmp/cchjlTTM.s:1181   .text.UTILS_EnablePLLAndSwitchSystem:000000cc $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

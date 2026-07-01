@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccWgPcxs.s 			page 1
+ARM GAS  /tmp/cc4sBZwM.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccWgPcxs.s 			page 1
   56 0040 1E4B     		ldr	r3, .L7+4
   57 0042 DA68     		ldr	r2, [r3, #12]
   58 0044 1D4B     		ldr	r3, .L7+4
-ARM GAS  /tmp/ccWgPcxs.s 			page 2
+ARM GAS  /tmp/cc4sBZwM.s 			page 2
 
 
   59 0046 1E49     		ldr	r1, .L7+8
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccWgPcxs.s 			page 1
  113 00ac 0A43     		orrs	r2, r1
  114 00ae DA60     		str	r2, [r3, #12]
  115              	.L6:
-ARM GAS  /tmp/ccWgPcxs.s 			page 3
+ARM GAS  /tmp/cc4sBZwM.s 			page 3
 
 
  116 00b0 C046     		nop
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccWgPcxs.s 			page 1
  174 0012 BD46     		mov	sp, r7
  175              		@ sp needed
  176 0014 80BD     		pop	{r7, pc}
-ARM GAS  /tmp/ccWgPcxs.s 			page 4
+ARM GAS  /tmp/cc4sBZwM.s 			page 4
 
 
  177              	.L14:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccWgPcxs.s 			page 1
  236              		.code	16
  237              		.thumb_func
  239              	HAL_PWREx_EnableVddio2Monitor:
-ARM GAS  /tmp/ccWgPcxs.s 			page 5
+ARM GAS  /tmp/cc4sBZwM.s 			page 5
 
 
  240              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccWgPcxs.s 			page 1
  296 0026 9A60     		str	r2, [r3, #8]
  297 0028 C046     		nop
  298 002a BD46     		mov	sp, r7
-ARM GAS  /tmp/ccWgPcxs.s 			page 6
+ARM GAS  /tmp/cc4sBZwM.s 			page 6
 
 
  299              		@ sp needed
@@ -352,35 +352,35 @@ ARM GAS  /tmp/ccWgPcxs.s 			page 1
  351              		@ sp needed
  352 0008 80BD     		pop	{r7, pc}
  354              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/ccWgPcxs.s 			page 7
+ARM GAS  /tmp/cc4sBZwM.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_hal_pwr_ex.c
-     /tmp/ccWgPcxs.s:15     .text.HAL_PWR_ConfigPVD:00000000 $t
-     /tmp/ccWgPcxs.s:21     .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
-     /tmp/ccWgPcxs.s:124    .text.HAL_PWR_ConfigPVD:000000b8 $d
-     /tmp/ccWgPcxs.s:129    .text.HAL_PWR_EnablePVD:00000000 $t
-     /tmp/ccWgPcxs.s:135    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
-     /tmp/ccWgPcxs.s:153    .text.HAL_PWR_EnablePVD:00000018 $d
-     /tmp/ccWgPcxs.s:156    .text.HAL_PWR_DisablePVD:00000000 $t
-     /tmp/ccWgPcxs.s:162    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
-     /tmp/ccWgPcxs.s:180    .text.HAL_PWR_DisablePVD:00000018 $d
-     /tmp/ccWgPcxs.s:183    .text.HAL_PWR_PVD_IRQHandler:00000000 $t
-     /tmp/ccWgPcxs.s:189    .text.HAL_PWR_PVD_IRQHandler:00000000 HAL_PWR_PVD_IRQHandler
-     /tmp/ccWgPcxs.s:222    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
-     /tmp/ccWgPcxs.s:213    .text.HAL_PWR_PVD_IRQHandler:00000024 $d
-     /tmp/ccWgPcxs.s:216    .text.HAL_PWR_PVDCallback:00000000 $t
-     /tmp/ccWgPcxs.s:233    .text.HAL_PWREx_EnableVddio2Monitor:00000000 $t
-     /tmp/ccWgPcxs.s:239    .text.HAL_PWREx_EnableVddio2Monitor:00000000 HAL_PWREx_EnableVddio2Monitor
-     /tmp/ccWgPcxs.s:265    .text.HAL_PWREx_EnableVddio2Monitor:00000028 $d
-     /tmp/ccWgPcxs.s:268    .text.HAL_PWREx_DisableVddio2Monitor:00000000 $t
-     /tmp/ccWgPcxs.s:274    .text.HAL_PWREx_DisableVddio2Monitor:00000000 HAL_PWREx_DisableVddio2Monitor
-     /tmp/ccWgPcxs.s:304    .text.HAL_PWREx_DisableVddio2Monitor:00000030 $d
-     /tmp/ccWgPcxs.s:307    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:00000000 $t
-     /tmp/ccWgPcxs.s:313    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:00000000 HAL_PWREx_Vddio2Monitor_IRQHandler
-     /tmp/ccWgPcxs.s:344    .text.HAL_PWREx_Vddio2MonitorCallback:00000000 HAL_PWREx_Vddio2MonitorCallback
-     /tmp/ccWgPcxs.s:335    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:00000020 $d
-     /tmp/ccWgPcxs.s:338    .text.HAL_PWREx_Vddio2MonitorCallback:00000000 $t
+     /tmp/cc4sBZwM.s:15     .text.HAL_PWR_ConfigPVD:00000000 $t
+     /tmp/cc4sBZwM.s:21     .text.HAL_PWR_ConfigPVD:00000000 HAL_PWR_ConfigPVD
+     /tmp/cc4sBZwM.s:124    .text.HAL_PWR_ConfigPVD:000000b8 $d
+     /tmp/cc4sBZwM.s:129    .text.HAL_PWR_EnablePVD:00000000 $t
+     /tmp/cc4sBZwM.s:135    .text.HAL_PWR_EnablePVD:00000000 HAL_PWR_EnablePVD
+     /tmp/cc4sBZwM.s:153    .text.HAL_PWR_EnablePVD:00000018 $d
+     /tmp/cc4sBZwM.s:156    .text.HAL_PWR_DisablePVD:00000000 $t
+     /tmp/cc4sBZwM.s:162    .text.HAL_PWR_DisablePVD:00000000 HAL_PWR_DisablePVD
+     /tmp/cc4sBZwM.s:180    .text.HAL_PWR_DisablePVD:00000018 $d
+     /tmp/cc4sBZwM.s:183    .text.HAL_PWR_PVD_IRQHandler:00000000 $t
+     /tmp/cc4sBZwM.s:189    .text.HAL_PWR_PVD_IRQHandler:00000000 HAL_PWR_PVD_IRQHandler
+     /tmp/cc4sBZwM.s:222    .text.HAL_PWR_PVDCallback:00000000 HAL_PWR_PVDCallback
+     /tmp/cc4sBZwM.s:213    .text.HAL_PWR_PVD_IRQHandler:00000024 $d
+     /tmp/cc4sBZwM.s:216    .text.HAL_PWR_PVDCallback:00000000 $t
+     /tmp/cc4sBZwM.s:233    .text.HAL_PWREx_EnableVddio2Monitor:00000000 $t
+     /tmp/cc4sBZwM.s:239    .text.HAL_PWREx_EnableVddio2Monitor:00000000 HAL_PWREx_EnableVddio2Monitor
+     /tmp/cc4sBZwM.s:265    .text.HAL_PWREx_EnableVddio2Monitor:00000028 $d
+     /tmp/cc4sBZwM.s:268    .text.HAL_PWREx_DisableVddio2Monitor:00000000 $t
+     /tmp/cc4sBZwM.s:274    .text.HAL_PWREx_DisableVddio2Monitor:00000000 HAL_PWREx_DisableVddio2Monitor
+     /tmp/cc4sBZwM.s:304    .text.HAL_PWREx_DisableVddio2Monitor:00000030 $d
+     /tmp/cc4sBZwM.s:307    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:00000000 $t
+     /tmp/cc4sBZwM.s:313    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:00000000 HAL_PWREx_Vddio2Monitor_IRQHandler
+     /tmp/cc4sBZwM.s:344    .text.HAL_PWREx_Vddio2MonitorCallback:00000000 HAL_PWREx_Vddio2MonitorCallback
+     /tmp/cc4sBZwM.s:335    .text.HAL_PWREx_Vddio2Monitor_IRQHandler:00000020 $d
+     /tmp/cc4sBZwM.s:338    .text.HAL_PWREx_Vddio2MonitorCallback:00000000 $t
 
 NO UNDEFINED SYMBOLS

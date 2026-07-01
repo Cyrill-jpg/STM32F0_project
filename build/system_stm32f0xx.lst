@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cckJe14e.s 			page 1
+ARM GAS  /tmp/cck8QNiL.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cckJe14e.s 			page 1
   60              	SystemCoreClockUpdate:
   61              		@ args = 0, pretend = 0, frame = 16
   62              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  /tmp/cckJe14e.s 			page 2
+ARM GAS  /tmp/cck8QNiL.s 			page 2
 
 
   63 0000 80B5     		push	{r7, lr}
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cckJe14e.s 			page 1
  117 0066 0233     		adds	r3, r3, #2
  118 0068 BB60     		str	r3, [r7, #8]
  119 006a 234B     		ldr	r3, .L11
-ARM GAS  /tmp/cckJe14e.s 			page 3
+ARM GAS  /tmp/cck8QNiL.s 			page 3
 
 
  120 006c DB6A     		ldr	r3, [r3, #44]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cckJe14e.s 			page 1
  174 00d6 5B68     		ldr	r3, [r3, #4]
  175 00d8 1B09     		lsrs	r3, r3, #4
  176 00da 0F22     		movs	r2, #15
-ARM GAS  /tmp/cckJe14e.s 			page 4
+ARM GAS  /tmp/cck8QNiL.s 			page 4
 
 
  177 00dc 1340     		ands	r3, r2
@@ -206,22 +206,22 @@ ARM GAS  /tmp/cckJe14e.s 			page 1
  199 0108 00000000 		.word	AHBPrescTable
  201              		.global	__aeabi_uidiv
  202              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/cckJe14e.s 			page 5
+ARM GAS  /tmp/cck8QNiL.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 system_stm32f0xx.c
-     /tmp/cckJe14e.s:19     .data.SystemCoreClock:00000000 SystemCoreClock
-     /tmp/cckJe14e.s:16     .data.SystemCoreClock:00000000 $d
-     /tmp/cckJe14e.s:26     .rodata.AHBPrescTable:00000000 AHBPrescTable
-     /tmp/cckJe14e.s:23     .rodata.AHBPrescTable:00000000 $d
-     /tmp/cckJe14e.s:34     .rodata.APBPrescTable:00000000 APBPrescTable
-     /tmp/cckJe14e.s:31     .rodata.APBPrescTable:00000000 $d
-     /tmp/cckJe14e.s:37     .text.SystemInit:00000000 $t
-     /tmp/cckJe14e.s:43     .text.SystemInit:00000000 SystemInit
-     /tmp/cckJe14e.s:54     .text.SystemCoreClockUpdate:00000000 $t
-     /tmp/cckJe14e.s:60     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-     /tmp/cckJe14e.s:195    .text.SystemCoreClockUpdate:000000f8 $d
+     /tmp/cck8QNiL.s:19     .data.SystemCoreClock:00000000 SystemCoreClock
+     /tmp/cck8QNiL.s:16     .data.SystemCoreClock:00000000 $d
+     /tmp/cck8QNiL.s:26     .rodata.AHBPrescTable:00000000 AHBPrescTable
+     /tmp/cck8QNiL.s:23     .rodata.AHBPrescTable:00000000 $d
+     /tmp/cck8QNiL.s:34     .rodata.APBPrescTable:00000000 APBPrescTable
+     /tmp/cck8QNiL.s:31     .rodata.APBPrescTable:00000000 $d
+     /tmp/cck8QNiL.s:37     .text.SystemInit:00000000 $t
+     /tmp/cck8QNiL.s:43     .text.SystemInit:00000000 SystemInit
+     /tmp/cck8QNiL.s:54     .text.SystemCoreClockUpdate:00000000 $t
+     /tmp/cck8QNiL.s:60     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+     /tmp/cck8QNiL.s:195    .text.SystemCoreClockUpdate:000000f8 $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

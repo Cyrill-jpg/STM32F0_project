@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc7dcS70.s 			page 1
+ARM GAS  /tmp/ccKccQc6.s 			page 1
 
 
    1              		.arch armv6s-m
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc7dcS70.s 			page 1
   58 0014 1A60     		str	r2, [r3]
   59 0016 C046     		nop
   60 0018 BD46     		mov	sp, r7
-ARM GAS  /tmp/cc7dcS70.s 			page 2
+ARM GAS  /tmp/ccKccQc6.s 			page 2
 
 
   61 001a 02B0     		add	sp, sp, #8
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc7dcS70.s 			page 1
  119 0012 DA02     		lsls	r2, r3, #11
  120 0014 B968     		ldr	r1, [r7, #8]
  121 0016 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/cc7dcS70.s 			page 3
+ARM GAS  /tmp/ccKccQc6.s 			page 3
 
 
  122 0018 0B43     		orrs	r3, r1
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc7dcS70.s 			page 1
  180              		@ sp needed
  181 001a 80BD     		pop	{r7, pc}
  182              	.L10:
-ARM GAS  /tmp/cc7dcS70.s 			page 4
+ARM GAS  /tmp/ccKccQc6.s 			page 4
 
 
  183              		.align	2
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc7dcS70.s 			page 1
  242              		.section	.text.LL_I2C_AcknowledgeNextData,"ax",%progbits
  243              		.align	1
  244              		.syntax unified
-ARM GAS  /tmp/cc7dcS70.s 			page 5
+ARM GAS  /tmp/ccKccQc6.s 			page 5
 
 
  245              		.code	16
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc7dcS70.s 			page 1
  303              		.section	.text.LL_APB1_GRP1_ReleaseReset,"ax",%progbits
  304              		.align	1
  305              		.syntax unified
-ARM GAS  /tmp/cc7dcS70.s 			page 6
+ARM GAS  /tmp/ccKccQc6.s 			page 6
 
 
  306              		.code	16
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc7dcS70.s 			page 1
  363 002c 12E0     		b	.L26
  364              	.L25:
  365 002e 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/cc7dcS70.s 			page 7
+ARM GAS  /tmp/ccKccQc6.s 			page 7
 
 
  366 0030 0D4A     		ldr	r2, .L29+4
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc7dcS70.s 			page 1
  422 001e FFF7FEFF 		bl	LL_I2C_ConfigFilters
  423 0022 3B68     		ldr	r3, [r7]
  424 0024 5A68     		ldr	r2, [r3, #4]
-ARM GAS  /tmp/cc7dcS70.s 			page 8
+ARM GAS  /tmp/ccKccQc6.s 			page 8
 
 
  425 0026 7B68     		ldr	r3, [r7, #4]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc7dcS70.s 			page 1
  481 0004 00AF     		add	r7, sp, #0
  482 0006 7860     		str	r0, [r7, #4]
  483 0008 7B68     		ldr	r3, [r7, #4]
-ARM GAS  /tmp/cc7dcS70.s 			page 9
+ARM GAS  /tmp/ccKccQc6.s 			page 9
 
 
  484 000a 0022     		movs	r2, #0
@@ -508,45 +508,45 @@ ARM GAS  /tmp/cc7dcS70.s 			page 1
  508              		@ sp needed
  509 003a 80BD     		pop	{r7, pc}
  511              		.ident	"GCC: (crosstool-NG 1.28.0 - arm-cortexm0-eabi) 15.2.0"
-ARM GAS  /tmp/cc7dcS70.s 			page 10
+ARM GAS  /tmp/ccKccQc6.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f0xx_ll_i2c.c
-     /tmp/cc7dcS70.s:15     .text.LL_I2C_Enable:00000000 $t
-     /tmp/cc7dcS70.s:20     .text.LL_I2C_Enable:00000000 LL_I2C_Enable
-     /tmp/cc7dcS70.s:40     .text.LL_I2C_Disable:00000000 $t
-     /tmp/cc7dcS70.s:45     .text.LL_I2C_Disable:00000000 LL_I2C_Disable
-     /tmp/cc7dcS70.s:66     .text.LL_I2C_ConfigFilters:00000000 $t
-     /tmp/cc7dcS70.s:71     .text.LL_I2C_ConfigFilters:00000000 LL_I2C_ConfigFilters
-     /tmp/cc7dcS70.s:99     .text.LL_I2C_ConfigFilters:0000002c $d
-     /tmp/cc7dcS70.s:102    .text.LL_I2C_SetOwnAddress1:00000000 $t
-     /tmp/cc7dcS70.s:107    .text.LL_I2C_SetOwnAddress1:00000000 LL_I2C_SetOwnAddress1
-     /tmp/cc7dcS70.s:133    .text.LL_I2C_EnableOwnAddress1:00000000 $t
-     /tmp/cc7dcS70.s:138    .text.LL_I2C_EnableOwnAddress1:00000000 LL_I2C_EnableOwnAddress1
-     /tmp/cc7dcS70.s:159    .text.LL_I2C_DisableOwnAddress1:00000000 $t
-     /tmp/cc7dcS70.s:164    .text.LL_I2C_DisableOwnAddress1:00000000 LL_I2C_DisableOwnAddress1
-     /tmp/cc7dcS70.s:185    .text.LL_I2C_DisableOwnAddress1:0000001c $d
-     /tmp/cc7dcS70.s:188    .text.LL_I2C_SetTiming:00000000 $t
-     /tmp/cc7dcS70.s:193    .text.LL_I2C_SetTiming:00000000 LL_I2C_SetTiming
-     /tmp/cc7dcS70.s:211    .text.LL_I2C_SetMode:00000000 $t
-     /tmp/cc7dcS70.s:216    .text.LL_I2C_SetMode:00000000 LL_I2C_SetMode
-     /tmp/cc7dcS70.s:240    .text.LL_I2C_SetMode:00000024 $d
-     /tmp/cc7dcS70.s:243    .text.LL_I2C_AcknowledgeNextData:00000000 $t
-     /tmp/cc7dcS70.s:248    .text.LL_I2C_AcknowledgeNextData:00000000 LL_I2C_AcknowledgeNextData
-     /tmp/cc7dcS70.s:272    .text.LL_I2C_AcknowledgeNextData:00000024 $d
-     /tmp/cc7dcS70.s:275    .text.LL_APB1_GRP1_ForceReset:00000000 $t
-     /tmp/cc7dcS70.s:280    .text.LL_APB1_GRP1_ForceReset:00000000 LL_APB1_GRP1_ForceReset
-     /tmp/cc7dcS70.s:301    .text.LL_APB1_GRP1_ForceReset:0000001c $d
-     /tmp/cc7dcS70.s:304    .text.LL_APB1_GRP1_ReleaseReset:00000000 $t
-     /tmp/cc7dcS70.s:309    .text.LL_APB1_GRP1_ReleaseReset:00000000 LL_APB1_GRP1_ReleaseReset
-     /tmp/cc7dcS70.s:331    .text.LL_APB1_GRP1_ReleaseReset:00000020 $d
-     /tmp/cc7dcS70.s:334    .text.LL_I2C_DeInit:00000000 $t
-     /tmp/cc7dcS70.s:340    .text.LL_I2C_DeInit:00000000 LL_I2C_DeInit
-     /tmp/cc7dcS70.s:395    .text.LL_I2C_DeInit:00000064 $d
-     /tmp/cc7dcS70.s:399    .text.LL_I2C_Init:00000000 $t
-     /tmp/cc7dcS70.s:405    .text.LL_I2C_Init:00000000 LL_I2C_Init
-     /tmp/cc7dcS70.s:470    .text.LL_I2C_StructInit:00000000 $t
-     /tmp/cc7dcS70.s:476    .text.LL_I2C_StructInit:00000000 LL_I2C_StructInit
+     /tmp/ccKccQc6.s:15     .text.LL_I2C_Enable:00000000 $t
+     /tmp/ccKccQc6.s:20     .text.LL_I2C_Enable:00000000 LL_I2C_Enable
+     /tmp/ccKccQc6.s:40     .text.LL_I2C_Disable:00000000 $t
+     /tmp/ccKccQc6.s:45     .text.LL_I2C_Disable:00000000 LL_I2C_Disable
+     /tmp/ccKccQc6.s:66     .text.LL_I2C_ConfigFilters:00000000 $t
+     /tmp/ccKccQc6.s:71     .text.LL_I2C_ConfigFilters:00000000 LL_I2C_ConfigFilters
+     /tmp/ccKccQc6.s:99     .text.LL_I2C_ConfigFilters:0000002c $d
+     /tmp/ccKccQc6.s:102    .text.LL_I2C_SetOwnAddress1:00000000 $t
+     /tmp/ccKccQc6.s:107    .text.LL_I2C_SetOwnAddress1:00000000 LL_I2C_SetOwnAddress1
+     /tmp/ccKccQc6.s:133    .text.LL_I2C_EnableOwnAddress1:00000000 $t
+     /tmp/ccKccQc6.s:138    .text.LL_I2C_EnableOwnAddress1:00000000 LL_I2C_EnableOwnAddress1
+     /tmp/ccKccQc6.s:159    .text.LL_I2C_DisableOwnAddress1:00000000 $t
+     /tmp/ccKccQc6.s:164    .text.LL_I2C_DisableOwnAddress1:00000000 LL_I2C_DisableOwnAddress1
+     /tmp/ccKccQc6.s:185    .text.LL_I2C_DisableOwnAddress1:0000001c $d
+     /tmp/ccKccQc6.s:188    .text.LL_I2C_SetTiming:00000000 $t
+     /tmp/ccKccQc6.s:193    .text.LL_I2C_SetTiming:00000000 LL_I2C_SetTiming
+     /tmp/ccKccQc6.s:211    .text.LL_I2C_SetMode:00000000 $t
+     /tmp/ccKccQc6.s:216    .text.LL_I2C_SetMode:00000000 LL_I2C_SetMode
+     /tmp/ccKccQc6.s:240    .text.LL_I2C_SetMode:00000024 $d
+     /tmp/ccKccQc6.s:243    .text.LL_I2C_AcknowledgeNextData:00000000 $t
+     /tmp/ccKccQc6.s:248    .text.LL_I2C_AcknowledgeNextData:00000000 LL_I2C_AcknowledgeNextData
+     /tmp/ccKccQc6.s:272    .text.LL_I2C_AcknowledgeNextData:00000024 $d
+     /tmp/ccKccQc6.s:275    .text.LL_APB1_GRP1_ForceReset:00000000 $t
+     /tmp/ccKccQc6.s:280    .text.LL_APB1_GRP1_ForceReset:00000000 LL_APB1_GRP1_ForceReset
+     /tmp/ccKccQc6.s:301    .text.LL_APB1_GRP1_ForceReset:0000001c $d
+     /tmp/ccKccQc6.s:304    .text.LL_APB1_GRP1_ReleaseReset:00000000 $t
+     /tmp/ccKccQc6.s:309    .text.LL_APB1_GRP1_ReleaseReset:00000000 LL_APB1_GRP1_ReleaseReset
+     /tmp/ccKccQc6.s:331    .text.LL_APB1_GRP1_ReleaseReset:00000020 $d
+     /tmp/ccKccQc6.s:334    .text.LL_I2C_DeInit:00000000 $t
+     /tmp/ccKccQc6.s:340    .text.LL_I2C_DeInit:00000000 LL_I2C_DeInit
+     /tmp/ccKccQc6.s:395    .text.LL_I2C_DeInit:00000064 $d
+     /tmp/ccKccQc6.s:399    .text.LL_I2C_Init:00000000 $t
+     /tmp/ccKccQc6.s:405    .text.LL_I2C_Init:00000000 LL_I2C_Init
+     /tmp/ccKccQc6.s:470    .text.LL_I2C_StructInit:00000000 $t
+     /tmp/ccKccQc6.s:476    .text.LL_I2C_StructInit:00000000 LL_I2C_StructInit
 
 NO UNDEFINED SYMBOLS
